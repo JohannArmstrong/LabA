@@ -1,0 +1,2 @@
+No se inserta la hora mediante el server
+    No est'a andando, tal vez se cay'o el ngrok

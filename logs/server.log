@@ -1,0 +1,990 @@
+2025-11-03 16:11:42 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 16:11:42 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-03 16:13:58 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 16:13:58 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-03 16:19:04 [INFO] Opening tunnel named: http-5000-eea6de4b-33b2-42a1-9b99-fc1bb6756225
+2025-11-03 16:19:04 [INFO] t=2025-11-03T16:19:04-0300 lvl=info msg="no configuration paths supplied"
+2025-11-03 16:19:04 [INFO] t=2025-11-03T16:19:04-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-03 16:19:04 [INFO] t=2025-11-03T16:19:04-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-03 16:19:04 [INFO] t=2025-11-03T16:19:04-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-03 16:19:05 [INFO] t=2025-11-03T16:19:05-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-03 16:19:05 [INFO] t=2025-11-03T16:19:05-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-03 16:19:05 [INFO] t=2025-11-03T16:19:05-0300 lvl=info msg=start pg=/api/tunnels id=97d4ecc2c5f8f7de
+2025-11-03 16:19:05 [INFO] t=2025-11-03T16:19:05-0300 lvl=info msg=end pg=/api/tunnels id=97d4ecc2c5f8f7de status=200 dur=0s
+2025-11-03 16:19:05 [INFO] t=2025-11-03T16:19:05-0300 lvl=info msg=start pg=/api/tunnels id=10a853fe569dd2c1
+2025-11-03 16:19:05 [INFO] t=2025-11-03T16:19:05-0300 lvl=info msg=end pg=/api/tunnels id=10a853fe569dd2c1 status=200 dur=506.5¬µs
+2025-11-03 16:19:05 [INFO] t=2025-11-03T16:19:05-0300 lvl=info msg=start pg=/api/tunnels id=2c74db2b8434bf9b
+2025-11-03 16:19:05 [INFO] t=2025-11-03T16:19:05-0300 lvl=info msg=end pg=/api/tunnels id=2c74db2b8434bf9b status=200 dur=0s
+2025-11-03 16:19:05 [INFO] t=2025-11-03T16:19:05-0300 lvl=info msg=start pg=/api/tunnels id=5eb22031770749d5
+2025-11-03 16:19:05 [WARNING] t=2025-11-03T16:19:05-0300 lvl=warn msg="failed to start tunnel" pg=/api/tunnels id=5eb22031770749d5 err="failed to start tunnel: Only paid plans may create endpoints with custom subdomains.\nFailed to create an endpoint with the custom subdomain 'nonenlightening-liana-unresiliently' for the account 'labA'.\nThis account is on the 'Free' plan.\n\nUpgrade to a paid plan at: https://dashboard.ngrok.com/billing/choose-a-plan\r\n\r\nERR_NGROK_313\r\n"
+2025-11-03 16:19:05 [INFO] t=2025-11-03T16:19:05-0300 lvl=info msg=end pg=/api/tunnels id=5eb22031770749d5 status=502 dur=204.9777ms
+2025-11-03 16:27:05 [INFO] Opening tunnel named: http-5000-bcb8efd9-faac-44cc-a2f7-43316b6fdc4e
+2025-11-03 16:27:06 [INFO] t=2025-11-03T16:27:06-0300 lvl=info msg="no configuration paths supplied"
+2025-11-03 16:27:06 [INFO] t=2025-11-03T16:27:06-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-03 16:27:06 [INFO] t=2025-11-03T16:27:06-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-03 16:27:06 [INFO] t=2025-11-03T16:27:06-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-03 16:27:06 [INFO] t=2025-11-03T16:27:06-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-03 16:27:06 [INFO] t=2025-11-03T16:27:06-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-03 16:27:06 [INFO] t=2025-11-03T16:27:06-0300 lvl=info msg=start pg=/api/tunnels id=00e7b7bb2a0673d8
+2025-11-03 16:27:06 [INFO] t=2025-11-03T16:27:06-0300 lvl=info msg=end pg=/api/tunnels id=00e7b7bb2a0673d8 status=200 dur=0s
+2025-11-03 16:27:06 [INFO] t=2025-11-03T16:27:06-0300 lvl=info msg=start pg=/api/tunnels id=b0ef2fcfcd8e9d5d
+2025-11-03 16:27:06 [INFO] t=2025-11-03T16:27:06-0300 lvl=info msg=end pg=/api/tunnels id=b0ef2fcfcd8e9d5d status=200 dur=0s
+2025-11-03 16:27:06 [INFO] t=2025-11-03T16:27:06-0300 lvl=info msg=start pg=/api/tunnels id=08492bd36e71897d
+2025-11-03 16:27:06 [INFO] t=2025-11-03T16:27:06-0300 lvl=info msg=end pg=/api/tunnels id=08492bd36e71897d status=200 dur=0s
+2025-11-03 16:27:06 [INFO] t=2025-11-03T16:27:06-0300 lvl=info msg=start pg=/api/tunnels id=22b1cae9b5556a79
+2025-11-03 16:27:07 [INFO] t=2025-11-03T16:27:07-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-bcb8efd9-faac-44cc-a2f7-43316b6fdc4e addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-03 16:27:07 [INFO] t=2025-11-03T16:27:07-0300 lvl=info msg=end pg=/api/tunnels id=22b1cae9b5556a79 status=201 dur=347.3686ms
+2025-11-03 16:27:07 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 16:27:07 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-03 16:27:11 [WARNING] t=2025-11-03T16:27:11-0300 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+2025-11-03 17:09:07 [INFO] t=2025-11-03T17:09:07-0300 lvl=info msg="join connections" obj=join id=1d2ed0e51997 l=127.0.0.1:5000 r=34.116.22.41:52181
+2025-11-03 17:09:07 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-03T20:09:03.177Z', 'Fecha de Inicio': '2025-11-03T03:00:00.000Z', 'Fecha de Finalizaci\xf3n': '2025-11-03T03:00:00.000Z', 'Categor\xeda': 'En laboratorio', 'Tipo de actividad': 'Charla', 'Descripci\xf3n de la actividad': 'pa prob\xe1', 'Horas de duraci\xf3n del evento': 3, 'Impacto: Cantidad de personas que asistieron': 3, 'Requiere armado especial': '', 'Descripci\xf3n del armado': 'na', 'Horas de trabajo (traslado, preparaci\xf3n, armado y participaci\xf3n del evento)': 3, '\xbfLabA Abierto?': 'No', 'Participantes': 'nadie', 'Organizador principal': 'ITRSO - Paysand\xfa', 'Qu\xe9 recursos materiales se utilizaron': 'ninguno', 'Observaciones por fuera de lo planificado': '', 'Costo de actividad (materiales+vi\xe1ticos)': 1000, 'Im\xe1genes del evento (al menos 2)': ''}
+2025-11-03 17:09:07 [ERROR] \u274c Error al insertar en la base de datos: ÉäÉåÅ[ÉVÉáÉì"proyecto"ÇÃóÒ"fecha_registro"ÇÃNULLílÇ™îÒNULLêßñÒÇ…à·îΩÇµÇƒÇ¢Ç‹Ç∑
+DETAIL:  é∏îsÇµÇΩçsÇÕ(329, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)Çä‹Ç›Ç‹Ç∑
+2025-11-03 17:09:07 [INFO] 127.0.0.1 - - [03/Nov/2025 17:09:07] "[35m[1mPOST /api/nuevo_proyecto HTTP/1.1[0m" 500 -
+2025-11-03 17:14:41 [INFO] t=2025-11-03T17:14:41-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-03 17:14:41 [INFO] t=2025-11-03T17:14:41-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-03 17:14:41 [INFO] t=2025-11-03T17:14:41-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=38bc7fe9b21e err="reconnecting session closed"
+2025-11-03 17:14:41 [INFO] t=2025-11-03T17:14:41-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=1ab807132c13e2f1e31c6984465ef1b4
+2025-11-03 17:14:41 [WARNING] t=2025-11-03T17:14:41-0300 lvl=warn msg="Stopping forwarder" name=http-5000-bcb8efd9-faac-44cc-a2f7-43316b6fdc4e acceptErr="failed to accept connection: Listener closed"
+2025-11-03 17:14:48 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 17:14:48 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-03 17:18:47 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 17:18:47 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-03 17:21:55 [INFO] Opening tunnel named: http-5000-0d6ae7e4-5312-46f6-b6d2-87038ad2fd64
+2025-11-03 17:21:55 [INFO] t=2025-11-03T17:21:55-0300 lvl=info msg="no configuration paths supplied"
+2025-11-03 17:21:55 [INFO] t=2025-11-03T17:21:55-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-03 17:21:55 [INFO] t=2025-11-03T17:21:55-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-03 17:21:55 [INFO] t=2025-11-03T17:21:55-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-03 17:21:56 [INFO] t=2025-11-03T17:21:56-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-03 17:21:56 [INFO] t=2025-11-03T17:21:56-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-03 17:21:56 [INFO] t=2025-11-03T17:21:56-0300 lvl=info msg=start pg=/api/tunnels id=9aeb47db2a9703a0
+2025-11-03 17:21:56 [INFO] t=2025-11-03T17:21:56-0300 lvl=info msg=end pg=/api/tunnels id=9aeb47db2a9703a0 status=200 dur=0s
+2025-11-03 17:21:56 [INFO] t=2025-11-03T17:21:56-0300 lvl=info msg=start pg=/api/tunnels id=0b8e709b28524dc7
+2025-11-03 17:21:56 [INFO] t=2025-11-03T17:21:56-0300 lvl=info msg=end pg=/api/tunnels id=0b8e709b28524dc7 status=200 dur=0s
+2025-11-03 17:21:56 [INFO] t=2025-11-03T17:21:56-0300 lvl=info msg=start pg=/api/tunnels id=494411f187c232cc
+2025-11-03 17:21:56 [INFO] t=2025-11-03T17:21:56-0300 lvl=info msg=end pg=/api/tunnels id=494411f187c232cc status=200 dur=0s
+2025-11-03 17:21:56 [INFO] t=2025-11-03T17:21:56-0300 lvl=info msg=start pg=/api/tunnels id=6f4a2d3142008b32
+2025-11-03 17:21:56 [INFO] t=2025-11-03T17:21:56-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-0d6ae7e4-5312-46f6-b6d2-87038ad2fd64 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-03 17:21:56 [INFO] t=2025-11-03T17:21:56-0300 lvl=info msg=end pg=/api/tunnels id=6f4a2d3142008b32 status=201 dur=386.7987ms
+2025-11-03 17:21:56 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-03 17:21:56 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-03 17:24:59 [INFO] t=2025-11-03T17:24:59-0300 lvl=info msg="join connections" obj=join id=af7f65e535a7 l=127.0.0.1:5000 r=35.187.134.168:47635
+2025-11-03 17:24:59 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-03T20:24:55.219Z', 'Fecha de Inicio': '2025-11-03T03:00:00.000Z', 'Fecha de Finalizaci\xf3n': '2025-11-03T03:00:00.000Z', 'Categor\xeda': 'En laboratorio', 'Tipo de actividad': 'Inauguraci\xf3n', 'Descripci\xf3n de la actividad': 'y---', 'Horas de duraci\xf3n del evento': 1, 'Impacto: Cantidad de personas que asistieron': 1, 'Requiere armado especial': 'No', 'Descripci\xf3n del armado': 'se arm\xf3 todo bien', 'Horas de trabajo (traslado, preparaci\xf3n, armado y participaci\xf3n del evento)': 8, '\xbfLabA Abierto?': 'S\xed', 'Participantes': 'yo', 'Organizador principal': 'ITRSO - Paysand\xfa', 'Qu\xe9 recursos materiales se utilizaron': 'naa', 'Observaciones por fuera de lo planificado': 'naa', 'Costo de actividad (materiales+vi\xe1ticos)': 10000, 'Im\xe1genes del evento (al menos 2)': ''}
+2025-11-03 17:24:59 [ERROR] \u274c Error al insertar en la base de datos: ÉäÉåÅ[ÉVÉáÉì"proyecto"ÇÃóÒ"fecha_necesidad"ÇÃNULLílÇ™îÒNULLêßñÒÇ…à·îΩÇµÇƒÇ¢Ç‹Ç∑
+DETAIL:  é∏îsÇµÇΩçsÇÕ(330, 2025-11-03, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)Çä‹Ç›Ç‹Ç∑
+2025-11-03 17:24:59 [INFO] 127.0.0.1 - - [03/Nov/2025 17:24:59] "[35m[1mPOST /api/nuevo_proyecto HTTP/1.1[0m" 500 -
+2025-11-03 17:36:01 [INFO] t=2025-11-03T17:36:01-0300 lvl=info msg="join connections" obj=join id=1837e6a46b49 l=127.0.0.1:5000 r=35.187.134.169:51268
+2025-11-03 17:36:01 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-03T20:35:57.730Z', 'Fecha de Inicio': '2025-11-03T03:00:00.000Z', 'Fecha de Finalizaci\xf3n': '2025-11-03T03:00:00.000Z', 'Categor\xeda': 'En laboratorio', 'Tipo de actividad': 'Visita', 'Descripci\xf3n de la actividad': 'tremenda actividad', 'Horas de duraci\xf3n del evento': 444, 'Impacto: Cantidad de personas que asistieron': 444, 'Requiere armado especial': 'No', 'Descripci\xf3n del armado': 'se arm\xf3 todo', 'Horas de trabajo (traslado, preparaci\xf3n, armado y participaci\xf3n del evento)': 444, '\xbfLabA Abierto?': 'S\xed', 'Participantes': 'nadie m\xe1s que yo', 'Organizador principal': 'ITRSO - Paysand\xfa', 'Qu\xe9 recursos materiales se utilizaron': 'todos', 'Observaciones por fuera de lo planificado': 'nada', 'Costo de actividad (materiales+vi\xe1ticos)': 444, 'Im\xe1genes del evento (al menos 2)': ''}
+2025-11-03 17:36:01 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-03 17:36:01 [INFO] 127.0.0.1 - - [03/Nov/2025 17:36:01] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-03 17:43:40 [INFO] t=2025-11-03T17:43:40-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-03 17:43:40 [INFO] t=2025-11-03T17:43:40-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-03 17:43:40 [INFO] t=2025-11-03T17:43:40-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=6727a11ff4e2 err="reconnecting session closed"
+2025-11-04 13:41:12 [INFO] Opening tunnel named: http-5000-66e4b10e-1cec-412e-ba13-05900e47be83
+2025-11-04 13:41:12 [INFO] t=2025-11-04T13:41:12-0300 lvl=info msg="no configuration paths supplied"
+2025-11-04 13:41:12 [INFO] t=2025-11-04T13:41:12-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-04 13:41:12 [INFO] t=2025-11-04T13:41:12-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-04 13:41:12 [INFO] t=2025-11-04T13:41:12-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-04 13:41:13 [INFO] t=2025-11-04T13:41:13-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-04 13:41:13 [INFO] t=2025-11-04T13:41:13-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-04 13:41:13 [INFO] t=2025-11-04T13:41:13-0300 lvl=info msg=start pg=/api/tunnels id=da8973fd378afb2c
+2025-11-04 13:41:13 [INFO] t=2025-11-04T13:41:13-0300 lvl=info msg=end pg=/api/tunnels id=da8973fd378afb2c status=200 dur=0s
+2025-11-04 13:41:13 [INFO] t=2025-11-04T13:41:13-0300 lvl=info msg=start pg=/api/tunnels id=528c86522363364f
+2025-11-04 13:41:13 [INFO] t=2025-11-04T13:41:13-0300 lvl=info msg=end pg=/api/tunnels id=528c86522363364f status=200 dur=0s
+2025-11-04 13:41:13 [INFO] t=2025-11-04T13:41:13-0300 lvl=info msg=start pg=/api/tunnels id=c78c010579bcd31a
+2025-11-04 13:41:13 [INFO] t=2025-11-04T13:41:13-0300 lvl=info msg=end pg=/api/tunnels id=c78c010579bcd31a status=200 dur=0s
+2025-11-04 13:41:13 [INFO] t=2025-11-04T13:41:13-0300 lvl=info msg=start pg=/api/tunnels id=0e9274171d972979
+2025-11-04 13:41:13 [INFO] t=2025-11-04T13:41:13-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-66e4b10e-1cec-412e-ba13-05900e47be83 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-04 13:41:13 [INFO] t=2025-11-04T13:41:13-0300 lvl=info msg=end pg=/api/tunnels id=0e9274171d972979 status=201 dur=361.796ms
+2025-11-04 13:41:13 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-04 13:41:13 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-04 14:05:28 [INFO] t=2025-11-04T14:05:28-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-04 14:05:28 [INFO] t=2025-11-04T14:05:28-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-07 21:34:31 [INFO] Opening tunnel named: http-5000-76745dda-6a43-43b9-bef7-dabde7a3d517
+2025-11-07 21:34:32 [INFO] t=2025-11-07T21:34:32-0300 lvl=info msg="no configuration paths supplied"
+2025-11-07 21:34:32 [INFO] t=2025-11-07T21:34:32-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-07 21:34:32 [INFO] t=2025-11-07T21:34:32-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-07 21:34:32 [INFO] t=2025-11-07T21:34:32-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-07 21:34:32 [INFO] t=2025-11-07T21:34:32-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-07 21:34:32 [INFO] t=2025-11-07T21:34:32-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-07 21:34:32 [INFO] t=2025-11-07T21:34:32-0300 lvl=info msg=start pg=/api/tunnels id=3d6d9e4e85054daa
+2025-11-07 21:34:32 [INFO] t=2025-11-07T21:34:32-0300 lvl=info msg=end pg=/api/tunnels id=3d6d9e4e85054daa status=200 dur=598.7¬µs
+2025-11-07 21:34:32 [INFO] t=2025-11-07T21:34:32-0300 lvl=info msg=start pg=/api/tunnels id=86be37d9929c0b7d
+2025-11-07 21:34:32 [INFO] t=2025-11-07T21:34:32-0300 lvl=info msg=end pg=/api/tunnels id=86be37d9929c0b7d status=200 dur=0s
+2025-11-07 21:34:32 [INFO] t=2025-11-07T21:34:32-0300 lvl=info msg=start pg=/api/tunnels id=81bef8f4c110d4ab
+2025-11-07 21:34:32 [INFO] t=2025-11-07T21:34:32-0300 lvl=info msg=end pg=/api/tunnels id=81bef8f4c110d4ab status=200 dur=0s
+2025-11-07 21:34:32 [INFO] t=2025-11-07T21:34:32-0300 lvl=info msg=start pg=/api/tunnels id=e2cf4f33d4188024
+2025-11-07 21:34:33 [INFO] t=2025-11-07T21:34:33-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-76745dda-6a43-43b9-bef7-dabde7a3d517 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-07 21:34:33 [INFO] t=2025-11-07T21:34:33-0300 lvl=info msg=end pg=/api/tunnels id=e2cf4f33d4188024 status=201 dur=333.5243ms
+2025-11-07 21:34:33 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-07 21:34:33 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-07 22:59:22 [INFO] t=2025-11-07T22:59:22-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-07 22:59:22 [INFO] t=2025-11-07T22:59:22-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-07 22:59:22 [INFO] t=2025-11-07T22:59:22-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=11b9562ad95d err="reconnecting session closed"
+2025-11-07 22:59:22 [INFO] t=2025-11-07T22:59:22-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=c2a7c322e31e3b5f163c53fdf9967256
+2025-11-07 22:59:22 [WARNING] t=2025-11-07T22:59:22-0300 lvl=warn msg="Stopping forwarder" name=http-5000-76745dda-6a43-43b9-bef7-dabde7a3d517 acceptErr="failed to accept connection: Listener closed"
+2025-11-07 22:59:22 [WARNING] t=2025-11-07T22:59:22-0300 lvl=warn msg="Error restarting forwarder" name=http-5000-76745dda-6a43-43b9-bef7-dabde7a3d517 err="failed to start tunnel: session closed"
+2025-11-07 22:59:22 [INFO] t=2025-11-07T22:59:22-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-07 23:45:29 [INFO] Opening tunnel named: http-5000-c3a80211-2120-4dc9-a5af-d2470beeb7be
+2025-11-07 23:45:29 [INFO] t=2025-11-07T23:45:29-0300 lvl=info msg="no configuration paths supplied"
+2025-11-07 23:45:29 [INFO] t=2025-11-07T23:45:29-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-07 23:45:29 [INFO] t=2025-11-07T23:45:29-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-07 23:45:29 [INFO] t=2025-11-07T23:45:29-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-07 23:45:29 [INFO] t=2025-11-07T23:45:29-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-07 23:45:29 [INFO] t=2025-11-07T23:45:29-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-07 23:45:29 [INFO] t=2025-11-07T23:45:29-0300 lvl=info msg=start pg=/api/tunnels id=858e4dd2c592bcb3
+2025-11-07 23:45:29 [INFO] t=2025-11-07T23:45:29-0300 lvl=info msg=end pg=/api/tunnels id=858e4dd2c592bcb3 status=200 dur=0s
+2025-11-07 23:45:29 [INFO] t=2025-11-07T23:45:29-0300 lvl=info msg=start pg=/api/tunnels id=c956c2633bfd1de6
+2025-11-07 23:45:29 [INFO] t=2025-11-07T23:45:29-0300 lvl=info msg=end pg=/api/tunnels id=c956c2633bfd1de6 status=200 dur=0s
+2025-11-07 23:45:29 [INFO] t=2025-11-07T23:45:29-0300 lvl=info msg=start pg=/api/tunnels id=605b7e7efe99e03b
+2025-11-07 23:45:29 [INFO] t=2025-11-07T23:45:29-0300 lvl=info msg=end pg=/api/tunnels id=605b7e7efe99e03b status=200 dur=0s
+2025-11-07 23:45:29 [INFO] t=2025-11-07T23:45:29-0300 lvl=info msg=start pg=/api/tunnels id=8947517508a9c0db
+2025-11-07 23:45:30 [INFO] t=2025-11-07T23:45:30-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-c3a80211-2120-4dc9-a5af-d2470beeb7be addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-07 23:45:30 [INFO] t=2025-11-07T23:45:30-0300 lvl=info msg=end pg=/api/tunnels id=8947517508a9c0db status=201 dur=363.5424ms
+2025-11-07 23:45:30 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-07 23:45:30 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-07 23:48:57 [INFO] t=2025-11-07T23:48:57-0300 lvl=info msg="join connections" obj=join id=bf2752432dc9 l=127.0.0.1:5000 r=35.187.143.2:56101
+2025-11-07 23:48:57 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-08T02:48:54.325Z', 'Direcci\xf3n de correo electr\xf3nico': 'rodrigo.palivoda@estudiantes.utec.edu.uy', 'Nombre completo:': 'el rodri piola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'uteC', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Investigador/a', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'Revoluci\xf3N', 'Breve descripci\xf3n del proyecto': 'Revoluciona', 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Plotter de corte', 'Material a utilizar': 'PLA (Filamento de mayor uso)', 'Origen del material': 'Aporte del solicitante', 'Cantidad de prototipos a fabricar:': 50, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios:  (justificaci\xf3n de uso)': 'para revolucionar', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-14T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': 30, 'Otros comentarios': 'yh... '}
+2025-11-07 23:48:57 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-07 23:48:57 [INFO] 127.0.0.1 - - [07/Nov/2025 23:48:57] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-08 00:06:46 [INFO] t=2025-11-08T00:06:46-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-08 00:06:46 [INFO] t=2025-11-08T00:06:46-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-08 00:06:46 [INFO] t=2025-11-08T00:06:46-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=ddd9ba0abb50 err="reconnecting session closed"
+2025-11-08 00:06:46 [INFO] t=2025-11-08T00:06:46-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-08 00:06:46 [INFO] t=2025-11-08T00:06:46-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=37bba2c82e9e80e08970e08735fb1090
+2025-11-08 00:06:46 [WARNING] t=2025-11-08T00:06:46-0300 lvl=warn msg="Stopping forwarder" name=http-5000-c3a80211-2120-4dc9-a5af-d2470beeb7be acceptErr="failed to accept connection: Listener closed"
+2025-11-08 00:06:52 [INFO] Opening tunnel named: http-5000-30db2d3a-b8ed-4d6a-a64c-5b6537ff3a80
+2025-11-08 00:06:52 [INFO] t=2025-11-08T00:06:52-0300 lvl=info msg="no configuration paths supplied"
+2025-11-08 00:06:52 [INFO] t=2025-11-08T00:06:52-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-08 00:06:52 [INFO] t=2025-11-08T00:06:52-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-08 00:06:52 [INFO] t=2025-11-08T00:06:52-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-08 00:06:53 [INFO] t=2025-11-08T00:06:53-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-08 00:06:53 [INFO] t=2025-11-08T00:06:53-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-08 00:06:53 [INFO] t=2025-11-08T00:06:53-0300 lvl=info msg=start pg=/api/tunnels id=612df450d839c013
+2025-11-08 00:06:53 [INFO] t=2025-11-08T00:06:53-0300 lvl=info msg=end pg=/api/tunnels id=612df450d839c013 status=200 dur=0s
+2025-11-08 00:06:53 [INFO] t=2025-11-08T00:06:53-0300 lvl=info msg=start pg=/api/tunnels id=a0da5219555a330b
+2025-11-08 00:06:53 [INFO] t=2025-11-08T00:06:53-0300 lvl=info msg=end pg=/api/tunnels id=a0da5219555a330b status=200 dur=0s
+2025-11-08 00:06:53 [INFO] t=2025-11-08T00:06:53-0300 lvl=info msg=start pg=/api/tunnels id=be7731b8f5400a05
+2025-11-08 00:06:53 [INFO] t=2025-11-08T00:06:53-0300 lvl=info msg=end pg=/api/tunnels id=be7731b8f5400a05 status=200 dur=57.3¬µs
+2025-11-08 00:06:53 [INFO] t=2025-11-08T00:06:53-0300 lvl=info msg=start pg=/api/tunnels id=0f0c97a697a49320
+2025-11-08 00:06:53 [INFO] t=2025-11-08T00:06:53-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-30db2d3a-b8ed-4d6a-a64c-5b6537ff3a80 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-08 00:06:53 [INFO] t=2025-11-08T00:06:53-0300 lvl=info msg=end pg=/api/tunnels id=0f0c97a697a49320 status=201 dur=339.372ms
+2025-11-08 00:06:53 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-08 00:06:53 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-08 00:09:32 [INFO] t=2025-11-08T00:09:32-0300 lvl=info msg="join connections" obj=join id=3a3afc39aad5 l=127.0.0.1:5000 r=35.187.134.171:53261
+2025-11-08 00:09:32 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-08T03:09:30.222Z', 'Direcci\xf3n de correo electr\xf3nico': 'rodrigo.palivoda@estudiantes.utec.edu.uy', 'Nombre completo:': 'el Rodri bien Peola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': "tesn'ologo inform'atico", 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Investigador/a', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'aaaaaa', 'Breve descripci\xf3n del proyecto': 'bbbbbb', 'Seleccione el tipo de solicitud': 'Asistencia t\xe9cnica (de equipamiento u otro)', 'Seleccione la herramienta, material o servicio que desea utilizar:': '', 'Material a utilizar': '', 'Origen del material': '', 'Cantidad de prototipos a fabricar:': '', 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios:  (justificaci\xf3n de uso)': '', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-09T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': '3.5', 'Otros comentarios': 'other commits'}
+2025-11-08 00:09:32 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-08 00:09:32 [INFO] 127.0.0.1 - - [08/Nov/2025 00:09:32] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-08 00:21:34 [INFO] t=2025-11-08T00:21:34-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-08 00:21:34 [INFO] t=2025-11-08T00:21:34-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-08 00:21:34 [INFO] t=2025-11-08T00:21:34-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=e16f5e9954f2 err="reconnecting session closed"
+2025-11-08 00:21:34 [INFO] t=2025-11-08T00:21:34-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=b6b88e417e3396bae8aec6304d2bc96c
+2025-11-08 00:21:34 [WARNING] t=2025-11-08T00:21:34-0300 lvl=warn msg="Stopping forwarder" name=http-5000-30db2d3a-b8ed-4d6a-a64c-5b6537ff3a80 acceptErr="failed to accept connection: Listener closed"
+2025-11-08 00:21:34 [INFO] t=2025-11-08T00:21:34-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-08 00:23:22 [INFO] Opening tunnel named: http-5000-1e39ef19-506b-4519-838e-8f91cb228a7e
+2025-11-08 00:23:22 [INFO] t=2025-11-08T00:23:22-0300 lvl=info msg="no configuration paths supplied"
+2025-11-08 00:23:22 [INFO] t=2025-11-08T00:23:22-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-08 00:23:22 [INFO] t=2025-11-08T00:23:22-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-08 00:23:22 [INFO] t=2025-11-08T00:23:22-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-08 00:23:22 [INFO] t=2025-11-08T00:23:22-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-08 00:23:22 [INFO] t=2025-11-08T00:23:22-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-08 00:23:22 [INFO] t=2025-11-08T00:23:22-0300 lvl=info msg=start pg=/api/tunnels id=6fd65a51fbed1432
+2025-11-08 00:23:22 [INFO] t=2025-11-08T00:23:22-0300 lvl=info msg=end pg=/api/tunnels id=6fd65a51fbed1432 status=200 dur=0s
+2025-11-08 00:23:22 [INFO] t=2025-11-08T00:23:22-0300 lvl=info msg=start pg=/api/tunnels id=02026748261e44f6
+2025-11-08 00:23:22 [INFO] t=2025-11-08T00:23:22-0300 lvl=info msg=end pg=/api/tunnels id=02026748261e44f6 status=200 dur=0s
+2025-11-08 00:23:22 [INFO] t=2025-11-08T00:23:22-0300 lvl=info msg=start pg=/api/tunnels id=88e6711e1e86747a
+2025-11-08 00:23:22 [INFO] t=2025-11-08T00:23:22-0300 lvl=info msg=end pg=/api/tunnels id=88e6711e1e86747a status=200 dur=0s
+2025-11-08 00:23:22 [INFO] t=2025-11-08T00:23:22-0300 lvl=info msg=start pg=/api/tunnels id=32c82398302760cd
+2025-11-08 00:23:23 [INFO] t=2025-11-08T00:23:23-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-1e39ef19-506b-4519-838e-8f91cb228a7e addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-08 00:23:23 [INFO] t=2025-11-08T00:23:23-0300 lvl=info msg=end pg=/api/tunnels id=32c82398302760cd status=201 dur=327.7464ms
+2025-11-08 00:23:23 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-08 00:23:23 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-08 00:24:01 [INFO] t=2025-11-08T00:24:01-0300 lvl=info msg="join connections" obj=join id=98d73ee5156c l=127.0.0.1:5000 r=35.187.143.8:55997
+2025-11-08 00:24:01 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-08T03:23:56.638Z', 'Direcci\xf3n de correo electr\xf3nico': 'rodrigo.palivoda@estudiantes.utec.edu.uy', 'Nombre completo:': 'el Rodri bien Peola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'utec', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Emprendedor/a', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'aaaaa', 'Breve descripci\xf3n del proyecto': 'bbbbbb', 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Lab. biomateriales (hornalla, ollas, etc)', 'Material a utilizar': 'PLA (Filamento de mayor uso)', 'Origen del material': 'Aporte de IDEI', 'Cantidad de prototipos a fabricar:': 4, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios:  (justificaci\xf3n de uso)': "pa prob'a", 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-14T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': 4, 'Otros comentarios': 'otros comentarios'}
+2025-11-08 00:24:01 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-08 00:24:01 [INFO] 127.0.0.1 - - [08/Nov/2025 00:24:01] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-08 00:25:46 [INFO] t=2025-11-08T00:25:46-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-08 00:25:46 [INFO] t=2025-11-08T00:25:46-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-08 00:26:53 [INFO] Opening tunnel named: http-5000-cd35d72e-1fed-477a-b71f-7902b3f38084
+2025-11-08 00:26:53 [INFO] t=2025-11-08T00:26:53-0300 lvl=info msg="no configuration paths supplied"
+2025-11-08 00:26:53 [INFO] t=2025-11-08T00:26:53-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-08 00:26:53 [INFO] t=2025-11-08T00:26:53-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-08 00:26:53 [INFO] t=2025-11-08T00:26:53-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-08 00:26:53 [INFO] t=2025-11-08T00:26:53-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-08 00:26:53 [INFO] t=2025-11-08T00:26:53-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-08 00:26:53 [INFO] t=2025-11-08T00:26:53-0300 lvl=info msg=start pg=/api/tunnels id=25f505190ebdd32f
+2025-11-08 00:26:53 [INFO] t=2025-11-08T00:26:53-0300 lvl=info msg=end pg=/api/tunnels id=25f505190ebdd32f status=200 dur=0s
+2025-11-08 00:26:53 [INFO] t=2025-11-08T00:26:53-0300 lvl=info msg=start pg=/api/tunnels id=e3093903f127ccde
+2025-11-08 00:26:53 [INFO] t=2025-11-08T00:26:53-0300 lvl=info msg=end pg=/api/tunnels id=e3093903f127ccde status=200 dur=98.9¬µs
+2025-11-08 00:26:53 [INFO] t=2025-11-08T00:26:53-0300 lvl=info msg=start pg=/api/tunnels id=1b001ba05472f4bd
+2025-11-08 00:26:53 [INFO] t=2025-11-08T00:26:53-0300 lvl=info msg=end pg=/api/tunnels id=1b001ba05472f4bd status=200 dur=0s
+2025-11-08 00:26:53 [INFO] t=2025-11-08T00:26:53-0300 lvl=info msg=start pg=/api/tunnels id=47227c87ecc5d7ee
+2025-11-08 00:26:54 [INFO] t=2025-11-08T00:26:54-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-cd35d72e-1fed-477a-b71f-7902b3f38084 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-08 00:26:54 [INFO] t=2025-11-08T00:26:54-0300 lvl=info msg=end pg=/api/tunnels id=47227c87ecc5d7ee status=201 dur=337.3686ms
+2025-11-08 00:26:54 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-08 00:26:54 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-08 00:27:52 [INFO] t=2025-11-08T00:27:52-0300 lvl=info msg="join connections" obj=join id=1fff13e6ef21 l=127.0.0.1:5000 r=35.187.133.170:45751
+2025-11-08 00:27:52 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-08T03:27:49.780Z', 'Direcci\xf3n de correo electr\xf3nico': 'rodrigo.palivoda@estudiantes.utec.edu.uy', 'Nombre completo:': 'el Rodri bien Peola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'uteS', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Emprendedor/a', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'aaaaa', 'Breve descripci\xf3n del proyecto': 'bbbbbb', 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Lab. biomateriales (hornalla, ollas, etc)', 'Material a utilizar': 'PLA (Filamento de mayor uso)', 'Origen del material': 'Aporte de IDEI', 'Cantidad de prototipos a fabricar:': 4, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios:  (justificaci\xf3n de uso)': "pa prob'a", 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-14T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': 4, 'Otros comentarios': 'otros comentarios'}
+2025-11-08 00:27:52 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-08 00:27:52 [INFO] 127.0.0.1 - - [08/Nov/2025 00:27:52] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-08 00:33:24 [INFO] t=2025-11-08T00:33:24-0300 lvl=info msg="join connections" obj=join id=409e25f5360c l=127.0.0.1:5000 r=35.187.133.165:36293
+2025-11-08 00:33:24 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-08T03:33:21.077Z', 'Direcci\xf3n de correo electr\xf3nico': 'rodrigo.palivoda@estudiantes.utec.edu.uy', 'Nombre completo:': 'el Rodri bien Peola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'uteS', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Emprendedor/a', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'aaaaaaasdfsdf', 'Breve descripci\xf3n del proyecto': 'bbbbbb', 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Lab. biomateriales (hornalla, ollas, etc)', 'Material a utilizar': 'PLA (Filamento de mayor uso)', 'Origen del material': 'Aporte de IDEI', 'Cantidad de prototipos a fabricar:': 4, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios:  (justificaci\xf3n de uso)': "pa prob'a", 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-14T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': 4, 'Otros comentarios': 'otros comentarios'}
+2025-11-08 00:33:24 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-08 00:33:24 [INFO] 127.0.0.1 - - [08/Nov/2025 00:33:24] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-08 00:41:44 [INFO] t=2025-11-08T00:41:44-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-08 00:41:44 [INFO] t=2025-11-08T00:41:44-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-08 00:41:44 [INFO] t=2025-11-08T00:41:44-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=a7317b657017 err="reconnecting session closed"
+2025-11-08 00:41:44 [INFO] t=2025-11-08T00:41:44-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=744e98c06310e560e6855b052df7db19
+2025-11-08 00:41:44 [WARNING] t=2025-11-08T00:41:44-0300 lvl=warn msg="Stopping forwarder" name=http-5000-cd35d72e-1fed-477a-b71f-7902b3f38084 acceptErr="failed to accept connection: Listener closed"
+2025-11-08 00:41:44 [INFO] t=2025-11-08T00:41:44-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-08 00:41:44 [WARNING] t=2025-11-08T00:41:44-0300 lvl=warn msg="Error restarting forwarder" name=http-5000-cd35d72e-1fed-477a-b71f-7902b3f38084 err="failed to start tunnel: session closed"
+2025-11-21 03:32:16 [INFO] Opening tunnel named: http-5000-057af81c-7c94-46ef-a153-9cd39b465bf1
+2025-11-21 03:32:16 [INFO] t=2025-11-21T03:32:16-0300 lvl=info msg="no configuration paths supplied"
+2025-11-21 03:32:16 [INFO] t=2025-11-21T03:32:16-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-21 03:32:16 [INFO] t=2025-11-21T03:32:16-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-21 03:32:16 [INFO] t=2025-11-21T03:32:16-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-21 03:32:16 [INFO] t=2025-11-21T03:32:16-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-21 03:32:16 [INFO] t=2025-11-21T03:32:16-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-21 03:32:16 [INFO] t=2025-11-21T03:32:16-0300 lvl=info msg=start pg=/api/tunnels id=851967d4fb849ac7
+2025-11-21 03:32:16 [INFO] t=2025-11-21T03:32:16-0300 lvl=info msg=end pg=/api/tunnels id=851967d4fb849ac7 status=200 dur=513.5¬µs
+2025-11-21 03:32:16 [INFO] t=2025-11-21T03:32:16-0300 lvl=info msg=start pg=/api/tunnels id=2fe63ec5969156c9
+2025-11-21 03:32:16 [INFO] t=2025-11-21T03:32:16-0300 lvl=info msg=end pg=/api/tunnels id=2fe63ec5969156c9 status=200 dur=0s
+2025-11-21 03:32:16 [INFO] t=2025-11-21T03:32:16-0300 lvl=info msg=start pg=/api/tunnels id=e7f80c437e581b02
+2025-11-21 03:32:16 [INFO] t=2025-11-21T03:32:16-0300 lvl=info msg=end pg=/api/tunnels id=e7f80c437e581b02 status=200 dur=0s
+2025-11-21 03:32:16 [INFO] t=2025-11-21T03:32:16-0300 lvl=info msg=start pg=/api/tunnels id=a64b42897e8f43f5
+2025-11-21 03:32:17 [INFO] t=2025-11-21T03:32:17-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-057af81c-7c94-46ef-a153-9cd39b465bf1 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-21 03:32:17 [INFO] t=2025-11-21T03:32:17-0300 lvl=info msg=end pg=/api/tunnels id=a64b42897e8f43f5 status=201 dur=405.3093ms
+2025-11-21 03:32:17 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-21 03:32:17 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-21 03:32:19 [INFO] t=2025-11-21T03:32:19-0300 lvl=info msg="update available" obj=updater
+2025-11-21 03:35:20 [INFO] t=2025-11-21T03:35:20-0300 lvl=info msg="join connections" obj=join id=f3a2bdb133d3 l=127.0.0.1:5000 r=35.187.134.169:36014
+2025-11-21 03:35:20 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-21T06:35:15.795Z', 'Direcci\xf3n de correo electr\xf3nico': 'elrodri@gmail.com', 'Nombre completo:': 'El Rodri Bien Piola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'A Una', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Docente', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'El Proy Ecto', 'Breve descripci\xf3n del proyecto': "Ni yo s'e qu'e hace", 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Corte l\xe1ser', 'Material a utilizar': 'MDF', 'Origen del material': 'Aporte de IDEI', 'Cantidad de prototipos a fabricar:': 77, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios:  (justificaci\xf3n de uso)': 'Pa hacer el proyecto', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-26T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': '3.5', 'Otros comentarios': 'Y naa'}
+2025-11-21 03:35:20 [ERROR] \u274c Error al insertar en la base de datos: name 'name_value' is not defined
+2025-11-21 03:35:20 [INFO] 127.0.0.1 - - [21/Nov/2025 03:35:20] "[35m[1mPOST /api/nuevo_proyecto HTTP/1.1[0m" 500 -
+2025-11-21 03:39:11 [INFO] t=2025-11-21T03:39:11-0300 lvl=info msg="join connections" obj=join id=e83b5383e137 l=127.0.0.1:5000 r=34.116.22.109:50213
+2025-11-21 03:39:11 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-21T06:39:07.733Z', 'Direcci\xf3n de correo electr\xf3nico': 'elrodri@gmail.com', 'Nombre completo:': 'El Rodri Bien Piola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'A Una', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Docente', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'El Proy Ecto', 'Breve descripci\xf3n del proyecto': "Ni yo s'e qu'e hace", 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Herramientas manuales', 'Material a utilizar': 'MDF', 'Origen del material': 'Aporte de IDEI', 'Cantidad de prototipos a fabricar:': 77, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios:  (justificaci\xf3n de uso)': 'Pa hacer el proyecto', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-26T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': '3.5', 'Otros comentarios': 'Y naa'}
+2025-11-21 03:39:11 [ERROR] \u274c Error al insertar en la base de datos: name 'name_value' is not defined
+2025-11-21 03:39:11 [INFO] 127.0.0.1 - - [21/Nov/2025 03:39:11] "[35m[1mPOST /api/nuevo_proyecto HTTP/1.1[0m" 500 -
+2025-11-21 03:39:43 [INFO] t=2025-11-21T03:39:43-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-21 03:39:43 [INFO] t=2025-11-21T03:39:43-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-21 03:39:43 [INFO] t=2025-11-21T03:39:43-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=e2996edc6154 err="reconnecting session closed"
+2025-11-21 03:39:43 [INFO] t=2025-11-21T03:39:43-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-21 03:39:43 [INFO] t=2025-11-21T03:39:43-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=cd6727a2bec57d0f221fe4dd009b3885
+2025-11-21 03:39:43 [WARNING] t=2025-11-21T03:39:43-0300 lvl=warn msg="Stopping forwarder" name=http-5000-057af81c-7c94-46ef-a153-9cd39b465bf1 acceptErr="failed to accept connection: Listener closed"
+2025-11-21 03:40:52 [INFO] Opening tunnel named: http-5000-06377188-5e91-4d11-94a8-5fbeca0624b7
+2025-11-21 03:40:52 [INFO] t=2025-11-21T03:40:52-0300 lvl=info msg="no configuration paths supplied"
+2025-11-21 03:40:52 [INFO] t=2025-11-21T03:40:52-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-21 03:40:52 [INFO] t=2025-11-21T03:40:52-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-21 03:40:52 [INFO] t=2025-11-21T03:40:52-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-21 03:40:53 [INFO] t=2025-11-21T03:40:53-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-21 03:40:53 [INFO] t=2025-11-21T03:40:53-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-21 03:40:53 [INFO] t=2025-11-21T03:40:53-0300 lvl=info msg=start pg=/api/tunnels id=b5c82576ffe893df
+2025-11-21 03:40:53 [INFO] t=2025-11-21T03:40:53-0300 lvl=info msg=end pg=/api/tunnels id=b5c82576ffe893df status=200 dur=0s
+2025-11-21 03:40:53 [INFO] t=2025-11-21T03:40:53-0300 lvl=info msg=start pg=/api/tunnels id=4423c611a1997f36
+2025-11-21 03:40:53 [INFO] t=2025-11-21T03:40:53-0300 lvl=info msg=end pg=/api/tunnels id=4423c611a1997f36 status=200 dur=0s
+2025-11-21 03:40:53 [INFO] t=2025-11-21T03:40:53-0300 lvl=info msg=start pg=/api/tunnels id=e3bed420f607c318
+2025-11-21 03:40:53 [INFO] t=2025-11-21T03:40:53-0300 lvl=info msg=end pg=/api/tunnels id=e3bed420f607c318 status=200 dur=0s
+2025-11-21 03:40:53 [INFO] t=2025-11-21T03:40:53-0300 lvl=info msg=start pg=/api/tunnels id=a47b5f5d4c3f5746
+2025-11-21 03:40:53 [INFO] t=2025-11-21T03:40:53-0300 lvl=info msg="update available" obj=updater
+2025-11-21 03:40:53 [INFO] t=2025-11-21T03:40:53-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-06377188-5e91-4d11-94a8-5fbeca0624b7 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-21 03:40:53 [INFO] t=2025-11-21T03:40:53-0300 lvl=info msg=end pg=/api/tunnels id=a47b5f5d4c3f5746 status=201 dur=332.6442ms
+2025-11-21 03:40:53 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-21 03:40:53 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-21 03:41:37 [INFO] t=2025-11-21T03:41:37-0300 lvl=info msg="join connections" obj=join id=31f50cf84e02 l=127.0.0.1:5000 r=107.178.192.41:52924
+2025-11-21 03:41:37 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-21T06:41:32.807Z', 'Direcci\xf3n de correo electr\xf3nico': 'elrodri@gmail.com', 'Nombre completo:': 'El Rodri Bien Piola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'A Una', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Docente', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'El Proy Ecto', 'Breve descripci\xf3n del proyecto': "Ni yo s'e qu'e hace", 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Fresadora CNC de circuitos', 'Material a utilizar': 'MDF', 'Origen del material': 'Aporte de IDEI', 'Cantidad de prototipos a fabricar:': 77, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios:  (justificaci\xf3n de uso)': 'Pa hacer el proyecto', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-26T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': '3.5', 'Otros comentarios': 'Y naa'}
+2025-11-21 03:41:37 [ERROR] \u274c Error al insertar en la base de datos: óÒ"id"ÇÕë∂ç›ÇµÇ‹ÇπÇÒ
+LINE 1: INSERT INTO herramienta (nombre) VALUES ($1) RETURNING id;
+                                                               ^
+2025-11-21 03:41:37 [INFO] 127.0.0.1 - - [21/Nov/2025 03:41:37] "[35m[1mPOST /api/nuevo_proyecto HTTP/1.1[0m" 500 -
+2025-11-21 03:43:08 [INFO] t=2025-11-21T03:43:08-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-21 03:43:08 [INFO] t=2025-11-21T03:43:08-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-21 03:43:08 [INFO] t=2025-11-21T03:43:08-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=e9be91b24fc9 err="reconnecting session closed"
+2025-11-21 03:43:08 [INFO] t=2025-11-21T03:43:08-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-21 03:43:38 [INFO] Opening tunnel named: http-5000-61fea689-9d4d-4c55-a8b6-a0bcc2d4ea63
+2025-11-21 03:43:38 [INFO] t=2025-11-21T03:43:38-0300 lvl=info msg="no configuration paths supplied"
+2025-11-21 03:43:38 [INFO] t=2025-11-21T03:43:38-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-21 03:43:38 [INFO] t=2025-11-21T03:43:38-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-21 03:43:38 [INFO] t=2025-11-21T03:43:38-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-21 03:43:39 [INFO] t=2025-11-21T03:43:39-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-21 03:43:39 [INFO] t=2025-11-21T03:43:39-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-21 03:43:39 [INFO] t=2025-11-21T03:43:39-0300 lvl=info msg=start pg=/api/tunnels id=e8452a0e52c53f22
+2025-11-21 03:43:39 [INFO] t=2025-11-21T03:43:39-0300 lvl=info msg=end pg=/api/tunnels id=e8452a0e52c53f22 status=200 dur=0s
+2025-11-21 03:43:39 [INFO] t=2025-11-21T03:43:39-0300 lvl=info msg=start pg=/api/tunnels id=e646fd1981aae07a
+2025-11-21 03:43:39 [INFO] t=2025-11-21T03:43:39-0300 lvl=info msg=end pg=/api/tunnels id=e646fd1981aae07a status=200 dur=0s
+2025-11-21 03:43:39 [INFO] t=2025-11-21T03:43:39-0300 lvl=info msg=start pg=/api/tunnels id=f76dcd35a2a20b63
+2025-11-21 03:43:39 [INFO] t=2025-11-21T03:43:39-0300 lvl=info msg=end pg=/api/tunnels id=f76dcd35a2a20b63 status=200 dur=0s
+2025-11-21 03:43:39 [INFO] t=2025-11-21T03:43:39-0300 lvl=info msg=start pg=/api/tunnels id=39eb1ef6958fe1ad
+2025-11-21 03:43:39 [INFO] t=2025-11-21T03:43:39-0300 lvl=info msg="update available" obj=updater
+2025-11-21 03:43:39 [INFO] t=2025-11-21T03:43:39-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-61fea689-9d4d-4c55-a8b6-a0bcc2d4ea63 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-21 03:43:39 [INFO] t=2025-11-21T03:43:39-0300 lvl=info msg=end pg=/api/tunnels id=39eb1ef6958fe1ad status=201 dur=342.6954ms
+2025-11-21 03:43:39 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-21 03:43:39 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-21 03:43:59 [INFO] t=2025-11-21T03:43:59-0300 lvl=info msg="join connections" obj=join id=76860261d0d3 l=127.0.0.1:5000 r=35.187.134.166:39351
+2025-11-21 03:43:59 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-21T06:43:55.747Z', 'Direcci\xf3n de correo electr\xf3nico': 'elrodri@gmail.com', 'Nombre completo:': 'El Rodri Bien Piola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'A Una', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Docente', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'El Proy Ecto', 'Breve descripci\xf3n del proyecto': "Ni yo s'e qu'e hace", 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Router CNC', 'Material a utilizar': 'MDF', 'Origen del material': 'Aporte de IDEI', 'Cantidad de prototipos a fabricar:': 77, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios:  (justificaci\xf3n de uso)': 'Pa hacer el proyecto', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-26T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': '3.5', 'Otros comentarios': 'Y naa'}
+2025-11-21 03:43:59 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-21 03:43:59 [INFO] 127.0.0.1 - - [21/Nov/2025 03:43:59] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-21 03:46:39 [INFO] t=2025-11-21T03:46:39-0300 lvl=info msg="join connections" obj=join id=f3b04b014c0f l=127.0.0.1:5000 r=107.178.192.11:54814
+2025-11-21 03:46:39 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-21T06:46:36.375Z', 'Direcci\xf3n de correo electr\xf3nico': 'elrodri@gmail.com', 'Nombre completo:': 'El Rodri Bien Piola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'A Una', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Docente', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'El Proy Ecto', 'Breve descripci\xf3n del proyecto': "Ni yo s'e qu'e hace", 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Router CNC', 'Material a utilizar': 'MDF', 'Origen del material': 'Aporte de IDEI', 'Cantidad de prototipos a fabricar:': 77, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios:  (justificaci\xf3n de uso)': 'Pa hacer el proyecto', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-19T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': '3.5', 'Otros comentarios': 'Y naa'}
+2025-11-21 03:46:39 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-21 03:46:39 [INFO] 127.0.0.1 - - [21/Nov/2025 03:46:39] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-21 03:56:27 [INFO] t=2025-11-21T03:56:27-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-21 03:56:27 [INFO] t=2025-11-21T03:56:27-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-21 03:56:27 [INFO] t=2025-11-21T03:56:27-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=e5b2424d0497 err="reconnecting session closed"
+2025-11-21 03:56:27 [INFO] t=2025-11-21T03:56:27-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=03a244d9b59a7dba880b8d84ce18dfb4
+2025-11-21 03:56:27 [WARNING] t=2025-11-21T03:56:27-0300 lvl=warn msg="Stopping forwarder" name=http-5000-61fea689-9d4d-4c55-a8b6-a0bcc2d4ea63 acceptErr="failed to accept connection: Listener closed"
+2025-11-21 03:56:27 [WARNING] t=2025-11-21T03:56:27-0300 lvl=warn msg="Error restarting forwarder" name=http-5000-61fea689-9d4d-4c55-a8b6-a0bcc2d4ea63 err="failed to start tunnel: session closed"
+2025-11-21 03:56:27 [INFO] t=2025-11-21T03:56:27-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-21 03:56:32 [INFO] Opening tunnel named: http-5000-35ec0d3e-e25a-4e20-bb49-f09789458ce4
+2025-11-21 03:56:32 [INFO] t=2025-11-21T03:56:32-0300 lvl=info msg="no configuration paths supplied"
+2025-11-21 03:56:32 [INFO] t=2025-11-21T03:56:32-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-21 03:56:32 [INFO] t=2025-11-21T03:56:32-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-21 03:56:32 [INFO] t=2025-11-21T03:56:32-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-21 03:56:33 [INFO] t=2025-11-21T03:56:33-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-21 03:56:33 [INFO] t=2025-11-21T03:56:33-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-21 03:56:33 [INFO] t=2025-11-21T03:56:33-0300 lvl=info msg="update available" obj=updater
+2025-11-21 03:56:33 [INFO] t=2025-11-21T03:56:33-0300 lvl=info msg=start pg=/api/tunnels id=6cc88ee4b980e81d
+2025-11-21 03:56:33 [INFO] t=2025-11-21T03:56:33-0300 lvl=info msg=end pg=/api/tunnels id=6cc88ee4b980e81d status=200 dur=0s
+2025-11-21 03:56:33 [INFO] t=2025-11-21T03:56:33-0300 lvl=info msg=start pg=/api/tunnels id=c925ebc8c4deb65a
+2025-11-21 03:56:33 [INFO] t=2025-11-21T03:56:33-0300 lvl=info msg=end pg=/api/tunnels id=c925ebc8c4deb65a status=200 dur=0s
+2025-11-21 03:56:33 [INFO] t=2025-11-21T03:56:33-0300 lvl=info msg=start pg=/api/tunnels id=ec2299cb21c88ea4
+2025-11-21 03:56:33 [INFO] t=2025-11-21T03:56:33-0300 lvl=info msg=end pg=/api/tunnels id=ec2299cb21c88ea4 status=200 dur=0s
+2025-11-21 03:56:33 [INFO] t=2025-11-21T03:56:33-0300 lvl=info msg=start pg=/api/tunnels id=fe5ca1417d6b2846
+2025-11-21 03:56:33 [INFO] t=2025-11-21T03:56:33-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-35ec0d3e-e25a-4e20-bb49-f09789458ce4 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-21 03:56:33 [INFO] t=2025-11-21T03:56:33-0300 lvl=info msg=end pg=/api/tunnels id=fe5ca1417d6b2846 status=201 dur=362.0597ms
+2025-11-21 03:56:33 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-21 03:56:33 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-21 03:57:06 [INFO] t=2025-11-21T03:57:06-0300 lvl=info msg="join connections" obj=join id=188296fa9704 l=127.0.0.1:5000 r=34.116.22.108:37732
+2025-11-21 03:57:06 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-21T06:57:03.915Z', 'Direcci\xf3n de correo electr\xf3nico': 'elrodri@gmail.com', 'Nombre completo:': 'El Rodri Bien Piola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'A Una', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Docente', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'El Proy Esto', 'Breve descripci\xf3n del proyecto': "Ni yo s'e qu'e hace", 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Router CNC', 'Material a utilizar': 'MDF', 'Origen del material': 'Aporte de IDEI', 'Cantidad de prototipos a fabricar:': 77, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios: (justificaci\xf3n de uso)': 'Pa hacer el proyecto', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-20T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': '3.5', 'Otros comentarios': 'Y naa'}
+2025-11-21 03:57:07 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-21 03:57:07 [INFO] 127.0.0.1 - - [21/Nov/2025 03:57:07] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-21 03:59:20 [INFO] t=2025-11-21T03:59:20-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-21 03:59:20 [INFO] t=2025-11-21T03:59:20-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-21 03:59:20 [INFO] t=2025-11-21T03:59:20-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=610cf5ddceb5 err="reconnecting session closed"
+2025-11-21 04:04:25 [INFO] Opening tunnel named: http-5000-46c56621-62dc-4514-986f-292639b91223
+2025-11-21 04:04:25 [INFO] t=2025-11-21T04:04:25-0300 lvl=info msg="no configuration paths supplied"
+2025-11-21 04:04:25 [INFO] t=2025-11-21T04:04:25-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-21 04:04:25 [INFO] t=2025-11-21T04:04:25-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-21 04:04:25 [INFO] t=2025-11-21T04:04:25-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-21 04:04:26 [INFO] t=2025-11-21T04:04:26-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-21 04:04:26 [INFO] t=2025-11-21T04:04:26-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-21 04:04:26 [INFO] t=2025-11-21T04:04:26-0300 lvl=info msg=start pg=/api/tunnels id=fe66ca8edac78510
+2025-11-21 04:04:26 [INFO] t=2025-11-21T04:04:26-0300 lvl=info msg=end pg=/api/tunnels id=fe66ca8edac78510 status=200 dur=0s
+2025-11-21 04:04:26 [INFO] t=2025-11-21T04:04:26-0300 lvl=info msg=start pg=/api/tunnels id=63327934a84afb63
+2025-11-21 04:04:26 [INFO] t=2025-11-21T04:04:26-0300 lvl=info msg=end pg=/api/tunnels id=63327934a84afb63 status=200 dur=0s
+2025-11-21 04:04:26 [INFO] t=2025-11-21T04:04:26-0300 lvl=info msg=start pg=/api/tunnels id=5423ea2e64d4716c
+2025-11-21 04:04:26 [INFO] t=2025-11-21T04:04:26-0300 lvl=info msg=end pg=/api/tunnels id=5423ea2e64d4716c status=200 dur=0s
+2025-11-21 04:04:26 [INFO] t=2025-11-21T04:04:26-0300 lvl=info msg=start pg=/api/tunnels id=dc454aa6d256629a
+2025-11-21 04:04:26 [INFO] t=2025-11-21T04:04:26-0300 lvl=info msg="update available" obj=updater
+2025-11-21 04:04:26 [INFO] t=2025-11-21T04:04:26-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-46c56621-62dc-4514-986f-292639b91223 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-21 04:04:26 [INFO] t=2025-11-21T04:04:26-0300 lvl=info msg=end pg=/api/tunnels id=dc454aa6d256629a status=201 dur=352.5388ms
+2025-11-21 04:04:26 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-21 04:04:26 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-21 04:05:20 [INFO] t=2025-11-21T04:05:20-0300 lvl=info msg="join connections" obj=join id=34bd184469c3 l=127.0.0.1:5000 r=34.116.22.105:44132
+2025-11-21 04:05:20 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-21T07:05:16.174Z', 'Direcci\xf3n de correo electr\xf3nico': 'elrodri@gmail.com', 'Nombre completo:': 'El Rodri Bien Piola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'A Una', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Docente', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'El Proy Esto', 'Breve descripci\xf3n del proyecto': "Ni yo s'e qu'e hacee", 'Seleccione el tipo de solicitud': 'Asistencia t\xe9cnica (de equipamiento u otro)', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Router CNC', 'Material a utilizar': 'MDF', 'Origen del material': 'Aporte de IDEI', 'Cantidad de prototipos a fabricar:': 77, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios: (justificaci\xf3n de uso)': 'Pa hacer el proyecto', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-25T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': '3.5', 'Otros comentarios': 'Y naa'}
+2025-11-21 04:05:20 [ERROR] Exception on /api/nuevo_proyecto [POST]
+Traceback (most recent call last):
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\LabA\server.py", line 99, in nuevo_proyecto
+    fecha_necesidad = parse_date(str(row.get("Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)")))
+                                     ^^^
+NameError: name 'row' is not defined. Did you mean: 'pow'?
+2025-11-21 04:05:20 [INFO] 127.0.0.1 - - [21/Nov/2025 04:05:20] "[35m[1mPOST /api/nuevo_proyecto HTTP/1.1[0m" 500 -
+2025-11-21 04:06:36 [INFO] t=2025-11-21T04:06:36-0300 lvl=info msg="join connections" obj=join id=ad3d791e6a16 l=127.0.0.1:5000 r=34.116.22.108:48819
+2025-11-21 04:06:36 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-21T07:06:32.933Z', 'Direcci\xf3n de correo electr\xf3nico': 'elrodri@gmail.com', 'Nombre completo:': 'El Rodri Bien Piola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'A Una', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Estudiante', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'El Proy Esto', 'Breve descripci\xf3n del proyecto': "Ni yo s'e qu'e haceeee0", 'Seleccione el tipo de solicitud': 'Asistencia t\xe9cnica (de equipamiento u otro)', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Router CNC', 'Material a utilizar': 'MDF', 'Origen del material': 'Aporte de IDEI', 'Cantidad de prototipos a fabricar:': 77, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios: (justificaci\xf3n de uso)': 'Pa hacer el proyecto', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-27T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': '3.5', 'Otros comentarios': 'Y naa'}
+2025-11-21 04:06:36 [ERROR] Exception on /api/nuevo_proyecto [POST]
+Traceback (most recent call last):
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\LabA\server.py", line 99, in nuevo_proyecto
+    fecha_necesidad = parse_date(str(row.get("Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)")))
+                                     ^^^
+NameError: name 'row' is not defined. Did you mean: 'pow'?
+2025-11-21 04:06:36 [INFO] 127.0.0.1 - - [21/Nov/2025 04:06:36] "[35m[1mPOST /api/nuevo_proyecto HTTP/1.1[0m" 500 -
+2025-11-21 04:08:20 [INFO] t=2025-11-21T04:08:20-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-21 04:08:20 [INFO] t=2025-11-21T04:08:20-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-21 04:08:20 [INFO] t=2025-11-21T04:08:20-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=41b8b3bf6d69 err="reconnecting session closed"
+2025-11-21 04:08:20 [INFO] t=2025-11-21T04:08:20-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-21 04:08:20 [INFO] t=2025-11-21T04:08:20-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=e7fb988082a78f66b490e82d58db2bd7
+2025-11-21 04:08:20 [WARNING] t=2025-11-21T04:08:20-0300 lvl=warn msg="Stopping forwarder" name=http-5000-46c56621-62dc-4514-986f-292639b91223 acceptErr="failed to accept connection: Listener closed"
+2025-11-21 04:08:27 [INFO] Opening tunnel named: http-5000-6e8f6721-e387-4168-bff7-9f670fa2c373
+2025-11-21 04:08:27 [INFO] t=2025-11-21T04:08:27-0300 lvl=info msg="no configuration paths supplied"
+2025-11-21 04:08:27 [INFO] t=2025-11-21T04:08:27-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-21 04:08:27 [INFO] t=2025-11-21T04:08:27-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-21 04:08:27 [INFO] t=2025-11-21T04:08:27-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-21 04:08:28 [INFO] t=2025-11-21T04:08:28-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-21 04:08:28 [INFO] t=2025-11-21T04:08:28-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-21 04:08:28 [INFO] t=2025-11-21T04:08:28-0300 lvl=info msg=start pg=/api/tunnels id=a3227575fc642234
+2025-11-21 04:08:28 [INFO] t=2025-11-21T04:08:28-0300 lvl=info msg=end pg=/api/tunnels id=a3227575fc642234 status=200 dur=0s
+2025-11-21 04:08:28 [INFO] t=2025-11-21T04:08:28-0300 lvl=info msg=start pg=/api/tunnels id=634263ecd42092e7
+2025-11-21 04:08:28 [INFO] t=2025-11-21T04:08:28-0300 lvl=info msg=end pg=/api/tunnels id=634263ecd42092e7 status=200 dur=0s
+2025-11-21 04:08:28 [INFO] t=2025-11-21T04:08:28-0300 lvl=info msg=start pg=/api/tunnels id=2cae0f2036aab85a
+2025-11-21 04:08:28 [INFO] t=2025-11-21T04:08:28-0300 lvl=info msg=end pg=/api/tunnels id=2cae0f2036aab85a status=200 dur=0s
+2025-11-21 04:08:28 [INFO] t=2025-11-21T04:08:28-0300 lvl=info msg=start pg=/api/tunnels id=1ec99a4d0b0723dc
+2025-11-21 04:08:28 [INFO] t=2025-11-21T04:08:28-0300 lvl=info msg="update available" obj=updater
+2025-11-21 04:08:28 [INFO] t=2025-11-21T04:08:28-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-6e8f6721-e387-4168-bff7-9f670fa2c373 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-21 04:08:28 [INFO] t=2025-11-21T04:08:28-0300 lvl=info msg=end pg=/api/tunnels id=1ec99a4d0b0723dc status=201 dur=372.6053ms
+2025-11-21 04:08:28 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-21 04:08:28 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-21 04:08:57 [INFO] t=2025-11-21T04:08:57-0300 lvl=info msg="join connections" obj=join id=c3e7af07953b l=127.0.0.1:5000 r=34.116.22.108:61497
+2025-11-21 04:08:57 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-21T07:08:52.870Z', 'Direcci\xf3n de correo electr\xf3nico': 'elrodri@gmail.com', 'Nombre completo:': 'El Rodri Bien Piola', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'A Una', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Estudiante', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'El Proy Esto', 'Breve descripci\xf3n del proyecto': "Ni yo s'e qu'e AC", 'Seleccione el tipo de solicitud': 'Asistencia t\xe9cnica (de equipamiento u otro)', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Router CNC', 'Material a utilizar': 'MDF', 'Origen del material': 'Aporte de IDEI', 'Cantidad de prototipos a fabricar:': 77, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios: (justificaci\xf3n de uso)': 'Pa hacer el proyecto', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-27T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': '3.5', 'Otros comentarios': 'Y naa'}
+2025-11-21 04:08:57 [ERROR] Exception on /api/nuevo_proyecto [POST]
+Traceback (most recent call last):
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\LabA\server.py", line 99, in nuevo_proyecto
+    fecha_necesidad = parse_date(str(row.get("Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)")))
+                                     ^^^
+NameError: name 'row' is not defined. Did you mean: 'pow'?
+2025-11-21 04:08:57 [INFO] 127.0.0.1 - - [21/Nov/2025 04:08:57] "[35m[1mPOST /api/nuevo_proyecto HTTP/1.1[0m" 500 -
+2025-11-21 04:14:30 [INFO] t=2025-11-21T04:14:30-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-21 04:14:30 [INFO] t=2025-11-21T04:14:30-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-21 04:14:30 [INFO] t=2025-11-21T04:14:30-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=25029aaed71e err="reconnecting session closed"
+2025-11-21 23:04:40 [INFO] Opening tunnel named: http-5000-5058bd41-a3e8-4c21-bb66-fabde6548ae9
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg="no configuration paths supplied"
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg=start pg=/api/tunnels id=216059b71ff7eb67
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg=end pg=/api/tunnels id=216059b71ff7eb67 status=200 dur=0s
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg=start pg=/api/tunnels id=02a91e761ca8c3ef
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg=end pg=/api/tunnels id=02a91e761ca8c3ef status=200 dur=0s
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg=start pg=/api/tunnels id=c548c047b9f1e78b
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg=end pg=/api/tunnels id=c548c047b9f1e78b status=200 dur=0s
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg=start pg=/api/tunnels id=4582b08aee04f7b5
+2025-11-21 23:04:41 [INFO] t=2025-11-21T23:04:41-0300 lvl=info msg="update available" obj=updater
+2025-11-21 23:04:42 [INFO] t=2025-11-21T23:04:42-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-5058bd41-a3e8-4c21-bb66-fabde6548ae9 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-21 23:04:42 [INFO] t=2025-11-21T23:04:42-0300 lvl=info msg=end pg=/api/tunnels id=4582b08aee04f7b5 status=201 dur=371.3846ms
+2025-11-21 23:04:42 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-21 23:04:42 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-21 23:17:51 [INFO] t=2025-11-21T23:17:51-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-21 23:17:51 [INFO] t=2025-11-21T23:17:51-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-21 23:17:51 [INFO] t=2025-11-21T23:17:51-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=b454013dea7b err="reconnecting session closed"
+2025-11-21 23:17:51 [INFO] t=2025-11-21T23:17:51-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=2e2ba11d767b01ba3f01ca3e2d47a046
+2025-11-21 23:17:51 [WARNING] t=2025-11-21T23:17:51-0300 lvl=warn msg="Stopping forwarder" name=http-5000-5058bd41-a3e8-4c21-bb66-fabde6548ae9 acceptErr="failed to accept connection: Listener closed"
+2025-11-21 23:17:51 [INFO] t=2025-11-21T23:17:51-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-21 23:17:56 [INFO] Opening tunnel named: http-5000-c1a311db-6ead-48db-9aad-618dc99a8f7b
+2025-11-21 23:17:56 [INFO] t=2025-11-21T23:17:56-0300 lvl=info msg="no configuration paths supplied"
+2025-11-21 23:17:56 [INFO] t=2025-11-21T23:17:56-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-21 23:17:56 [INFO] t=2025-11-21T23:17:56-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-21 23:17:56 [INFO] t=2025-11-21T23:17:56-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-21 23:17:57 [INFO] t=2025-11-21T23:17:57-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-21 23:17:57 [INFO] t=2025-11-21T23:17:57-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-21 23:17:57 [INFO] t=2025-11-21T23:17:57-0300 lvl=info msg=start pg=/api/tunnels id=8dfeb1f31a4ffc7a
+2025-11-21 23:17:57 [INFO] t=2025-11-21T23:17:57-0300 lvl=info msg=end pg=/api/tunnels id=8dfeb1f31a4ffc7a status=200 dur=0s
+2025-11-21 23:17:57 [INFO] t=2025-11-21T23:17:57-0300 lvl=info msg=start pg=/api/tunnels id=469b41453b78e559
+2025-11-21 23:17:57 [INFO] t=2025-11-21T23:17:57-0300 lvl=info msg=end pg=/api/tunnels id=469b41453b78e559 status=200 dur=0s
+2025-11-21 23:17:57 [INFO] t=2025-11-21T23:17:57-0300 lvl=info msg=start pg=/api/tunnels id=463ec12cffec2ba7
+2025-11-21 23:17:57 [INFO] t=2025-11-21T23:17:57-0300 lvl=info msg=end pg=/api/tunnels id=463ec12cffec2ba7 status=200 dur=0s
+2025-11-21 23:17:57 [INFO] t=2025-11-21T23:17:57-0300 lvl=info msg=start pg=/api/tunnels id=795be1e0004e75df
+2025-11-21 23:17:57 [INFO] t=2025-11-21T23:17:57-0300 lvl=info msg="update available" obj=updater
+2025-11-21 23:17:57 [INFO] t=2025-11-21T23:17:57-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-c1a311db-6ead-48db-9aad-618dc99a8f7b addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-21 23:17:57 [INFO] t=2025-11-21T23:17:57-0300 lvl=info msg=end pg=/api/tunnels id=795be1e0004e75df status=201 dur=409.626ms
+2025-11-21 23:17:57 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-21 23:17:57 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-21 23:20:32 [INFO] t=2025-11-21T23:20:32-0300 lvl=info msg="join connections" obj=join id=efec850df1e0 l=127.0.0.1:5000 r=35.187.133.167:54545
+2025-11-21 23:20:32 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-22T02:20:27.959Z', 'Direcci\xf3n de correo electr\xf3nico': 'rodrigo.palivoda@estudiantes.utec.edu.uy', 'Nombre completo:': 'elrodiro', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'UTEC', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Investigador/a', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'secreto', 'Breve descripci\xf3n del proyecto': 'es secreto', 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Impresi\xf3n 3D FDM', 'Material a utilizar': 'ABS', 'Origen del material': 'Aporte del solicitante', 'Cantidad de prototipos a fabricar:': 5, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios: (justificaci\xf3n de uso)': 'te dije que es secreto', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-28T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': 4, 'Otros comentarios': 'nada que agregar'}
+2025-11-21 23:20:33 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-21 23:20:33 [INFO] 127.0.0.1 - - [21/Nov/2025 23:20:33] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-21 23:32:45 [INFO] t=2025-11-21T23:32:45-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-21 23:32:45 [INFO] t=2025-11-21T23:32:45-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-21 23:32:45 [INFO] t=2025-11-21T23:32:45-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=b706f8b3f46b err="reconnecting session closed"
+2025-11-21 23:32:45 [INFO] t=2025-11-21T23:32:45-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=4bfe72fb2bf1029cdb7fa1dd3b72b4ff
+2025-11-21 23:36:42 [INFO] Opening tunnel named: http-5000-1ab2d11d-b0b5-4c90-817f-d1ed3d1f4fc6
+2025-11-21 23:36:42 [INFO] t=2025-11-21T23:36:42-0300 lvl=info msg="no configuration paths supplied"
+2025-11-21 23:36:42 [INFO] t=2025-11-21T23:36:42-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-21 23:36:42 [INFO] t=2025-11-21T23:36:42-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-21 23:36:42 [INFO] t=2025-11-21T23:36:42-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-21 23:36:42 [INFO] t=2025-11-21T23:36:42-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-21 23:36:42 [INFO] t=2025-11-21T23:36:42-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-21 23:36:42 [INFO] t=2025-11-21T23:36:42-0300 lvl=info msg=start pg=/api/tunnels id=5125404c2e5a31b0
+2025-11-21 23:36:42 [INFO] t=2025-11-21T23:36:42-0300 lvl=info msg=end pg=/api/tunnels id=5125404c2e5a31b0 status=200 dur=0s
+2025-11-21 23:36:42 [INFO] t=2025-11-21T23:36:42-0300 lvl=info msg=start pg=/api/tunnels id=bf4dd6054948d1e4
+2025-11-21 23:36:42 [INFO] t=2025-11-21T23:36:42-0300 lvl=info msg=end pg=/api/tunnels id=bf4dd6054948d1e4 status=200 dur=0s
+2025-11-21 23:36:42 [INFO] t=2025-11-21T23:36:42-0300 lvl=info msg=start pg=/api/tunnels id=11625a55f5ebc37f
+2025-11-21 23:36:42 [INFO] t=2025-11-21T23:36:42-0300 lvl=info msg=end pg=/api/tunnels id=11625a55f5ebc37f status=200 dur=0s
+2025-11-21 23:36:42 [INFO] t=2025-11-21T23:36:42-0300 lvl=info msg=start pg=/api/tunnels id=d5d7d6cd3ef6d8db
+2025-11-21 23:36:43 [INFO] t=2025-11-21T23:36:43-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-1ab2d11d-b0b5-4c90-817f-d1ed3d1f4fc6 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-21 23:36:43 [INFO] t=2025-11-21T23:36:43-0300 lvl=info msg=end pg=/api/tunnels id=d5d7d6cd3ef6d8db status=201 dur=352.5318ms
+2025-11-21 23:36:43 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-21 23:36:43 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-21 23:36:43 [INFO] t=2025-11-21T23:36:43-0300 lvl=info msg="update available" obj=updater
+2025-11-21 23:37:22 [INFO] t=2025-11-21T23:37:22-0300 lvl=info msg="join connections" obj=join id=1a3bc5fccc3a l=127.0.0.1:5000 r=107.178.192.41:39975
+2025-11-21 23:37:22 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-22T02:37:18.312Z', 'Direcci\xf3n de correo electr\xf3nico': 'rodrigo.palivoda@estudiantes.utec.edu.uy', 'Nombre completo:': 'elrodiro', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'UTEC', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Investigador/a', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'secretinho', 'Breve descripci\xf3n del proyecto': 'es secreto', 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Impresi\xf3n 3D FDM', 'Material a utilizar': 'ABS', 'Origen del material': 'Aporte del solicitante', 'Cantidad de prototipos a fabricar:': 5, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios: (justificaci\xf3n de uso)': 'te dije que es secreto', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-28T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': 4, 'Otros comentarios': 'nada que agregar'}
+2025-11-21 23:37:23 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-21 23:37:23 [INFO] 127.0.0.1 - - [21/Nov/2025 23:37:23] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-21 23:41:57 [INFO] t=2025-11-21T23:41:57-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-21 23:41:57 [INFO] t=2025-11-21T23:41:57-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-21 23:41:57 [INFO] t=2025-11-21T23:41:57-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=a5b6719ca258 err="reconnecting session closed"
+2025-11-21 23:41:57 [INFO] t=2025-11-21T23:41:57-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=8281ad5ffcf82d7260172699bb2c6a2f
+2025-11-21 23:41:57 [INFO] t=2025-11-21T23:41:57-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-21 23:42:52 [INFO] Opening tunnel named: http-5000-d8f39c65-05b1-425e-925b-d351fbf827d9
+2025-11-21 23:42:52 [INFO] t=2025-11-21T23:42:52-0300 lvl=info msg="no configuration paths supplied"
+2025-11-21 23:42:52 [INFO] t=2025-11-21T23:42:52-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-21 23:42:52 [INFO] t=2025-11-21T23:42:52-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-21 23:42:52 [INFO] t=2025-11-21T23:42:52-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-21 23:42:53 [INFO] t=2025-11-21T23:42:53-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-21 23:42:53 [INFO] t=2025-11-21T23:42:53-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-21 23:42:53 [INFO] t=2025-11-21T23:42:53-0300 lvl=info msg=start pg=/api/tunnels id=24d4db166d828042
+2025-11-21 23:42:53 [INFO] t=2025-11-21T23:42:53-0300 lvl=info msg=end pg=/api/tunnels id=24d4db166d828042 status=200 dur=974¬µs
+2025-11-21 23:42:53 [INFO] t=2025-11-21T23:42:53-0300 lvl=info msg=start pg=/api/tunnels id=06d74a888206f000
+2025-11-21 23:42:53 [INFO] t=2025-11-21T23:42:53-0300 lvl=info msg=end pg=/api/tunnels id=06d74a888206f000 status=200 dur=0s
+2025-11-21 23:42:53 [INFO] t=2025-11-21T23:42:53-0300 lvl=info msg=start pg=/api/tunnels id=0c88e620ac99e5cd
+2025-11-21 23:42:53 [INFO] t=2025-11-21T23:42:53-0300 lvl=info msg=end pg=/api/tunnels id=0c88e620ac99e5cd status=200 dur=0s
+2025-11-21 23:42:53 [INFO] t=2025-11-21T23:42:53-0300 lvl=info msg=start pg=/api/tunnels id=d2b273f565b0bb49
+2025-11-21 23:42:53 [INFO] t=2025-11-21T23:42:53-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-d8f39c65-05b1-425e-925b-d351fbf827d9 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-21 23:42:53 [INFO] t=2025-11-21T23:42:53-0300 lvl=info msg=end pg=/api/tunnels id=d2b273f565b0bb49 status=201 dur=350.5195ms
+2025-11-21 23:42:53 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-21 23:42:53 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-21 23:42:53 [INFO] t=2025-11-21T23:42:53-0300 lvl=info msg="update available" obj=updater
+2025-11-21 23:43:16 [INFO] t=2025-11-21T23:43:16-0300 lvl=info msg="join connections" obj=join id=0a42e75c2dd3 l=127.0.0.1:5000 r=107.178.192.198:58647
+2025-11-21 23:43:16 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-22T02:43:11.809Z', 'Direcci\xf3n de correo electr\xf3nico': 'rodrigo.palivoda@estudiantes.utec.edu.uy', 'Nombre completo:': 'elrodiro', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'UTEC', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Investigador/a', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'secretinho newPosta', 'Breve descripci\xf3n del proyecto': 'es secreto', 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Impresi\xf3n 3D FDM', 'Material a utilizar': 'ABS', 'Origen del material': 'Aporte del solicitante', 'Cantidad de prototipos a fabricar:': 5, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios: (justificaci\xf3n de uso)': 'te dije que es secreto', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-28T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': 4, 'Otros comentarios': 'nada que agregar'}
+2025-11-21 23:43:16 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-21 23:43:16 [INFO] 127.0.0.1 - - [21/Nov/2025 23:43:16] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-21 23:44:42 [INFO] t=2025-11-21T23:44:42-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-21 23:44:42 [INFO] t=2025-11-21T23:44:42-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-21 23:44:42 [INFO] t=2025-11-21T23:44:42-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=b4c565eeedad err="reconnecting session closed"
+2025-11-21 23:44:42 [INFO] t=2025-11-21T23:44:42-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-21 23:45:59 [INFO] Opening tunnel named: http-5000-84539d8a-ebaf-4d9e-92ee-9c811bc2f484
+2025-11-21 23:45:59 [INFO] t=2025-11-21T23:45:59-0300 lvl=info msg="no configuration paths supplied"
+2025-11-21 23:45:59 [INFO] t=2025-11-21T23:45:59-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-21 23:45:59 [INFO] t=2025-11-21T23:45:59-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-21 23:45:59 [INFO] t=2025-11-21T23:45:59-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-21 23:46:00 [INFO] t=2025-11-21T23:46:00-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-21 23:46:00 [INFO] t=2025-11-21T23:46:00-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-21 23:46:00 [INFO] t=2025-11-21T23:46:00-0300 lvl=info msg=start pg=/api/tunnels id=bebb0595e9dc8479
+2025-11-21 23:46:00 [INFO] t=2025-11-21T23:46:00-0300 lvl=info msg=end pg=/api/tunnels id=bebb0595e9dc8479 status=200 dur=0s
+2025-11-21 23:46:00 [INFO] t=2025-11-21T23:46:00-0300 lvl=info msg=start pg=/api/tunnels id=adf7a5894ee4d8ac
+2025-11-21 23:46:00 [INFO] t=2025-11-21T23:46:00-0300 lvl=info msg=end pg=/api/tunnels id=adf7a5894ee4d8ac status=200 dur=0s
+2025-11-21 23:46:00 [INFO] t=2025-11-21T23:46:00-0300 lvl=info msg=start pg=/api/tunnels id=9eab55430f702762
+2025-11-21 23:46:00 [INFO] t=2025-11-21T23:46:00-0300 lvl=info msg=end pg=/api/tunnels id=9eab55430f702762 status=200 dur=0s
+2025-11-21 23:46:00 [INFO] t=2025-11-21T23:46:00-0300 lvl=info msg=start pg=/api/tunnels id=b554e49858c4f535
+2025-11-21 23:46:00 [INFO] t=2025-11-21T23:46:00-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-84539d8a-ebaf-4d9e-92ee-9c811bc2f484 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-21 23:46:00 [INFO] t=2025-11-21T23:46:00-0300 lvl=info msg=end pg=/api/tunnels id=b554e49858c4f535 status=201 dur=327.7275ms
+2025-11-21 23:46:00 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-21 23:46:00 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-21 23:46:01 [INFO] t=2025-11-21T23:46:01-0300 lvl=info msg="update available" obj=updater
+2025-11-21 23:46:27 [INFO] t=2025-11-21T23:46:27-0300 lvl=info msg="join connections" obj=join id=5ec856476400 l=127.0.0.1:5000 r=107.178.192.6:53489
+2025-11-21 23:46:27 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-22T02:46:23.153Z', 'Direcci\xf3n de correo electr\xf3nico': 'rodrigo.palivoda@estudiantes.utec.edu.uy', 'Nombre completo:': 'elrodiro', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'UTEC', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Investigador/a', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'secretinho definitivo', 'Breve descripci\xf3n del proyecto': 'es secreto', 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Impresi\xf3n 3D FDM', 'Material a utilizar': 'ABS', 'Origen del material': 'Aporte del solicitante', 'Cantidad de prototipos a fabricar:': 5, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios: (justificaci\xf3n de uso)': 'te dije que es secreto', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-28T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': 4, 'Otros comentarios': 'nada que agregar'}
+2025-11-21 23:46:27 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-21 23:46:27 [INFO] 127.0.0.1 - - [21/Nov/2025 23:46:27] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-21 23:46:58 [INFO] t=2025-11-21T23:46:58-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-21 23:46:58 [INFO] t=2025-11-21T23:46:58-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-21 23:46:58 [INFO] t=2025-11-21T23:46:58-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=eb6cac4fbb85 err="reconnecting session closed"
+2025-11-21 23:46:58 [INFO] t=2025-11-21T23:46:58-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=e2aac909f80ab6fc643202a7c75a473f
+2025-11-21 23:46:58 [WARNING] t=2025-11-21T23:46:58-0300 lvl=warn msg="Stopping forwarder" name=http-5000-84539d8a-ebaf-4d9e-92ee-9c811bc2f484 acceptErr="failed to accept connection: Listener closed"
+2025-11-21 23:46:58 [INFO] t=2025-11-21T23:46:58-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-22 02:42:13 [INFO] Opening tunnel named: http-5000-666378a0-4c9a-44d4-84ea-07730c8a3d33
+2025-11-22 02:42:13 [INFO] t=2025-11-22T02:42:13-0300 lvl=info msg="no configuration paths supplied"
+2025-11-22 02:42:13 [INFO] t=2025-11-22T02:42:13-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-22 02:42:13 [INFO] t=2025-11-22T02:42:13-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-22 02:42:13 [INFO] t=2025-11-22T02:42:13-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-22 02:42:14 [INFO] t=2025-11-22T02:42:14-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-22 02:42:14 [INFO] t=2025-11-22T02:42:14-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-22 02:42:14 [INFO] t=2025-11-22T02:42:14-0300 lvl=info msg=start pg=/api/tunnels id=90be8f15e4964817
+2025-11-22 02:42:14 [INFO] t=2025-11-22T02:42:14-0300 lvl=info msg=end pg=/api/tunnels id=90be8f15e4964817 status=200 dur=512.5¬µs
+2025-11-22 02:42:14 [INFO] t=2025-11-22T02:42:14-0300 lvl=info msg=start pg=/api/tunnels id=867abee7b4e7afed
+2025-11-22 02:42:14 [INFO] t=2025-11-22T02:42:14-0300 lvl=info msg=end pg=/api/tunnels id=867abee7b4e7afed status=200 dur=0s
+2025-11-22 02:42:14 [INFO] t=2025-11-22T02:42:14-0300 lvl=info msg=start pg=/api/tunnels id=821f909b74b0acd4
+2025-11-22 02:42:14 [INFO] t=2025-11-22T02:42:14-0300 lvl=info msg=end pg=/api/tunnels id=821f909b74b0acd4 status=200 dur=0s
+2025-11-22 02:42:14 [INFO] t=2025-11-22T02:42:14-0300 lvl=info msg=start pg=/api/tunnels id=460f8bdfc8fee525
+2025-11-22 02:42:15 [INFO] t=2025-11-22T02:42:15-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-666378a0-4c9a-44d4-84ea-07730c8a3d33 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-22 02:42:15 [INFO] t=2025-11-22T02:42:15-0300 lvl=info msg=end pg=/api/tunnels id=460f8bdfc8fee525 status=201 dur=374.7911ms
+2025-11-22 02:42:15 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-22 02:42:15 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-22 02:42:18 [WARNING] t=2025-11-22T02:42:18-0300 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+2025-11-22 02:42:45 [INFO] 127.0.0.1 - - [22/Nov/2025 02:42:45] "[33mGET / HTTP/1.1[0m" 404 -
+2025-11-22 02:42:46 [INFO] 127.0.0.1 - - [22/Nov/2025 02:42:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-22 02:45:15 [INFO] 127.0.0.1 - - [22/Nov/2025 02:45:15] "[33mGET / HTTP/1.1[0m" 404 -
+2025-11-22 02:46:36 [INFO] 127.0.0.1 - - [22/Nov/2025 02:46:36] "[33mGET / HTTP/1.1[0m" 404 -
+2025-11-22 02:48:45 [INFO] t=2025-11-22T02:48:45-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-22 02:48:45 [INFO] t=2025-11-22T02:48:45-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-22 02:48:45 [INFO] t=2025-11-22T02:48:45-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=af4d38555a61 err="reconnecting session closed"
+2025-11-22 02:49:43 [INFO] Opening tunnel named: http-5000-97ac2ef8-0836-4064-8d2f-d30812d7f7e7
+2025-11-22 02:49:43 [INFO] t=2025-11-22T02:49:43-0300 lvl=info msg="no configuration paths supplied"
+2025-11-22 02:49:43 [INFO] t=2025-11-22T02:49:43-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-22 02:49:43 [INFO] t=2025-11-22T02:49:43-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-22 02:49:43 [INFO] t=2025-11-22T02:49:43-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-22 02:49:43 [INFO] t=2025-11-22T02:49:43-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-22 02:49:43 [INFO] t=2025-11-22T02:49:43-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-22 02:49:44 [INFO] t=2025-11-22T02:49:44-0300 lvl=info msg=start pg=/api/tunnels id=9832bda5d67d7677
+2025-11-22 02:49:44 [INFO] t=2025-11-22T02:49:44-0300 lvl=info msg=end pg=/api/tunnels id=9832bda5d67d7677 status=200 dur=0s
+2025-11-22 02:49:44 [INFO] t=2025-11-22T02:49:44-0300 lvl=info msg=start pg=/api/tunnels id=967446ca49e2f4ec
+2025-11-22 02:49:44 [INFO] t=2025-11-22T02:49:44-0300 lvl=info msg=end pg=/api/tunnels id=967446ca49e2f4ec status=200 dur=0s
+2025-11-22 02:49:44 [INFO] t=2025-11-22T02:49:44-0300 lvl=info msg=start pg=/api/tunnels id=891ca1f5e5720f28
+2025-11-22 02:49:44 [INFO] t=2025-11-22T02:49:44-0300 lvl=info msg=end pg=/api/tunnels id=891ca1f5e5720f28 status=200 dur=0s
+2025-11-22 02:49:44 [INFO] t=2025-11-22T02:49:44-0300 lvl=info msg=start pg=/api/tunnels id=3fc33b126740fde8
+2025-11-22 02:49:44 [INFO] t=2025-11-22T02:49:44-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-97ac2ef8-0836-4064-8d2f-d30812d7f7e7 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-22 02:49:44 [INFO] t=2025-11-22T02:49:44-0300 lvl=info msg=end pg=/api/tunnels id=3fc33b126740fde8 status=201 dur=336.8347ms
+2025-11-22 02:49:44 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-22 02:49:44 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-22 02:49:44 [INFO] t=2025-11-22T02:49:44-0300 lvl=info msg="update available" obj=updater
+2025-11-22 02:49:50 [INFO] 127.0.0.1 - - [22/Nov/2025 02:49:50] "GET / HTTP/1.1" 200 -
+2025-11-22 02:49:50 [INFO] 127.0.0.1 - - [22/Nov/2025 02:49:50] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-11-22 02:59:15 [INFO] 127.0.0.1 - - [22/Nov/2025 02:59:15] "GET / HTTP/1.1" 200 -
+2025-11-22 02:59:15 [INFO] 127.0.0.1 - - [22/Nov/2025 02:59:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-22 02:59:22 [INFO] 127.0.0.1 - - [22/Nov/2025 02:59:22] "GET / HTTP/1.1" 200 -
+2025-11-22 02:59:23 [INFO] 127.0.0.1 - - [22/Nov/2025 02:59:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-22 02:59:27 [INFO] 127.0.0.1 - - [22/Nov/2025 02:59:27] "GET / HTTP/1.1" 200 -
+2025-11-22 02:59:28 [INFO] 127.0.0.1 - - [22/Nov/2025 02:59:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-22 03:01:53 [INFO] t=2025-11-22T03:01:53-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-22 03:01:53 [INFO] t=2025-11-22T03:01:53-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-22 03:01:53 [INFO] t=2025-11-22T03:01:53-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=a90b564bdbed err="reconnecting session closed"
+2025-11-22 03:01:53 [INFO] t=2025-11-22T03:01:53-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=d5cbcc42bff85bfc345321c8844d397c
+2025-11-22 03:01:53 [WARNING] t=2025-11-22T03:01:53-0300 lvl=warn msg="Stopping forwarder" name=http-5000-97ac2ef8-0836-4064-8d2f-d30812d7f7e7 acceptErr="failed to accept connection: Listener closed"
+2025-11-22 03:05:26 [INFO] Opening tunnel named: http-5000-cbe2c001-44bf-4f98-84a2-ad1cd5659aa1
+2025-11-22 03:05:26 [INFO] t=2025-11-22T03:05:26-0300 lvl=info msg="no configuration paths supplied"
+2025-11-22 03:05:26 [INFO] t=2025-11-22T03:05:26-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-22 03:05:26 [INFO] t=2025-11-22T03:05:26-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-22 03:05:26 [INFO] t=2025-11-22T03:05:26-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-22 03:05:27 [INFO] t=2025-11-22T03:05:27-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-22 03:05:27 [INFO] t=2025-11-22T03:05:27-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-22 03:05:27 [INFO] t=2025-11-22T03:05:27-0300 lvl=info msg=start pg=/api/tunnels id=a7e9b774a872e973
+2025-11-22 03:05:27 [INFO] t=2025-11-22T03:05:27-0300 lvl=info msg=end pg=/api/tunnels id=a7e9b774a872e973 status=200 dur=205¬µs
+2025-11-22 03:05:27 [INFO] t=2025-11-22T03:05:27-0300 lvl=info msg=start pg=/api/tunnels id=11e5b2c19faa0da2
+2025-11-22 03:05:27 [INFO] t=2025-11-22T03:05:27-0300 lvl=info msg=end pg=/api/tunnels id=11e5b2c19faa0da2 status=200 dur=0s
+2025-11-22 03:05:27 [INFO] t=2025-11-22T03:05:27-0300 lvl=info msg=start pg=/api/tunnels id=e1e654af43980606
+2025-11-22 03:05:27 [INFO] t=2025-11-22T03:05:27-0300 lvl=info msg=end pg=/api/tunnels id=e1e654af43980606 status=200 dur=0s
+2025-11-22 03:05:27 [INFO] t=2025-11-22T03:05:27-0300 lvl=info msg=start pg=/api/tunnels id=1ecdbd79f265d9d6
+2025-11-22 03:05:27 [INFO] t=2025-11-22T03:05:27-0300 lvl=info msg="update available" obj=updater
+2025-11-22 03:05:27 [INFO] t=2025-11-22T03:05:27-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-cbe2c001-44bf-4f98-84a2-ad1cd5659aa1 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-22 03:05:27 [INFO] t=2025-11-22T03:05:27-0300 lvl=info msg=end pg=/api/tunnels id=1ecdbd79f265d9d6 status=201 dur=327.7308ms
+2025-11-22 03:05:27 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-22 03:05:27 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-22 03:05:41 [INFO] 127.0.0.1 - - [22/Nov/2025 03:05:41] "GET / HTTP/1.1" 200 -
+2025-11-22 03:05:41 [INFO] 127.0.0.1 - - [22/Nov/2025 03:05:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-22 03:05:42 [INFO] 127.0.0.1 - - [22/Nov/2025 03:05:42] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-11-22 03:08:04 [INFO] t=2025-11-22T03:08:04-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-22 03:08:04 [INFO] t=2025-11-22T03:08:04-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-22 03:08:04 [INFO] t=2025-11-22T03:08:04-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=ff0e64441dd3 err="reconnecting session closed"
+2025-11-22 03:08:04 [INFO] t=2025-11-22T03:08:04-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=b29c6afdc8d622dc152e2fe2f377d64c
+2025-11-22 03:08:04 [WARNING] t=2025-11-22T03:08:04-0300 lvl=warn msg="Stopping forwarder" name=http-5000-cbe2c001-44bf-4f98-84a2-ad1cd5659aa1 acceptErr="failed to accept connection: Listener closed"
+2025-11-22 03:08:04 [INFO] t=2025-11-22T03:08:04-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-22 03:08:04 [WARNING] t=2025-11-22T03:08:04-0300 lvl=warn msg="Error restarting forwarder" name=http-5000-cbe2c001-44bf-4f98-84a2-ad1cd5659aa1 err="failed to start tunnel: session closed"
+2025-11-22 03:09:14 [INFO] Opening tunnel named: http-5000-36bd9e93-b13a-4435-8cc3-5eacff065a38
+2025-11-22 03:09:14 [INFO] t=2025-11-22T03:09:14-0300 lvl=info msg="no configuration paths supplied"
+2025-11-22 03:09:14 [INFO] t=2025-11-22T03:09:14-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-22 03:09:14 [INFO] t=2025-11-22T03:09:14-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-22 03:09:14 [INFO] t=2025-11-22T03:09:14-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-22 03:09:15 [INFO] t=2025-11-22T03:09:15-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-22 03:09:15 [INFO] t=2025-11-22T03:09:15-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-22 03:09:15 [INFO] t=2025-11-22T03:09:15-0300 lvl=info msg="update available" obj=updater
+2025-11-22 03:09:15 [INFO] t=2025-11-22T03:09:15-0300 lvl=info msg=start pg=/api/tunnels id=ddfbbe0c324e256d
+2025-11-22 03:09:15 [INFO] t=2025-11-22T03:09:15-0300 lvl=info msg=end pg=/api/tunnels id=ddfbbe0c324e256d status=200 dur=0s
+2025-11-22 03:09:15 [INFO] t=2025-11-22T03:09:15-0300 lvl=info msg=start pg=/api/tunnels id=93f0e18b242edac8
+2025-11-22 03:09:15 [INFO] t=2025-11-22T03:09:15-0300 lvl=info msg=end pg=/api/tunnels id=93f0e18b242edac8 status=200 dur=0s
+2025-11-22 03:09:15 [INFO] t=2025-11-22T03:09:15-0300 lvl=info msg=start pg=/api/tunnels id=f6970c938e067ce1
+2025-11-22 03:09:15 [INFO] t=2025-11-22T03:09:15-0300 lvl=info msg=end pg=/api/tunnels id=f6970c938e067ce1 status=200 dur=0s
+2025-11-22 03:09:15 [INFO] t=2025-11-22T03:09:15-0300 lvl=info msg=start pg=/api/tunnels id=52d1d8f465a9eff1
+2025-11-22 03:09:15 [INFO] t=2025-11-22T03:09:15-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-36bd9e93-b13a-4435-8cc3-5eacff065a38 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-22 03:09:15 [INFO] t=2025-11-22T03:09:15-0300 lvl=info msg=end pg=/api/tunnels id=52d1d8f465a9eff1 status=201 dur=350.4302ms
+2025-11-22 03:09:15 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-22 03:09:15 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-22 03:09:31 [INFO] 127.0.0.1 - - [22/Nov/2025 03:09:31] "[31m[1mGET /api/nuevo_proyecto HTTP/1.1[0m" 405 -
+2025-11-22 03:09:42 [INFO] 127.0.0.1 - - [22/Nov/2025 03:09:42] "[33mGET /api/nuevo_proyecto/ HTTP/1.1[0m" 404 -
+2025-11-22 03:10:05 [INFO] t=2025-11-22T03:10:05-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-22 03:10:05 [INFO] t=2025-11-22T03:10:05-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-22 03:10:05 [INFO] t=2025-11-22T03:10:05-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=a65a596449e9 err="reconnecting session closed"
+2025-11-22 03:10:05 [INFO] t=2025-11-22T03:10:05-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=4f385c34d3da80f437e63b9b80ae16f4
+2025-11-22 03:10:05 [WARNING] t=2025-11-22T03:10:05-0300 lvl=warn msg="Stopping forwarder" name=http-5000-36bd9e93-b13a-4435-8cc3-5eacff065a38 acceptErr="failed to accept connection: Listener closed"
+2025-11-22 03:10:05 [INFO] t=2025-11-22T03:10:05-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-22 22:59:01 [INFO] Opening tunnel named: http-5000-17466571-771f-4476-b904-e41166e3584c
+2025-11-22 22:59:02 [INFO] t=2025-11-22T22:59:02-0300 lvl=info msg="no configuration paths supplied"
+2025-11-22 22:59:02 [INFO] t=2025-11-22T22:59:02-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-22 22:59:02 [INFO] t=2025-11-22T22:59:02-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-22 22:59:02 [INFO] t=2025-11-22T22:59:02-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-22 22:59:02 [INFO] t=2025-11-22T22:59:02-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-22 22:59:02 [INFO] t=2025-11-22T22:59:02-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-22 22:59:02 [INFO] t=2025-11-22T22:59:02-0300 lvl=info msg=start pg=/api/tunnels id=d318c802a77968bb
+2025-11-22 22:59:02 [INFO] t=2025-11-22T22:59:02-0300 lvl=info msg=end pg=/api/tunnels id=d318c802a77968bb status=200 dur=0s
+2025-11-22 22:59:02 [INFO] t=2025-11-22T22:59:02-0300 lvl=info msg=start pg=/api/tunnels id=3aedf0048a4495c2
+2025-11-22 22:59:02 [INFO] t=2025-11-22T22:59:02-0300 lvl=info msg=end pg=/api/tunnels id=3aedf0048a4495c2 status=200 dur=0s
+2025-11-22 22:59:02 [INFO] t=2025-11-22T22:59:02-0300 lvl=info msg=start pg=/api/tunnels id=3f64e35a8039ac40
+2025-11-22 22:59:02 [INFO] t=2025-11-22T22:59:02-0300 lvl=info msg=end pg=/api/tunnels id=3f64e35a8039ac40 status=200 dur=0s
+2025-11-22 22:59:02 [INFO] t=2025-11-22T22:59:02-0300 lvl=info msg=start pg=/api/tunnels id=54800535717d3190
+2025-11-22 22:59:03 [INFO] t=2025-11-22T22:59:03-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-17466571-771f-4476-b904-e41166e3584c addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-22 22:59:03 [INFO] t=2025-11-22T22:59:03-0300 lvl=info msg=end pg=/api/tunnels id=54800535717d3190 status=201 dur=537.0629ms
+2025-11-22 22:59:03 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-22 22:59:03 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-22 22:59:07 [WARNING] t=2025-11-22T22:59:07-0300 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+2025-11-22 22:59:15 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\LabA\server.py", line 276, in proyectos
+    cur.execute("""
+    ~~~~~~~~~~~^^^^
+        SELECT p.id_proyecto, p.fecha_registro, u.mail, u.nombre, carrera.nombre, cargo.nombre, sede.nombre, p.nombre_proyecto, p.descripcion, tipo.nombre, herr.nombre, p.material, p.cantidad, p.justificacion, p.fecha_necesidad, p.tiempo_estimado, p.otros_comentarios, origen.nombre, estado.nombre
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        ORDER BY p.fecha_registro DESC;
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """)
+    ^^^^
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg\cursor.py", line 97, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: óÒu.mailÇÕë∂ç›ÇµÇ‹ÇπÇÒ
+LINE 2: ...          SELECT p.id_proyecto, p.fecha_registro, u.mail, u....
+                                                             ^
+HINT:  óÒ"u.email"ÇéQè∆ÇµÇÊÇ§Ç∆ÇµÇƒÇ¢ÇΩÇÊÇ§Ç≈Ç∑ÅB
+2025-11-22 22:59:15 [INFO] 127.0.0.1 - - [22/Nov/2025 22:59:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-22 22:59:16 [INFO] 127.0.0.1 - - [22/Nov/2025 22:59:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-22 22:59:54 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\LabA\server.py", line 276, in proyectos
+    cur.execute("""
+    ~~~~~~~~~~~^^^^
+        SELECT p.id_proyecto, p.fecha_registro, u.mail, u.nombre, carrera.nombre, cargo.nombre, sede.nombre, p.nombre_proyecto, p.descripcion, tipo.nombre, herr.nombre, p.material, p.cantidad, p.justificacion, p.fecha_necesidad, p.tiempo_estimado, p.otros_comentarios, origen.nombre, estado.nombre
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        ORDER BY p.fecha_registro DESC;
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """)
+    ^^^^
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg\cursor.py", line 97, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: óÒu.mailÇÕë∂ç›ÇµÇ‹ÇπÇÒ
+LINE 2: ...          SELECT p.id_proyecto, p.fecha_registro, u.mail, u....
+                                                             ^
+HINT:  óÒ"u.email"ÇéQè∆ÇµÇÊÇ§Ç∆ÇµÇƒÇ¢ÇΩÇÊÇ§Ç≈Ç∑ÅB
+2025-11-22 22:59:54 [INFO] 127.0.0.1 - - [22/Nov/2025 22:59:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-22 23:01:38 [INFO] t=2025-11-22T23:01:38-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-22 23:01:38 [INFO] t=2025-11-22T23:01:38-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-22 23:01:38 [INFO] t=2025-11-22T23:01:38-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=bbf6037dcd2b err="reconnecting session closed"
+2025-11-22 23:01:38 [INFO] t=2025-11-22T23:01:38-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-22 23:03:42 [INFO] Opening tunnel named: http-5000-03366e42-53a5-497a-bfa7-f6c468c8301b
+2025-11-22 23:03:42 [INFO] t=2025-11-22T23:03:42-0300 lvl=info msg="no configuration paths supplied"
+2025-11-22 23:03:42 [INFO] t=2025-11-22T23:03:42-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-22 23:03:42 [INFO] t=2025-11-22T23:03:42-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-22 23:03:42 [INFO] t=2025-11-22T23:03:42-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-22 23:03:43 [INFO] t=2025-11-22T23:03:43-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-22 23:03:43 [INFO] t=2025-11-22T23:03:43-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-22 23:03:43 [INFO] t=2025-11-22T23:03:43-0300 lvl=info msg=start pg=/api/tunnels id=a4a6d6629616dff3
+2025-11-22 23:03:43 [INFO] t=2025-11-22T23:03:43-0300 lvl=info msg=end pg=/api/tunnels id=a4a6d6629616dff3 status=200 dur=506.1¬µs
+2025-11-22 23:03:43 [INFO] t=2025-11-22T23:03:43-0300 lvl=info msg=start pg=/api/tunnels id=5c6d3eb21c4b140a
+2025-11-22 23:03:43 [INFO] t=2025-11-22T23:03:43-0300 lvl=info msg=end pg=/api/tunnels id=5c6d3eb21c4b140a status=200 dur=0s
+2025-11-22 23:03:43 [INFO] t=2025-11-22T23:03:43-0300 lvl=info msg=start pg=/api/tunnels id=2287d57df9ccfa98
+2025-11-22 23:03:43 [INFO] t=2025-11-22T23:03:43-0300 lvl=info msg=end pg=/api/tunnels id=2287d57df9ccfa98 status=200 dur=0s
+2025-11-22 23:03:43 [INFO] t=2025-11-22T23:03:43-0300 lvl=info msg=start pg=/api/tunnels id=d817b284563c2274
+2025-11-22 23:03:43 [INFO] t=2025-11-22T23:03:43-0300 lvl=info msg="update available" obj=updater
+2025-11-22 23:03:43 [INFO] t=2025-11-22T23:03:43-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-03366e42-53a5-497a-bfa7-f6c468c8301b addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-22 23:03:43 [INFO] t=2025-11-22T23:03:43-0300 lvl=info msg=end pg=/api/tunnels id=d817b284563c2274 status=201 dur=344.2769ms
+2025-11-22 23:03:43 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-22 23:03:43 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-22 23:03:50 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\LabA\server.py", line 276, in proyectos
+    cur.execute("""
+    ~~~~~~~~~~~^^^^
+        SELECT p.id_proyecto, p.fecha_registro, u.email, u.nombre, carrera.nombre, cargo.nombre, sede.nombre, p.nombre_proyecto, p.descripcion, tipo.nombre, herr.nombre, p.material, p.cantidad, p.justificacion, p.fecha_necesidad, p.tiempo_estimado, p.otros_comentarios, origen.nombre, estado.nombre
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        ORDER BY p.fecha_registro DESC;
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """)
+    ^^^^
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg\cursor.py", line 97, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: óÒp.cantidadÇÕë∂ç›ÇµÇ‹ÇπÇÒ
+LINE 2: ...escripcion, tipo.nombre, herr.nombre, p.material, p.cantidad...
+                                                             ^
+2025-11-22 23:03:50 [INFO] 127.0.0.1 - - [22/Nov/2025 23:03:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-22 23:04:46 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\LabA\server.py", line 276, in proyectos
+    cur.execute("""
+    ~~~~~~~~~~~^^^^
+        SELECT p.id_proyecto, p.fecha_registro, u.email, u.nombre, carrera.nombre, cargo.nombre, sede.nombre, p.nombre_proyecto, p.descripcion, tipo.nombre, herr.nombre, p.material, p.cantidad, p.justificacion, p.fecha_necesidad, p.tiempo_estimado, p.otros_comentarios, origen.nombre, estado.nombre
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        ORDER BY p.fecha_registro DESC;
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """)
+    ^^^^
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg\cursor.py", line 97, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: óÒp.cantidadÇÕë∂ç›ÇµÇ‹ÇπÇÒ
+LINE 2: ...escripcion, tipo.nombre, herr.nombre, p.material, p.cantidad...
+                                                             ^
+2025-11-22 23:04:46 [INFO] 127.0.0.1 - - [22/Nov/2025 23:04:46] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-22 23:04:48 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\LabA\server.py", line 276, in proyectos
+    cur.execute("""
+    ~~~~~~~~~~~^^^^
+        SELECT p.id_proyecto, p.fecha_registro, u.email, u.nombre, carrera.nombre, cargo.nombre, sede.nombre, p.nombre_proyecto, p.descripcion, tipo.nombre, herr.nombre, p.material, p.cantidad, p.justificacion, p.fecha_necesidad, p.tiempo_estimado, p.otros_comentarios, origen.nombre, estado.nombre
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        ORDER BY p.fecha_registro DESC;
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """)
+    ^^^^
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg\cursor.py", line 97, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: óÒp.cantidadÇÕë∂ç›ÇµÇ‹ÇπÇÒ
+LINE 2: ...escripcion, tipo.nombre, herr.nombre, p.material, p.cantidad...
+                                                             ^
+2025-11-22 23:04:48 [INFO] 127.0.0.1 - - [22/Nov/2025 23:04:48] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-11-22 23:08:08 [INFO] t=2025-11-22T23:08:08-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-22 23:08:08 [INFO] t=2025-11-22T23:08:08-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-22 23:08:08 [INFO] t=2025-11-22T23:08:08-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=a4e6eeac8f55 err="reconnecting session closed"
+2025-11-22 23:08:08 [INFO] t=2025-11-22T23:08:08-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=bc0fc53204be4c3a51f66ee7f4124ca8
+2025-11-22 23:08:08 [WARNING] t=2025-11-22T23:08:08-0300 lvl=warn msg="Stopping forwarder" name=http-5000-03366e42-53a5-497a-bfa7-f6c468c8301b acceptErr="failed to accept connection: Listener closed"
+2025-11-22 23:08:08 [INFO] t=2025-11-22T23:08:08-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-22 23:08:08 [WARNING] t=2025-11-22T23:08:08-0300 lvl=warn msg="Error restarting forwarder" name=http-5000-03366e42-53a5-497a-bfa7-f6c468c8301b err="failed to start tunnel: session closed"
+2025-11-22 23:09:40 [INFO] Opening tunnel named: http-5000-007e8a29-7fd3-48c7-8207-6967b16fd2ab
+2025-11-22 23:09:40 [INFO] t=2025-11-22T23:09:40-0300 lvl=info msg="no configuration paths supplied"
+2025-11-22 23:09:40 [INFO] t=2025-11-22T23:09:40-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-22 23:09:40 [INFO] t=2025-11-22T23:09:40-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-22 23:09:40 [INFO] t=2025-11-22T23:09:40-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-22 23:09:41 [INFO] t=2025-11-22T23:09:41-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-22 23:09:41 [INFO] t=2025-11-22T23:09:41-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-22 23:09:41 [INFO] t=2025-11-22T23:09:41-0300 lvl=info msg=start pg=/api/tunnels id=a6caf67c99f21595
+2025-11-22 23:09:41 [INFO] t=2025-11-22T23:09:41-0300 lvl=info msg=end pg=/api/tunnels id=a6caf67c99f21595 status=200 dur=0s
+2025-11-22 23:09:41 [INFO] t=2025-11-22T23:09:41-0300 lvl=info msg=start pg=/api/tunnels id=058103e94ecb83aa
+2025-11-22 23:09:41 [INFO] t=2025-11-22T23:09:41-0300 lvl=info msg=end pg=/api/tunnels id=058103e94ecb83aa status=200 dur=0s
+2025-11-22 23:09:41 [INFO] t=2025-11-22T23:09:41-0300 lvl=info msg=start pg=/api/tunnels id=2bca7635c49191db
+2025-11-22 23:09:41 [INFO] t=2025-11-22T23:09:41-0300 lvl=info msg=end pg=/api/tunnels id=2bca7635c49191db status=200 dur=0s
+2025-11-22 23:09:41 [INFO] t=2025-11-22T23:09:41-0300 lvl=info msg=start pg=/api/tunnels id=79acd836e7f30695
+2025-11-22 23:09:42 [INFO] t=2025-11-22T23:09:42-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-007e8a29-7fd3-48c7-8207-6967b16fd2ab addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-22 23:09:42 [INFO] t=2025-11-22T23:09:42-0300 lvl=info msg=end pg=/api/tunnels id=79acd836e7f30695 status=201 dur=329.2577ms
+2025-11-22 23:09:42 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-22 23:09:42 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-22 23:09:42 [INFO] t=2025-11-22T23:09:42-0300 lvl=info msg="update available" obj=updater
+2025-11-22 23:09:55 [INFO] 127.0.0.1 - - [22/Nov/2025 23:09:55] "GET / HTTP/1.1" 200 -
+2025-11-22 23:09:55 [INFO] 127.0.0.1 - - [22/Nov/2025 23:09:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-22 23:09:55 [INFO] 127.0.0.1 - - [22/Nov/2025 23:09:55] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-11-22 23:15:45 [INFO] t=2025-11-22T23:15:45-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-22 23:15:45 [INFO] t=2025-11-22T23:15:45-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-22 23:15:45 [INFO] t=2025-11-22T23:15:45-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=4c561c454506 err="reconnecting session closed"
+2025-11-22 23:15:45 [INFO] t=2025-11-22T23:15:45-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-22 23:15:45 [INFO] t=2025-11-22T23:15:45-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=56c67729d36b26a43ea271aa10a86716
+2025-11-22 23:15:45 [WARNING] t=2025-11-22T23:15:45-0300 lvl=warn msg="Stopping forwarder" name=http-5000-007e8a29-7fd3-48c7-8207-6967b16fd2ab acceptErr="failed to accept connection: Listener closed"
+2025-11-22 23:25:58 [INFO] Opening tunnel named: http-5000-8c7603d5-8485-445c-abe2-75e5f1ff76ec
+2025-11-22 23:25:58 [INFO] t=2025-11-22T23:25:58-0300 lvl=info msg="no configuration paths supplied"
+2025-11-22 23:25:58 [INFO] t=2025-11-22T23:25:58-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-22 23:25:58 [INFO] t=2025-11-22T23:25:58-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-22 23:25:58 [INFO] t=2025-11-22T23:25:58-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-22 23:25:59 [INFO] t=2025-11-22T23:25:59-0300 lvl=info msg="update available" obj=updater
+2025-11-22 23:25:59 [INFO] t=2025-11-22T23:25:59-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-22 23:25:59 [INFO] t=2025-11-22T23:25:59-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-22 23:25:59 [INFO] t=2025-11-22T23:25:59-0300 lvl=info msg=start pg=/api/tunnels id=079b797bba15c5dd
+2025-11-22 23:25:59 [INFO] t=2025-11-22T23:25:59-0300 lvl=info msg=end pg=/api/tunnels id=079b797bba15c5dd status=200 dur=0s
+2025-11-22 23:25:59 [INFO] t=2025-11-22T23:25:59-0300 lvl=info msg=start pg=/api/tunnels id=a641fbf52526c67a
+2025-11-22 23:25:59 [INFO] t=2025-11-22T23:25:59-0300 lvl=info msg=end pg=/api/tunnels id=a641fbf52526c67a status=200 dur=0s
+2025-11-22 23:25:59 [INFO] t=2025-11-22T23:25:59-0300 lvl=info msg=start pg=/api/tunnels id=e65d020aa1426ee5
+2025-11-22 23:25:59 [INFO] t=2025-11-22T23:25:59-0300 lvl=info msg=end pg=/api/tunnels id=e65d020aa1426ee5 status=200 dur=0s
+2025-11-22 23:25:59 [INFO] t=2025-11-22T23:25:59-0300 lvl=info msg=start pg=/api/tunnels id=1d0e07742e22260e
+2025-11-22 23:25:59 [INFO] t=2025-11-22T23:25:59-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-8c7603d5-8485-445c-abe2-75e5f1ff76ec addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-22 23:25:59 [INFO] t=2025-11-22T23:25:59-0300 lvl=info msg=end pg=/api/tunnels id=1d0e07742e22260e status=201 dur=343.0736ms
+2025-11-22 23:25:59 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-22 23:25:59 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-22 23:26:02 [INFO] 127.0.0.1 - - [22/Nov/2025 23:26:02] "GET / HTTP/1.1" 200 -
+2025-11-22 23:26:02 [INFO] 127.0.0.1 - - [22/Nov/2025 23:26:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-22 23:26:02 [INFO] 127.0.0.1 - - [22/Nov/2025 23:26:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-22 23:27:09 [INFO] 127.0.0.1 - - [22/Nov/2025 23:27:09] "GET / HTTP/1.1" 200 -
+2025-11-22 23:27:09 [INFO] 127.0.0.1 - - [22/Nov/2025 23:27:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-22 23:27:09 [INFO] 127.0.0.1 - - [22/Nov/2025 23:27:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-22 23:35:07 [INFO] t=2025-11-22T23:35:07-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-22 23:35:07 [INFO] t=2025-11-22T23:35:07-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-22 23:35:07 [INFO] t=2025-11-22T23:35:07-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=c4bff3b2c2fa err="reconnecting session closed"
+2025-11-22 23:35:07 [INFO] t=2025-11-22T23:35:07-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=45e253fe6de0651699e8731297b33ccf
+2025-11-22 23:35:07 [WARNING] t=2025-11-22T23:35:07-0300 lvl=warn msg="Stopping forwarder" name=http-5000-8c7603d5-8485-445c-abe2-75e5f1ff76ec acceptErr="failed to accept connection: Listener closed"

@@ -1,0 +1,86 @@
+instalar python3 y pip
+añadir pip a variables de entorno
+    dependencias a instalar:
+        pip install psycopg[binary]
+        pip install pandas
+        pip install flask
+        pip install pyngrok  
+        
+        pip install -r requirements.txt
+      
+    ngrok config add-authtoken 34vxA2zSXNsna2y0SDKafJcHwED_34UADjPUSsneoePPfKr5m
+        devuelve:   Authtoken saved to configuration file: C:\Users\TTBNN\AppData\Local/ngrok/ngrok.yml
+    
+    # para correr ngork: ngrok http 5000 # no es necesario
+
+
+
+
+
+
+
+
+
+para compartir la hoja de cálcuo:
+    compartir a internet,
+    seleccionar el número de hoja correcto,
+    en csv.
+    
+
+en apps script:
+    + añadir activador (en el ícono de reloj):  
+        onFormSubmit
+        Principal
+        De una hoja de cálculo
+        Al envierse el formulario
+        Notifícame cada día
+        
+
+Apps script:
+function onFormSubmit(e) {
+  const sheet = e.source.getActiveSheet();
+  const row = e.range.getRow();
+  const data = sheet.getRange(row, 1, 1, sheet.getLastColumn()).getValues()[0];
+
+  const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+  const rowData = {};
+  headers.forEach((header, i) => {
+    rowData[header.trim()] = data[i];
+  });
+
+  // Enviar al backend Python (tu servidor Flask)
+  const url = "https://nonenlightening-liana-unresiliently.ngrok-free.dev/api/nuevo_proyecto";
+  const options = {
+    method: "post",
+    contentType: "application/json",
+    payload: JSON.stringify(rowData)
+  };
+  UrlFetchApp.fetch(url, options);
+}
+
+// const url = "https://nonenlightening-liana-unresiliently.ngrok-free.dev/api/nuevo_proyecto"; 
+
+
+
+function testEnviarFila() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  const lastRow = sheet.getLastRow();
+  const data = sheet.getRange(lastRow, 1, 1, sheet.getLastColumn()).getValues()[0];
+
+  const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+  const rowData = {};
+  headers.forEach((header, i) => {
+    rowData[header.trim()] = data[i];
+  });
+
+  const url = "https://nonenlightening-liana-unresiliently.ngrok-free.dev/api/nuevo_proyecto";
+  const options = {
+    method: "post",
+    contentType: "application/json",
+    payload: JSON.stringify(rowData)
+  };
+
+  const response = UrlFetchApp.fetch(url, options);
+  Logger.log(response.getContentText());
+}
+   
