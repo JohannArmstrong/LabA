@@ -988,3 +988,318 @@ LINE 2: ...escripcion, tipo.nombre, herr.nombre, p.material, p.cantidad...
 2025-11-22 23:35:07 [INFO] t=2025-11-22T23:35:07-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=c4bff3b2c2fa err="reconnecting session closed"
 2025-11-22 23:35:07 [INFO] t=2025-11-22T23:35:07-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=45e253fe6de0651699e8731297b33ccf
 2025-11-22 23:35:07 [WARNING] t=2025-11-22T23:35:07-0300 lvl=warn msg="Stopping forwarder" name=http-5000-8c7603d5-8485-445c-abe2-75e5f1ff76ec acceptErr="failed to accept connection: Listener closed"
+2025-11-22 23:39:46 [INFO] Opening tunnel named: http-5000-a0752b09-ee7e-4611-b369-85a095228a75
+2025-11-22 23:39:46 [INFO] t=2025-11-22T23:39:46-0300 lvl=info msg="no configuration paths supplied"
+2025-11-22 23:39:46 [INFO] t=2025-11-22T23:39:46-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-22 23:39:46 [INFO] t=2025-11-22T23:39:46-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-22 23:39:46 [INFO] t=2025-11-22T23:39:46-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-22 23:39:47 [INFO] t=2025-11-22T23:39:47-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-22 23:39:47 [INFO] t=2025-11-22T23:39:47-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-22 23:39:47 [INFO] t=2025-11-22T23:39:47-0300 lvl=info msg=start pg=/api/tunnels id=27d54fd5ff3e63ae
+2025-11-22 23:39:47 [INFO] t=2025-11-22T23:39:47-0300 lvl=info msg=end pg=/api/tunnels id=27d54fd5ff3e63ae status=200 dur=0s
+2025-11-22 23:39:47 [INFO] t=2025-11-22T23:39:47-0300 lvl=info msg=start pg=/api/tunnels id=53639ba7e7ee73ed
+2025-11-22 23:39:47 [INFO] t=2025-11-22T23:39:47-0300 lvl=info msg=end pg=/api/tunnels id=53639ba7e7ee73ed status=200 dur=0s
+2025-11-22 23:39:47 [INFO] t=2025-11-22T23:39:47-0300 lvl=info msg=start pg=/api/tunnels id=f9a07557856cc5dd
+2025-11-22 23:39:47 [INFO] t=2025-11-22T23:39:47-0300 lvl=info msg=end pg=/api/tunnels id=f9a07557856cc5dd status=200 dur=0s
+2025-11-22 23:39:47 [INFO] t=2025-11-22T23:39:47-0300 lvl=info msg=start pg=/api/tunnels id=91615e79861f6c91
+2025-11-22 23:39:47 [INFO] t=2025-11-22T23:39:47-0300 lvl=info msg="update available" obj=updater
+2025-11-22 23:39:48 [INFO] t=2025-11-22T23:39:48-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-a0752b09-ee7e-4611-b369-85a095228a75 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-22 23:39:48 [INFO] t=2025-11-22T23:39:48-0300 lvl=info msg=end pg=/api/tunnels id=91615e79861f6c91 status=201 dur=366.6728ms
+2025-11-22 23:39:48 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-22 23:39:48 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-22 23:39:52 [INFO] 127.0.0.1 - - [22/Nov/2025 23:39:52] "GET / HTTP/1.1" 200 -
+2025-11-22 23:39:53 [INFO] 127.0.0.1 - - [22/Nov/2025 23:39:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-22 23:39:53 [INFO] 127.0.0.1 - - [22/Nov/2025 23:39:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-22 23:59:50 [INFO] t=2025-11-22T23:59:50-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-22 23:59:50 [INFO] t=2025-11-22T23:59:50-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-22 23:59:50 [INFO] t=2025-11-22T23:59:50-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=d27f79823d68 err="reconnecting session closed"
+2025-11-22 23:59:50 [INFO] t=2025-11-22T23:59:50-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=a7b4272faa68c4bb3537b735379cc649
+2025-11-22 23:59:50 [WARNING] t=2025-11-22T23:59:50-0300 lvl=warn msg="Stopping forwarder" name=http-5000-a0752b09-ee7e-4611-b369-85a095228a75 acceptErr="failed to accept connection: Listener closed"
+2025-11-23 06:36:25 [INFO] Opening tunnel named: http-5000-6911ffc0-0272-425c-8a60-ee6e9d014492
+2025-11-23 06:36:25 [INFO] t=2025-11-23T06:36:25-0300 lvl=info msg="no configuration paths supplied"
+2025-11-23 06:36:25 [INFO] t=2025-11-23T06:36:25-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-23 06:36:25 [INFO] t=2025-11-23T06:36:25-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-23 06:36:25 [INFO] t=2025-11-23T06:36:25-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-23 06:36:26 [INFO] t=2025-11-23T06:36:26-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-23 06:36:26 [INFO] t=2025-11-23T06:36:26-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-23 06:36:26 [INFO] t=2025-11-23T06:36:26-0300 lvl=info msg=start pg=/api/tunnels id=4916c5216a584199
+2025-11-23 06:36:26 [INFO] t=2025-11-23T06:36:26-0300 lvl=info msg=end pg=/api/tunnels id=4916c5216a584199 status=200 dur=0s
+2025-11-23 06:36:26 [INFO] t=2025-11-23T06:36:26-0300 lvl=info msg=start pg=/api/tunnels id=2c392e9125f1ae5d
+2025-11-23 06:36:26 [INFO] t=2025-11-23T06:36:26-0300 lvl=info msg=end pg=/api/tunnels id=2c392e9125f1ae5d status=200 dur=0s
+2025-11-23 06:36:26 [INFO] t=2025-11-23T06:36:26-0300 lvl=info msg=start pg=/api/tunnels id=17db8c63c7803ddc
+2025-11-23 06:36:26 [INFO] t=2025-11-23T06:36:26-0300 lvl=info msg=end pg=/api/tunnels id=17db8c63c7803ddc status=200 dur=0s
+2025-11-23 06:36:26 [INFO] t=2025-11-23T06:36:26-0300 lvl=info msg=start pg=/api/tunnels id=7c334f8ff5762309
+2025-11-23 06:36:26 [INFO] t=2025-11-23T06:36:26-0300 lvl=info msg="update available" obj=updater
+2025-11-23 06:36:26 [INFO] t=2025-11-23T06:36:26-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-6911ffc0-0272-425c-8a60-ee6e9d014492 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-23 06:36:26 [INFO] t=2025-11-23T06:36:26-0300 lvl=info msg=end pg=/api/tunnels id=7c334f8ff5762309 status=201 dur=336.5291ms
+2025-11-23 06:36:26 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-23 06:36:26 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-23 06:36:35 [INFO] 127.0.0.1 - - [23/Nov/2025 06:36:35] "GET / HTTP/1.1" 200 -
+2025-11-23 06:36:36 [INFO] 127.0.0.1 - - [23/Nov/2025 06:36:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-23 06:36:36 [INFO] 127.0.0.1 - - [23/Nov/2025 06:36:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-23 06:36:39 [ERROR] Exception on /exportar_pdf [GET]
+Traceback (most recent call last):
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\pdfkit\configuration.py", line 35, in __init__
+    with open(self.wkhtmltopdf) as f:
+         ~~~~^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: b''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\LabA\server.py", line 340, in exportar_pdf
+    pdf = pdfkit.from_string(rendered, False)
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\pdfkit\api.py", line 72, in from_string
+    r = PDFKit(input, 'string', options=options, toc=toc, cover=cover, css=css,
+               configuration=configuration, cover_first=cover_first, verbose=verbose)
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\pdfkit\pdfkit.py", line 45, in __init__
+    self.configuration = (Configuration() if configuration is None
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\pdfkit\configuration.py", line 38, in __init__
+    raise IOError('No wkhtmltopdf executable found: "%s"\n'
+    ...<3 lines>...
+                  'https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf' % self.wkhtmltopdf)
+OSError: No wkhtmltopdf executable found: "b''"
+If this file exists please check that this process can read it or you can pass path to it manually in method call, check README. Otherwise please install wkhtmltopdf - https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf
+2025-11-23 06:36:39 [INFO] 127.0.0.1 - - [23/Nov/2025 06:36:39] "[35m[1mGET /exportar_pdf HTTP/1.1[0m" 500 -
+2025-11-23 06:44:05 [INFO] Opening tunnel named: http-5000-b4d14f9b-0451-4907-9325-42569448c2f7
+2025-11-23 06:44:05 [INFO] t=2025-11-23T06:44:05-0300 lvl=info msg="no configuration paths supplied"
+2025-11-23 06:44:05 [INFO] t=2025-11-23T06:44:05-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-23 06:44:05 [INFO] t=2025-11-23T06:44:05-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-23 06:44:05 [INFO] t=2025-11-23T06:44:05-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-23 06:44:06 [INFO] t=2025-11-23T06:44:06-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-23 06:44:06 [INFO] t=2025-11-23T06:44:06-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-23 06:44:06 [INFO] t=2025-11-23T06:44:06-0300 lvl=info msg=start pg=/api/tunnels id=defef087c47dcb5f
+2025-11-23 06:44:06 [INFO] t=2025-11-23T06:44:06-0300 lvl=info msg=end pg=/api/tunnels id=defef087c47dcb5f status=200 dur=0s
+2025-11-23 06:44:06 [INFO] t=2025-11-23T06:44:06-0300 lvl=info msg=start pg=/api/tunnels id=7519d13211e86506
+2025-11-23 06:44:06 [INFO] t=2025-11-23T06:44:06-0300 lvl=info msg=end pg=/api/tunnels id=7519d13211e86506 status=200 dur=0s
+2025-11-23 06:44:06 [INFO] t=2025-11-23T06:44:06-0300 lvl=info msg=start pg=/api/tunnels id=e3d48f1f0437be94
+2025-11-23 06:44:06 [INFO] t=2025-11-23T06:44:06-0300 lvl=info msg=end pg=/api/tunnels id=e3d48f1f0437be94 status=200 dur=0s
+2025-11-23 06:44:06 [INFO] t=2025-11-23T06:44:06-0300 lvl=info msg=start pg=/api/tunnels id=ada84e13993cce3d
+2025-11-23 06:44:07 [INFO] t=2025-11-23T06:44:07-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-b4d14f9b-0451-4907-9325-42569448c2f7 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-23 06:44:07 [INFO] t=2025-11-23T06:44:07-0300 lvl=info msg=end pg=/api/tunnels id=ada84e13993cce3d status=201 dur=554.8048ms
+2025-11-23 06:44:07 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-23 06:44:07 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-23 06:44:10 [WARNING] t=2025-11-23T06:44:10-0300 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+2025-11-23 06:44:12 [INFO] 127.0.0.1 - - [23/Nov/2025 06:44:12] "GET / HTTP/1.1" 200 -
+2025-11-23 06:44:13 [INFO] 127.0.0.1 - - [23/Nov/2025 06:44:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-23 06:44:13 [INFO] 127.0.0.1 - - [23/Nov/2025 06:44:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-23 06:44:19 [ERROR] Exception on /exportar_pdf [GET]
+Traceback (most recent call last):
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\LabA\server.py", line 340, in exportar_pdf
+    pdf = pdfkit.from_string(rendered, False)
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\pdfkit\api.py", line 75, in from_string
+    return r.to_pdf(output_path)
+           ~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\pdfkit\pdfkit.py", line 201, in to_pdf
+    self.handle_error(exit_code, stderr)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TTBNN\AppData\Local\Programs\Python\Python313\Lib\site-packages\pdfkit\pdfkit.py", line 155, in handle_error
+    raise IOError('wkhtmltopdf reported an error:\n' + stderr)
+OSError: wkhtmltopdf reported an error:
+QWin32PrintEngine::initialize: OpenPrinter failed (The RPC server is unavailable.)
+QWin32PrintEngine::initialize: OpenPrinter failed (The RPC server is unavailable.)
+Exit with code 1 due to network error: ProtocolUnknownError
+
+2025-11-23 06:44:19 [INFO] 127.0.0.1 - - [23/Nov/2025 06:44:19] "[35m[1mGET /exportar_pdf HTTP/1.1[0m" 500 -
+2025-11-23 06:49:17 [INFO] t=2025-11-23T06:49:17-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-23 06:49:17 [INFO] t=2025-11-23T06:49:17-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-23 06:49:17 [INFO] t=2025-11-23T06:49:17-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=c47e73eb775f err="reconnecting session closed"
+2025-11-23 06:49:17 [INFO] t=2025-11-23T06:49:17-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-23 06:49:17 [INFO] t=2025-11-23T06:49:17-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=6ae0947bc739cb4186562b76798e0e50
+2025-11-23 06:54:31 [INFO] Opening tunnel named: http-5000-3e4614e7-b02a-472a-83f3-7b393b102963
+2025-11-23 06:54:31 [INFO] t=2025-11-23T06:54:31-0300 lvl=info msg="no configuration paths supplied"
+2025-11-23 06:54:31 [INFO] t=2025-11-23T06:54:31-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-23 06:54:31 [INFO] t=2025-11-23T06:54:31-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-23 06:54:31 [INFO] t=2025-11-23T06:54:31-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-23 06:54:32 [INFO] t=2025-11-23T06:54:32-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-23 06:54:32 [INFO] t=2025-11-23T06:54:32-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-23 06:54:32 [INFO] t=2025-11-23T06:54:32-0300 lvl=info msg=start pg=/api/tunnels id=221bca67d9e0f273
+2025-11-23 06:54:32 [INFO] t=2025-11-23T06:54:32-0300 lvl=info msg=end pg=/api/tunnels id=221bca67d9e0f273 status=200 dur=0s
+2025-11-23 06:54:32 [INFO] t=2025-11-23T06:54:32-0300 lvl=info msg=start pg=/api/tunnels id=9f41da411d1753e3
+2025-11-23 06:54:32 [INFO] t=2025-11-23T06:54:32-0300 lvl=info msg=end pg=/api/tunnels id=9f41da411d1753e3 status=200 dur=0s
+2025-11-23 06:54:32 [INFO] t=2025-11-23T06:54:32-0300 lvl=info msg=start pg=/api/tunnels id=f35bb7a0760337b4
+2025-11-23 06:54:32 [INFO] t=2025-11-23T06:54:32-0300 lvl=info msg=end pg=/api/tunnels id=f35bb7a0760337b4 status=200 dur=0s
+2025-11-23 06:54:32 [INFO] t=2025-11-23T06:54:32-0300 lvl=info msg=start pg=/api/tunnels id=e0744b1e90ac520e
+2025-11-23 06:54:32 [INFO] t=2025-11-23T06:54:32-0300 lvl=info msg="update available" obj=updater
+2025-11-23 06:54:32 [INFO] t=2025-11-23T06:54:32-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-3e4614e7-b02a-472a-83f3-7b393b102963 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-23 06:54:32 [INFO] t=2025-11-23T06:54:32-0300 lvl=info msg=end pg=/api/tunnels id=e0744b1e90ac520e status=201 dur=381.8673ms
+2025-11-23 06:54:33 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-23 06:54:33 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-23 06:54:33 [INFO]  * Restarting with stat
+2025-11-23 06:54:33 [INFO] Opening tunnel named: http-5000-7b191b6a-6c03-47ec-9fd7-d32e8576367a
+2025-11-23 06:54:33 [INFO] t=2025-11-23T06:54:33-0300 lvl=info msg="no configuration paths supplied"
+2025-11-23 06:54:33 [INFO] t=2025-11-23T06:54:33-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-23 06:54:33 [INFO] t=2025-11-23T06:54:33-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-23 06:54:33 [WARNING] t=2025-11-23T06:54:33-0300 lvl=warn msg="can't bind default web address, trying alternatives" obj=web addr=127.0.0.1:4040
+2025-11-23 06:54:33 [INFO] t=2025-11-23T06:54:33-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4041 allow_hosts=[]
+2025-11-23 06:54:34 [INFO] t=2025-11-23T06:54:34-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-23 06:54:34 [INFO] t=2025-11-23T06:54:34-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-23 06:54:34 [INFO] t=2025-11-23T06:54:34-0300 lvl=info msg=start pg=/api/tunnels id=a6fec02535fe1bdc
+2025-11-23 06:54:34 [INFO] t=2025-11-23T06:54:34-0300 lvl=info msg=end pg=/api/tunnels id=a6fec02535fe1bdc status=200 dur=0s
+2025-11-23 06:54:34 [INFO] t=2025-11-23T06:54:34-0300 lvl=info msg=start pg=/api/tunnels id=82d0e94f8fb63863
+2025-11-23 06:54:34 [INFO] t=2025-11-23T06:54:34-0300 lvl=info msg=end pg=/api/tunnels id=82d0e94f8fb63863 status=200 dur=0s
+2025-11-23 06:54:34 [INFO] t=2025-11-23T06:54:34-0300 lvl=info msg=start pg=/api/tunnels id=d4e09ad9065e4e5e
+2025-11-23 06:54:34 [INFO] t=2025-11-23T06:54:34-0300 lvl=info msg=end pg=/api/tunnels id=d4e09ad9065e4e5e status=200 dur=0s
+2025-11-23 06:54:34 [INFO] t=2025-11-23T06:54:34-0300 lvl=info msg=start pg=/api/tunnels id=9a4361e493f6efb1
+2025-11-23 06:54:34 [INFO] t=2025-11-23T06:54:34-0300 lvl=info msg="update available" obj=updater
+2025-11-23 06:54:34 [WARNING] t=2025-11-23T06:54:34-0300 lvl=warn msg="failed to start tunnel" pg=/api/tunnels id=9a4361e493f6efb1 err="failed to start tunnel: The endpoint 'https://nonenlightening-liana-unresiliently.ngrok-free.dev' is already online. Either\n1. stop your existing endpoint first, or\n2. start both endpoints with `--pooling-enabled` to load balance between them.\r\n\r\nERR_NGROK_334\r\n"
+2025-11-23 06:54:34 [INFO] t=2025-11-23T06:54:34-0300 lvl=info msg=end pg=/api/tunnels id=9a4361e493f6efb1 status=502 dur=163.8119ms
+2025-11-23 06:56:32 [INFO] Opening tunnel named: http-5000-32728fa3-e79f-48b5-9196-968a16c3b8e9
+2025-11-23 06:56:32 [INFO] t=2025-11-23T06:56:32-0300 lvl=info msg="no configuration paths supplied"
+2025-11-23 06:56:32 [INFO] t=2025-11-23T06:56:32-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-23 06:56:32 [INFO] t=2025-11-23T06:56:32-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-23 06:56:32 [INFO] t=2025-11-23T06:56:32-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-23 06:56:33 [INFO] t=2025-11-23T06:56:33-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-23 06:56:33 [INFO] t=2025-11-23T06:56:33-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-23 06:56:33 [INFO] t=2025-11-23T06:56:33-0300 lvl=info msg="update available" obj=updater
+2025-11-23 06:56:33 [INFO] t=2025-11-23T06:56:33-0300 lvl=info msg=start pg=/api/tunnels id=1557d7cded9b69f9
+2025-11-23 06:56:33 [INFO] t=2025-11-23T06:56:33-0300 lvl=info msg=end pg=/api/tunnels id=1557d7cded9b69f9 status=200 dur=0s
+2025-11-23 06:56:33 [INFO] t=2025-11-23T06:56:33-0300 lvl=info msg=start pg=/api/tunnels id=a118c8e7f2476629
+2025-11-23 06:56:33 [INFO] t=2025-11-23T06:56:33-0300 lvl=info msg=end pg=/api/tunnels id=a118c8e7f2476629 status=200 dur=0s
+2025-11-23 06:56:33 [INFO] t=2025-11-23T06:56:33-0300 lvl=info msg=start pg=/api/tunnels id=74fc3e399b15e0f4
+2025-11-23 06:56:33 [INFO] t=2025-11-23T06:56:33-0300 lvl=info msg=end pg=/api/tunnels id=74fc3e399b15e0f4 status=200 dur=0s
+2025-11-23 06:56:33 [INFO] t=2025-11-23T06:56:33-0300 lvl=info msg=start pg=/api/tunnels id=3ef18901d0df69b6
+2025-11-23 06:56:33 [WARNING] t=2025-11-23T06:56:33-0300 lvl=warn msg="invalid tunnel configuration" pg=/api/tunnels id=3ef18901d0df69b6 err="yaml: unmarshal errors:\n  line 1: field options not found in type config.HTTPv2Tunnel"
+2025-11-23 06:56:33 [INFO] t=2025-11-23T06:56:33-0300 lvl=info msg=end pg=/api/tunnels id=3ef18901d0df69b6 status=400 dur=0s
+2025-11-23 07:02:03 [INFO] Opening tunnel named: http-5000-c8d9a147-e82e-4698-8e91-ca2e8f55b2b5
+2025-11-23 07:02:03 [INFO] t=2025-11-23T07:02:03-0300 lvl=info msg="no configuration paths supplied"
+2025-11-23 07:02:03 [INFO] t=2025-11-23T07:02:03-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-23 07:02:03 [INFO] t=2025-11-23T07:02:03-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-23 07:02:03 [INFO] t=2025-11-23T07:02:03-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-23 07:02:03 [INFO] t=2025-11-23T07:02:03-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-23 07:02:03 [INFO] t=2025-11-23T07:02:03-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-23 07:02:03 [INFO] t=2025-11-23T07:02:03-0300 lvl=info msg=start pg=/api/tunnels id=ed2405ae30c22055
+2025-11-23 07:02:03 [INFO] t=2025-11-23T07:02:03-0300 lvl=info msg=end pg=/api/tunnels id=ed2405ae30c22055 status=200 dur=0s
+2025-11-23 07:02:03 [INFO] t=2025-11-23T07:02:03-0300 lvl=info msg=start pg=/api/tunnels id=f2e17d53236c7b62
+2025-11-23 07:02:03 [INFO] t=2025-11-23T07:02:03-0300 lvl=info msg=end pg=/api/tunnels id=f2e17d53236c7b62 status=200 dur=0s
+2025-11-23 07:02:03 [INFO] t=2025-11-23T07:02:03-0300 lvl=info msg=start pg=/api/tunnels id=dc73c63d72f86212
+2025-11-23 07:02:03 [INFO] t=2025-11-23T07:02:03-0300 lvl=info msg=end pg=/api/tunnels id=dc73c63d72f86212 status=200 dur=0s
+2025-11-23 07:02:03 [INFO] t=2025-11-23T07:02:03-0300 lvl=info msg=start pg=/api/tunnels id=e8db4a9970f899cf
+2025-11-23 07:02:04 [INFO] t=2025-11-23T07:02:04-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-c8d9a147-e82e-4698-8e91-ca2e8f55b2b5 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-23 07:02:04 [INFO] t=2025-11-23T07:02:04-0300 lvl=info msg=end pg=/api/tunnels id=e8db4a9970f899cf status=201 dur=335.8457ms
+2025-11-23 07:02:04 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-23 07:02:04 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-23 07:02:04 [INFO]  * Restarting with stat
+2025-11-23 07:02:04 [INFO] Opening tunnel named: http-5000-82bb1472-5f8f-43a5-bde2-f7924afc1997
+2025-11-23 07:02:04 [INFO] t=2025-11-23T07:02:04-0300 lvl=info msg="no configuration paths supplied"
+2025-11-23 07:02:04 [INFO] t=2025-11-23T07:02:04-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-23 07:02:04 [INFO] t=2025-11-23T07:02:04-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-23 07:02:04 [WARNING] t=2025-11-23T07:02:04-0300 lvl=warn msg="can't bind default web address, trying alternatives" obj=web addr=127.0.0.1:4040
+2025-11-23 07:02:04 [INFO] t=2025-11-23T07:02:04-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4041 allow_hosts=[]
+2025-11-23 07:02:05 [INFO] t=2025-11-23T07:02:05-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-23 07:02:05 [INFO] t=2025-11-23T07:02:05-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-23 07:02:05 [INFO] t=2025-11-23T07:02:05-0300 lvl=info msg=start pg=/api/tunnels id=dc2c82fe13cfc192
+2025-11-23 07:02:05 [INFO] t=2025-11-23T07:02:05-0300 lvl=info msg=end pg=/api/tunnels id=dc2c82fe13cfc192 status=200 dur=0s
+2025-11-23 07:02:05 [INFO] t=2025-11-23T07:02:05-0300 lvl=info msg=start pg=/api/tunnels id=a5a33c2dd4c3a6af
+2025-11-23 07:02:05 [INFO] t=2025-11-23T07:02:05-0300 lvl=info msg=end pg=/api/tunnels id=a5a33c2dd4c3a6af status=200 dur=0s
+2025-11-23 07:02:05 [INFO] t=2025-11-23T07:02:05-0300 lvl=info msg=start pg=/api/tunnels id=4e8c05dadbd2cdd9
+2025-11-23 07:02:05 [INFO] t=2025-11-23T07:02:05-0300 lvl=info msg=end pg=/api/tunnels id=4e8c05dadbd2cdd9 status=200 dur=0s
+2025-11-23 07:02:05 [INFO] t=2025-11-23T07:02:05-0300 lvl=info msg=start pg=/api/tunnels id=3a4b96d49abd929b
+2025-11-23 07:02:05 [WARNING] t=2025-11-23T07:02:05-0300 lvl=warn msg="failed to start tunnel" pg=/api/tunnels id=3a4b96d49abd929b err="failed to start tunnel: The endpoint 'https://nonenlightening-liana-unresiliently.ngrok-free.dev' is already online. Either\n1. stop your existing endpoint first, or\n2. start both endpoints with `--pooling-enabled` to load balance between them.\r\n\r\nERR_NGROK_334\r\n"
+2025-11-23 07:02:05 [INFO] t=2025-11-23T07:02:05-0300 lvl=info msg=end pg=/api/tunnels id=3a4b96d49abd929b status=502 dur=163.4117ms
+2025-11-23 07:02:05 [INFO] t=2025-11-23T07:02:05-0300 lvl=info msg=start pg=/api/tunnels id=27a1fdfbb68c9b61
+2025-11-23 07:02:05 [INFO] t=2025-11-23T07:02:05-0300 lvl=info msg=end pg=/api/tunnels id=27a1fdfbb68c9b61 status=200 dur=0s
+2025-11-23 07:03:25 [INFO] Opening tunnel named: http-5000-1469a355-32f9-4429-987d-0c08447d9071
+2025-11-23 07:03:25 [INFO] t=2025-11-23T07:03:25-0300 lvl=info msg="no configuration paths supplied"
+2025-11-23 07:03:25 [INFO] t=2025-11-23T07:03:25-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-23 07:03:25 [INFO] t=2025-11-23T07:03:25-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-23 07:03:25 [INFO] t=2025-11-23T07:03:25-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-23 07:03:26 [INFO] t=2025-11-23T07:03:26-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-23 07:03:26 [INFO] t=2025-11-23T07:03:26-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-23 07:03:26 [INFO] t=2025-11-23T07:03:26-0300 lvl=info msg=start pg=/api/tunnels id=64797930f952a4a3
+2025-11-23 07:03:26 [INFO] t=2025-11-23T07:03:26-0300 lvl=info msg=end pg=/api/tunnels id=64797930f952a4a3 status=200 dur=0s
+2025-11-23 07:03:26 [INFO] t=2025-11-23T07:03:26-0300 lvl=info msg=start pg=/api/tunnels id=63f766c5a32e8ebf
+2025-11-23 07:03:26 [INFO] t=2025-11-23T07:03:26-0300 lvl=info msg=end pg=/api/tunnels id=63f766c5a32e8ebf status=200 dur=73.6µs
+2025-11-23 07:03:26 [INFO] t=2025-11-23T07:03:26-0300 lvl=info msg=start pg=/api/tunnels id=eed48fc6cb7650a2
+2025-11-23 07:03:26 [INFO] t=2025-11-23T07:03:26-0300 lvl=info msg=end pg=/api/tunnels id=eed48fc6cb7650a2 status=200 dur=0s
+2025-11-23 07:03:26 [INFO] t=2025-11-23T07:03:26-0300 lvl=info msg=start pg=/api/tunnels id=1dcc576afb0190fe
+2025-11-23 07:03:26 [INFO] t=2025-11-23T07:03:26-0300 lvl=info msg="update available" obj=updater
+2025-11-23 07:03:26 [INFO] t=2025-11-23T07:03:26-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-1469a355-32f9-4429-987d-0c08447d9071 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-23 07:03:26 [INFO] t=2025-11-23T07:03:26-0300 lvl=info msg=end pg=/api/tunnels id=1dcc576afb0190fe status=201 dur=460.6758ms
+2025-11-23 07:03:26 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-23 07:03:26 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-23 07:03:26 [INFO]  * Restarting with stat
+2025-11-23 07:03:27 [INFO] Opening tunnel named: http-5000-51979f5f-1f66-4d80-94b1-944061de9ff4
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg="no configuration paths supplied"
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-23 07:03:27 [WARNING] t=2025-11-23T07:03:27-0300 lvl=warn msg="can't bind default web address, trying alternatives" obj=web addr=127.0.0.1:4040
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4041 allow_hosts=[]
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg=start pg=/api/tunnels id=665b8846f712c335
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg=end pg=/api/tunnels id=665b8846f712c335 status=200 dur=0s
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg=start pg=/api/tunnels id=46d002cf445cc019
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg=end pg=/api/tunnels id=46d002cf445cc019 status=200 dur=0s
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg=start pg=/api/tunnels id=fdff73805b896c3c
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg=end pg=/api/tunnels id=fdff73805b896c3c status=200 dur=0s
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg=start pg=/api/tunnels id=54152941ba4809e0
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg="update available" obj=updater
+2025-11-23 07:03:27 [WARNING] t=2025-11-23T07:03:27-0300 lvl=warn msg="failed to start tunnel" pg=/api/tunnels id=54152941ba4809e0 err="failed to start tunnel: The endpoint 'https://nonenlightening-liana-unresiliently.ngrok-free.dev' is already online. Either\n1. stop your existing endpoint first, or\n2. start both endpoints with `--pooling-enabled` to load balance between them.\r\n\r\nERR_NGROK_334\r\n"
+2025-11-23 07:03:27 [INFO] t=2025-11-23T07:03:27-0300 lvl=info msg=end pg=/api/tunnels id=54152941ba4809e0 status=502 dur=164.7724ms
+2025-11-23 07:03:28 [INFO] t=2025-11-23T07:03:28-0300 lvl=info msg=start pg=/api/tunnels id=91040b3b4979f7df
+2025-11-23 07:03:28 [INFO] t=2025-11-23T07:03:28-0300 lvl=info msg=end pg=/api/tunnels id=91040b3b4979f7df status=200 dur=0s
+2025-11-24 03:03:08 [INFO] Opening tunnel named: http-5000-96f059ee-ad13-4a3c-92a2-a72ad83710f4
+2025-11-24 03:03:09 [INFO] t=2025-11-24T03:03:09-0300 lvl=info msg="no configuration paths supplied"
+2025-11-24 03:03:09 [INFO] t=2025-11-24T03:03:09-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-24 03:03:09 [INFO] t=2025-11-24T03:03:09-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-24 03:03:09 [INFO] t=2025-11-24T03:03:09-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-24 03:03:09 [INFO] t=2025-11-24T03:03:09-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-24 03:03:09 [INFO] t=2025-11-24T03:03:09-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-24 03:03:09 [INFO] t=2025-11-24T03:03:09-0300 lvl=info msg=start pg=/api/tunnels id=9f272eecb4ad93db
+2025-11-24 03:03:09 [INFO] t=2025-11-24T03:03:09-0300 lvl=info msg=end pg=/api/tunnels id=9f272eecb4ad93db status=200 dur=0s
+2025-11-24 03:03:09 [INFO] t=2025-11-24T03:03:09-0300 lvl=info msg=start pg=/api/tunnels id=6b6cffef5465268a
+2025-11-24 03:03:09 [INFO] t=2025-11-24T03:03:09-0300 lvl=info msg=end pg=/api/tunnels id=6b6cffef5465268a status=200 dur=0s
+2025-11-24 03:03:09 [INFO] t=2025-11-24T03:03:09-0300 lvl=info msg=start pg=/api/tunnels id=0186edc3e833d194
+2025-11-24 03:03:09 [INFO] t=2025-11-24T03:03:09-0300 lvl=info msg=end pg=/api/tunnels id=0186edc3e833d194 status=200 dur=0s
+2025-11-24 03:03:09 [INFO] t=2025-11-24T03:03:09-0300 lvl=info msg=start pg=/api/tunnels id=0e173ba8d91d1368
+2025-11-24 03:03:10 [INFO] t=2025-11-24T03:03:10-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-96f059ee-ad13-4a3c-92a2-a72ad83710f4 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-24 03:03:10 [INFO] t=2025-11-24T03:03:10-0300 lvl=info msg=end pg=/api/tunnels id=0e173ba8d91d1368 status=201 dur=340.754ms
+2025-11-24 03:03:10 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-24 03:03:10 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-24 03:03:10 [INFO]  * Restarting with stat
+2025-11-24 03:03:10 [INFO] Opening tunnel named: http-5000-630bbb1e-05ea-48d7-b3da-477f1ca3d294
+2025-11-24 03:03:10 [INFO] t=2025-11-24T03:03:10-0300 lvl=info msg="no configuration paths supplied"
+2025-11-24 03:03:10 [INFO] t=2025-11-24T03:03:10-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-24 03:03:10 [INFO] t=2025-11-24T03:03:10-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-24 03:03:10 [WARNING] t=2025-11-24T03:03:10-0300 lvl=warn msg="can't bind default web address, trying alternatives" obj=web addr=127.0.0.1:4040
+2025-11-24 03:03:10 [INFO] t=2025-11-24T03:03:10-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4041 allow_hosts=[]
+2025-11-24 03:03:11 [INFO] t=2025-11-24T03:03:11-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-24 03:03:11 [INFO] t=2025-11-24T03:03:11-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-24 03:03:11 [INFO] t=2025-11-24T03:03:11-0300 lvl=info msg=start pg=/api/tunnels id=12e8b95495283b1f
+2025-11-24 03:03:11 [INFO] t=2025-11-24T03:03:11-0300 lvl=info msg=end pg=/api/tunnels id=12e8b95495283b1f status=200 dur=0s
+2025-11-24 03:03:11 [INFO] t=2025-11-24T03:03:11-0300 lvl=info msg=start pg=/api/tunnels id=1d1c34ef05a959d7
+2025-11-24 03:03:11 [INFO] t=2025-11-24T03:03:11-0300 lvl=info msg=end pg=/api/tunnels id=1d1c34ef05a959d7 status=200 dur=0s
+2025-11-24 03:03:11 [INFO] t=2025-11-24T03:03:11-0300 lvl=info msg=start pg=/api/tunnels id=8348512195a81748
+2025-11-24 03:03:11 [INFO] t=2025-11-24T03:03:11-0300 lvl=info msg=end pg=/api/tunnels id=8348512195a81748 status=200 dur=0s
+2025-11-24 03:03:11 [INFO] t=2025-11-24T03:03:11-0300 lvl=info msg=start pg=/api/tunnels id=76a47be33123c55a
+2025-11-24 03:03:11 [WARNING] t=2025-11-24T03:03:11-0300 lvl=warn msg="failed to start tunnel" pg=/api/tunnels id=76a47be33123c55a err="failed to start tunnel: The endpoint 'https://nonenlightening-liana-unresiliently.ngrok-free.dev' is already online. Either\n1. stop your existing endpoint first, or\n2. start both endpoints with `--pooling-enabled` to load balance between them.\r\n\r\nERR_NGROK_334\r\n"
+2025-11-24 03:03:11 [INFO] t=2025-11-24T03:03:11-0300 lvl=info msg=end pg=/api/tunnels id=76a47be33123c55a status=502 dur=164.5974ms
+2025-11-24 03:03:11 [INFO] t=2025-11-24T03:03:11-0300 lvl=info msg=start pg=/api/tunnels id=d4acb1937c8e579b
+2025-11-24 03:03:11 [INFO] t=2025-11-24T03:03:11-0300 lvl=info msg=end pg=/api/tunnels id=d4acb1937c8e579b status=200 dur=0s

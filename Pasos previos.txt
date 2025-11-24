@@ -11,6 +11,11 @@ Ahora sí, ependencias a instalar:
     pip install pandas
     pip install flask
     pip install pyngrok
+    pip install pdfkit
+    
+    pip install -r requirements.txt
+    
+    sudo apt install wkhtmltopdf y agregar a variables de entorno
     
 Registrarse en ngrok, en este caso con mi mail institucional.
 De forma gratuita, ngrok permite un solo punto de conección con nombre por defecto.

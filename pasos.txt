@@ -5,8 +5,11 @@ añadir pip a variables de entorno
         pip install pandas
         pip install flask
         pip install pyngrok  
+        pip install pdfkit
         
         pip install -r requirements.txt
+        
+        instalar wkhtmltopdf
       
     ngrok config add-authtoken 34vxA2zSXNsna2y0SDKafJcHwED_34UADjPUSsneoePPfKr5m
         devuelve:   Authtoken saved to configuration file: C:\Users\TTBNN\AppData\Local/ngrok/ngrok.yml

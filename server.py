@@ -5,11 +5,14 @@
 
 
 
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, make_response
+import pdfkit
 import psycopg as psy
 from datetime import datetime
 import logging
 import os
+import atexit # para cerrar ngrok al cerrar el server
+
 
 app = Flask(__name__)
 
@@ -269,7 +272,7 @@ def nuevo_proyecto():
         print(msg)
         return jsonify({"status": "error", "mensaje": str(e)}), 500
 
-
+#####################################################################################
 # ruta para la p'agina web localhost:5000
 @app.route("/")
 def proyectos():
@@ -305,10 +308,58 @@ def proyectos():
         return f"❌ Error al cargar proyectos: {e}", 500
 
 
-# inicia túnel público de ngrok
+#######################################################################################
+# ruta para pdf
+@app.route("/exportar_pdf")
+def exportar_pdf():
+    # 1. Ejecutar la consulta
+    conn_str = (
+        f"host={DB_CONFIG['host']} dbname={DB_CONFIG['dbname']} "
+        f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
+    )
+    with psy.connect(conn_str) as conn:
+        with conn.cursor() as cur:
+            cur.execute("""
+                SELECT p.id_proyecto, p.fecha_registro, u.email, u.nombre, carrera.nombre, cargo.nombre, sede.nombre,
+                       p.nombre_proyecto, p.descripcion, tipo.nombre, herr.nombre, p.material, p.cantidad_prototipos,
+                       p.justificacion, p.fecha_necesidad, p.tiempo_estimado, p.otros_comentarios, origen.nombre, estado.nombre
+                FROM proyecto p
+                JOIN usuario u ON p.id_usuario = u.id_usuario
+                JOIN tipo ON p.id_tipo = tipo.id_tipo
+                JOIN sede ON p.id_sede = sede.id_sede
+                JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+                JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                JOIN estado ON p.id_estado = estado.id_estado
+                JOIN carrera ON p.id_carrera = carrera.id_carrera
+                JOIN cargo ON p.id_cargo = cargo.id_cargo
+                ORDER BY p.id_proyecto DESC;
+            """)
+            proyectos = cur.fetchall()
+
+    # 2. Renderizar el template como string
+    rendered = render_template("proyectos.html", proyectos=proyectos)
+
+    # 3. Configurar wkhtmltopdf (en Windows suele ser necesario)
+    path_wkhtmltopdf = r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
+    config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
+
+    # 4. Convertir a PDF
+    pdf = pdfkit.from_string(rendered, False, configuration=config)
+
+    # 5. Devolver respuesta HTTP con PDF
+    response = make_response(pdf)
+    response.headers["Content-Type"] = "application/pdf"
+    response.headers["Content-Disposition"] = "inline; filename=proyectos.pdf"
+    return response
+
+
+
+# corre en el puerto 5000 donde se conecta con ngrok
 if __name__ == "__main__":
     from pyngrok import ngrok
 
     public_url = ngrok.connect(5000)
     print(f"🌐 URL pública: {public_url}")
-    app.run(port=5000)
+    atexit.register(ngrok.disconnect, public_url)
+    
+    app.run(debug=True, port=5000)
