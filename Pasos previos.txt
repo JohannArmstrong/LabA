@@ -12,10 +12,14 @@ Ahora sí, ependencias a instalar:
     pip install flask
     pip install pyngrok
     pip install pdfkit
+    pip install weasyprint
+        en windows tuve que instalar un mont'on de librer'ias, en linux y eso no es necesario
+    pip install beautifulsoup4
+
     
     pip install -r requirements.txt
     
-    sudo apt install wkhtmltopdf y agregar a variables de entorno
+    #sudo apt install wkhtmltopdf y agregar a variables de entorno (reemplazado por weasyprint)
     
 Registrarse en ngrok, en este caso con mi mail institucional.
 De forma gratuita, ngrok permite un solo punto de conección con nombre por defecto.

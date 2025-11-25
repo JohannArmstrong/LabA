@@ -67,10 +67,10 @@ CREATE TABLE proyecto (
     id_herramienta INT REFERENCES herramienta(id_herramienta),
 
     material TEXT,
-    cantidad_prototipos TEXT,
+    cantidad_prototipos INT,
     justificacion TEXT,
     fecha_necesidad DATE,
-    tiempo_estimado TEXT,
+    tiempo_estimado DECIMAL,
     otros_comentarios TEXT,
 
     id_origen_material INT REFERENCES origen_material(id_origen_material),

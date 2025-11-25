@@ -7,6 +7,8 @@
 
 from flask import Flask, request, jsonify, render_template, make_response
 import pdfkit
+from weasyprint import HTML, CSS
+from bs4 import BeautifulSoup
 import psycopg as psy
 from datetime import datetime
 import logging
@@ -17,6 +19,8 @@ import atexit # para cerrar ngrok al cerrar el server
 app = Flask(__name__)
 
 # cambia los NaN, etc. para mostrar "-" en las tablas
+# usa jinja2
+# se usa directamente desde el HTML con <td>{{ cell|default_dash }}</td>
 @app.template_filter("default_dash")
 def default_dash(value):
     if value is None or str(value).lower() in ("nan", "none"):
@@ -118,6 +122,7 @@ def get_or_create(cur, table, field, value):
 
 
 # establece la ruta, es decir, el "túnel" que proporciona ngrok
+# para la entrada de datos hacia la DB
 @app.route("/api/nuevo_proyecto", methods=["POST"])
 def nuevo_proyecto():
     data = clean_keys(request.get_json())
@@ -273,10 +278,134 @@ def nuevo_proyecto():
         return jsonify({"status": "error", "mensaje": str(e)}), 500
 
 #####################################################################################
+
+# para concatenar con la consulta
+COLUMNAS_DISPONIBLES = {
+    "id_proyecto": "p.id_proyecto",
+    "fecha_registro": "p.fecha_registro",
+    "email": "u.email",
+    "usuario_nombre": "u.nombre",
+    "carrera": "carrera.nombre",
+    "cargo": "cargo.nombre",
+    "sede": "sede.nombre",
+    "nombre_proyecto": "p.nombre_proyecto",
+    "descripcion": "p.descripcion",
+    "tipo": "tipo.nombre",
+    "herramienta": "herr.nombre",
+    "material": "p.material",
+    "cantidad_prototipos": "p.cantidad_prototipos",
+    "justificacion": "p.justificacion",
+    "fecha_necesidad": "p.fecha_necesidad",
+    "tiempo_estimado": "p.tiempo_estimado",
+    "otros_comentarios": "p.otros_comentarios",
+    "origen": "origen.nombre",
+    "estado": "estado.nombre"
+}
+
 # ruta para la p'agina web localhost:5000
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def proyectos():
     try:
+        if request.method == "POST":
+            seleccionadas = request.form.getlist("columnas")
+        else:
+            # GET inicial con todas las columnas seleccionadas por defecto
+            seleccionadas = list(COLUMNAS_DISPONIBLES.keys())
+
+        # se juntan las columnas seleccionadas, separadas por coma
+        cols_sql = ", ".join([COLUMNAS_DISPONIBLES[c] for c in seleccionadas])
+        # se unen ambas partes para formar la consulta
+        query = f"""
+            SELECT {cols_sql}
+            FROM proyecto p
+            JOIN usuario u ON p.id_usuario = u.id_usuario
+            JOIN tipo ON p.id_tipo = tipo.id_tipo
+            JOIN sede ON p.id_sede = sede.id_sede
+            JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+            JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+            JOIN estado ON p.id_estado = estado.id_estado
+            JOIN carrera ON p.id_carrera = carrera.id_carrera
+            JOIN cargo ON p.id_cargo = cargo.id_cargo
+            ORDER BY p.id_proyecto DESC;
+        """
+
+        conn_str = (
+            f"host={DB_CONFIG['host']} dbname={DB_CONFIG['dbname']} "
+            f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
+        )
+        with psy.connect(conn_str) as conn:
+            with conn.cursor() as cur:
+                cur.execute(query)
+                proyectos = cur.fetchall()
+
+        # sumatorias de columnas numéricas
+        # con problemas por ser algunas texto en vez de n'umeros
+        sum_row = []
+        for i, col in enumerate(seleccionadas):
+            valores = [p[i] for p in proyectos if isinstance(p[i], (int, float))]
+            if valores:
+                sum_row.append(sum(valores))
+            else:
+                sum_row.append("-")
+
+        return render_template("proyectos.html",
+                               columnas_disponibles=COLUMNAS_DISPONIBLES.keys(),
+                               columnas=seleccionadas,
+                               rows=proyectos,
+                               sum_row=sum_row)
+
+    except Exception as e:
+        logging.error(f"Error en consulta: {e}")
+        return f"❌ Error al cargar proyectos: {e}", 500
+
+
+
+'''@app.route("/",methods=["GET", "POST"])
+def proyectos():
+    try:
+        seleccionadas = request.form.getlist("columnas")
+
+        # Construir SELECT dinámico
+        cols_sql = ", ".join([COLUMNAS_DISPONIBLES[c] for c in seleccionadas])
+        query = f"""
+            SELECT {cols_sql}
+            FROM proyecto p
+            JOIN usuario u ON p.id_usuario = u.id_usuario
+            JOIN tipo ON p.id_tipo = tipo.id_tipo
+            JOIN sede ON p.id_sede = sede.id_sede
+            JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+            JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+            JOIN estado ON p.id_estado = estado.id_estado
+            JOIN carrera ON p.id_carrera = carrera.id_carrera
+            JOIN cargo ON p.id_cargo = cargo.id_cargo
+            ORDER BY p.id_proyecto DESC;
+        """
+        conn_str = (
+            f"host={DB_CONFIG['host']} dbname={DB_CONFIG['dbname']} "
+            f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
+        )
+        with psy.connect(conn_str) as conn:
+            with conn.cursor() as cur:
+                cur.execute(query)
+                proyectos = cur.fetchall()
+
+         # Calcular sumatorias de columnas numéricas
+        sumatorias = {}
+        for i, col in enumerate(seleccionadas):
+            valores = [p[i] for p in proyectos if isinstance(p[i], (int, float))]
+            if valores:
+                sumatorias[col] = sum(valores)
+        
+        return render_template("proyectos.html", columnas=seleccionadas, rows=proyectos, sumatorias=sumatorias)
+        #return render_template("proyectos.html", proyectos=proyectos)
+
+    except Exception as e:
+        # loguear el error y mostrar un mensaje
+        logging.error(f"Error en consulta: {e}")
+        return f"❌ Error al cargar proyectos: {e}", 500
+
+'''
+'''
         conn_str = (
             f"host={DB_CONFIG['host']} dbname={DB_CONFIG['dbname']} "
             f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
@@ -298,15 +427,7 @@ def proyectos():
                     JOIN cargo ON p.id_cargo = cargo.id_cargo
                     ORDER BY p.id_proyecto DESC;
                 """)
-                proyectos = cur.fetchall()
-
-        return render_template("proyectos.html", proyectos=proyectos)
-
-    except Exception as e:
-        # loguear el error y mostrar un mensaje
-        logging.error(f"Error en consulta: {e}")
-        return f"❌ Error al cargar proyectos: {e}", 500
-
+                proyectos = cur.fetchall()'''
 
 #######################################################################################
 # ruta para pdf
@@ -339,14 +460,16 @@ def exportar_pdf():
     # 2. Renderizar el template como string
     rendered = render_template("proyectos.html", proyectos=proyectos)
 
-    # 3. Configurar wkhtmltopdf (en Windows suele ser necesario)
-    path_wkhtmltopdf = r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
-    config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
+    # Generar PDF directamente
+    soup = BeautifulSoup(rendered, "html.parser")
+    tabla_html = str(soup.select_one("#proyectos"))
 
-    # 4. Convertir a PDF
-    pdf = pdfkit.from_string(rendered, False, configuration=config)
+    # Generar PDF con estilos
+    pdf = HTML(string=tabla_html).write_pdf(
+        stylesheets=[CSS("static/css/bootstrap.min.css"),
+                     CSS("static/css/styles.css")]
+    )
 
-    # 5. Devolver respuesta HTTP con PDF
     response = make_response(pdf)
     response.headers["Content-Type"] = "application/pdf"
     response.headers["Content-Disposition"] = "inline; filename=proyectos.pdf"
@@ -355,11 +478,37 @@ def exportar_pdf():
 
 
 # corre en el puerto 5000 donde se conecta con ngrok
-if __name__ == "__main__":
+'''if __name__ == "__main__":
     from pyngrok import ngrok
 
-    public_url = ngrok.connect(5000)
-    print(f"🌐 URL pública: {public_url}")
+    # verificar si ya existe un túnel en el puerto 5000
+    tunnels = ngrok.get_tunnels()
+    public_url = None
+    for t in tunnels:
+        if "5000" in t.config["addr"]:
+            public_url = t.public_url
+            break
+
+    # si no existe, abrir uno nuevo
+    if not public_url:
+        public_url = ngrok.connect(5000)
+        print(f"🌐 Nuevo túnel: {public_url}")
+    else:
+        print(f"🌐 Reutilizando túnel existente: {public_url}")
+
+    # registra cierre automático
     atexit.register(ngrok.disconnect, public_url)
-    
-    app.run(debug=True, port=5000)
+
+    # corre flask
+    app.run(debug=False, port=5000)'''
+
+if __name__ == "__main__":
+    from pyngrok import ngrok
+    import atexit
+
+    if not ngrok.get_tunnels():
+        public_url = ngrok.connect(5000)
+        print(f"🌐 URL pública: {public_url}")
+        atexit.register(ngrok.disconnect, public_url)
+
+    app.run(debug=True, port=5000, use_reloader=False)
