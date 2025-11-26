@@ -19,7 +19,7 @@ import atexit # para cerrar ngrok al cerrar el server
 app = Flask(__name__)
 
 # cambia los NaN, etc. para mostrar "-" en las tablas
-# usa jinja2
+# Los @app usan jinja2 a través de flask
 # se usa directamente desde el HTML con <td>{{ cell|default_dash }}</td>
 @app.template_filter("default_dash")
 def default_dash(value):
@@ -45,6 +45,12 @@ DB_CONFIG = {
     "password": "Passw0rd",
     "port": 5432
 }
+
+conn_str = (
+            f"host={DB_CONFIG['host']} dbname={DB_CONFIG['dbname']} "
+            f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
+        )
+
 
 # funciones auxiliares
 
@@ -128,6 +134,7 @@ def nuevo_proyecto():
     data = clean_keys(request.get_json())
     logging.info(f"📩 Datos recibidos: {data}")
 
+    # si por alguna razón no se puede parsear la fecha, se coloca la actual
     fecha_registro = parse_date(str(data.get("Marca temporal"))) or datetime.now().date()
     
     # para evitar errores que había
@@ -156,11 +163,6 @@ def nuevo_proyecto():
     estado_raw = data.get("Estado") if "Estado" in data else None
 
     try:
-        conn_str = (
-            f"host={DB_CONFIG['host']} dbname={DB_CONFIG['dbname']} "
-            f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
-        )
-
         with psy.connect(conn_str) as conn:
             with conn.cursor() as cur:
 
@@ -308,12 +310,60 @@ def proyectos():
     try:
         if request.method == "POST":
             seleccionadas = request.form.getlist("columnas")
+            # si hay una alg'un par'ametro de b'usqueda, vac'io
+            filtros = {col: request.form.get(f"filtro_{col}", "") for col in seleccionadas}
         else:
             # GET inicial con todas las columnas seleccionadas por defecto
             seleccionadas = list(COLUMNAS_DISPONIBLES.keys())
+            filtros = {col: "" for col in seleccionadas}
 
         # se juntan las columnas seleccionadas, separadas por coma
         cols_sql = ", ".join([COLUMNAS_DISPONIBLES[c] for c in seleccionadas])
+
+        # se obtienen par'ametros de filtrado, si los hay (los campos de b'usqueda de coincidencias)
+        where_clauses = []
+        params = []
+        for col, val in filtros.items():
+            if val.strip():  # si el input no está vacío. Strip vita espacios innecesarios
+                where_clauses.append(f"{COLUMNAS_DISPONIBLES[col]}::text ILIKE %s")
+                params.append(f"%{val}%")
+        
+        # se juntan los filtros para la consulta
+        where_sql = " AND ".join(where_clauses)
+
+        if where_sql:
+            query = f"""
+                SELECT {cols_sql}
+                FROM proyecto p
+                JOIN usuario u ON p.id_usuario = u.id_usuario
+                JOIN tipo ON p.id_tipo = tipo.id_tipo
+                JOIN sede ON p.id_sede = sede.id_sede
+                JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+                JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                JOIN estado ON p.id_estado = estado.id_estado
+                JOIN carrera ON p.id_carrera = carrera.id_carrera
+                JOIN cargo ON p.id_cargo = cargo.id_cargo
+                WHERE {where_sql}
+                ORDER BY p.id_proyecto DESC;
+            """
+        else:
+            # consulta cuando no hay búsqueda
+            # se unen ambas partes para formar la consulta
+            query = f"""
+                SELECT {cols_sql}
+                FROM proyecto p
+                JOIN usuario u ON p.id_usuario = u.id_usuario
+                JOIN tipo ON p.id_tipo = tipo.id_tipo
+                JOIN sede ON p.id_sede = sede.id_sede
+                JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+                JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                JOIN estado ON p.id_estado = estado.id_estado
+                JOIN carrera ON p.id_carrera = carrera.id_carrera
+                JOIN cargo ON p.id_cargo = cargo.id_cargo
+                ORDER BY p.id_proyecto DESC;
+            """
+
+        '''# consulta cuando no hay búsqueda
         # se unen ambas partes para formar la consulta
         query = f"""
             SELECT {cols_sql}
@@ -327,15 +377,11 @@ def proyectos():
             JOIN carrera ON p.id_carrera = carrera.id_carrera
             JOIN cargo ON p.id_cargo = cargo.id_cargo
             ORDER BY p.id_proyecto DESC;
-        """
+        """'''
 
-        conn_str = (
-            f"host={DB_CONFIG['host']} dbname={DB_CONFIG['dbname']} "
-            f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
-        )
         with psy.connect(conn_str) as conn:
             with conn.cursor() as cur:
-                cur.execute(query)
+                cur.execute(query, params)
                 proyectos = cur.fetchall()
 
         # sumatorias de columnas numéricas
@@ -352,7 +398,8 @@ def proyectos():
                                columnas_disponibles=COLUMNAS_DISPONIBLES.keys(),
                                columnas=seleccionadas,
                                rows=proyectos,
-                               sum_row=sum_row)
+                               sum_row=sum_row,
+                               filtros=filtros)
 
     except Exception as e:
         logging.error(f"Error en consulta: {e}")
@@ -430,42 +477,54 @@ def proyectos():
                 proyectos = cur.fetchall()'''
 
 #######################################################################################
-# ruta para pdf
-@app.route("/exportar_pdf")
-def exportar_pdf():
-    # 1. Ejecutar la consulta
-    conn_str = (
-        f"host={DB_CONFIG['host']} dbname={DB_CONFIG['dbname']} "
-        f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
-    )
+# función auxiliar para obtener datos y sumatorias
+def obtener_proyectos(seleccionadas):
+    cols_sql = ", ".join([COLUMNAS_DISPONIBLES[c] for c in seleccionadas])
+    query = f"""
+        SELECT {cols_sql}
+        FROM proyecto p
+        JOIN usuario u ON p.id_usuario = u.id_usuario
+        JOIN tipo ON p.id_tipo = tipo.id_tipo
+        JOIN sede ON p.id_sede = sede.id_sede
+        JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+        JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+        JOIN estado ON p.id_estado = estado.id_estado
+        JOIN carrera ON p.id_carrera = carrera.id_carrera
+        JOIN cargo ON p.id_cargo = cargo.id_cargo
+        ORDER BY p.id_proyecto DESC;
+    """
+
+
     with psy.connect(conn_str) as conn:
         with conn.cursor() as cur:
-            cur.execute("""
-                SELECT p.id_proyecto, p.fecha_registro, u.email, u.nombre, carrera.nombre, cargo.nombre, sede.nombre,
-                       p.nombre_proyecto, p.descripcion, tipo.nombre, herr.nombre, p.material, p.cantidad_prototipos,
-                       p.justificacion, p.fecha_necesidad, p.tiempo_estimado, p.otros_comentarios, origen.nombre, estado.nombre
-                FROM proyecto p
-                JOIN usuario u ON p.id_usuario = u.id_usuario
-                JOIN tipo ON p.id_tipo = tipo.id_tipo
-                JOIN sede ON p.id_sede = sede.id_sede
-                JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
-                JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
-                JOIN estado ON p.id_estado = estado.id_estado
-                JOIN carrera ON p.id_carrera = carrera.id_carrera
-                JOIN cargo ON p.id_cargo = cargo.id_cargo
-                ORDER BY p.id_proyecto DESC;
-            """)
+            cur.execute(query)
             proyectos = cur.fetchall()
 
-    # 2. Renderizar el template como string
-    rendered = render_template("proyectos.html", proyectos=proyectos)
+    # fila de sumatorias
+    sum_row = []
+    for i, col in enumerate(seleccionadas):
+        valores = [p[i] for p in proyectos if isinstance(p[i], (int, float))]
+        sum_row.append(sum(valores) if valores else "-")
 
-    # Generar PDF directamente
-    soup = BeautifulSoup(rendered, "html.parser")
-    tabla_html = str(soup.select_one("#proyectos"))
+    return proyectos, sum_row
 
-    # Generar PDF con estilos
-    pdf = HTML(string=tabla_html).write_pdf(
+@app.route("/exportar_pdf", methods=["GET", "POST"])
+def exportar_pdf():
+    seleccionadas = request.form.getlist("columnas")
+    if not seleccionadas:
+        seleccionadas = list(COLUMNAS_DISPONIBLES.keys())
+
+    proyectos, sum_row = obtener_proyectos(seleccionadas)
+
+    # renderizar el mismo template que usás en pantalla
+    html_string = render_template("proyectos.html",
+                                  columnas_disponibles=COLUMNAS_DISPONIBLES.keys(),
+                                  columnas=seleccionadas,
+                                  rows=proyectos,
+                                  sum_row=sum_row)
+
+    # generar PDF con WeasyPrint
+    pdf = HTML(string=html_string).write_pdf(
         stylesheets=[CSS("static/css/bootstrap.min.css"),
                      CSS("static/css/styles.css")]
     )

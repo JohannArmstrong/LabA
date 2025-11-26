@@ -1,11 +1,24 @@
-// dark theme
+// dark theme con bootstrap
 document.addEventListener("DOMContentLoaded", function () {
     const btn = document.getElementById("theme-toggle");
-    btn.addEventListener("click", function () {
-        const htmlTag = document.documentElement;
-        const currentTheme = htmlTag.getAttribute("data-bs-theme");
-        htmlTag.setAttribute("data-bs-theme", currentTheme === "light" ? "dark" : "light");
-    });
+    const htmlTag = document.documentElement;
+
+    // uso de local storage para guardar el tema actual
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        htmlTag.setAttribute("data-bs-theme", savedTheme);
+    } else {
+        htmlTag.setAttribute("data-bs-theme", "dark"); // por defecto oscuro
+        localStorage.setItem("theme", "dark");
+    }
+
+    // alternar tema mediante bot'on
+        btn.addEventListener("click", function () {
+            const currentTheme = htmlTag.getAttribute("data-bs-theme");
+            const newTheme = currentTheme === "light" ? "dark" : "light";
+            htmlTag.setAttribute("data-bs-theme", newTheme);
+            localStorage.setItem("theme", newTheme); // guardar estado
+        });
 });
 
 
