@@ -2,6 +2,7 @@ import pandas as panda
 import psycopg as psy
 from datetime import datetime
 import math
+from decimal import Decimal, InvalidOperation
 
 #  CSV público de google sheets 
 link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTilwi5g-OdfObKJmRWFIV-8N0RBaGLX2QiF0bmSpl915RlkIed5Ye-O80Ey5crsg5D7o8bCNtz26sv/pub?gid=1350431005&single=true&output=csv"
@@ -32,6 +33,30 @@ def parse_int(value):
         return int(float(value))
     except Exception:
         return None
+
+
+def parse_decimal(value):
+    if value is None:
+        return None
+    try:
+        v = str(value).replace(",", ".").strip()
+        if v == "":
+            return None
+        d = Decimal(v)
+        # descartar NaN o infinitos
+        if d.is_nan() or d.is_infinite():
+            return None
+        return d
+    except (InvalidOperation, ValueError):
+        return None
+        
+'''def parse_decimal(value):
+    if value is None:
+        return None
+    try:
+        return Decimal(str(value).replace(",", "."))
+    except InvalidOperation:
+        return None'''
 
 # funci'on para obtener o insertar ID en tablas normalizadas
 def get_or_create_id(cur, table, name_value):
@@ -103,6 +128,9 @@ with psy.connect(conn_str) as conn:
             fecha_registro = parse_date(str(row.get("Marca temporal")))
             fecha_necesidad = parse_date(str(row.get("Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelación)")))
 
+            tiempo_estimado = parse_decimal(row.get("Tiempo estimado de utilización de la herramienta / material / servicio (hs):"))
+
+
             # por si hay texto en vez de números, aunque de todas formas inserta null
             cantidad_prototipos = row.get("Cantidad de prototipos a fabricar:")
             try:
@@ -141,7 +169,8 @@ with psy.connect(conn_str) as conn:
                 cantidad_prototipos,
                 row.get("Vinculación del proyecto con las acciones relacionadas a las herramientas de fabricación digital / materiales / servicios: (justificación de uso)"),
                 fecha_necesidad,
-                row.get("Tiempo estimado de utilización de la herramienta / material / servicio (hs):"),
+                tiempo_estimado,
+                #row.get("Tiempo estimado de utilización de la herramienta / material / servicio (hs):"),
                 row.get("Otros comentarios"),
                 id_origen_material,
                 copiado,

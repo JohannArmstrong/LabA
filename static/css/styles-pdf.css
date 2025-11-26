@@ -1,0 +1,49 @@
+body {
+  min-height: 100vh;
+}
+
+
+
+@page {
+  size: A4;
+  margin: 1cm;
+}
+
+@media print {
+  table {
+    font-size: 10px;
+    
+  }
+  th, td {
+    padding: 2px 4px;
+  }
+  .to-pdf {
+    /*transform: scale(0.7);   /* reduce al 70% */
+    transform-origin: top left;
+  }
+
+  table thead {
+    color: white;
+  }
+}
+
+
+/*table {
+  page-break-inside: avoid;
+  width: 100%;
+  border-collapse: collapse;
+}*/
+table {
+  width: 100%;
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+tr {
+  page-break-inside: avoid;
+  page-break-after: auto;
+}
+
+table, tr, td, th {
+  page-break-inside: avoid;
+}

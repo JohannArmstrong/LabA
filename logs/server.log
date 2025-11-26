@@ -8168,3 +8168,540 @@ Exit with code 1 due to network error: ProtocolUnknownError
 2025-11-26 10:42:57 [WARNING] t=2025-11-26T10:42:57-0300 lvl=warn msg="Stopping forwarder" name=http-5000-3273837a-0be7-457d-b116-bcf614a75186 acceptErr="failed to accept connection: Listener closed"
 2025-11-26 10:42:57 [WARNING] t=2025-11-26T10:42:57-0300 lvl=warn msg="Error restarting forwarder" name=http-5000-3273837a-0be7-457d-b116-bcf614a75186 err="failed to start tunnel: session closed"
 2025-11-26 10:42:57 [INFO] t=2025-11-26T10:42:57-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-26 10:53:53 [INFO] t=2025-11-26T10:53:53-0300 lvl=info msg="no configuration paths supplied"
+2025-11-26 10:53:53 [INFO] t=2025-11-26T10:53:53-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-26 10:53:53 [INFO] t=2025-11-26T10:53:53-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-26 10:53:53 [INFO] t=2025-11-26T10:53:53-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg=start pg=/api/tunnels id=0a27354ca95754fc
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg=end pg=/api/tunnels id=0a27354ca95754fc status=200 dur=606.3µs
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg=start pg=/api/tunnels id=9574273b35ee22bc
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg=end pg=/api/tunnels id=9574273b35ee22bc status=200 dur=0s
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg=start pg=/api/tunnels id=e71ccdc9ba5b6c20
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg=end pg=/api/tunnels id=e71ccdc9ba5b6c20 status=200 dur=0s
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg=start pg=/api/tunnels id=882561912012e44d
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg=end pg=/api/tunnels id=882561912012e44d status=200 dur=0s
+2025-11-26 10:53:54 [INFO] Opening tunnel named: http-5000-460f6d3d-189c-41b2-acdd-0b1f2dc69b81
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg=start pg=/api/tunnels id=51cbef6a9e05aa42
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg="update available" obj=updater
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-460f6d3d-189c-41b2-acdd-0b1f2dc69b81 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-26 10:53:54 [INFO] t=2025-11-26T10:53:54-0300 lvl=info msg=end pg=/api/tunnels id=51cbef6a9e05aa42 status=201 dur=348.8923ms
+2025-11-26 10:53:54 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-26 10:53:54 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-26 10:54:14 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:14] "POST / HTTP/1.1" 200 -
+2025-11-26 10:54:14 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:54:15 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 10:54:26 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:26] "GET / HTTP/1.1" 200 -
+2025-11-26 10:54:26 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:54:26 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 10:54:28 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:28] "GET / HTTP/1.1" 200 -
+2025-11-26 10:54:28 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 10:54:28 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:54:32 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:32] "[33mGET /estadisticas HTTP/1.1[0m" 404 -
+2025-11-26 10:54:35 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:35] "[33mGET /reservada2 HTTP/1.1[0m" 404 -
+2025-11-26 10:54:39 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:39] "[33mGET /reservada1 HTTP/1.1[0m" 404 -
+2025-11-26 10:54:42 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:42] "GET / HTTP/1.1" 200 -
+2025-11-26 10:54:43 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:54:43 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 10:54:45 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 10:54:45 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:54:46 [INFO] 127.0.0.1 - - [26/Nov/2025 10:54:46] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 10:55:10 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:10] "POST / HTTP/1.1" 200 -
+2025-11-26 10:55:10 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:55:10 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 10:55:10 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 10:55:10 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:10] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 10:55:12 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:12] "GET / HTTP/1.1" 200 -
+2025-11-26 10:55:13 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 10:55:13 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:13] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 10:55:16 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:16] "POST / HTTP/1.1" 200 -
+2025-11-26 10:55:16 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:16] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:55:16 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 10:55:16 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 10:55:16 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:16] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 10:55:19 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:19] "GET / HTTP/1.1" 200 -
+2025-11-26 10:55:19 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 10:55:19 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:19] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 10:55:22 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:22] "POST / HTTP/1.1" 200 -
+2025-11-26 10:55:22 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:55:22 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 10:55:22 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 10:55:22 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:22] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 10:55:29 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:29] "POST / HTTP/1.1" 200 -
+2025-11-26 10:55:29 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:55:29 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 10:55:29 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 10:55:29 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:29] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 10:55:54 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:54] "POST / HTTP/1.1" 200 -
+2025-11-26 10:55:54 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:55:54 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 10:55:54 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 10:55:55 [INFO] 127.0.0.1 - - [26/Nov/2025 10:55:55] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 10:56:05 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:05] "POST / HTTP/1.1" 200 -
+2025-11-26 10:56:06 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:56:06 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 10:56:06 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 10:56:06 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:06] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 10:56:13 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:13] "POST / HTTP/1.1" 200 -
+2025-11-26 10:56:14 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:56:14 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 10:56:14 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 10:56:14 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:14] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 10:56:38 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:38] "POST / HTTP/1.1" 200 -
+2025-11-26 10:56:38 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:56:38 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 10:56:38 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 10:56:38 [INFO] 127.0.0.1 - - [26/Nov/2025 10:56:38] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 10:59:33 [INFO] 127.0.0.1 - - [26/Nov/2025 10:59:33] "POST / HTTP/1.1" 200 -
+2025-11-26 10:59:34 [INFO] 127.0.0.1 - - [26/Nov/2025 10:59:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:59:34 [INFO] 127.0.0.1 - - [26/Nov/2025 10:59:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 10:59:37 [INFO] 127.0.0.1 - - [26/Nov/2025 10:59:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 10:59:38 [INFO] 127.0.0.1 - - [26/Nov/2025 10:59:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 10:59:38 [INFO] 127.0.0.1 - - [26/Nov/2025 10:59:38] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 11:03:07 [INFO] 127.0.0.1 - - [26/Nov/2025 11:03:07] "POST / HTTP/1.1" 200 -
+2025-11-26 11:03:07 [INFO] 127.0.0.1 - - [26/Nov/2025 11:03:07] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-11-26 11:03:07 [INFO] 127.0.0.1 - - [26/Nov/2025 11:03:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 11:03:07 [INFO] 127.0.0.1 - - [26/Nov/2025 11:03:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 11:03:07 [INFO] 127.0.0.1 - - [26/Nov/2025 11:03:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 11:03:08 [INFO] 127.0.0.1 - - [26/Nov/2025 11:03:08] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 11:05:26 [INFO] 127.0.0.1 - - [26/Nov/2025 11:05:26] "POST / HTTP/1.1" 200 -
+2025-11-26 11:05:26 [INFO] 127.0.0.1 - - [26/Nov/2025 11:05:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 11:05:27 [INFO] 127.0.0.1 - - [26/Nov/2025 11:05:27] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-11-26 11:05:27 [INFO] 127.0.0.1 - - [26/Nov/2025 11:05:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 11:05:27 [INFO] 127.0.0.1 - - [26/Nov/2025 11:05:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 11:05:28 [INFO] 127.0.0.1 - - [26/Nov/2025 11:05:28] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 11:06:18 [INFO] 127.0.0.1 - - [26/Nov/2025 11:06:18] "POST / HTTP/1.1" 200 -
+2025-11-26 11:06:18 [INFO] 127.0.0.1 - - [26/Nov/2025 11:06:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 11:06:18 [INFO] 127.0.0.1 - - [26/Nov/2025 11:06:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 11:06:18 [INFO] 127.0.0.1 - - [26/Nov/2025 11:06:18] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-11-26 11:06:18 [INFO] 127.0.0.1 - - [26/Nov/2025 11:06:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 11:06:18 [INFO] 127.0.0.1 - - [26/Nov/2025 11:06:18] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 11:06:23 [INFO] 127.0.0.1 - - [26/Nov/2025 11:06:23] "POST / HTTP/1.1" 200 -
+2025-11-26 11:06:24 [INFO] 127.0.0.1 - - [26/Nov/2025 11:06:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 11:06:24 [INFO] 127.0.0.1 - - [26/Nov/2025 11:06:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 11:06:24 [INFO] 127.0.0.1 - - [26/Nov/2025 11:06:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-26 11:06:24 [INFO] 127.0.0.1 - - [26/Nov/2025 11:06:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 11:06:24 [INFO] 127.0.0.1 - - [26/Nov/2025 11:06:24] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-11-26 11:07:57 [INFO] t=2025-11-26T11:07:57-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-26 11:07:57 [INFO] t=2025-11-26T11:07:57-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-26 11:07:57 [INFO] t=2025-11-26T11:07:57-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=3a926686e3b7 err="reconnecting session closed"
+2025-11-26 11:07:57 [INFO] t=2025-11-26T11:07:57-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=282c2c496f93394888db85f7698e0a33
+2025-11-26 11:07:57 [WARNING] t=2025-11-26T11:07:57-0300 lvl=warn msg="Stopping forwarder" name=http-5000-460f6d3d-189c-41b2-acdd-0b1f2dc69b81 acceptErr="failed to accept connection: Listener closed"
+2025-11-26 11:07:57 [WARNING] t=2025-11-26T11:07:57-0300 lvl=warn msg="Error restarting forwarder" name=http-5000-460f6d3d-189c-41b2-acdd-0b1f2dc69b81 err="failed to start tunnel: session closed"
+2025-11-26 11:07:57 [INFO] t=2025-11-26T11:07:57-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg="no configuration paths supplied"
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg=start pg=/api/tunnels id=eb872f87153b223c
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg=end pg=/api/tunnels id=eb872f87153b223c status=200 dur=0s
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg=start pg=/api/tunnels id=fd986d1a7f8bb5ef
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg=end pg=/api/tunnels id=fd986d1a7f8bb5ef status=200 dur=0s
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg=start pg=/api/tunnels id=270098e43491ce3e
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg=end pg=/api/tunnels id=270098e43491ce3e status=200 dur=0s
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg=start pg=/api/tunnels id=497762a1f004d56e
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg=end pg=/api/tunnels id=497762a1f004d56e status=200 dur=545.7µs
+2025-11-26 14:57:32 [INFO] Opening tunnel named: http-5000-85ded8fb-606c-4be1-bcec-ebc19551187a
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg=start pg=/api/tunnels id=dbc7aa7d95287127
+2025-11-26 14:57:32 [INFO] t=2025-11-26T14:57:32-0300 lvl=info msg="update available" obj=updater
+2025-11-26 14:57:33 [INFO] t=2025-11-26T14:57:33-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-85ded8fb-606c-4be1-bcec-ebc19551187a addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-26 14:57:33 [INFO] t=2025-11-26T14:57:33-0300 lvl=info msg=end pg=/api/tunnels id=dbc7aa7d95287127 status=201 dur=374.1042ms
+2025-11-26 14:57:33 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-26 14:57:33 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-26 14:57:43 [INFO] 127.0.0.1 - - [26/Nov/2025 14:57:43] "GET / HTTP/1.1" 200 -
+2025-11-26 14:57:44 [INFO] 127.0.0.1 - - [26/Nov/2025 14:57:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 14:57:44 [INFO] 127.0.0.1 - - [26/Nov/2025 14:57:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 14:57:44 [INFO] 127.0.0.1 - - [26/Nov/2025 14:57:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:05:54 [INFO] t=2025-11-26T15:05:54-0300 lvl=info msg="join connections" obj=join id=4478fa5738b7 l=127.0.0.1:5000 r=35.243.23.7:40045
+2025-11-26 15:05:54 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-26T18:05:50.600Z', 'Direcci\xf3n de correo electr\xf3nico': 'rodrigo.palivoda@estudiantes.utec.edu.uy', 'Nombre completo:': ' el rodri', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'utex', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Externo', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'terrible project', 'Breve descripci\xf3n del proyecto': "y .... si sab'es decime", 'Seleccione el tipo de solicitud': 'Asistencia t\xe9cnica (de equipamiento u otro)', 'Seleccione la herramienta, material o servicio que desea utilizar:': '', 'Material a utilizar': '', 'Origen del material': '', 'Cantidad de prototipos a fabricar:': '', 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios: (justificaci\xf3n de uso)': '', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-27T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': 15, 'Otros comentarios': 'nothing'}
+2025-11-26 15:05:55 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-26 15:05:55 [INFO] 127.0.0.1 - - [26/Nov/2025 15:05:55] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-26 15:15:56 [INFO] 127.0.0.1 - - [26/Nov/2025 15:15:56] "GET / HTTP/1.1" 200 -
+2025-11-26 15:15:56 [INFO] 127.0.0.1 - - [26/Nov/2025 15:15:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:15:56 [INFO] 127.0.0.1 - - [26/Nov/2025 15:15:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:15:56 [INFO] 127.0.0.1 - - [26/Nov/2025 15:15:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:16:22 [INFO] 127.0.0.1 - - [26/Nov/2025 15:16:22] "GET / HTTP/1.1" 200 -
+2025-11-26 15:16:22 [INFO] 127.0.0.1 - - [26/Nov/2025 15:16:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:16:22 [INFO] 127.0.0.1 - - [26/Nov/2025 15:16:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:16:22 [INFO] 127.0.0.1 - - [26/Nov/2025 15:16:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:16:41 [INFO] 127.0.0.1 - - [26/Nov/2025 15:16:41] "POST / HTTP/1.1" 200 -
+2025-11-26 15:16:41 [INFO] 127.0.0.1 - - [26/Nov/2025 15:16:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:16:41 [INFO] 127.0.0.1 - - [26/Nov/2025 15:16:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:16:41 [INFO] 127.0.0.1 - - [26/Nov/2025 15:16:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:17:36 [INFO] 127.0.0.1 - - [26/Nov/2025 15:17:36] "POST / HTTP/1.1" 200 -
+2025-11-26 15:17:36 [INFO] 127.0.0.1 - - [26/Nov/2025 15:17:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:17:36 [INFO] 127.0.0.1 - - [26/Nov/2025 15:17:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:17:36 [INFO] 127.0.0.1 - - [26/Nov/2025 15:17:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:17:49 [INFO] 127.0.0.1 - - [26/Nov/2025 15:17:49] "POST / HTTP/1.1" 200 -
+2025-11-26 15:17:49 [INFO] 127.0.0.1 - - [26/Nov/2025 15:17:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:17:49 [INFO] 127.0.0.1 - - [26/Nov/2025 15:17:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:17:49 [INFO] 127.0.0.1 - - [26/Nov/2025 15:17:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:31:17 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:17] "POST / HTTP/1.1" 200 -
+2025-11-26 15:31:17 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:31:17 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:31:17 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:31:21 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:21] "POST / HTTP/1.1" 200 -
+2025-11-26 15:31:22 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:31:22 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:31:22 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:31:29 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:29] "POST / HTTP/1.1" 200 -
+2025-11-26 15:31:29 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:31:29 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:31:29 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:31:35 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:35] "POST / HTTP/1.1" 200 -
+2025-11-26 15:31:35 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:31:35 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:31:35 [INFO] 127.0.0.1 - - [26/Nov/2025 15:31:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:31:43 [INFO] t=2025-11-26T15:31:43-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-26 15:31:43 [INFO] t=2025-11-26T15:31:43-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-26 15:31:43 [INFO] t=2025-11-26T15:31:43-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=9c5e268acceb err="reconnecting session closed"
+2025-11-26 15:31:43 [INFO] t=2025-11-26T15:31:43-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-26 15:31:43 [INFO] t=2025-11-26T15:31:43-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=c71fbaa6d6219984264915bb0427b0b0
+2025-11-26 15:31:43 [WARNING] t=2025-11-26T15:31:43-0300 lvl=warn msg="Stopping forwarder" name=http-5000-85ded8fb-606c-4be1-bcec-ebc19551187a acceptErr="failed to accept connection: Listener closed"
+2025-11-26 15:31:43 [WARNING] t=2025-11-26T15:31:43-0300 lvl=warn msg="Error restarting forwarder" name=http-5000-85ded8fb-606c-4be1-bcec-ebc19551187a err="failed to start tunnel: session closed"
+2025-11-26 15:32:03 [INFO] t=2025-11-26T15:32:03-0300 lvl=info msg="no configuration paths supplied"
+2025-11-26 15:32:03 [INFO] t=2025-11-26T15:32:03-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-26 15:32:03 [INFO] t=2025-11-26T15:32:03-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-26 15:32:03 [INFO] t=2025-11-26T15:32:03-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-26 15:32:04 [INFO] t=2025-11-26T15:32:04-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-26 15:32:04 [INFO] t=2025-11-26T15:32:04-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-26 15:32:04 [INFO] t=2025-11-26T15:32:04-0300 lvl=info msg=start pg=/api/tunnels id=ba3aa0cb40d49ded
+2025-11-26 15:32:04 [INFO] t=2025-11-26T15:32:04-0300 lvl=info msg=end pg=/api/tunnels id=ba3aa0cb40d49ded status=200 dur=0s
+2025-11-26 15:32:04 [INFO] t=2025-11-26T15:32:04-0300 lvl=info msg=start pg=/api/tunnels id=7804560e825b2f9e
+2025-11-26 15:32:04 [INFO] t=2025-11-26T15:32:04-0300 lvl=info msg=end pg=/api/tunnels id=7804560e825b2f9e status=200 dur=0s
+2025-11-26 15:32:04 [INFO] t=2025-11-26T15:32:04-0300 lvl=info msg=start pg=/api/tunnels id=6afe4ab87941a31f
+2025-11-26 15:32:04 [INFO] t=2025-11-26T15:32:04-0300 lvl=info msg=end pg=/api/tunnels id=6afe4ab87941a31f status=200 dur=0s
+2025-11-26 15:32:04 [INFO] t=2025-11-26T15:32:04-0300 lvl=info msg=start pg=/api/tunnels id=c723eb7af6b4b97e
+2025-11-26 15:32:04 [INFO] t=2025-11-26T15:32:04-0300 lvl=info msg=end pg=/api/tunnels id=c723eb7af6b4b97e status=200 dur=0s
+2025-11-26 15:32:04 [INFO] Opening tunnel named: http-5000-e4d41f94-b773-4784-a742-40cd3f95d62a
+2025-11-26 15:32:04 [INFO] t=2025-11-26T15:32:04-0300 lvl=info msg=start pg=/api/tunnels id=0f614d97c57e238f
+2025-11-26 15:32:04 [INFO] t=2025-11-26T15:32:04-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-e4d41f94-b773-4784-a742-40cd3f95d62a addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-26 15:32:04 [INFO] t=2025-11-26T15:32:04-0300 lvl=info msg=end pg=/api/tunnels id=0f614d97c57e238f status=201 dur=372.5255ms
+2025-11-26 15:32:04 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-26 15:32:04 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-26 15:32:08 [WARNING] t=2025-11-26T15:32:08-0300 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+2025-11-26 15:32:27 [INFO] 127.0.0.1 - - [26/Nov/2025 15:32:27] "POST / HTTP/1.1" 200 -
+2025-11-26 15:32:27 [INFO] 127.0.0.1 - - [26/Nov/2025 15:32:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:32:27 [INFO] 127.0.0.1 - - [26/Nov/2025 15:32:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:32:27 [INFO] 127.0.0.1 - - [26/Nov/2025 15:32:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:32:31 [INFO] 127.0.0.1 - - [26/Nov/2025 15:32:31] "POST / HTTP/1.1" 200 -
+2025-11-26 15:32:31 [INFO] 127.0.0.1 - - [26/Nov/2025 15:32:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:32:31 [INFO] 127.0.0.1 - - [26/Nov/2025 15:32:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:32:31 [INFO] 127.0.0.1 - - [26/Nov/2025 15:32:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:42:16 [INFO] t=2025-11-26T15:42:16-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-26 15:42:16 [INFO] t=2025-11-26T15:42:16-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-26 15:42:16 [INFO] t=2025-11-26T15:42:16-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=9726f978574d err="reconnecting session closed"
+2025-11-26 15:42:16 [INFO] t=2025-11-26T15:42:16-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=63d88a67a8a3d766008c1ea47388030a
+2025-11-26 15:42:16 [WARNING] t=2025-11-26T15:42:16-0300 lvl=warn msg="Stopping forwarder" name=http-5000-e4d41f94-b773-4784-a742-40cd3f95d62a acceptErr="failed to accept connection: Listener closed"
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg="no configuration paths supplied"
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg=start pg=/api/tunnels id=f47ff41b70ec613e
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg=end pg=/api/tunnels id=f47ff41b70ec613e status=200 dur=0s
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg=start pg=/api/tunnels id=b338533f4f8401d8
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg=end pg=/api/tunnels id=b338533f4f8401d8 status=200 dur=0s
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg=start pg=/api/tunnels id=dbded85d0bdfc605
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg=end pg=/api/tunnels id=dbded85d0bdfc605 status=200 dur=0s
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg=start pg=/api/tunnels id=5c2deab2c6d3b3ff
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg=end pg=/api/tunnels id=5c2deab2c6d3b3ff status=200 dur=0s
+2025-11-26 15:42:30 [INFO] Opening tunnel named: http-5000-cca42b3b-17b3-496e-8006-a054df1fe1c3
+2025-11-26 15:42:30 [INFO] t=2025-11-26T15:42:30-0300 lvl=info msg=start pg=/api/tunnels id=9c0fa8e2206fd5ca
+2025-11-26 15:42:31 [INFO] t=2025-11-26T15:42:31-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-cca42b3b-17b3-496e-8006-a054df1fe1c3 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-26 15:42:31 [INFO] t=2025-11-26T15:42:31-0300 lvl=info msg=end pg=/api/tunnels id=9c0fa8e2206fd5ca status=201 dur=363.8671ms
+2025-11-26 15:42:31 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-26 15:42:31 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-26 15:42:32 [WARNING] t=2025-11-26T15:42:32-0300 lvl=warn msg="failed to check for update" obj=updater err="Server responded with 500 Internal Server Error: {\n  \"errors\": [\n    {\"message\": \"Internal server error\"}\n  ]\n}\n"
+2025-11-26 15:43:27 [INFO] 127.0.0.1 - - [26/Nov/2025 15:43:27] "POST / HTTP/1.1" 200 -
+2025-11-26 15:43:27 [INFO] 127.0.0.1 - - [26/Nov/2025 15:43:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:43:27 [INFO] 127.0.0.1 - - [26/Nov/2025 15:43:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:43:27 [INFO] 127.0.0.1 - - [26/Nov/2025 15:43:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:43:49 [INFO] 127.0.0.1 - - [26/Nov/2025 15:43:49] "POST / HTTP/1.1" 200 -
+2025-11-26 15:43:50 [INFO] 127.0.0.1 - - [26/Nov/2025 15:43:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:43:50 [INFO] 127.0.0.1 - - [26/Nov/2025 15:43:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:43:50 [INFO] 127.0.0.1 - - [26/Nov/2025 15:43:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:47:17 [INFO] t=2025-11-26T15:47:17-0300 lvl=info msg="join connections" obj=join id=af0713aeecc8 l=127.0.0.1:5000 r=107.178.192.6:40396
+2025-11-26 15:47:17 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-26T18:47:13.273Z', 'Direcci\xf3n de correo electr\xf3nico': 'rodrigo.palivoda@estudiantes.utec.edu.uy', 'Nombre completo:': 'elrod', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'utec', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Coordinador/a', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'a ver si aparece', 'Breve descripci\xf3n del proyecto': 'a ver si apareC', 'Seleccione el tipo de solicitud': 'Asistencia en desarrollo de un producto', 'Seleccione la herramienta, material o servicio que desea utilizar:': '', 'Material a utilizar': '', 'Origen del material': '', 'Cantidad de prototipos a fabricar:': '', 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios: (justificaci\xf3n de uso)': '', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-27T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': 4, 'Otros comentarios': 'naaa'}
+2025-11-26 15:47:17 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-26 15:47:17 [INFO] 127.0.0.1 - - [26/Nov/2025 15:47:17] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-26 15:48:39 [INFO] 127.0.0.1 - - [26/Nov/2025 15:48:39] "POST / HTTP/1.1" 200 -
+2025-11-26 15:48:39 [INFO] 127.0.0.1 - - [26/Nov/2025 15:48:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:48:39 [INFO] 127.0.0.1 - - [26/Nov/2025 15:48:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:48:39 [INFO] 127.0.0.1 - - [26/Nov/2025 15:48:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:48:55 [INFO] 127.0.0.1 - - [26/Nov/2025 15:48:55] "POST / HTTP/1.1" 200 -
+2025-11-26 15:48:55 [INFO] 127.0.0.1 - - [26/Nov/2025 15:48:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:48:55 [INFO] 127.0.0.1 - - [26/Nov/2025 15:48:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:48:55 [INFO] 127.0.0.1 - - [26/Nov/2025 15:48:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:49:59 [INFO] t=2025-11-26T15:49:59-0300 lvl=info msg="join connections" obj=join id=1be73056087b l=127.0.0.1:5000 r=35.187.143.4:61677
+2025-11-26 15:49:59 [INFO] \U0001f4e9 Datos recibidos: {'Marca temporal': '2025-11-26T18:49:54.520Z', 'Direcci\xf3n de correo electr\xf3nico': 'rodrigo.palivoda@estudiantes.utec.edu.uy', 'Nombre completo:': 'elrodri', 'Describa a qu\xe9 carrera y/o instituci\xf3n corresponde el proyecto:': 'utec', 'Describa su cargo dentro de la Instituci\xf3n y/o Proyecto.': 'Coordinador/a', 'En qu\xe9 sede queda el laboratorio al cual quiere acceder:': 'ITR SO - Paysand\xfa', 'Nombre del proyecto/actividad:': 'a ver si apareC', 'Breve descripci\xf3n del proyecto': 'a ver si apareC', 'Seleccione el tipo de solicitud': 'Uso de equipamiento del LabA', 'Seleccione la herramienta, material o servicio que desea utilizar:': 'Corte l\xe1ser', 'Material a utilizar': 'PLA (Filamento de mayor uso)', 'Origen del material': 'Aporte de IDEI con posterior reposici\xf3n del solicitante', 'Cantidad de prototipos a fabricar:': 10, 'Vinculaci\xf3n del proyecto con las acciones relacionadas a las herramientas de fabricaci\xf3n digital / materiales / servicios: (justificaci\xf3n de uso)': 'pa usar', 'Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelaci\xf3n)': '2025-11-27T03:00:00.000Z', 'Tiempo estimado de utilizaci\xf3n de la herramienta / material / servicio (hs):': 4, 'Otros comentarios': 'naaa'}
+2025-11-26 15:49:59 [INFO] \u2705 Proyecto insertado correctamente (o ignorado si ya exist\xeda).
+2025-11-26 15:49:59 [INFO] 127.0.0.1 - - [26/Nov/2025 15:49:59] "POST /api/nuevo_proyecto HTTP/1.1" 200 -
+2025-11-26 15:50:45 [INFO] 127.0.0.1 - - [26/Nov/2025 15:50:45] "POST / HTTP/1.1" 200 -
+2025-11-26 15:50:45 [INFO] 127.0.0.1 - - [26/Nov/2025 15:50:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:50:46 [INFO] 127.0.0.1 - - [26/Nov/2025 15:50:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:50:46 [INFO] 127.0.0.1 - - [26/Nov/2025 15:50:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:50:51 [INFO] 127.0.0.1 - - [26/Nov/2025 15:50:51] "POST / HTTP/1.1" 200 -
+2025-11-26 15:50:51 [INFO] 127.0.0.1 - - [26/Nov/2025 15:50:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 15:50:51 [INFO] 127.0.0.1 - - [26/Nov/2025 15:50:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:50:51 [INFO] 127.0.0.1 - - [26/Nov/2025 15:50:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:57:56 [INFO] t=2025-11-26T15:57:56-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-26 15:57:56 [INFO] t=2025-11-26T15:57:56-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-26 15:57:56 [INFO] t=2025-11-26T15:57:56-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=08f0853ff1d8 err="reconnecting session closed"
+2025-11-26 15:57:56 [INFO] t=2025-11-26T15:57:56-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=638ee1636c1f1878ea9ad75e14b6cdee
+2025-11-26 15:57:56 [WARNING] t=2025-11-26T15:57:56-0300 lvl=warn msg="Stopping forwarder" name=http-5000-cca42b3b-17b3-496e-8006-a054df1fe1c3 acceptErr="failed to accept connection: Listener closed"
+2025-11-26 15:58:07 [INFO] t=2025-11-26T15:58:07-0300 lvl=info msg="no configuration paths supplied"
+2025-11-26 15:58:07 [INFO] t=2025-11-26T15:58:07-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-26 15:58:07 [INFO] t=2025-11-26T15:58:07-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-26 15:58:07 [INFO] t=2025-11-26T15:58:07-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-26 15:58:08 [INFO] t=2025-11-26T15:58:08-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-26 15:58:08 [INFO] t=2025-11-26T15:58:08-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-26 15:58:08 [INFO] t=2025-11-26T15:58:08-0300 lvl=info msg=start pg=/api/tunnels id=39cfd97a64cec9e4
+2025-11-26 15:58:08 [INFO] t=2025-11-26T15:58:08-0300 lvl=info msg=end pg=/api/tunnels id=39cfd97a64cec9e4 status=200 dur=0s
+2025-11-26 15:58:08 [INFO] t=2025-11-26T15:58:08-0300 lvl=info msg=start pg=/api/tunnels id=c09eb96a2108314d
+2025-11-26 15:58:08 [INFO] t=2025-11-26T15:58:08-0300 lvl=info msg=end pg=/api/tunnels id=c09eb96a2108314d status=200 dur=0s
+2025-11-26 15:58:08 [INFO] t=2025-11-26T15:58:08-0300 lvl=info msg=start pg=/api/tunnels id=31e62de97e7924b4
+2025-11-26 15:58:08 [INFO] t=2025-11-26T15:58:08-0300 lvl=info msg=end pg=/api/tunnels id=31e62de97e7924b4 status=200 dur=0s
+2025-11-26 15:58:08 [INFO] t=2025-11-26T15:58:08-0300 lvl=info msg=start pg=/api/tunnels id=9582aa260ab2aa54
+2025-11-26 15:58:08 [INFO] t=2025-11-26T15:58:08-0300 lvl=info msg=end pg=/api/tunnels id=9582aa260ab2aa54 status=200 dur=0s
+2025-11-26 15:58:08 [INFO] Opening tunnel named: http-5000-776eb8df-e132-41cc-a592-edcc96bceea3
+2025-11-26 15:58:08 [INFO] t=2025-11-26T15:58:08-0300 lvl=info msg=start pg=/api/tunnels id=c9779731cb4d20b3
+2025-11-26 15:58:08 [INFO] t=2025-11-26T15:58:08-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-776eb8df-e132-41cc-a592-edcc96bceea3 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-26 15:58:08 [INFO] t=2025-11-26T15:58:08-0300 lvl=info msg=end pg=/api/tunnels id=c9779731cb4d20b3 status=201 dur=347.6686ms
+2025-11-26 15:58:08 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-26 15:58:08 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-26 15:58:12 [WARNING] t=2025-11-26T15:58:12-0300 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+2025-11-26 15:58:28 [INFO] 127.0.0.1 - - [26/Nov/2025 15:58:28] "POST / HTTP/1.1" 200 -
+2025-11-26 15:58:28 [INFO] 127.0.0.1 - - [26/Nov/2025 15:58:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 15:58:28 [INFO] 127.0.0.1 - - [26/Nov/2025 15:58:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 15:58:28 [INFO] 127.0.0.1 - - [26/Nov/2025 15:58:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 16:02:12 [INFO] t=2025-11-26T16:02:12-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-26 16:02:12 [INFO] t=2025-11-26T16:02:12-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-26 16:02:12 [INFO] t=2025-11-26T16:02:12-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=606bf8c66f3a err="reconnecting session closed"
+2025-11-26 16:02:12 [INFO] t=2025-11-26T16:02:12-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-26 16:02:21 [INFO] t=2025-11-26T16:02:21-0300 lvl=info msg="no configuration paths supplied"
+2025-11-26 16:02:21 [INFO] t=2025-11-26T16:02:21-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-26 16:02:21 [INFO] t=2025-11-26T16:02:21-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-26 16:02:21 [INFO] t=2025-11-26T16:02:21-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-26 16:02:22 [INFO] t=2025-11-26T16:02:22-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-26 16:02:22 [INFO] t=2025-11-26T16:02:22-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-26 16:02:22 [INFO] t=2025-11-26T16:02:22-0300 lvl=info msg=start pg=/api/tunnels id=eb47f67a3efa17dd
+2025-11-26 16:02:22 [INFO] t=2025-11-26T16:02:22-0300 lvl=info msg=end pg=/api/tunnels id=eb47f67a3efa17dd status=200 dur=0s
+2025-11-26 16:02:22 [INFO] t=2025-11-26T16:02:22-0300 lvl=info msg=start pg=/api/tunnels id=e2d3fe3e14964dce
+2025-11-26 16:02:22 [INFO] t=2025-11-26T16:02:22-0300 lvl=info msg=end pg=/api/tunnels id=e2d3fe3e14964dce status=200 dur=0s
+2025-11-26 16:02:22 [INFO] t=2025-11-26T16:02:22-0300 lvl=info msg=start pg=/api/tunnels id=28ef8c6c9ffaf4bd
+2025-11-26 16:02:22 [INFO] t=2025-11-26T16:02:22-0300 lvl=info msg=end pg=/api/tunnels id=28ef8c6c9ffaf4bd status=200 dur=0s
+2025-11-26 16:02:22 [INFO] t=2025-11-26T16:02:22-0300 lvl=info msg=start pg=/api/tunnels id=57a3c443550d4fa4
+2025-11-26 16:02:22 [INFO] t=2025-11-26T16:02:22-0300 lvl=info msg=end pg=/api/tunnels id=57a3c443550d4fa4 status=200 dur=0s
+2025-11-26 16:02:22 [INFO] Opening tunnel named: http-5000-cafd8b7d-8e90-4f25-8b09-403699481b73
+2025-11-26 16:02:22 [INFO] t=2025-11-26T16:02:22-0300 lvl=info msg=start pg=/api/tunnels id=8de5229f4dd681b7
+2025-11-26 16:02:22 [INFO] t=2025-11-26T16:02:22-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-cafd8b7d-8e90-4f25-8b09-403699481b73 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-26 16:02:22 [INFO] t=2025-11-26T16:02:22-0300 lvl=info msg=end pg=/api/tunnels id=8de5229f4dd681b7 status=201 dur=342.308ms
+2025-11-26 16:02:22 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-26 16:02:22 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-26 16:02:26 [WARNING] t=2025-11-26T16:02:26-0300 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+2025-11-26 16:02:29 [INFO] 127.0.0.1 - - [26/Nov/2025 16:02:29] "POST / HTTP/1.1" 200 -
+2025-11-26 16:02:29 [INFO] 127.0.0.1 - - [26/Nov/2025 16:02:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 16:02:29 [INFO] 127.0.0.1 - - [26/Nov/2025 16:02:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 16:02:29 [INFO] 127.0.0.1 - - [26/Nov/2025 16:02:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 16:09:24 [INFO] t=2025-11-26T16:09:24-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-26 16:09:24 [INFO] t=2025-11-26T16:09:24-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-26 16:09:24 [INFO] t=2025-11-26T16:09:24-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=ae8d046f3764 err="reconnecting session closed"
+2025-11-26 16:09:24 [INFO] t=2025-11-26T16:09:24-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-26 16:09:24 [INFO] t=2025-11-26T16:09:24-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=37d87ddc6b70e2580ffabac744ba8d09
+2025-11-26 16:09:24 [WARNING] t=2025-11-26T16:09:24-0300 lvl=warn msg="Stopping forwarder" name=http-5000-cafd8b7d-8e90-4f25-8b09-403699481b73 acceptErr="failed to accept connection: Listener closed"
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg="no configuration paths supplied"
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg=start pg=/api/tunnels id=cea83e35a0ffd6cb
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg=end pg=/api/tunnels id=cea83e35a0ffd6cb status=200 dur=0s
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg=start pg=/api/tunnels id=462fd52da578bb8a
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg=end pg=/api/tunnels id=462fd52da578bb8a status=200 dur=0s
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg=start pg=/api/tunnels id=b3be4a3f7be86499
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg=end pg=/api/tunnels id=b3be4a3f7be86499 status=200 dur=60µs
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg=start pg=/api/tunnels id=a854448380038c9c
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg=end pg=/api/tunnels id=a854448380038c9c status=200 dur=0s
+2025-11-26 16:12:00 [INFO] Opening tunnel named: http-5000-a257b18d-96f5-4e64-87c6-51f1e6a69215
+2025-11-26 16:12:00 [INFO] t=2025-11-26T16:12:00-0300 lvl=info msg=start pg=/api/tunnels id=53e1dfe25b21b29c
+2025-11-26 16:12:01 [INFO] t=2025-11-26T16:12:01-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-a257b18d-96f5-4e64-87c6-51f1e6a69215 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-26 16:12:01 [INFO] t=2025-11-26T16:12:01-0300 lvl=info msg=end pg=/api/tunnels id=53e1dfe25b21b29c status=201 dur=342.1ms
+2025-11-26 16:12:01 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-26 16:12:01 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-26 16:12:05 [WARNING] t=2025-11-26T16:12:05-0300 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+2025-11-26 16:12:08 [INFO] 127.0.0.1 - - [26/Nov/2025 16:12:08] "POST / HTTP/1.1" 200 -
+2025-11-26 16:12:08 [INFO] 127.0.0.1 - - [26/Nov/2025 16:12:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 16:12:08 [INFO] 127.0.0.1 - - [26/Nov/2025 16:12:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 16:12:08 [INFO] 127.0.0.1 - - [26/Nov/2025 16:12:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 16:17:28 [INFO] t=2025-11-26T16:17:28-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-26 16:17:28 [INFO] t=2025-11-26T16:17:28-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-26 16:17:28 [INFO] t=2025-11-26T16:17:28-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=83022457f694 err="reconnecting session closed"
+2025-11-26 16:17:39 [INFO] t=2025-11-26T16:17:39-0300 lvl=info msg="no configuration paths supplied"
+2025-11-26 16:17:39 [INFO] t=2025-11-26T16:17:39-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-26 16:17:39 [INFO] t=2025-11-26T16:17:39-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-26 16:17:39 [INFO] t=2025-11-26T16:17:39-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-26 16:17:40 [INFO] t=2025-11-26T16:17:40-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-26 16:17:40 [INFO] t=2025-11-26T16:17:40-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-26 16:17:40 [INFO] t=2025-11-26T16:17:40-0300 lvl=info msg=start pg=/api/tunnels id=ae86871dcf4235f5
+2025-11-26 16:17:40 [INFO] t=2025-11-26T16:17:40-0300 lvl=info msg=end pg=/api/tunnels id=ae86871dcf4235f5 status=200 dur=0s
+2025-11-26 16:17:40 [INFO] t=2025-11-26T16:17:40-0300 lvl=info msg=start pg=/api/tunnels id=71d402cfaab2ed15
+2025-11-26 16:17:40 [INFO] t=2025-11-26T16:17:40-0300 lvl=info msg=end pg=/api/tunnels id=71d402cfaab2ed15 status=200 dur=0s
+2025-11-26 16:17:40 [INFO] t=2025-11-26T16:17:40-0300 lvl=info msg=start pg=/api/tunnels id=0c5262a29735b9c0
+2025-11-26 16:17:40 [INFO] t=2025-11-26T16:17:40-0300 lvl=info msg=end pg=/api/tunnels id=0c5262a29735b9c0 status=200 dur=0s
+2025-11-26 16:17:40 [INFO] t=2025-11-26T16:17:40-0300 lvl=info msg=start pg=/api/tunnels id=fb95bc026ec68245
+2025-11-26 16:17:40 [INFO] t=2025-11-26T16:17:40-0300 lvl=info msg=end pg=/api/tunnels id=fb95bc026ec68245 status=200 dur=0s
+2025-11-26 16:17:40 [INFO] Opening tunnel named: http-5000-358d5e48-75fd-48a4-9349-0498a23a0b04
+2025-11-26 16:17:40 [INFO] t=2025-11-26T16:17:40-0300 lvl=info msg=start pg=/api/tunnels id=27ec588cca983f30
+2025-11-26 16:17:40 [INFO] t=2025-11-26T16:17:40-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-358d5e48-75fd-48a4-9349-0498a23a0b04 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-26 16:17:40 [INFO] t=2025-11-26T16:17:40-0300 lvl=info msg=end pg=/api/tunnels id=27ec588cca983f30 status=201 dur=342.6147ms
+2025-11-26 16:17:40 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-26 16:17:40 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-26 16:17:44 [WARNING] t=2025-11-26T16:17:44-0300 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+2025-11-26 16:17:46 [INFO] 127.0.0.1 - - [26/Nov/2025 16:17:46] "POST / HTTP/1.1" 200 -
+2025-11-26 16:17:46 [INFO] 127.0.0.1 - - [26/Nov/2025 16:17:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 16:17:47 [INFO] 127.0.0.1 - - [26/Nov/2025 16:17:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 16:17:47 [INFO] 127.0.0.1 - - [26/Nov/2025 16:17:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 16:23:38 [INFO] t=2025-11-26T16:23:38-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-26 16:23:38 [INFO] t=2025-11-26T16:23:38-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-26 16:23:38 [INFO] t=2025-11-26T16:23:38-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=7a54be6612af err="reconnecting session closed"
+2025-11-26 16:23:38 [INFO] t=2025-11-26T16:23:38-0300 lvl=info msg="no more state changes" obj=tunnels.session
+2025-11-26 16:23:38 [INFO] t=2025-11-26T16:23:38-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=d300c52a558175af8f4785775069e6db
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg="no configuration paths supplied"
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg=start pg=/api/tunnels id=ee0b9bbbb172ec71
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg=end pg=/api/tunnels id=ee0b9bbbb172ec71 status=200 dur=0s
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg=start pg=/api/tunnels id=1a2ce2fa64528443
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg=end pg=/api/tunnels id=1a2ce2fa64528443 status=200 dur=0s
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg=start pg=/api/tunnels id=a9333e2ecf4e27bf
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg=end pg=/api/tunnels id=a9333e2ecf4e27bf status=200 dur=0s
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg=start pg=/api/tunnels id=074bbdbc27c01282
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg=end pg=/api/tunnels id=074bbdbc27c01282 status=200 dur=0s
+2025-11-26 16:24:48 [INFO] Opening tunnel named: http-5000-dc6b6326-20f1-426f-93ad-893a604c4e4b
+2025-11-26 16:24:48 [INFO] t=2025-11-26T16:24:48-0300 lvl=info msg=start pg=/api/tunnels id=a7cfb1d9a703b2c8
+2025-11-26 16:24:49 [INFO] t=2025-11-26T16:24:49-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-dc6b6326-20f1-426f-93ad-893a604c4e4b addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-26 16:24:49 [INFO] t=2025-11-26T16:24:49-0300 lvl=info msg=end pg=/api/tunnels id=a7cfb1d9a703b2c8 status=201 dur=413.0553ms
+2025-11-26 16:24:49 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-26 16:24:49 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-26 16:24:53 [WARNING] t=2025-11-26T16:24:53-0300 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+2025-11-26 16:24:54 [INFO] 127.0.0.1 - - [26/Nov/2025 16:24:54] "POST / HTTP/1.1" 200 -
+2025-11-26 16:24:54 [INFO] 127.0.0.1 - - [26/Nov/2025 16:24:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 16:24:54 [INFO] 127.0.0.1 - - [26/Nov/2025 16:24:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 16:24:54 [INFO] 127.0.0.1 - - [26/Nov/2025 16:24:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 16:28:30 [INFO] t=2025-11-26T16:28:30-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-26 16:28:30 [INFO] t=2025-11-26T16:28:30-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-26 16:28:42 [INFO] t=2025-11-26T16:28:42-0300 lvl=info msg="no configuration paths supplied"
+2025-11-26 16:28:42 [INFO] t=2025-11-26T16:28:42-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-26 16:28:42 [INFO] t=2025-11-26T16:28:42-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-26 16:28:42 [INFO] t=2025-11-26T16:28:42-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-26 16:28:43 [INFO] t=2025-11-26T16:28:43-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-26 16:28:43 [INFO] t=2025-11-26T16:28:43-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-26 16:28:43 [INFO] t=2025-11-26T16:28:43-0300 lvl=info msg=start pg=/api/tunnels id=ec233ba3586837c7
+2025-11-26 16:28:43 [INFO] t=2025-11-26T16:28:43-0300 lvl=info msg=end pg=/api/tunnels id=ec233ba3586837c7 status=200 dur=0s
+2025-11-26 16:28:43 [INFO] t=2025-11-26T16:28:43-0300 lvl=info msg=start pg=/api/tunnels id=49f46ffe6c646457
+2025-11-26 16:28:43 [INFO] t=2025-11-26T16:28:43-0300 lvl=info msg=end pg=/api/tunnels id=49f46ffe6c646457 status=200 dur=107.8µs
+2025-11-26 16:28:43 [INFO] t=2025-11-26T16:28:43-0300 lvl=info msg=start pg=/api/tunnels id=8c41cd40ce87b5d2
+2025-11-26 16:28:43 [INFO] t=2025-11-26T16:28:43-0300 lvl=info msg=end pg=/api/tunnels id=8c41cd40ce87b5d2 status=200 dur=0s
+2025-11-26 16:28:43 [INFO] t=2025-11-26T16:28:43-0300 lvl=info msg=start pg=/api/tunnels id=440fa72a1bbdf836
+2025-11-26 16:28:43 [INFO] t=2025-11-26T16:28:43-0300 lvl=info msg=end pg=/api/tunnels id=440fa72a1bbdf836 status=200 dur=0s
+2025-11-26 16:28:43 [INFO] Opening tunnel named: http-5000-8214b107-4877-443a-9ab4-49d2b7fea35b
+2025-11-26 16:28:43 [INFO] t=2025-11-26T16:28:43-0300 lvl=info msg=start pg=/api/tunnels id=9b9153adf410c8e9
+2025-11-26 16:28:43 [INFO] t=2025-11-26T16:28:43-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-8214b107-4877-443a-9ab4-49d2b7fea35b addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-26 16:28:43 [INFO] t=2025-11-26T16:28:43-0300 lvl=info msg=end pg=/api/tunnels id=9b9153adf410c8e9 status=201 dur=379.3733ms
+2025-11-26 16:28:43 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-26 16:28:43 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-26 16:28:45 [INFO] 127.0.0.1 - - [26/Nov/2025 16:28:45] "POST / HTTP/1.1" 200 -
+2025-11-26 16:28:46 [INFO] 127.0.0.1 - - [26/Nov/2025 16:28:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 16:28:46 [INFO] 127.0.0.1 - - [26/Nov/2025 16:28:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 16:28:46 [INFO] 127.0.0.1 - - [26/Nov/2025 16:28:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 16:28:47 [WARNING] t=2025-11-26T16:28:47-0300 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+2025-11-26 16:30:46 [INFO] t=2025-11-26T16:30:46-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-26 16:30:46 [INFO] t=2025-11-26T16:30:46-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-26 16:30:46 [INFO] t=2025-11-26T16:30:46-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=aa1ff72f14de err="reconnecting session closed"
+2025-11-26 16:30:46 [INFO] t=2025-11-26T16:30:46-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=4e88923cbd12c02de371083bbe3f7a76
+2025-11-26 16:30:46 [WARNING] t=2025-11-26T16:30:46-0300 lvl=warn msg="Stopping forwarder" name=http-5000-8214b107-4877-443a-9ab4-49d2b7fea35b acceptErr="failed to accept connection: Listener closed"
+2025-11-26 16:30:46 [WARNING] t=2025-11-26T16:30:46-0300 lvl=warn msg="Error restarting forwarder" name=http-5000-8214b107-4877-443a-9ab4-49d2b7fea35b err="failed to start tunnel: session closed"
+2025-11-26 16:31:11 [INFO] t=2025-11-26T16:31:11-0300 lvl=info msg="no configuration paths supplied"
+2025-11-26 16:31:11 [INFO] t=2025-11-26T16:31:11-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-26 16:31:11 [INFO] t=2025-11-26T16:31:11-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-26 16:31:11 [INFO] t=2025-11-26T16:31:11-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-26 16:31:12 [INFO] t=2025-11-26T16:31:12-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-26 16:31:12 [INFO] t=2025-11-26T16:31:12-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-26 16:31:12 [INFO] t=2025-11-26T16:31:12-0300 lvl=info msg=start pg=/api/tunnels id=7be6db294da0d5fa
+2025-11-26 16:31:12 [INFO] t=2025-11-26T16:31:12-0300 lvl=info msg=end pg=/api/tunnels id=7be6db294da0d5fa status=200 dur=123µs
+2025-11-26 16:31:12 [INFO] t=2025-11-26T16:31:12-0300 lvl=info msg=start pg=/api/tunnels id=b15db968939dc17f
+2025-11-26 16:31:12 [INFO] t=2025-11-26T16:31:12-0300 lvl=info msg=end pg=/api/tunnels id=b15db968939dc17f status=200 dur=0s
+2025-11-26 16:31:12 [INFO] t=2025-11-26T16:31:12-0300 lvl=info msg=start pg=/api/tunnels id=1f54302a3a9d948c
+2025-11-26 16:31:12 [INFO] t=2025-11-26T16:31:12-0300 lvl=info msg=end pg=/api/tunnels id=1f54302a3a9d948c status=200 dur=0s
+2025-11-26 16:31:12 [INFO] t=2025-11-26T16:31:12-0300 lvl=info msg=start pg=/api/tunnels id=446824f670429223
+2025-11-26 16:31:12 [INFO] t=2025-11-26T16:31:12-0300 lvl=info msg=end pg=/api/tunnels id=446824f670429223 status=200 dur=0s
+2025-11-26 16:31:12 [INFO] Opening tunnel named: http-5000-25f091d8-cc1d-4ebb-b9d6-52526872641b
+2025-11-26 16:31:12 [INFO] t=2025-11-26T16:31:12-0300 lvl=info msg=start pg=/api/tunnels id=3c3b7e6da4889eda
+2025-11-26 16:31:12 [INFO] t=2025-11-26T16:31:12-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-25f091d8-cc1d-4ebb-b9d6-52526872641b addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-26 16:31:12 [INFO] t=2025-11-26T16:31:12-0300 lvl=info msg=end pg=/api/tunnels id=3c3b7e6da4889eda status=201 dur=382.7141ms
+2025-11-26 16:31:12 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-26 16:31:12 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-26 16:31:16 [WARNING] t=2025-11-26T16:31:16-0300 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+2025-11-26 16:31:16 [INFO] 127.0.0.1 - - [26/Nov/2025 16:31:16] "POST / HTTP/1.1" 200 -
+2025-11-26 16:31:16 [INFO] 127.0.0.1 - - [26/Nov/2025 16:31:16] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 16:31:16 [INFO] 127.0.0.1 - - [26/Nov/2025 16:31:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 16:31:16 [INFO] 127.0.0.1 - - [26/Nov/2025 16:31:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 16:45:12 [INFO] t=2025-11-26T16:45:12-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-26 16:45:12 [INFO] t=2025-11-26T16:45:12-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-26 16:45:12 [INFO] t=2025-11-26T16:45:12-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=0d3cd239042d err="reconnecting session closed"
+2025-11-26 16:45:12 [INFO] t=2025-11-26T16:45:12-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=677fbdd3b67abb8c4e7ef8970ff568a5
+2025-11-26 16:45:12 [WARNING] t=2025-11-26T16:45:12-0300 lvl=warn msg="Stopping forwarder" name=http-5000-25f091d8-cc1d-4ebb-b9d6-52526872641b acceptErr="failed to accept connection: Listener closed"
+2025-11-26 16:47:03 [INFO] t=2025-11-26T16:47:03-0300 lvl=info msg="no configuration paths supplied"
+2025-11-26 16:47:03 [INFO] t=2025-11-26T16:47:03-0300 lvl=info msg="using configuration at default config path" path=C:\\Users\\TTBNN\\AppData\\Local/ngrok/ngrok.yml
+2025-11-26 16:47:03 [INFO] t=2025-11-26T16:47:03-0300 lvl=info msg="open config file" path=C:\\Users\\TTBNN\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+2025-11-26 16:47:03 [INFO] t=2025-11-26T16:47:03-0300 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+2025-11-26 16:47:04 [INFO] t=2025-11-26T16:47:04-0300 lvl=info msg="client session established" obj=tunnels.session
+2025-11-26 16:47:04 [INFO] t=2025-11-26T16:47:04-0300 lvl=info msg="tunnel session started" obj=tunnels.session
+2025-11-26 16:47:04 [INFO] t=2025-11-26T16:47:04-0300 lvl=info msg=start pg=/api/tunnels id=0293d68b1b33a11e
+2025-11-26 16:47:04 [INFO] t=2025-11-26T16:47:04-0300 lvl=info msg=end pg=/api/tunnels id=0293d68b1b33a11e status=200 dur=0s
+2025-11-26 16:47:04 [INFO] t=2025-11-26T16:47:04-0300 lvl=info msg=start pg=/api/tunnels id=d254989bcd9d4a77
+2025-11-26 16:47:04 [INFO] t=2025-11-26T16:47:04-0300 lvl=info msg=end pg=/api/tunnels id=d254989bcd9d4a77 status=200 dur=0s
+2025-11-26 16:47:04 [INFO] t=2025-11-26T16:47:04-0300 lvl=info msg=start pg=/api/tunnels id=08ae719e52817424
+2025-11-26 16:47:04 [INFO] t=2025-11-26T16:47:04-0300 lvl=info msg=end pg=/api/tunnels id=08ae719e52817424 status=200 dur=0s
+2025-11-26 16:47:04 [INFO] t=2025-11-26T16:47:04-0300 lvl=info msg=start pg=/api/tunnels id=e44dfbb1e3782c4a
+2025-11-26 16:47:04 [INFO] t=2025-11-26T16:47:04-0300 lvl=info msg=end pg=/api/tunnels id=e44dfbb1e3782c4a status=200 dur=0s
+2025-11-26 16:47:04 [INFO] Opening tunnel named: http-5000-5aa637cb-008d-4403-a8a2-68d2793454a9
+2025-11-26 16:47:04 [INFO] t=2025-11-26T16:47:04-0300 lvl=info msg=start pg=/api/tunnels id=e4fcea8653ee6436
+2025-11-26 16:47:04 [INFO] t=2025-11-26T16:47:04-0300 lvl=info msg="started tunnel" obj=tunnels name=http-5000-5aa637cb-008d-4403-a8a2-68d2793454a9 addr=http://localhost:5000 url=https://nonenlightening-liana-unresiliently.ngrok-free.dev
+2025-11-26 16:47:05 [INFO] t=2025-11-26T16:47:04-0300 lvl=info msg=end pg=/api/tunnels id=e4fcea8653ee6436 status=201 dur=389.1918ms
+2025-11-26 16:47:05 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-26 16:47:05 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-26 16:47:08 [WARNING] t=2025-11-26T16:47:08-0300 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+2025-11-26 16:47:23 [INFO] 127.0.0.1 - - [26/Nov/2025 16:47:23] "POST / HTTP/1.1" 200 -
+2025-11-26 16:47:23 [INFO] 127.0.0.1 - - [26/Nov/2025 16:47:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-11-26 16:47:23 [INFO] 127.0.0.1 - - [26/Nov/2025 16:47:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-26 16:47:23 [INFO] 127.0.0.1 - - [26/Nov/2025 16:47:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-11-26 16:48:01 [INFO] 127.0.0.1 - - [26/Nov/2025 16:48:01] "[35m[1mGET /exportar_pdf HTTP/1.1[0m" 500 -
+2025-11-26 16:48:03 [INFO] 127.0.0.1 - - [26/Nov/2025 16:48:03] "[36mGET /exportar_pdf?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-11-26 16:48:03 [INFO] 127.0.0.1 - - [26/Nov/2025 16:48:03] "[36mGET /exportar_pdf?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-11-26 16:48:03 [INFO] 127.0.0.1 - - [26/Nov/2025 16:48:03] "GET /exportar_pdf?__debugger__=yes&cmd=resource&f=console.png&s=ozB1REHKBYgB0nnkJnDo HTTP/1.1" 200 -
+2025-11-26 16:48:52 [INFO] t=2025-11-26T16:48:52-0300 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+2025-11-26 16:48:52 [INFO] t=2025-11-26T16:48:52-0300 lvl=info msg="session closing" obj=tunnels.session err=nil
+2025-11-26 16:48:52 [INFO] t=2025-11-26T16:48:52-0300 lvl=info msg="accept failed" obj=tunnels.session obj=csess id=183fb43659a8 err="reconnecting session closed"
+2025-11-26 16:48:52 [INFO] t=2025-11-26T16:48:52-0300 lvl=info msg="failed to accept connection: Listener closed" obj=tunnels.session clientid=6050cca14468f26c65f28ad5bc759824

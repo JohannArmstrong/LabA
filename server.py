@@ -14,7 +14,8 @@ from datetime import datetime
 import logging
 import os
 import atexit # para cerrar ngrok al cerrar el server
-
+from decimal import Decimal, InvalidOperation
+import math
 
 app = Flask(__name__)
 
@@ -47,9 +48,9 @@ DB_CONFIG = {
 }
 
 conn_str = (
-            f"host={DB_CONFIG['host']} dbname={DB_CONFIG['dbname']} "
-            f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
-        )
+    f"host={DB_CONFIG['host']} dbname={DB_CONFIG['dbname']} "
+    f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
+)
 
 
 # funciones auxiliares
@@ -91,6 +92,22 @@ def parse_int(value):
     try:
         return int(float(value))
     except Exception:
+        return None
+
+
+def parse_decimal(value):
+    if value is None:
+        return None
+    try:
+        v = str(value).replace(",", ".").strip()
+        if v == "":
+            return None
+        d = Decimal(v)
+        # descarta NaN o infinitos
+        if d.is_nan() or d.is_infinite():
+            return None
+        return d
+    except (InvalidOperation, ValueError):
         return None
 
 
@@ -219,6 +236,8 @@ def nuevo_proyecto():
                     data.get("Describa a qué carrera y/o institución corresponde el proyecto:")
                 )
 
+                tiempo_estimado = parse_decimal(data.get("Tiempo estimado de utilización de la herramienta / material / servicio (hs):"))
+
 
                 # insertar proyecto en DB
                 cur.execute("""
@@ -259,7 +278,8 @@ def nuevo_proyecto():
                     cantidad_prototipos,
                     data.get("Vinculación del proyecto con las acciones relacionadas a las herramientas de fabricación digital / materiales / servicios: (justificación de uso)"),
                     fecha_necesidad,
-                    data.get("Tiempo estimado de utilización de la herramienta / material / servicio (hs):"),
+                    tiempo_estimado,
+                    #data.get("Tiempo estimado de utilización de la herramienta / material / servicio (hs):"),
                     data.get("Otros comentarios"),
                     id_origen_material,
                     copiado,
@@ -336,13 +356,13 @@ def proyectos():
                 SELECT {cols_sql}
                 FROM proyecto p
                 JOIN usuario u ON p.id_usuario = u.id_usuario
-                JOIN tipo ON p.id_tipo = tipo.id_tipo
-                JOIN sede ON p.id_sede = sede.id_sede
-                JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
-                JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
-                JOIN estado ON p.id_estado = estado.id_estado
-                JOIN carrera ON p.id_carrera = carrera.id_carrera
-                JOIN cargo ON p.id_cargo = cargo.id_cargo
+                LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
+                LEFT JOIN sede ON p.id_sede = sede.id_sede
+                LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+                LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                LEFT JOIN estado ON p.id_estado = estado.id_estado
+                LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
+                LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
                 WHERE {where_sql}
                 ORDER BY p.id_proyecto DESC;
             """
@@ -353,13 +373,13 @@ def proyectos():
                 SELECT {cols_sql}
                 FROM proyecto p
                 JOIN usuario u ON p.id_usuario = u.id_usuario
-                JOIN tipo ON p.id_tipo = tipo.id_tipo
-                JOIN sede ON p.id_sede = sede.id_sede
-                JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
-                JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
-                JOIN estado ON p.id_estado = estado.id_estado
-                JOIN carrera ON p.id_carrera = carrera.id_carrera
-                JOIN cargo ON p.id_cargo = cargo.id_cargo
+                LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
+                LEFT JOIN sede ON p.id_sede = sede.id_sede
+                LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+                LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                LEFT JOIN estado ON p.id_estado = estado.id_estado
+                LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
+                LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
                 ORDER BY p.id_proyecto DESC;
             """
 
@@ -383,16 +403,33 @@ def proyectos():
             with conn.cursor() as cur:
                 cur.execute(query, params)
                 proyectos = cur.fetchall()
+                print(len(proyectos))
+                cur.execute("SELECT COUNT(*) FROM proyecto;")
+                print("Total proyectos en DB:", cur.fetchone()[0])
+
 
         # sumatorias de columnas numéricas
         # con problemas por ser algunas texto en vez de n'umeros
         sum_row = []
         for i, col in enumerate(seleccionadas):
-            valores = [p[i] for p in proyectos if isinstance(p[i], (int, float))]
+            valores = []
+            for p in proyectos:
+                v = p[i]
+                # aceptar int, float, Decimal
+                if isinstance(v, (int, float, Decimal)):
+                    # descartar NaN
+                    if isinstance(v, float) and math.isnan(v):
+                        continue
+                    valores.append(v)
+            sum_row.append(sum(valores) if valores else "-")
+
+        '''sum_row = []
+        for i, col in enumerate(seleccionadas):
+            valores = [p[i] for p in proyectos if isinstance(p[i], (int, float, Decimal))]
             if valores:
                 sum_row.append(sum(valores))
             else:
-                sum_row.append("-")
+                sum_row.append("-")'''
 
         return render_template("proyectos.html",
                                columnas_disponibles=COLUMNAS_DISPONIBLES.keys(),
@@ -406,76 +443,6 @@ def proyectos():
         return f"❌ Error al cargar proyectos: {e}", 500
 
 
-
-'''@app.route("/",methods=["GET", "POST"])
-def proyectos():
-    try:
-        seleccionadas = request.form.getlist("columnas")
-
-        # Construir SELECT dinámico
-        cols_sql = ", ".join([COLUMNAS_DISPONIBLES[c] for c in seleccionadas])
-        query = f"""
-            SELECT {cols_sql}
-            FROM proyecto p
-            JOIN usuario u ON p.id_usuario = u.id_usuario
-            JOIN tipo ON p.id_tipo = tipo.id_tipo
-            JOIN sede ON p.id_sede = sede.id_sede
-            JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
-            JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
-            JOIN estado ON p.id_estado = estado.id_estado
-            JOIN carrera ON p.id_carrera = carrera.id_carrera
-            JOIN cargo ON p.id_cargo = cargo.id_cargo
-            ORDER BY p.id_proyecto DESC;
-        """
-        conn_str = (
-            f"host={DB_CONFIG['host']} dbname={DB_CONFIG['dbname']} "
-            f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
-        )
-        with psy.connect(conn_str) as conn:
-            with conn.cursor() as cur:
-                cur.execute(query)
-                proyectos = cur.fetchall()
-
-         # Calcular sumatorias de columnas numéricas
-        sumatorias = {}
-        for i, col in enumerate(seleccionadas):
-            valores = [p[i] for p in proyectos if isinstance(p[i], (int, float))]
-            if valores:
-                sumatorias[col] = sum(valores)
-        
-        return render_template("proyectos.html", columnas=seleccionadas, rows=proyectos, sumatorias=sumatorias)
-        #return render_template("proyectos.html", proyectos=proyectos)
-
-    except Exception as e:
-        # loguear el error y mostrar un mensaje
-        logging.error(f"Error en consulta: {e}")
-        return f"❌ Error al cargar proyectos: {e}", 500
-
-'''
-'''
-        conn_str = (
-            f"host={DB_CONFIG['host']} dbname={DB_CONFIG['dbname']} "
-            f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
-        )
-        with psy.connect(conn_str) as conn:
-            with conn.cursor() as cur:
-                # consulta censilla para comenzar
-                #                                                         
-                cur.execute("""
-                    SELECT p.id_proyecto, p.fecha_registro, u.email, u.nombre, carrera.nombre, cargo.nombre, sede.nombre, p.nombre_proyecto, p.descripcion, tipo.nombre, herr.nombre, p.material, p.cantidad_prototipos, p.justificacion, p.fecha_necesidad, p.tiempo_estimado, p.otros_comentarios, origen.nombre, estado.nombre
-                    FROM proyecto p
-                    JOIN usuario u ON p.id_usuario = u.id_usuario
-                    JOIN tipo ON p.id_tipo = tipo.id_tipo
-                    JOIN sede ON p.id_sede = sede.id_sede
-                    JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
-                    JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
-                    JOIN estado ON p.id_estado = estado.id_estado
-                    JOIN carrera ON p.id_carrera = carrera.id_carrera
-                    JOIN cargo ON p.id_cargo = cargo.id_cargo
-                    ORDER BY p.id_proyecto DESC;
-                """)
-                proyectos = cur.fetchall()'''
-
 #######################################################################################
 # función auxiliar para obtener datos y sumatorias
 def obtener_proyectos(seleccionadas):
@@ -484,13 +451,13 @@ def obtener_proyectos(seleccionadas):
         SELECT {cols_sql}
         FROM proyecto p
         JOIN usuario u ON p.id_usuario = u.id_usuario
-        JOIN tipo ON p.id_tipo = tipo.id_tipo
-        JOIN sede ON p.id_sede = sede.id_sede
-        JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
-        JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
-        JOIN estado ON p.id_estado = estado.id_estado
-        JOIN carrera ON p.id_carrera = carrera.id_carrera
-        JOIN cargo ON p.id_cargo = cargo.id_cargo
+        LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
+        LEFT JOIN sede ON p.id_sede = sede.id_sede
+        LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+        LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+        LEFT JOIN estado ON p.id_estado = estado.id_estado
+        LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
+        LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
         ORDER BY p.id_proyecto DESC;
     """
 
@@ -503,7 +470,15 @@ def obtener_proyectos(seleccionadas):
     # fila de sumatorias
     sum_row = []
     for i, col in enumerate(seleccionadas):
-        valores = [p[i] for p in proyectos if isinstance(p[i], (int, float))]
+        valores = []
+        for p in proyectos:
+            v = p[i]
+            # aceptar int, float, Decimal
+            if isinstance(v, (int, float, Decimal)):
+                # descartar NaN
+                if isinstance(v, float) and math.isnan(v):
+                    continue
+                valores.append(v)
         sum_row.append(sum(valores) if valores else "-")
 
     return proyectos, sum_row
@@ -526,7 +501,7 @@ def exportar_pdf():
     # generar PDF con WeasyPrint
     pdf = HTML(string=html_string).write_pdf(
         stylesheets=[CSS("static/css/bootstrap.min.css"),
-                     CSS("static/css/styles.css")]
+                     CSS("static/css/styles-pdf.css")]
     )
 
     response = make_response(pdf)
@@ -537,29 +512,6 @@ def exportar_pdf():
 
 
 # corre en el puerto 5000 donde se conecta con ngrok
-'''if __name__ == "__main__":
-    from pyngrok import ngrok
-
-    # verificar si ya existe un túnel en el puerto 5000
-    tunnels = ngrok.get_tunnels()
-    public_url = None
-    for t in tunnels:
-        if "5000" in t.config["addr"]:
-            public_url = t.public_url
-            break
-
-    # si no existe, abrir uno nuevo
-    if not public_url:
-        public_url = ngrok.connect(5000)
-        print(f"🌐 Nuevo túnel: {public_url}")
-    else:
-        print(f"🌐 Reutilizando túnel existente: {public_url}")
-
-    # registra cierre automático
-    atexit.register(ngrok.disconnect, public_url)
-
-    # corre flask
-    app.run(debug=False, port=5000)'''
 
 if __name__ == "__main__":
     from pyngrok import ngrok
