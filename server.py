@@ -47,13 +47,14 @@ DB_CONFIG = {
     "port": 5432
 }
 
+# uso de la config de la DB para crear la cadena de conecci'on
 conn_str = (
     f"host={DB_CONFIG['host']} dbname={DB_CONFIG['dbname']} "
     f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
 )
 
 
-# funciones auxiliares
+# funciones auxiliares ------------------------
 
 def parse_date(value):
     if not value:
@@ -383,21 +384,6 @@ def proyectos():
                 ORDER BY p.id_proyecto DESC;
             """
 
-        '''# consulta cuando no hay búsqueda
-        # se unen ambas partes para formar la consulta
-        query = f"""
-            SELECT {cols_sql}
-            FROM proyecto p
-            JOIN usuario u ON p.id_usuario = u.id_usuario
-            JOIN tipo ON p.id_tipo = tipo.id_tipo
-            JOIN sede ON p.id_sede = sede.id_sede
-            JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
-            JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
-            JOIN estado ON p.id_estado = estado.id_estado
-            JOIN carrera ON p.id_carrera = carrera.id_carrera
-            JOIN cargo ON p.id_cargo = cargo.id_cargo
-            ORDER BY p.id_proyecto DESC;
-        """'''
 
         with psy.connect(conn_str) as conn:
             with conn.cursor() as cur:
@@ -423,25 +409,157 @@ def proyectos():
                     valores.append(v)
             sum_row.append(sum(valores) if valores else "-")
 
-        '''sum_row = []
-        for i, col in enumerate(seleccionadas):
-            valores = [p[i] for p in proyectos if isinstance(p[i], (int, float, Decimal))]
-            if valores:
-                sum_row.append(sum(valores))
-            else:
-                sum_row.append("-")'''
-
         return render_template("proyectos.html",
-                               columnas_disponibles=COLUMNAS_DISPONIBLES.keys(),
-                               columnas=seleccionadas,
-                               rows=proyectos,
-                               sum_row=sum_row,
-                               filtros=filtros)
+                                active_page="proyectos",
+                                columnas_disponibles=COLUMNAS_DISPONIBLES.keys(),
+                                columnas=seleccionadas,
+                                rows=proyectos,
+                                sum_row=sum_row,
+                                filtros=filtros)
 
     except Exception as e:
         logging.error(f"Error en consulta: {e}")
         return f"❌ Error al cargar proyectos: {e}", 500
 
+
+
+@app.route("/estadisticas", methods=["GET", "POST"])
+def estadisticas():
+    try:
+        with psy.connect(conn_str) as conn:
+            with conn.cursor() as cur:
+                cur.execute("SELECT nombre FROM sede ORDER BY nombre;")
+                sedes = [row[0] for row in cur.fetchall()]
+
+        seleccionadas = request.form.getlist("sedes")
+
+        where_clauses = []
+        params_uso_equipamiento = []
+        params_asistencia_tecnica = []
+        params_asistencia_desarrollo = []
+
+        if seleccionadas:
+            placeholders = ", ".join(["%s"] * len(seleccionadas))
+            where_clauses.append(f"sede.nombre IN ({placeholders})")
+
+            # copia lo que tiene seleccionadas dentro de params...
+            params_uso_equipamiento.extend(seleccionadas)
+
+            # creo las params para las otras tablas
+            # forma correcta de copiar una lista
+            params_asistencia_tecnica = list(params_uso_equipamiento)
+            params_asistencia_desarrollo = list(params_uso_equipamiento)
+
+
+        # filtro fijo por tipo
+        where_clauses.append("tipo.nombre = %s")
+
+        params_uso_equipamiento.append("Uso de equipamiento del LabA")
+        params_asistencia_tecnica.append("Asistencia técnica (de equipamiento u otro)")
+        params_asistencia_desarrollo.append("Asistencia en desarrollo de un producto")
+
+        where_sql = " AND ".join(where_clauses)
+
+
+        cols_uso_equipamiento = """
+                cargo.nombre,
+                p.nombre_proyecto,
+                herr.nombre,
+                p.material,
+                p.cantidad_prototipos,
+                p.fecha_necesidad,
+                p.tiempo_estimado,
+                origen.nombre
+            """
+
+        cols_asistencia_tecnica = """
+                p.nombre_proyecto,
+                p.tiempo_estimado,
+                p.descripcion,
+                cargo.nombre,
+                p.fecha_necesidad
+            """
+        
+        cols_asistencia_desarrollo = """
+                p.nombre_proyecto,
+                p.cantidad_prototipos,
+                herr.nombre,
+                p.tiempo_estimado,
+                p.material,
+                origen.nombre,
+                cargo.nombre,
+                p.fecha_necesidad
+            """
+
+        query_uso_equipamiento = f"""
+                SELECT {cols_uso_equipamiento}
+                FROM proyecto p
+                JOIN usuario u ON p.id_usuario = u.id_usuario
+                LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
+                LEFT JOIN sede ON p.id_sede = sede.id_sede
+                LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+                LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                LEFT JOIN estado ON p.id_estado = estado.id_estado
+                LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
+                LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
+                WHERE {where_sql}
+                ORDER BY p.id_proyecto DESC;
+            """
+
+        query_asistencia_tecnica = f"""
+                SELECT {cols_asistencia_tecnica}
+                FROM proyecto p
+                JOIN usuario u ON p.id_usuario = u.id_usuario
+                LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
+                LEFT JOIN sede ON p.id_sede = sede.id_sede
+                LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+                LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                LEFT JOIN estado ON p.id_estado = estado.id_estado
+                LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
+                LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
+                WHERE {where_sql}
+                ORDER BY p.id_proyecto DESC;
+            """
+        
+        query_asistencia_desarrollo = f"""
+                SELECT {cols_asistencia_desarrollo}
+                FROM proyecto p
+                JOIN usuario u ON p.id_usuario = u.id_usuario
+                LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
+                LEFT JOIN sede ON p.id_sede = sede.id_sede
+                LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+                LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                LEFT JOIN estado ON p.id_estado = estado.id_estado
+                LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
+                LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
+                WHERE {where_sql}
+                ORDER BY p.id_proyecto DESC;
+            """
+
+        # se ejecutan las 3 consultas
+        with psy.connect(conn_str) as conn:
+            with conn.cursor() as cur:
+                cur.execute(query_uso_equipamiento, params_uso_equipamiento)
+                uso_equipamiento = cur.fetchall()
+
+                cur.execute(query_asistencia_tecnica, params_asistencia_tecnica)
+                asistencia_tecnica = cur.fetchall()
+
+                cur.execute(query_asistencia_desarrollo, params_asistencia_desarrollo)
+                asistencia_desarrollo = cur.fetchall()
+
+        # se envían la info y las 3 consultas al front
+        return render_template("estadisticas.html",
+                                active_page="estadisticas",
+                                sedes=sedes,
+                                sedes_seleccionadas=seleccionadas,
+                                uso_equipamiento=uso_equipamiento,
+                                asistencia_tecnica=asistencia_tecnica,
+                                asistencia_desarrollo=asistencia_desarrollo)
+
+    except Exception as e:
+        logging.error(f"Error en consulta: {e}")
+        return f"❌ Error al cargar proyectos: {e}", 500
 
 #######################################################################################
 # función auxiliar para obtener datos y sumatorias
