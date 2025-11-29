@@ -4,8 +4,11 @@ from datetime import datetime
 import math
 from decimal import Decimal, InvalidOperation
 
-#  CSV público de google sheets 
-link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTilwi5g-OdfObKJmRWFIV-8N0RBaGLX2QiF0bmSpl915RlkIed5Ye-O80Ey5crsg5D7o8bCNtz26sv/pub?gid=1350431005&single=true&output=csv"
+# CSV público de google sheets
+# Se pueden agregar más archivos separados con coma
+links = [ 
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vTilwi5g-OdfObKJmRWFIV-8N0RBaGLX2QiF0bmSpl915RlkIed5Ye-O80Ey5crsg5D7o8bCNtz26sv/pub?gid=1350431005&single=true&output=csv"
+]
 
 # configuración de la DB
 DB_CONFIG = {
@@ -16,13 +19,13 @@ DB_CONFIG = {
     "port": 5432
 }
 
-# cambia valores numéricos de fecha a formato DATE
-def parse_date(value):
+# cambia valores numéricos de fecha a formato TIMESTAMP
+def parse_timestamp(value):
     if not value or not isinstance(value, str):
         return None
-    for fmt in ("%d/%m/%Y %H:%M:%S", "%d/%m/%Y", "%Y-%m-%d"):
+    for fmt in ("%d/%m/%Y %H:%M:%S", "%d/%m/%Y %H:%M", "%d/%m/%Y", "%Y-%m-%d %H:%M:%S", "%Y-%m-%d"):
         try:
-            return datetime.strptime(value.strip(), fmt).date()
+            return datetime.strptime(value.strip(), fmt)
         except Exception:
             pass
     return None
@@ -50,13 +53,6 @@ def parse_decimal(value):
     except (InvalidOperation, ValueError):
         return None
         
-'''def parse_decimal(value):
-    if value is None:
-        return None
-    try:
-        return Decimal(str(value).replace(",", "."))
-    except InvalidOperation:
-        return None'''
 
 # funci'on para obtener o insertar ID en tablas normalizadas
 def get_or_create_id(cur, table, name_value):
@@ -125,8 +121,8 @@ with psy.connect(conn_str) as conn:
                 id_usuario = cur.fetchone()[0]
                 print(f"🆕 Usuario creado: {nombre} ({email}) id={id_usuario}")
 
-            fecha_registro = parse_date(str(row.get("Marca temporal")))
-            fecha_necesidad = parse_date(str(row.get("Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelación)")))
+            fecha_registro = parse_timestamp(str(row.get("Marca temporal")))
+            fecha_necesidad = parse_timestamp(str(row.get("Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelación)")))
 
             tiempo_estimado = parse_decimal(row.get("Tiempo estimado de utilización de la herramienta / material / servicio (hs):"))
 

@@ -16,6 +16,31 @@ import os
 import atexit # para cerrar ngrok al cerrar el server
 from decimal import Decimal, InvalidOperation
 import math
+import threading
+import pandas as panda
+import atexit
+
+# Intervalo para ejecutar el escaneo de los archivos CSV adjuntos
+INTERVALO_CARGA = 120  # tiempo en SEGUNDOS     3600 = 1 hora
+
+# CSV público de google sheets
+# Se pueden agregar más archivos separados con coma
+links = [ 
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vTilwi5g-OdfObKJmRWFIV-8N0RBaGLX2QiF0bmSpl915RlkIed5Ye-O80Ey5crsg5D7o8bCNtz26sv/pub?gid=1350431005&single=true&output=csv",
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vTilwi5g-OdfObKJmRWFIV-8N0RBaGLX2QiF0bmSpl915RlkIed5Ye-O80Ey5crsg5D7o8bCNtz26sv/pub?gid=728128631&single=true&output=csv"
+]
+
+# Se inicia un temporizador que ejecuta el escaneo de las hojas de google
+t = None
+def scheduler():
+    cargar_csv_a_db() #ejecuta la carga
+    # tomo la t declarada global ahí arriba
+    global t
+    # vuelve a programar la siguiente ejecución
+    t = threading.Timer(INTERVALO_CARGA, scheduler)
+    t.daemon = True  # importante: hace que el hilo no bloquee la salida
+    t.start()
+
 
 app = Flask(__name__)
 
@@ -53,9 +78,249 @@ conn_str = (
     f"user={DB_CONFIG['user']} password={DB_CONFIG['password']} port={DB_CONFIG['port']}"
 )
 
+############################################################################################################
+# Las siguientes funciones contienen toda la lógica necesaria para cargar                                  #
+# los datos desde el archivo exportado en formato csv hacia la DB.                                         #
+# ##########################################################################################################
 
-# funciones auxiliares ------------------------
+# cambia valores numéricos de fecha a formato TIMESTAMP
+def parse_timestamp(value):
+    if not value or not isinstance(value, str):
+        return None
+    for fmt in ("%d/%m/%Y %H:%M:%S", "%d/%m/%Y %H:%M", "%d/%m/%Y", "%Y-%m-%d %H:%M:%S", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(value.strip(), fmt)
+        except Exception:
+            pass
+    return None
 
+# transforma float a int
+def parse_int(value):
+    try:
+        return int(float(value))
+    except Exception:
+        return None
+
+
+def parse_decimal(value):
+    if value is None:
+        return None
+    try:
+        v = str(value).replace(",", ".").strip()
+        if v == "":
+            return None
+        d = Decimal(v)
+        # descartar NaN o infinitos
+        if d.is_nan() or d.is_infinite():
+            return None
+        return d
+    except (InvalidOperation, ValueError):
+        return None
+        
+
+# funci'on para obtener o insertar ID en tablas normalizadas
+def get_or_create_id(cur, table, name_value):
+    """ Devuelve el id de la tabla normalizada. Inserta si no existe """
+    if not name_value or str(name_value).strip() == "":
+        return None
+
+    name_value = str(name_value).strip()
+
+    cur.execute(f"SELECT id_{table} FROM {table} WHERE nombre = %s;", (name_value,))
+    row = cur.fetchone()
+
+    if row:
+        return row[0]
+
+    cur.execute(
+        f"INSERT INTO {table} (nombre) VALUES (%s) RETURNING id_{table};",
+        (name_value,)
+    )
+    return cur.fetchone()[0]
+
+def cargar_csv_a_db():
+    print("▶ Ejecutando carga automática desde CSV ▶")
+    
+    total = 0 # para mostrar total de inserciones
+
+    for link in links:
+        # lee hoja 
+        hoja = panda.read_csv(link)
+        hoja.columns = [name.strip().replace("\n", " ").replace("\r", "").replace("  ", " ") for name in hoja.columns]
+
+        print("Columnas detectadas:")
+        print(hoja.columns.tolist())
+        print(f"Total de filas leídas (sin encabezado): {len(hoja)}")
+        print(hoja.head(3))
+
+
+        with psy.connect(conn_str) as conn:
+            with conn.cursor() as cur:
+                cur.execute("SELECT COUNT(*) FROM proyecto;")
+                total_antes = cur.fetchone()[0]
+
+                tiene_copiado = "Ya copiado" in hoja.columns
+                tiene_estado = "Estado" in hoja.columns
+
+                for i, row in hoja.iterrows():
+                    email = row.get("Dirección de correo electrónico")
+                    nombre = row.get("Nombre completo:")
+
+                    print(f"Fila {i+1} → email={repr(email)}, nombre={repr(nombre)}")
+
+                    if not email or not nombre:
+                        print(f"⚠ Fila {i+1} sin email o nombre → omitida")
+                        continue
+
+                    # usuario
+                    cur.execute("SELECT id_usuario FROM usuario WHERE email = %s;", (email,))
+                    user_row = cur.fetchone()
+                    if user_row:
+                        id_usuario = user_row[0]
+                    else:
+                        cur.execute(
+                            "INSERT INTO usuario (nombre, email) VALUES (%s, %s) RETURNING id_usuario;",
+                            (nombre, email)
+                        )
+                        id_usuario = cur.fetchone()[0]
+                        print(f"🆕 Usuario creado: {nombre} ({email}) id={id_usuario}")
+
+                    fecha_registro = parse_timestamp(str(row.get("Marca temporal")))
+                    fecha_necesidad = parse_timestamp(str(row.get("Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelación)")))
+
+                    tiempo_estimado = parse_decimal(row.get("Tiempo estimado de utilización de la herramienta / material / servicio (hs):"))
+
+
+                    # por si hay texto en vez de números, aunque de todas formas inserta null
+                    cantidad_prototipos = row.get("Cantidad de prototipos a fabricar:")
+                    try:
+                        cantidad_prototipos = parse_int(cantidad_prototipos)
+                    except Exception:
+                        pass
+
+                    # estas 2 columnas puede que no vayan en la DB final
+                    # por ahora están de forma opcional para poder probarlas al completar yo el formulario
+                    copiado = row.get("Ya copiado") if tiene_copiado else None
+                    estado_val = row.get("Estado") if tiene_estado else None
+
+                    # NUEVO SISTEMA → obtiene IDs de tablas normalizadas (alternativo a lo que se hace con usuario)
+                    id_cargo = get_or_create_id(cur, "cargo", row.get("Describa su cargo dentro de la Institución y/o Proyecto."))
+                    id_sede = get_or_create_id(cur, "sede", row.get("En qué sede queda el laboratorio al cual quiere acceder:"))
+                    id_tipo = get_or_create_id(cur, "tipo", row.get("Seleccione el tipo de solicitud"))
+                    id_herramienta = get_or_create_id(cur, "herramienta", row.get("Seleccione la herramienta, material o servicio que desea utilizar:"))
+                    id_origen_material = get_or_create_id(cur, "origen_material", row.get("Origen del material"))
+                    id_estado = get_or_create_id(cur, "estado", estado_val)
+                    # 'carrera' por si quieren hacerla con opciones precargadas en un futuro
+                    id_carrera = get_or_create_id(cur, "carrera", row.get("Describa a qué carrera y/o institución corresponde el proyecto:"))
+
+
+                    # valores ordenados según la nueva tabla
+                    valores = (
+                        fecha_registro,
+                        id_usuario,
+                        id_carrera,
+                        id_cargo,
+                        id_sede,
+                        row.get("Nombre del proyecto/actividad:"),
+                        row.get("Breve descripción del proyecto"),
+                        id_tipo,
+                        id_herramienta,
+                        row.get("Material a utilizar"),
+                        cantidad_prototipos,
+                        row.get("Vinculación del proyecto con las acciones relacionadas a las herramientas de fabricación digital / materiales / servicios: (justificación de uso)"),
+                        fecha_necesidad,
+                        tiempo_estimado,
+                        #row.get("Tiempo estimado de utilización de la herramienta / material / servicio (hs):"),
+                        row.get("Otros comentarios"),
+                        id_origen_material,
+                        copiado,
+                        id_estado
+                    )
+
+                    print(f"\n➡ Insertando proyecto de: {nombre}")
+
+                    try:
+                        cur.execute("""
+                            INSERT INTO proyecto (
+                                fecha_registro,
+                                id_usuario,
+                                id_carrera,
+                                id_cargo,
+                                id_sede,
+                                nombre_proyecto,
+                                descripcion,
+                                id_tipo,
+                                id_herramienta,
+                                material,
+                                cantidad_prototipos,
+                                justificacion,
+                                fecha_necesidad,
+                                tiempo_estimado,
+                                otros_comentarios,
+                                id_origen_material,
+                                copiado,
+                                id_estado
+                            ) VALUES (
+                                %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
+                            )
+
+                            ON CONFLICT (id_usuario, fecha_registro)
+                            DO UPDATE SET
+                                id_carrera = EXCLUDED.id_carrera,
+                                id_cargo = EXCLUDED.id_cargo,
+                                id_sede = EXCLUDED.id_sede,
+                                nombre_proyecto = EXCLUDED.nombre_proyecto,
+                                descripcion = EXCLUDED.descripcion,
+                                id_tipo = EXCLUDED.id_tipo,
+                                id_herramienta = EXCLUDED.id_herramienta,
+                                material = EXCLUDED.material,
+                                cantidad_prototipos = EXCLUDED.cantidad_prototipos,
+                                justificacion = EXCLUDED.justificacion,
+                                fecha_necesidad = EXCLUDED.fecha_necesidad,
+                                tiempo_estimado = EXCLUDED.tiempo_estimado,
+                                otros_comentarios = EXCLUDED.otros_comentarios,
+                                id_origen_material = EXCLUDED.id_origen_material,
+                                copiado = EXCLUDED.copiado,
+                                id_estado = EXCLUDED.id_estado;
+                        """, valores)
+
+                        if cur.rowcount == 0:
+                            print("⚠ No se insertó (conflicto o duplicado)")
+                        else:
+                            print("✅ Proyecto insertado")
+
+                    except Exception as e:
+                        print(f"❌ Error en fila {i+1}: {e}")
+                        conn.rollback()
+                        continue
+
+                conn.commit()
+
+                cur.execute("SELECT COUNT(*) FROM proyecto;")
+                total_despues = cur.fetchone()[0]
+                insertados = total_despues - total_antes
+                total += insertados
+                print(f"\n✔ Registros insertados/editados ahora: {insertados}")
+                print(f"\n✔ Total de registros insertados/editados: {total}")
+
+            #print("Script ejecutado sin problemas.")    luego poner el nombre del archivo cargado
+
+
+
+
+    print("✔ Carga finalizada")
+
+
+
+
+
+
+
+
+
+
+# funciones auxiliares -------------------------------------------------------------------------------------
+'''
 def parse_date(value):
     if not value:
         return None
@@ -118,9 +383,9 @@ def clean_keys(data):
         new_key = key.strip().replace("\n", " ").replace("\r", "").replace("  ", " ")
         clean[new_key] = value
     return clean
+'''
 
-
-
+'''
 # NUEVA FUNCIÓN ⇨ consulta/crea valores en tablas normalizadas
 
 def get_or_create(cur, table, field, value):
@@ -143,8 +408,9 @@ def get_or_create(cur, table, field, value):
         (value,)
     )
     return cur.fetchone()[0]
+'''
 
-
+'''
 # establece la ruta, es decir, el "túnel" que proporciona ngrok
 # para la entrada de datos hacia la DB
 @app.route("/api/nuevo_proyecto", methods=["POST"])
@@ -299,7 +565,7 @@ def nuevo_proyecto():
         logging.error(msg)
         print(msg)
         return jsonify({"status": "error", "mensaje": str(e)}), 500
-
+'''
 #####################################################################################
 
 # para concatenar con la consulta
@@ -433,133 +699,164 @@ def estadisticas():
 
         seleccionadas = request.form.getlist("sedes")
 
-        where_clauses = []
-        params_uso_equipamiento = []
-        params_asistencia_tecnica = []
-        params_asistencia_desarrollo = []
+        uso_equipamiento, asistencia_tecnica, asistencia_desarrollo = obtener_datos_estadisticas(seleccionadas)
 
-        if seleccionadas:
-            placeholders = ", ".join(["%s"] * len(seleccionadas))
-            where_clauses.append(f"sede.nombre IN ({placeholders})")
-
-            # copia lo que tiene seleccionadas dentro de params...
-            params_uso_equipamiento.extend(seleccionadas)
-
-            # creo las params para las otras tablas
-            # forma correcta de copiar una lista
-            params_asistencia_tecnica = list(params_uso_equipamiento)
-            params_asistencia_desarrollo = list(params_uso_equipamiento)
-
-
-        # filtro fijo por tipo
-        where_clauses.append("tipo.nombre = %s")
-
-        params_uso_equipamiento.append("Uso de equipamiento del LabA")
-        params_asistencia_tecnica.append("Asistencia técnica (de equipamiento u otro)")
-        params_asistencia_desarrollo.append("Asistencia en desarrollo de un producto")
-
-        where_sql = " AND ".join(where_clauses)
-
-
-        cols_uso_equipamiento = """
-                cargo.nombre,
-                p.nombre_proyecto,
-                herr.nombre,
-                p.material,
-                p.cantidad_prototipos,
-                p.fecha_necesidad,
-                p.tiempo_estimado,
-                origen.nombre
-            """
-
-        cols_asistencia_tecnica = """
-                p.nombre_proyecto,
-                p.tiempo_estimado,
-                p.descripcion,
-                cargo.nombre,
-                p.fecha_necesidad
-            """
-        
-        cols_asistencia_desarrollo = """
-                p.nombre_proyecto,
-                p.cantidad_prototipos,
-                herr.nombre,
-                p.tiempo_estimado,
-                p.material,
-                origen.nombre,
-                cargo.nombre,
-                p.fecha_necesidad
-            """
-
-        query_uso_equipamiento = f"""
-                SELECT {cols_uso_equipamiento}
-                FROM proyecto p
-                JOIN usuario u ON p.id_usuario = u.id_usuario
-                LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
-                LEFT JOIN sede ON p.id_sede = sede.id_sede
-                LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
-                LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
-                LEFT JOIN estado ON p.id_estado = estado.id_estado
-                LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
-                LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
-                WHERE {where_sql}
-                ORDER BY p.id_proyecto DESC;
-            """
-
-        query_asistencia_tecnica = f"""
-                SELECT {cols_asistencia_tecnica}
-                FROM proyecto p
-                JOIN usuario u ON p.id_usuario = u.id_usuario
-                LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
-                LEFT JOIN sede ON p.id_sede = sede.id_sede
-                LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
-                LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
-                LEFT JOIN estado ON p.id_estado = estado.id_estado
-                LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
-                LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
-                WHERE {where_sql}
-                ORDER BY p.id_proyecto DESC;
-            """
-        
-        query_asistencia_desarrollo = f"""
-                SELECT {cols_asistencia_desarrollo}
-                FROM proyecto p
-                JOIN usuario u ON p.id_usuario = u.id_usuario
-                LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
-                LEFT JOIN sede ON p.id_sede = sede.id_sede
-                LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
-                LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
-                LEFT JOIN estado ON p.id_estado = estado.id_estado
-                LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
-                LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
-                WHERE {where_sql}
-                ORDER BY p.id_proyecto DESC;
-            """
-
-        # se ejecutan las 3 consultas
-        with psy.connect(conn_str) as conn:
-            with conn.cursor() as cur:
-                cur.execute(query_uso_equipamiento, params_uso_equipamiento)
-                uso_equipamiento = cur.fetchall()
-
-                cur.execute(query_asistencia_tecnica, params_asistencia_tecnica)
-                asistencia_tecnica = cur.fetchall()
-
-                cur.execute(query_asistencia_desarrollo, params_asistencia_desarrollo)
-                asistencia_desarrollo = cur.fetchall()
-
-        # se envían la info y las 3 consultas al front
         return render_template("estadisticas.html",
+                               active_page="estadisticas",
+                               sedes=sedes,
+                               sedes_seleccionadas=seleccionadas,
+                               uso_equipamiento=uso_equipamiento,
+                               asistencia_tecnica=asistencia_tecnica,
+                               asistencia_desarrollo=asistencia_desarrollo)
+
+    except Exception as e:
+        logging.error(f"Error en consulta: {e}")
+        return f"❌ Error al cargar proyectos: {e}", 500
+
+
+# funci'on para usar en imprimir pdf estad'isticas
+def obtener_datos_estadisticas(seleccionadas):
+    where_clauses = []
+    params_uso_equipamiento = []
+    params_asistencia_tecnica = []
+    params_asistencia_desarrollo = []
+
+    if seleccionadas:
+        placeholders = ", ".join(["%s"] * len(seleccionadas))
+        where_clauses.append(f"sede.nombre IN ({placeholders})")
+
+        # copia lo que tiene seleccionadas dentro de params...
+        params_uso_equipamiento.extend(seleccionadas)
+
+        # creo las params para las otras tablas
+        # forma correcta de copiar una lista
+        params_asistencia_tecnica = list(params_uso_equipamiento)
+        params_asistencia_desarrollo = list(params_uso_equipamiento)
+
+
+    # filtro fijo por tipo
+    where_clauses.append("tipo.nombre = %s")
+
+    params_uso_equipamiento.append("Uso de equipamiento del LabA")
+    params_asistencia_tecnica.append("Asistencia técnica (de equipamiento u otro)")
+    params_asistencia_desarrollo.append("Asistencia en desarrollo de un producto")
+
+    where_sql = " AND ".join(where_clauses)
+
+
+    cols_uso_equipamiento = """
+            cargo.nombre,
+            p.nombre_proyecto,
+            herr.nombre,
+            p.material,
+            p.cantidad_prototipos,
+            p.fecha_necesidad,
+            p.tiempo_estimado,
+            origen.nombre
+        """
+
+    cols_asistencia_tecnica = """
+            p.nombre_proyecto,
+            p.tiempo_estimado,
+            p.descripcion,
+            cargo.nombre,
+            p.fecha_necesidad
+        """
+    
+    cols_asistencia_desarrollo = """
+            p.nombre_proyecto,
+            p.cantidad_prototipos,
+            herr.nombre,
+            p.tiempo_estimado,
+            p.material,
+            origen.nombre,
+            cargo.nombre,
+            p.fecha_necesidad
+        """
+
+    query_uso_equipamiento = f"""
+            SELECT {cols_uso_equipamiento}
+            FROM proyecto p
+            JOIN usuario u ON p.id_usuario = u.id_usuario
+            LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
+            LEFT JOIN sede ON p.id_sede = sede.id_sede
+            LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+            LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+            LEFT JOIN estado ON p.id_estado = estado.id_estado
+            LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
+            LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
+            WHERE {where_sql}
+            ORDER BY p.id_proyecto DESC;
+        """
+
+    query_asistencia_tecnica = f"""
+            SELECT {cols_asistencia_tecnica}
+            FROM proyecto p
+            JOIN usuario u ON p.id_usuario = u.id_usuario
+            LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
+            LEFT JOIN sede ON p.id_sede = sede.id_sede
+            LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+            LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+            LEFT JOIN estado ON p.id_estado = estado.id_estado
+            LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
+            LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
+            WHERE {where_sql}
+            ORDER BY p.id_proyecto DESC;
+        """
+    
+    query_asistencia_desarrollo = f"""
+            SELECT {cols_asistencia_desarrollo}
+            FROM proyecto p
+            JOIN usuario u ON p.id_usuario = u.id_usuario
+            LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
+            LEFT JOIN sede ON p.id_sede = sede.id_sede
+            LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+            LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+            LEFT JOIN estado ON p.id_estado = estado.id_estado
+            LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
+            LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
+            WHERE {where_sql}
+            ORDER BY p.id_proyecto DESC;
+        """
+
+    # se ejecutan las 3 consultas
+    with psy.connect(conn_str) as conn:
+        with conn.cursor() as cur:
+            cur.execute(query_uso_equipamiento, params_uso_equipamiento)
+            uso_equipamiento = cur.fetchall()
+
+            cur.execute(query_asistencia_tecnica, params_asistencia_tecnica)
+            asistencia_tecnica = cur.fetchall()
+
+            cur.execute(query_asistencia_desarrollo, params_asistencia_desarrollo)
+            asistencia_desarrollo = cur.fetchall()
+
+    return uso_equipamiento, asistencia_tecnica, asistencia_desarrollo
+
+
+
+@app.route("/estadisticas_pdf", methods=["GET", "POST"])
+def estadisticas_pdf():
+    seleccionadas = request.form.getlist("sedes")
+    uso_equipamiento, asistencia_tecnica, asistencia_desarrollo = obtener_datos_estadisticas(seleccionadas)
+
+    html_string = render_template("estadisticas.html",
                                 active_page="estadisticas",
-                                sedes=sedes,
+                                sedes=[],  # opcional 
                                 sedes_seleccionadas=seleccionadas,
                                 uso_equipamiento=uso_equipamiento,
                                 asistencia_tecnica=asistencia_tecnica,
                                 asistencia_desarrollo=asistencia_desarrollo)
 
-    except Exception as e:
-        logging.error(f"Error en consulta: {e}")
-        return f"❌ Error al cargar proyectos: {e}", 500
+    pdf = HTML(string=html_string).write_pdf(
+        stylesheets=[CSS("static/css/bootstrap.min.css"),
+                     CSS("static/css/styles-pdf.css")]
+    )
+
+    response = make_response(pdf)
+    response.headers["Content-Type"] = "application/pdf"
+    response.headers["Content-Disposition"] = "inline; filename=estadisticas.pdf"
+    return response
 
 #######################################################################################
 # función auxiliar para obtener datos y sumatorias
@@ -629,15 +926,10 @@ def exportar_pdf():
 
 
 
-# corre en el puerto 5000 donde se conecta con ngrok
 
+
+# corre en el puerto 5000
 if __name__ == "__main__":
-    from pyngrok import ngrok
-    import atexit
-
-    if not ngrok.get_tunnels():
-        public_url = ngrok.connect(5000)
-        print(f"🌐 URL pública: {public_url}")
-        atexit.register(ngrok.disconnect, public_url)
-
+    scheduler()
+    atexit.register(t.cancel) # detiene el hilo del timer, sino interfiere en el SO
     app.run(debug=True, port=5000, use_reloader=False)

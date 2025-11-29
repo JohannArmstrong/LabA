@@ -53,7 +53,7 @@ CREATE TABLE carrera (
 
 CREATE TABLE proyecto (
     id_proyecto SERIAL PRIMARY KEY,
-    fecha_registro DATE NOT NULL,
+    fecha_registro TIMESTAMP NOT NULL,
 
     id_usuario INT NOT NULL REFERENCES usuario(id_usuario) ON DELETE CASCADE,
     id_carrera INT REFERENCES carrera(id_carrera),
@@ -69,7 +69,7 @@ CREATE TABLE proyecto (
     material TEXT,
     cantidad_prototipos INT,
     justificacion TEXT,
-    fecha_necesidad DATE,
+    fecha_necesidad TIMESTAMP,
     tiempo_estimado DECIMAL,
     otros_comentarios TEXT,
 
@@ -78,6 +78,9 @@ CREATE TABLE proyecto (
     id_estado INT REFERENCES estado(id_estado),
 
     CONSTRAINT proyecto_unico UNIQUE (
-        id_usuario, nombre_proyecto, fecha_registro, id_sede, descripcion
+        id_usuario, nombre_proyecto, fecha_registro
+    )
+    CONSTRAINT proyecto_actualizado UNIQUE (
+        id_usuario, fecha_registro
     )
 );
