@@ -5,7 +5,7 @@
 
 
 
-from flask import Flask, request, jsonify, render_template, make_response
+from flask import Flask, request, jsonify, render_template, make_response, url_for
 import pdfkit
 from weasyprint import HTML, CSS
 from bs4 import BeautifulSoup
@@ -1024,30 +1024,114 @@ def obtener_datos_estadisticas(seleccionadas, fecha_desde=None, fecha_hasta=None
 
 
 
+#############################################################################################
 
-
-@app.route("/estadisticas_pdf", methods=["GET", "POST"])
+@app.route("/estadisticas/pdf", methods=["GET", "POST"])
 def estadisticas_pdf():
-    seleccionadas = request.form.getlist("sedes")
-    uso_equipamiento, asistencia_tecnica, asistencia_desarrollo = obtener_datos_estadisticas(seleccionadas)
+    try:
+        # Reutilizamos la misma lógica de /estadisticas
+        seleccionadas = request.form.getlist("sedes")
+        filtro_fecha_desde = request.form.get("filtro_fecha_desde", "")
+        filtro_fecha_hasta = request.form.get("filtro_fecha_hasta", "")
+        grafica_img = request.form.get("grafica_img", None)
 
-    html_string = render_template("estadisticas.html",
-                                active_page="estadisticas",
-                                sedes=[],  # opcional 
-                                sedes_seleccionadas=seleccionadas,
-                                uso_equipamiento=uso_equipamiento,
-                                asistencia_tecnica=asistencia_tecnica,
-                                asistencia_desarrollo=asistencia_desarrollo)
+        uso_equipamiento, asistencia_tecnica, asistencia_desarrollo = obtener_datos_estadisticas(
+            seleccionadas,
+            fecha_desde=filtro_fecha_desde,
+            fecha_hasta=filtro_fecha_hasta
+        )
 
-    pdf = HTML(string=html_string).write_pdf(
-        stylesheets=[CSS("static/css/bootstrap.min.css"),
-                     CSS("static/css/styles-pdf.css")]
-    )
+        resumen_uso = (
+            len(uso_equipamiento),
+            sum(fila[4] or 0 for fila in uso_equipamiento),
+            sum(fila[6] or 0 for fila in uso_equipamiento)
+        )
+        resumen_tecnica = (
+            len(asistencia_tecnica),
+            0,
+            sum(fila[1] or 0 for fila in asistencia_tecnica)
+        )
+        resumen_desarrollo = (
+            len(asistencia_desarrollo),
+            sum(fila[1] or 0 for fila in asistencia_desarrollo),
+            sum(fila[3] or 0 for fila in asistencia_desarrollo)
+        )
 
-    response = make_response(pdf)
-    response.headers["Content-Type"] = "application/pdf"
-    response.headers["Content-Disposition"] = "inline; filename=estadisticas.pdf"
-    return response
+        # para las 2 tablas a elecci'on
+        mostrar_herramientas = "herramientas" in request.form
+        mostrar_graficas = "graficas" in request.form
+
+        herramientas_summary = []
+        if mostrar_herramientas:
+            with psy.connect(conn_str) as conn:
+                with conn.cursor() as cur:
+                    # misma query que en /estadisticas
+                    cur.execute("""SELECT herr.nombre,
+                                        SUM(COALESCE(p.tiempo_estimado,0)),
+                                        SUM(COALESCE(p.cantidad_prototipos,0)),
+                                        COUNT(p.id_proyecto)
+                                FROM proyecto p
+                                JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                                JOIN sede ON p.id_sede = sede.id_sede
+                                GROUP BY herr.nombre
+                                ORDER BY herr.nombre;""")
+                    herramientas_summary = cur.fetchall()
+
+        graficas_data = []
+        if mostrar_graficas:
+            with psy.connect(conn_str) as conn:
+                with conn.cursor() as cur:
+                    # misma query que en /estadisticas
+                    cur.execute("""SELECT s.nombre,
+                                        COUNT(p.id_proyecto),
+                                        SUM(COALESCE(p.cantidad_prototipos,0)),
+                                        SUM(COALESCE(p.tiempo_estimado,0))
+                                FROM proyecto p
+                                JOIN sede s ON p.id_sede = s.id_sede
+                                GROUP BY s.nombre
+                                ORDER BY s.nombre;""")
+                    graficas_data = cur.fetchall()
+
+
+        # Renderizamos el template con solo_pdf=True
+        html = render_template(
+            "estadisticas.html",
+            uso_equipamiento=uso_equipamiento,
+            asistencia_tecnica=asistencia_tecnica,
+            asistencia_desarrollo=asistencia_desarrollo,
+            resumen_uso=resumen_uso,
+            resumen_tecnica=resumen_tecnica,
+            resumen_desarrollo=resumen_desarrollo,
+            filtro_fecha_desde=filtro_fecha_desde,
+            filtro_fecha_hasta=filtro_fecha_hasta,
+            mostrar_herramientas=mostrar_herramientas,
+            herramientas_summary=herramientas_summary,
+            mostrar_graficas=mostrar_graficas,
+            graficas_data=graficas_data,
+            grafica_img=grafica_img, 
+            solo_pdf=True
+        )
+
+
+        # Rutas absolutas a los CSS
+        css_files = [
+            url_for('static', filename='css/bootstrap.min.css', _external=True),
+            url_for('static', filename='css/styles.css', _external=True),
+            url_for('static', filename='css/pdf.css', _external=True) 
+        ]
+        stylesheets = [CSS(file) for file in css_files]
+
+        # Generamos el PDF
+        pdf = HTML(string=html).write_pdf(stylesheets=stylesheets)
+
+        response = make_response(pdf)
+        response.headers['Content-Type'] = 'application/pdf'
+        response.headers['Content-Disposition'] = 'inline; filename=estadisticas.pdf'
+        return response
+
+    except Exception as e:
+        logging.error(f"Error al generar PDF: {e}")
+        return f"❌ Error al generar PDF: {e}", 500
 
 #######################################################################################
 # función auxiliar para obtener datos y sumatorias

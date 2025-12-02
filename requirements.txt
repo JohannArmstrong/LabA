@@ -1,2 +1,6 @@
 flask
 psycopg[binary]
+flask
+pdfkit
+weasyprint
+beautifulsoup4

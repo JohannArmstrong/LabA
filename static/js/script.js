@@ -29,3 +29,26 @@ document.getElementById("toggle-all").addEventListener("click", function() {
   checkboxes.forEach(cb => cb.checked = !allChecked);
 });
 
+//var canvas = document.getElementById("miCanvas");
+//var imgData = canvas.toDataURL("image/png");
+//document.getElementById("canvasExport").src = imgData;
+
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector("form");
+  const exportBtn = form.querySelector("button[formaction*='estadisticas/pdf']");
+
+  exportBtn.addEventListener("click", function() {
+    const canvas = document.getElementById("graficaSedes");
+    if (canvas) {
+      const imgData = canvas.toDataURL("image/png");
+      let hiddenInput = form.querySelector("input[name='grafica_img']");
+      if (!hiddenInput) {
+        hiddenInput = document.createElement("input");
+        hiddenInput.type = "hidden";
+        hiddenInput.name = "grafica_img";
+        form.appendChild(hiddenInput);
+      }
+      hiddenInput.value = imgData;
+    }
+  });
+});

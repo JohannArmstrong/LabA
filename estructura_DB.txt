@@ -85,16 +85,4 @@ CREATE TABLE proyecto (
         id_usuario, fecha_registro
     )
     
-    CREATE VIEW uso_herramientas AS
-    SELECT
-        s.nombre AS sede,
-        h.nombre AS herramienta,
-        SUM(COALESCE(p.tiempo_estimado, 0)) AS tiempo,
-        SUM(COALESCE(p.cantidad_prototipos, 0)) AS prototipos,
-        COUNT(*) AS proyectos
-    FROM proyecto p
-    LEFT JOIN sede s ON p.id_sede = s.id_sede
-    LEFT JOIN herramienta h ON p.id_herramienta = h.id_herramienta
-    GROUP BY s.nombre, h.nombre
-    ORDER BY s.nombre, h.nombre;
 );

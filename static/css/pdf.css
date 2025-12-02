@@ -1,0 +1,128 @@
+/*
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 12pt;
+  color: #333;
+  margin: 2cm;
+}
+
+form,
+button,
+input,
+select {
+  display: none !important;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 6px;
+  text-align: left;
+  font-size: 11pt;
+}
+
+
+h1, h2, h3 {
+  color: #222;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.page-break {
+  page-break-before: always;
+}
+
+
+#graficaSedes { display: none; }
+#graficaSedesImg { display: block; }
+
+#miCanvas {
+  display: none; 
+}
+
+#canvasExport {
+  display: block; 
+  max-width: 100%;
+  height: auto;
+}*/
+
+/* pdf.css */
+
+/* Ajustes generales */
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 10pt;       /* letra más pequeña */
+  margin: 1.5cm;         /* márgenes más estrechos */
+  color: #333;
+}
+
+/* Encabezados */
+h2, h3 {
+  font-size: 10pt;
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
+}
+
+.hache1 {
+  font-size: 12pt !important;
+  margin-top: 0px !important;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.8em;
+  table-layout: fixed;   /* fuerza ajuste de columnas */
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 4px;          /* menos espacio interno */
+  font-size: 9pt;        /* texto más compacto */
+  word-wrap: break-word; /* evita que se desborde */
+}
+
+/* Encabezado oscuro */
+thead.table-dark th {
+  background-color: #444 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important; /* bordes blancos */
+}
+
+/* Ajuste general de las tablas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  page-break-inside: auto;
+}
+
+th, td {
+  border: 1px solid #444; /* bordes normales para el resto */
+  padding: 4px;
+  font-size: 9pt;
+}
+
+/* Ajuste de filas */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+tr {
+  page-break-inside: avoid;
+  page-break-after: auto;
+}
