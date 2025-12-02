@@ -8,6 +8,7 @@ DROP TABLE IF EXISTS herramienta;
 DROP TABLE IF EXISTS origen_material;
 DROP TABLE IF EXISTS estado;
 DROP TABLE IF EXISTS carrera;
+DROP VIEW IF EXISTS uso_herramientas;
 
 
 CREATE TABLE usuario (
@@ -83,4 +84,17 @@ CREATE TABLE proyecto (
     CONSTRAINT proyecto_actualizado UNIQUE (
         id_usuario, fecha_registro
     )
+    
+    CREATE VIEW uso_herramientas AS
+    SELECT
+        s.nombre AS sede,
+        h.nombre AS herramienta,
+        SUM(COALESCE(p.tiempo_estimado, 0)) AS tiempo,
+        SUM(COALESCE(p.cantidad_prototipos, 0)) AS prototipos,
+        COUNT(*) AS proyectos
+    FROM proyecto p
+    LEFT JOIN sede s ON p.id_sede = s.id_sede
+    LEFT JOIN herramienta h ON p.id_herramienta = h.id_herramienta
+    GROUP BY s.nombre, h.nombre
+    ORDER BY s.nombre, h.nombre;
 );

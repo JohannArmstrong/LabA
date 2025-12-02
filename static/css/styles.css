@@ -8,3 +8,20 @@ h1 {
   margin-right: auto;
 }
 
+h2 {
+  margin-top: 5rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.fecha {
+  max-width: 9rem !important;
+}
+
+p {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.to-print {
+  margin-top: 4rem;
+}

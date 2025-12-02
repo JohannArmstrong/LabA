@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("theme", "dark");
     }
 
-    // alternar tema mediante bot'on
+    // alternar tema mediante botón
         btn.addEventListener("click", function () {
             const currentTheme = htmlTag.getAttribute("data-bs-theme");
             const newTheme = currentTheme === "light" ? "dark" : "light";
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 });
 
-
+// función para marcar/desmarcar todos los elementos del formulario de la pág. "proyectos"
 document.getElementById("toggle-all").addEventListener("click", function() {
   const checkboxes = document.querySelectorAll("input[name=columnas]");
   // sees if at least 1 is checkd
@@ -29,25 +29,3 @@ document.getElementById("toggle-all").addEventListener("click", function() {
   checkboxes.forEach(cb => cb.checked = !allChecked);
 });
 
-
-/*not in use but still here
-// hide columns (also in pdf)
-document.getElementById("apply-columns").addEventListener("click", function() {
-  const checkboxes = document.querySelectorAll("#column-selector input[type=checkbox]");
-  const table = document.getElementById("proyectos");
-  
-  checkboxes.forEach(cb => {
-    const colIndex = cb.getAttribute("data-col");
-    const display = cb.checked ? "" : "none";
-    
-    // hide/show head
-    table.querySelectorAll("th")[colIndex].style.display = display;
-    // hide/show cells in each row
-    table.querySelectorAll("tr").forEach(row => {
-      const cells = row.querySelectorAll("td, th");
-      if (cells[colIndex]) {
-        cells[colIndex].style.display = display;
-      }
-    });
-  });
-});*/

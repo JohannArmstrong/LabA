@@ -5,7 +5,7 @@
 
 
 
-from flask import Flask, request, jsonify, render_template, make_response
+from flask import Flask, request, jsonify, render_template, make_response, url_for
 import pdfkit
 from weasyprint import HTML, CSS
 from bs4 import BeautifulSoup
@@ -19,6 +19,7 @@ import math
 import threading
 import pandas as panda
 import atexit
+
 
 # Intervalo para ejecutar el escaneo de los archivos CSV adjuntos
 INTERVALO_CARGA = 1200  # tiempo en SEGUNDOS     3600 = 1 hora
@@ -321,262 +322,6 @@ def cargar_csv_a_db():
 
 
 
-
-
-
-
-
-
-
-# funciones auxiliares -------------------------------------------------------------------------------------
-'''
-def parse_date(value):
-    if not value:
-        return None
-
-    value = str(value).strip()
-
-    # A veces Google Forms manda "2025-01-31T12:33:10.123Z"
-    if "T" in value and "Z" in value:
-        try:
-            return datetime.fromisoformat(value.replace("Z", "+00:00")).date()
-        except:
-            pass
-
-    formatos = [
-        "%Y-%m-%d",              # JSON Google Forms (solo fecha)
-        "%Y-%m-%d %H:%M:%S",     # JSON Google Forms (fecha y hora)
-        "%d/%m/%Y",              # CSV Google Sheets
-        "%d/%m/%Y %H:%M:%S",     # CSV Google Sheets (si agrega hora)
-        "%Y/%m/%d",              # Algunas configuraciones
-        "%Y/%m/%d %H:%M:%S"
-    ]
-
-    for fmt in formatos:
-        try:
-            return datetime.strptime(value, fmt).date()
-        except:
-            pass
-
-    print("⚠ No se pudo parsear la fecha:", value)
-    return None
-
-
-
-def parse_int(value):
-    try:
-        return int(float(value))
-    except Exception:
-        return None
-
-
-def parse_decimal(value):
-    if value is None:
-        return None
-    try:
-        v = str(value).replace(",", ".").strip()
-        if v == "":
-            return None
-        d = Decimal(v)
-        # descarta NaN o infinitos
-        if d.is_nan() or d.is_infinite():
-            return None
-        return d
-    except (InvalidOperation, ValueError):
-        return None
-
-
-def clean_keys(data):
-    clean = {}
-    for key, value in data.items():
-        new_key = key.strip().replace("\n", " ").replace("\r", "").replace("  ", " ")
-        clean[new_key] = value
-    return clean
-'''
-
-'''
-# NUEVA FUNCIÓN ⇨ consulta/crea valores en tablas normalizadas
-
-def get_or_create(cur, table, field, value):
-    """
-    Busca un valor en una tabla normalizada.
-    Si no existe, lo crea.
-    Retorna el id.
-    """
-    if value is None or str(value).strip() == "":
-        return None
-
-    cur.execute(f"SELECT id_{table} FROM {table} WHERE {field} = %s;", (value,))    
-    row = cur.fetchone()
-
-    if row:
-        return row[0]
-
-    cur.execute(
-        f"INSERT INTO {table} ({field}) VALUES (%s) RETURNING id_{table};",
-        (value,)
-    )
-    return cur.fetchone()[0]
-'''
-
-'''
-# establece la ruta, es decir, el "túnel" que proporciona ngrok
-# para la entrada de datos hacia la DB
-@app.route("/api/nuevo_proyecto", methods=["POST"])
-def nuevo_proyecto():
-    data = clean_keys(request.get_json())
-    logging.info(f"📩 Datos recibidos: {data}")
-
-    # si por alguna razón no se puede parsear la fecha, se coloca la actual
-    fecha_registro = parse_date(str(data.get("Marca temporal"))) or datetime.now().date()
-    
-    # para evitar errores que había
-    #fecha_necesidad_raw = data.get("Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelación)")
-    #fecha_necesidad = parse_date(fecha_necesidad_raw)
-
-    # fecha_registro = parse_date(str(data.get("Marca temporal"))) or datetime.now().date()
-    # esa anda pero se ve que toma el date.now
-    fecha_necesidad = parse_date(str(data.get("Fecha de necesidad: (considerar fecha de necesidad teniendo en cuenta una semana de antelación)")))
-    # Manejo flexible de la clave de fecha de necesidad
-
-    #key_fecha_necesidad = next(
-    #    (k for k in data.keys() if "Fecha de necesidad" in k),
-    #    None
-    #)
-    #print(">>> Fecha llegada del JSON:", data.get(key_fecha_necesidad))
-
-
-    #fecha_necesidad = parse_date(str(data.get(key_fecha_necesidad))) if key_fecha_necesidad else None
-
-
-
-    cantidad_prototipos = parse_int(data.get("Cantidad de prototipos a fabricar:"))
-
-    copiado = data.get("Ya copiado") if "Ya copiado" in data else None
-    estado_raw = data.get("Estado") if "Estado" in data else None
-
-    try:
-        with psy.connect(conn_str) as conn:
-            with conn.cursor() as cur:
-
-                # verifica si el usuario ya existe
-                email = data.get("Dirección de correo electrónico")
-                nombre = data.get("Nombre completo:")
-
-                cur.execute("SELECT id_usuario FROM usuario WHERE email = %s;", (email,))
-                user_row = cur.fetchone()
-
-                if user_row:
-                    id_usuario = user_row[0]
-                else:
-                    cur.execute(
-                        "INSERT INTO usuario (nombre, email) VALUES (%s, %s) RETURNING id_usuario;",
-                        (nombre, email)
-                    )
-                    id_usuario = cur.fetchone()[0]
-
-                
-                # nuevo método para consultar/insertar en las nuevas tablas
-                id_cargo = get_or_create(
-                    cur, "cargo", "nombre",
-                    data.get("Describa su cargo dentro de la Institución y/o Proyecto.")
-                )
-
-                id_sede = get_or_create(
-                    cur, "sede", "nombre",
-                    data.get("En qué sede queda el laboratorio al cual quiere acceder:")
-                )
-
-                id_tipo = get_or_create(
-                    cur, "tipo", "nombre",
-                    data.get("Seleccione el tipo de solicitud")
-                )
-
-                id_herramienta = get_or_create(
-                    cur, "herramienta", "nombre",
-                    data.get("Seleccione la herramienta, material o servicio que desea utilizar:")
-                )
-
-                id_origen_material = get_or_create(
-                    cur, "origen_material", "nombre",
-                    data.get("Origen del material")
-                )
-
-                id_estado = get_or_create(
-                    cur, "estado", "nombre",
-                    estado_raw
-                )
-
-                id_carrera = get_or_create(
-                    cur, "carrera", "nombre",
-                    data.get("Describa a qué carrera y/o institución corresponde el proyecto:")
-                )
-
-                tiempo_estimado = parse_decimal(data.get("Tiempo estimado de utilización de la herramienta / material / servicio (hs):"))
-
-
-                # insertar proyecto en DB
-                cur.execute("""
-                    INSERT INTO proyecto (
-                        fecha_registro,
-                        id_usuario,
-                        id_carrera,
-                        id_cargo,
-                        id_sede,
-                        nombre_proyecto,
-                        descripcion,
-                        id_tipo,
-                        id_herramienta,
-                        material,
-                        cantidad_prototipos,
-                        justificacion,
-                        fecha_necesidad,
-                        tiempo_estimado,
-                        otros_comentarios,
-                        id_origen_material,
-                        copiado,
-                        id_estado
-                    ) VALUES (
-                        %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
-                    )
-                    ON CONFLICT ON CONSTRAINT proyecto_unico DO NOTHING;
-                """, (
-                    fecha_registro,
-                    id_usuario,
-                    id_carrera,
-                    id_cargo,
-                    id_sede,
-                    data.get("Nombre del proyecto/actividad:"),
-                    data.get("Breve descripción del proyecto"),
-                    id_tipo,
-                    id_herramienta,
-                    data.get("Material a utilizar"),
-                    cantidad_prototipos,
-                    data.get("Vinculación del proyecto con las acciones relacionadas a las herramientas de fabricación digital / materiales / servicios: (justificación de uso)"),
-                    fecha_necesidad,
-                    tiempo_estimado,
-                    #data.get("Tiempo estimado de utilización de la herramienta / material / servicio (hs):"),
-                    data.get("Otros comentarios"),
-                    id_origen_material,
-                    copiado,
-                    id_estado
-                ))
-
-                conn.commit()
-
-        msg = "✅ Proyecto insertado correctamente (o ignorado si ya existía)."
-        logging.info(msg)
-        print(msg)
-        return jsonify({"status": "ok", "mensaje": msg})
-
-    except Exception as e:
-        msg = f"❌ Error al insertar en la base de datos: {e}"
-        logging.error(msg)
-        print(msg)
-        return jsonify({"status": "error", "mensaje": str(e)}), 500
-'''
-#####################################################################################
-
 # para concatenar con la consulta
 COLUMNAS_DISPONIBLES = {
     "id_proyecto": "p.id_proyecto",
@@ -754,7 +499,11 @@ def estadisticas():
         # se reciben los filtros desde la p'agina
         seleccionadas = request.form.getlist("sedes")
         mostrar_herramientas = "herramientas" in request.form
+        separar_herramientas = request.form.get("separar_herramientas") == "separar"
+
+        #separar_herramientas = "separar_herramientas" in request.form
         mostrar_graficas = "graficas" in request.form
+        
         filtro_fecha_desde = request.form.get("filtro_fecha_desde", "")
         filtro_fecha_hasta = request.form.get("filtro_fecha_hasta", "")
 
@@ -796,42 +545,99 @@ def estadisticas():
             total_tiempo_desarrollo += fila[3] or 0
         resumen_desarrollo = (total_proyectos_desarrollo, total_prototipos_desarrollo, total_tiempo_desarrollo)
 
-
-
         # si est'a seleccionada la opci'on "Mostrar tabla de herramientas"
-        herramientas_summary = []
+        herramientas_summary = {}
+        herramientas_summary_flat = []
+
         if mostrar_herramientas:
             with psy.connect(conn_str) as conn:
                 with conn.cursor() as cur:
+
+                    # WHERE dinámico por sede
                     placeholders = ", ".join(["%s"] * len(seleccionadas)) if seleccionadas else "%s"
                     where_clause = f"sede.nombre IN ({placeholders})" if seleccionadas else "TRUE"
 
-                    # Filtro de fechas
+                    # filtros de fecha
                     fecha_clause = []
-                    params = seleccionadas if seleccionadas else []
+                    params = seleccionadas.copy() if seleccionadas else []
+
                     if filtro_fecha_desde:
                         fecha_clause.append("p.fecha_registro >= %s")
                         params.append(filtro_fecha_desde)
+
                     if filtro_fecha_hasta:
                         fecha_clause.append("p.fecha_registro <= %s")
                         params.append(filtro_fecha_hasta)
+
                     fecha_sql = " AND ".join(fecha_clause)
 
-                    query = f"""
-                        SELECT herr.nombre,
-                            SUM(COALESCE(p.tiempo_estimado,0)) AS total_tiempo,
-                            SUM(COALESCE(p.cantidad_prototipos,0)) AS total_prototipos,
-                            COUNT(p.id_proyecto) AS total_proyectos
-                        FROM proyecto p
-                        JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
-                        JOIN sede ON p.id_sede = sede.id_sede
-                        WHERE {where_clause}
-                        {f"AND {fecha_sql}" if fecha_sql else ""}
-                        GROUP BY herr.nombre
-                        ORDER BY herr.nombre;
-                    """
+                    # SQL según modo (separado / no separado)
+                    if separar_herramientas:
+                        query = f"""
+                            SELECT sede.nombre,
+                                herr.nombre,
+                                SUM(COALESCE(p.tiempo_estimado,0)) AS total_tiempo,
+                                SUM(COALESCE(p.cantidad_prototipos,0)) AS total_prototipos,
+                                COUNT(p.id_proyecto) AS total_proyectos
+                            FROM proyecto p
+                            JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                            JOIN sede ON p.id_sede = sede.id_sede
+                            WHERE {where_clause}
+                            {f"AND {fecha_sql}" if fecha_sql else ""}
+                            GROUP BY sede.nombre, herr.nombre
+                            ORDER BY sede.nombre, herr.nombre;
+                        """
+                    else:
+                        query = f"""
+                            SELECT herr.nombre,
+                                SUM(COALESCE(p.tiempo_estimado,0)) AS total_tiempo,
+                                SUM(COALESCE(p.cantidad_prototipos,0)) AS total_prototipos,
+                                COUNT(p.id_proyecto) AS total_proyectos
+                            FROM proyecto p
+                            JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                            JOIN sede ON p.id_sede = sede.id_sede
+                            WHERE {where_clause}
+                            {f"AND {fecha_sql}" if fecha_sql else ""}
+                            GROUP BY herr.nombre
+                            ORDER BY herr.nombre;
+                        """
+
                     cur.execute(query, params)
-                    herramientas_summary = cur.fetchall()
+                    rows = cur.fetchall()
+
+                    if separar_herramientas:
+
+                        # Crear dict vacío solo para sedes seleccionadas
+                        herramientas_summary = {
+                            sede: [] for sede in (seleccionadas if seleccionadas else [])
+                        }
+
+                        # Llenar resultados agrupados por sede
+                        for fila in rows:
+                            sede = fila[0]
+
+                            # APPEND COMO TUPLA (NO DICCIONARIO)
+                            herramientas_summary.setdefault(sede, []).append((
+                                fila[1],  # herramienta
+                                fila[2],  # total tiempo
+                                fila[3],  # total prototipos
+                                fila[4],  # total proyectos
+                            ))
+
+                        print(f"[INFO] Tablas separadas por sede: {len(herramientas_summary)} sedes")
+                    #sin separar
+                    else:
+                        herramientas_summary_flat = [
+                            (
+                                fila[0],  # herramienta
+                                fila[1],  # total tiempo
+                                fila[2],  # total prototipos
+                                fila[3],  # total proyectos
+                            )
+                            for fila in rows
+                        ]
+
+                        print(f"[INFO] Tabla única de herramientas: {len(rows)} filas")
 
         # si est'a seleccionada la opci'on "Mostrar gr'aficas"
         graficas_data = []
@@ -870,6 +676,9 @@ def estadisticas():
                     """
                     cur.execute(query, params)
                     graficas_data = cur.fetchall()
+        
+        print("DEBUG uso equipamiento:", uso_equipamiento[:3])
+
 
         return render_template("estadisticas.html",
                             active_page="estadisticas",
@@ -881,6 +690,8 @@ def estadisticas():
                             mostrar_herramientas=mostrar_herramientas,
                             mostrar_graficas=mostrar_graficas,
                             herramientas_summary=herramientas_summary,
+                            herramientas_summary_flat=herramientas_summary_flat,
+                            separar_herramientas=bool(separar_herramientas),
                             graficas_data=graficas_data,
                             resumen_uso=resumen_uso,
                             resumen_tecnica=resumen_tecnica,
@@ -1020,36 +831,203 @@ def obtener_datos_estadisticas(seleccionadas, fecha_desde=None, fecha_hasta=None
             cur.execute(query_asistencia_desarrollo, params_asistencia_desarrollo)
             asistencia_desarrollo = cur.fetchall()
 
+    print("SQL uso equipamiento:", query_uso_equipamiento)
+    print("Params uso:", params_uso_equipamiento)
+    print("SQL asistencia técnica:", query_asistencia_tecnica)
+    print("Params tecnica:", params_asistencia_tecnica)
+    print("SQL asistencia desarrollo:", query_asistencia_desarrollo)
+    print("Params desarrollo:", params_asistencia_desarrollo)
+
     return uso_equipamiento, asistencia_tecnica, asistencia_desarrollo
 
 
 
+########################################################################################
 
 
-@app.route("/estadisticas_pdf", methods=["GET", "POST"])
+@app.route("/estadisticas/pdf", methods=["GET", "POST"])
 def estadisticas_pdf():
-    seleccionadas = request.form.getlist("sedes")
-    uso_equipamiento, asistencia_tecnica, asistencia_desarrollo = obtener_datos_estadisticas(seleccionadas)
+    try:
+        # filtros y opciones igual que en /estadisticas
+        seleccionadas = request.form.getlist("sedes")
+        mostrar_herramientas = "herramientas" in request.form
+        separar_herramientas = request.form.get("separar_herramientas") == "separar"
+        mostrar_graficas = "graficas" in request.form
+        filtro_fecha_desde = request.form.get("filtro_fecha_desde", "")
+        filtro_fecha_hasta = request.form.get("filtro_fecha_hasta", "")
 
-    html_string = render_template("estadisticas.html",
-                                active_page="estadisticas",
-                                sedes=[],  # opcional 
-                                sedes_seleccionadas=seleccionadas,
-                                uso_equipamiento=uso_equipamiento,
-                                asistencia_tecnica=asistencia_tecnica,
-                                asistencia_desarrollo=asistencia_desarrollo)
+        # datos principales
+        uso_equipamiento, asistencia_tecnica, asistencia_desarrollo = obtener_datos_estadisticas(
+            seleccionadas,
+            fecha_desde=filtro_fecha_desde,
+            fecha_hasta=filtro_fecha_hasta
+        )
 
-    pdf = HTML(string=html_string).write_pdf(
-        stylesheets=[CSS("static/css/bootstrap.min.css"),
-                     CSS("static/css/styles-pdf.css")]
-    )
+        # resúmenes
+        resumen_uso = (
+            len(uso_equipamiento),
+            sum(fila[4] or 0 for fila in uso_equipamiento),
+            sum(fila[6] or 0 for fila in uso_equipamiento)
+        )
+        resumen_tecnica = (
+            len(asistencia_tecnica),
+            0,
+            sum(fila[1] or 0 for fila in asistencia_tecnica)
+        )
+        resumen_desarrollo = (
+            len(asistencia_desarrollo),
+            sum(fila[1] or 0 for fila in asistencia_desarrollo),
+            sum(fila[3] or 0 for fila in asistencia_desarrollo)
+        )
 
-    response = make_response(pdf)
-    response.headers["Content-Type"] = "application/pdf"
-    response.headers["Content-Disposition"] = "inline; filename=estadisticas.pdf"
-    return response
+        # herramientas
+        herramientas_summary = {}
+        if mostrar_herramientas:
+            with psy.connect(conn_str) as conn:
+                with conn.cursor() as cur:
+                    placeholders = ", ".join(["%s"] * len(seleccionadas)) if seleccionadas else "%s"
+                    where_clause = f"sede.nombre IN ({placeholders})" if seleccionadas else "TRUE"
 
-#######################################################################################
+                    fecha_clause = []
+                    params = seleccionadas.copy() if seleccionadas else []
+                    if filtro_fecha_desde:
+                        fecha_clause.append("p.fecha_registro >= %s")
+                        params.append(filtro_fecha_desde)
+                    if filtro_fecha_hasta:
+                        fecha_clause.append("p.fecha_registro <= %s")
+                        params.append(filtro_fecha_hasta)
+                    fecha_sql = " AND ".join(fecha_clause)
+
+                    if separar_herramientas:
+                        query = f"""
+                            SELECT sede.nombre,
+                                   herr.nombre,
+                                   SUM(COALESCE(p.tiempo_estimado,0)) AS total_tiempo,
+                                   SUM(COALESCE(p.cantidad_prototipos,0)) AS total_prototipos,
+                                   COUNT(p.id_proyecto) AS total_proyectos
+                            FROM proyecto p
+                            JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                            JOIN sede ON p.id_sede = sede.id_sede
+                            WHERE {where_clause}
+                            {f"AND {fecha_sql}" if fecha_sql else ""}
+                            GROUP BY sede.nombre, herr.nombre
+                            ORDER BY sede.nombre, herr.nombre;
+                        """
+                    else:
+                        query = f"""
+                            SELECT herr.nombre,
+                                   SUM(COALESCE(p.tiempo_estimado,0)) AS total_tiempo,
+                                   SUM(COALESCE(p.cantidad_prototipos,0)) AS total_prototipos,
+                                   COUNT(p.id_proyecto) AS total_proyectos
+                            FROM proyecto p
+                            JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                            JOIN sede ON p.id_sede = sede.id_sede
+                            WHERE {where_clause}
+                            {f"AND {fecha_sql}" if fecha_sql else ""}
+                            GROUP BY herr.nombre
+                            ORDER BY herr.nombre;
+                        """
+
+                    cur.execute(query, params)
+                    rows = cur.fetchall()
+
+                    if separar_herramientas:
+                        herramientas_summary = {}
+                        for fila in rows:
+                            sede = fila[0]
+                            herramientas_summary.setdefault(sede, [])
+                            herramientas_summary[sede].append({
+                                "herramienta": fila[1],
+                                "tiempo": fila[2],
+                                "prototipos": fila[3],
+                                "proyectos": fila[4],
+                            })
+                    else:
+                        herramientas_summary = rows
+
+        # gráficas
+        graficas_data = []
+        if mostrar_graficas:
+            with psy.connect(conn_str) as conn:
+                with conn.cursor() as cur:
+                    fecha_clause = []
+                    params = []
+                    if filtro_fecha_desde:
+                        fecha_clause.append("p.fecha_registro >= %s")
+                        params.append(filtro_fecha_desde)
+                    if filtro_fecha_hasta:
+                        fecha_clause.append("p.fecha_registro <= %s")
+                        params.append(filtro_fecha_hasta)
+                    fecha_sql = " AND ".join(fecha_clause)
+
+                    query = f"""
+                        SELECT s.nombre,
+                            COUNT(p.id_proyecto) AS total_proyectos,
+                            SUM(COALESCE(p.cantidad_prototipos,0)) AS total_prototipos,
+                            SUM(COALESCE(p.tiempo_estimado,0)) AS total_tiempo,
+                            SUM(CASE WHEN t.nombre = 'Uso de equipamiento del LabA' THEN 1 ELSE 0 END) AS proyectos_equipamiento,
+                            SUM(CASE WHEN t.nombre = 'Asistencia técnica (de equipamiento u otro)' THEN 1 ELSE 0 END) AS proyectos_tecnica,
+                            SUM(CASE WHEN t.nombre = 'Asistencia en desarrollo de un producto' THEN 1 ELSE 0 END) AS proyectos_desarrollo,
+                            SUM(CASE WHEN t.nombre = 'Uso de equipamiento del LabA' THEN COALESCE(p.tiempo_estimado,0) ELSE 0 END) AS tiempo_equipamiento,
+                            SUM(CASE WHEN t.nombre = 'Asistencia técnica (de equipamiento u otro)' THEN COALESCE(p.tiempo_estimado,0) ELSE 0 END) AS tiempo_tecnica,
+                            SUM(CASE WHEN t.nombre = 'Asistencia en desarrollo de un producto' THEN COALESCE(p.tiempo_estimado,0) ELSE 0 END) AS tiempo_desarrollo
+                        FROM proyecto p
+                        JOIN sede s ON p.id_sede = s.id_sede
+                        JOIN tipo t ON p.id_tipo = t.id_tipo
+                        {f"WHERE {fecha_sql}" if fecha_sql else ""}
+                        GROUP BY s.nombre
+                        ORDER BY s.nombre;
+                    """
+                    cur.execute(query, params)
+                    graficas_data = cur.fetchall()
+
+        # renderizar y exportar
+        html = render_template(
+            "estadisticas.html",
+            active_page="estadisticas",
+            sedes=seleccionadas,
+            sedes_seleccionadas=seleccionadas,
+            uso_equipamiento=uso_equipamiento,
+            asistencia_tecnica=asistencia_tecnica,
+            asistencia_desarrollo=asistencia_desarrollo,
+            mostrar_herramientas=mostrar_herramientas,
+            separar_herramientas=separar_herramientas,
+            mostrar_graficas=mostrar_graficas,
+            herramientas_summary=herramientas_summary,
+            graficas_data=graficas_data,
+            resumen_uso=resumen_uso,
+            resumen_tecnica=resumen_tecnica,
+            resumen_desarrollo=resumen_desarrollo,
+            filtro_fecha_desde=filtro_fecha_desde,
+            filtro_fecha_hasta=filtro_fecha_hasta,
+            solo_pdf=True
+        )
+
+        css_files = [
+            url_for('static', filename='css/bootstrap.min.css', _external=True),
+            url_for('static', filename='css/styles.css', _external=True)
+        ]
+        stylesheets = [CSS(file) for file in css_files]
+
+        pdf = HTML(string=html).write_pdf(stylesheets=stylesheets)
+
+        response = make_response(pdf)
+        response.headers['Content-Type'] = 'application/pdf'
+        response.headers['Content-Disposition'] = 'inline; filename=estadisticas.pdf'
+        return response
+
+        # pdf = HTML(string=html).write_pdf()
+        # response = make_response(pdf)
+        # response.headers['Content-Type'] = 'application/pdf'
+        # response.headers['Content-Disposition'] = 'inline; filename=estadisticas.pdf'
+        # return response
+
+    except Exception as e:
+        logging.error(f"Error al generar PDF: {e}")
+        return f"❌ Error al generar PDF: {e}", 500
+
+
+
 # función auxiliar para obtener datos y sumatorias
 def obtener_proyectos(seleccionadas):
     cols_sql = ", ".join([COLUMNAS_DISPONIBLES[c] for c in seleccionadas])
@@ -1124,3 +1102,205 @@ if __name__ == "__main__":
     scheduler()
     atexit.register(t.cancel) # detiene el hilo del timer, sino interfiere en el SO
     app.run(debug=True, port=5000, use_reloader=False)
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+@app.route("/estadisticas", methods=["GET", "POST"])
+def estadisticas():
+    try:
+        with psy.connect(conn_str) as conn:
+            with conn.cursor() as cur:
+                cur.execute("SELECT nombre FROM sede ORDER BY nombre;")
+                sedes = [row[0] for row in cur.fetchall()]
+
+        seleccionadas = request.form.getlist("sedes")
+        mostrar_herramientas = "herramientas" in request.form
+        separar_herramientas = request.form.get("separar_herramientas") == "separar"
+
+        mostrar_graficas = "graficas" in request.form
+        
+        filtro_fecha_desde = request.form.get("filtro_fecha_desde", "")
+        filtro_fecha_hasta = request.form.get("filtro_fecha_hasta", "")
+
+        uso_equipamiento, asistencia_tecnica, asistencia_desarrollo = obtener_datos_estadisticas(
+            seleccionadas,
+            fecha_desde=filtro_fecha_desde,
+            fecha_hasta=filtro_fecha_hasta
+        )
+
+        total_proyectos_uso = len(uso_equipamiento)
+        total_prototipos_uso = 0
+        total_tiempo_uso = 0
+        for fila in uso_equipamiento:
+            total_prototipos_uso += fila[4] or 0
+            total_tiempo_uso += fila[6] or 0
+        resumen_uso = (total_proyectos_uso, total_prototipos_uso, total_tiempo_uso)
+
+        # asistencia técnica
+        total_proyectos_tecnica = len(asistencia_tecnica)
+        total_prototipos_tecnica = 0 
+        total_tiempo_tecnica = 0
+        for fila in asistencia_tecnica:
+            total_tiempo_tecnica += fila[1] or 0
+        resumen_tecnica = (total_proyectos_tecnica, total_prototipos_tecnica, total_tiempo_tecnica)
+
+        # asistencia en desarrollo
+        total_proyectos_desarrollo = len(asistencia_desarrollo)
+        total_prototipos_desarrollo = 0
+        total_tiempo_desarrollo = 0
+        for fila in asistencia_desarrollo:
+            total_prototipos_desarrollo += fila[1] or 0
+            total_tiempo_desarrollo += fila[3] or 0
+        resumen_desarrollo = (total_proyectos_desarrollo, total_prototipos_desarrollo, total_tiempo_desarrollo)
+
+        herramientas_summary = {}
+        herramientas_summary_flat = []
+
+        if mostrar_herramientas:
+            with psy.connect(conn_str) as conn:
+                with conn.cursor() as cur:
+
+                    placeholders = ", ".join(["%s"] * len(seleccionadas)) if seleccionadas else "%s"
+                    where_clause = f"sede.nombre IN ({placeholders})" if seleccionadas else "TRUE"
+                    fecha_clause = []
+                    params = seleccionadas.copy() if seleccionadas else []
+
+                    if filtro_fecha_desde:
+                        fecha_clause.append("p.fecha_registro >= %s")
+                        params.append(filtro_fecha_desde)
+
+                    if filtro_fecha_hasta:
+                        fecha_clause.append("p.fecha_registro <= %s")
+                        params.append(filtro_fecha_hasta)
+
+                    fecha_sql = " AND ".join(fecha_clause)
+                    if separar_herramientas:
+                        query = f"""
+                            SELECT sede.nombre,
+                                herr.nombre,
+                                SUM(COALESCE(p.tiempo_estimado,0)) AS total_tiempo,
+                                SUM(COALESCE(p.cantidad_prototipos,0)) AS total_prototipos,
+                                COUNT(p.id_proyecto) AS total_proyectos
+                            FROM proyecto p
+                            JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                            JOIN sede ON p.id_sede = sede.id_sede
+                            WHERE {where_clause}
+                            {f"AND {fecha_sql}" if fecha_sql else ""}
+                            GROUP BY sede.nombre, herr.nombre
+                            ORDER BY sede.nombre, herr.nombre;
+                        """
+                    else:
+                        query = f"""
+                            SELECT herr.nombre,
+                                SUM(COALESCE(p.tiempo_estimado,0)) AS total_tiempo,
+                                SUM(COALESCE(p.cantidad_prototipos,0)) AS total_prototipos,
+                                COUNT(p.id_proyecto) AS total_proyectos
+                            FROM proyecto p
+                            JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                            JOIN sede ON p.id_sede = sede.id_sede
+                            WHERE {where_clause}
+                            {f"AND {fecha_sql}" if fecha_sql else ""}
+                            GROUP BY herr.nombre
+                            ORDER BY herr.nombre;
+                        """
+
+                    cur.execute(query, params)
+                    rows = cur.fetchall()
+
+                    if separar_herramientas:
+                        herramientas_summary = {
+                            sede: [] for sede in (seleccionadas if seleccionadas else [])
+                        }
+                        for fila in rows:
+                            sede = fila[0]
+                            herramientas_summary.setdefault(sede, []).append((
+                                fila[1],
+                                fila[2], 
+                                fila[3],
+                                fila[4],
+                            ))
+
+                        print(f"[INFO] Tablas separadas por sede: {len(herramientas_summary)} sedes")
+                    #sin separar
+                    else:
+                        herramientas_summary_flat = [
+                            (
+                                fila[0],
+                                fila[1],
+                                fila[2],
+                                fila[3],  
+                            )
+                            for fila in rows
+                        ]
+                        print(f"[INFO] Tabla única de herramientas: {len(rows)} filas")
+
+        graficas_data = []
+        if mostrar_graficas:
+            with psy.connect(conn_str) as conn:
+                with conn.cursor() as cur:
+                    fecha_clause = []
+                    params = []
+                    if filtro_fecha_desde:
+                        fecha_clause.append("p.fecha_registro >= %s")
+                        params.append(filtro_fecha_desde)
+                    if filtro_fecha_hasta:
+                        fecha_clause.append("p.fecha_registro <= %s")
+                        params.append(filtro_fecha_hasta)
+                    fecha_sql = " AND ".join(fecha_clause)
+
+                    query = f"""
+                        SELECT s.nombre,
+                            COUNT(p.id_proyecto) AS total_proyectos,
+                            SUM(COALESCE(p.cantidad_prototipos,0)) AS total_prototipos,
+                            SUM(COALESCE(p.tiempo_estimado,0)) AS total_tiempo,
+
+                            SUM(CASE WHEN t.nombre = 'Uso de equipamiento del LabA' THEN 1 ELSE 0 END) AS proyectos_equipamiento,
+                            SUM(CASE WHEN t.nombre = 'Asistencia técnica (de equipamiento u otro)' THEN 1 ELSE 0 END) AS proyectos_tecnica,
+                            SUM(CASE WHEN t.nombre = 'Asistencia en desarrollo de un producto' THEN 1 ELSE 0 END) AS proyectos_desarrollo,
+
+                            SUM(CASE WHEN t.nombre = 'Uso de equipamiento del LabA' THEN COALESCE(p.tiempo_estimado,0) ELSE 0 END) AS tiempo_equipamiento,
+                            SUM(CASE WHEN t.nombre = 'Asistencia técnica (de equipamiento u otro)' THEN COALESCE(p.tiempo_estimado,0) ELSE 0 END) AS tiempo_tecnica,
+                            SUM(CASE WHEN t.nombre = 'Asistencia en desarrollo de un producto' THEN COALESCE(p.tiempo_estimado,0) ELSE 0 END) AS tiempo_desarrollo
+                        FROM proyecto p
+                        JOIN sede s ON p.id_sede = s.id_sede
+                        JOIN tipo t ON p.id_tipo = t.id_tipo
+                        {f"WHERE {fecha_sql}" if fecha_sql else ""}
+                        GROUP BY s.nombre
+                        ORDER BY s.nombre;
+                    """
+                    cur.execute(query, params)
+                    graficas_data = cur.fetchall()
+        print("DEBUG uso equipamiento:", uso_equipamiento[:3])
+        return render_template("estadisticas.html",
+                            active_page="estadisticas",
+                            sedes=sedes,
+                            sedes_seleccionadas=seleccionadas,
+                            uso_equipamiento=uso_equipamiento,
+                            asistencia_tecnica=asistencia_tecnica,
+                            asistencia_desarrollo=asistencia_desarrollo,
+                            mostrar_herramientas=mostrar_herramientas,
+                            mostrar_graficas=mostrar_graficas,
+                            herramientas_summary=herramientas_summary,
+                            herramientas_summary_flat=herramientas_summary_flat,
+                            separar_herramientas=bool(separar_herramientas),
+                            graficas_data=graficas_data,
+                            resumen_uso=resumen_uso,
+                            resumen_tecnica=resumen_tecnica,
+                            resumen_desarrollo=resumen_desarrollo,
+                            filtro_fecha_desde=filtro_fecha_desde,
+                            filtro_fecha_hasta=filtro_fecha_hasta)
+
+    except Exception as e:
+        logging.error(f"Error en consulta: {e}")
+        return f"❌ Error al cargar proyectos: {e}", 500
+'''

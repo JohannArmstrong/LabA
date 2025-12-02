@@ -44,7 +44,60 @@
                 <tr>
                     {% for col in columnas %}
                         <th>
-                            <input type="text" name="filtro_{{ col }}" placeholder="Buscar {{ col }}" value="{{ filtros.get(col, '') }}">
+                            {% if col == "sede" %}
+                                <select name="filtro_{{ col }}" class="form-select">
+                                    <option value="">-- Todas --</option>
+                                    {% for sede in sedes %}
+                                        <option value="{{ sede }}" {% if filtros.get(col) == sede %}selected{% endif %}>{{ sede|sin_especificar }}</option>
+                                    {% endfor %}
+                                </select>
+                            {% elif col == "cargo" %}
+                                <select name="filtro_{{ col }}" class="form-select">
+                                    <option value="">-- Todos --</option>
+                                    {% for cargo in cargos %}
+                                        <option value="{{ cargo }}" {% if filtros.get(col) == cargo %}selected{% endif %}>{{ cargo|sin_especificar }}</option>
+                                    {% endfor %}
+                                </select>
+                            {% elif col == "tipo" %}
+                                <select name="filtro_{{ col }}" class="form-select">
+                                    <option value="">-- Todos --</option>
+                                    {% for tipo in tipos %}
+                                        <option value="{{ tipo }}" {% if filtros.get(col) == tipo %}selected{% endif %}>{{ tipo|sin_especificar }}</option>
+                                    {% endfor %}
+                                </select>
+                            {% elif col == "herramienta" %}
+                                <select name="filtro_{{ col }}" class="form-select">
+                                    <option value="">-- Todas --</option>
+                                    {% for h in herramientas %}
+                                        <option value="{{ h }}" {% if filtros.get(col) == h %}selected{% endif %}>{{ h|sin_especificar }}</option>
+                                    {% endfor %}
+                                </select>
+                            {% elif col == "carrera" %}
+                                <select name="filtro_{{ col }}" class="form-select">
+                                    <option value="">-- Todas --</option>
+                                    {% for c in carreras %}
+                                        <option value="{{ c }}" {% if filtros.get(col) == c %}selected{% endif %}>{{ c|sin_especificar }}</option>
+                                    {% endfor %}
+                                </select>
+                            {% elif col == "estado" %}
+                                <select name="filtro_{{ col }}" class="form-select">
+                                    <option value="">-- Todos --</option>
+                                    {% for e in estados %}
+                                        <option value="{{ e }}" {% if filtros.get(col) == e %}selected{% endif %}>{{ e|sin_especificar }}</option>
+                                    {% endfor %}
+                                </select>
+                            {% elif col == "fecha_registro" %}
+                                <div class="d-flex flex-column">
+                                    <input type="date" name="filtro_fecha_registro_desde"
+                                        value="{{ filtros.get('fecha_registro_desde', '') }}"
+                                        class="form-control mb-1">
+                                    <input type="date" name="filtro_fecha_registro_hasta"
+                                        value="{{ filtros.get('fecha_registro_hasta', '') }}"
+                                        class="form-control">
+                                </div>
+                            {% else %}
+                                <input type="text" name="filtro_{{ col }}" placeholder="Buscar {{ col }}" value="{{ filtros.get(col, '') }}">
+                            {% endif %}
                         </th>
                     {% endfor %}
                 </tr>
@@ -71,58 +124,6 @@
 
     
 
-
-
-    <!--<table id="proyectos" class="table table-striped table-bordered to-pdf">
-        <thead class="table-dark">
-            <tr>
-                <th>ID</th>
-                <th>Fecha registro</th>
-                <th>Email</th>
-                <th>Nombre</th>
-                <th>Carrera</th>
-                <th>Cargo</th>
-                <th>Sede</th>
-                <th>Proyecto</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-                <th>Herramienta</th>
-                <th>Materiales</th>
-                <th>Cant. prototipos</th>
-                <th>Justificación</th>
-                <th>Fecha necesidad</th>
-                <th>Tiempo estimado</th>
-                <th>Otros comentarios</th>
-                <th>Origen material</th>
-                <th>Estado</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for p in proyectos %}
-            <tr>
-                <td>{{ p[0]|default_dash }}</td>
-                <td>{{ p[1]|default_dash }}</td>
-                <td>{{ p[2]|default_dash }}</td>
-                <td>{{ p[3]|default_dash }}</td>
-                <td>{{ p[4]|default_dash }}</td>
-                <td>{{ p[5]|default_dash }}</td>
-                <td>{{ p[6]|default_dash }}</td>
-                <td>{{ p[7]|default_dash }}</td>
-                <td>{{ p[8]|default_dash }}</td>
-                <td>{{ p[9]|default_dash }}</td>
-                <td>{{ p[10]|default_dash }}</td>
-                <td>{{ p[11]|default_dash }}</td>
-                <td>{{ p[12]|default_dash }}</td>
-                <td>{{ p[13]|default_dash }}</td>
-                <td>{{ p[14]|default_dash }}</td>
-                <td>{{ p[15]|default_dash }}</td>
-                <td>{{ p[16]|default_dash }}</td>
-                <td>{{ p[17]|default_dash }}</td>
-                <td>{{ p[18]|default_dash }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>-->
     <script src="../static/js/script.js"></script>
 </body>
 </html>
