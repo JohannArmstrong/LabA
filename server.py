@@ -22,15 +22,6 @@ import atexit
 # Intervalo para ejecutar el escaneo de los archivos CSV adjuntos
 INTERVALO_CARGA = 1200  # tiempo en SEGUNDOS     3600 = 1 hora
 
-# # CSV público de google sheets
-# # Se pueden agregar más archivos separados con coma
-# '''
-# links = [ 
-#     "https://docs.google.com/spreadsheets/d/e/2PACX-1vTilwi5g-OdfObKJmRWFIV-8N0RBaGLX2QiF0bmSpl915RlkIed5Ye-O80Ey5crsg5D7o8bCNtz26sv/pub?gid=1350431005&single=true&output=csv",
-#     "https://docs.google.com/spreadsheets/d/e/2PACX-1vTilwi5g-OdfObKJmRWFIV-8N0RBaGLX2QiF0bmSpl915RlkIed5Ye-O80Ey5crsg5D7o8bCNtz26sv/pub?gid=728128631&single=true&output=csv"
-    
-# ]'''
-# links = []
 
 def cargar_links_csv(path="csv_links.txt"):
     links = []
@@ -44,12 +35,11 @@ def cargar_links_csv(path="csv_links.txt"):
         logging.error(f"No se encontró el archivo {path}")
     return links
 
-links = cargar_links_csv()
 
 # Se inicia un temporizador que ejecuta el escaneo de las hojas de google
 t = None
 def scheduler():
-    cargar_csv_a_db() #ejecuta la carga
+    cargar_csv_a_db(None) #ejecuta la carga
     # tomo la t declarada global ahí arriba
     global t
     # vuelve a programar la siguiente ejecución
@@ -86,14 +76,6 @@ logging.basicConfig(
 )
 
 # config para conección con la DB
-# DB_CONFIG = {
-#     "host": "localhost",
-#     "dbname": "labA",
-#     "user": "postgres",
-#     "password": "Passw0rd",
-#     "port": 5432
-# }
-
 DB_CONFIG = {
     "host": os.getenv("DB_HOST", "localhost"),
     "dbname": os.getenv("DB_NAME", "labA"),
@@ -150,7 +132,7 @@ def parse_decimal(value):
         return None
         
 
-# funci'on para obtener o insertar ID en tablas normalizadas
+# función para obtener o insertar ID en tablas normalizadas
 def get_or_create_id(cur, table, name_value):
     """ Devuelve el id de la tabla normalizada. Inserta si no existe """
     if not name_value or str(name_value).strip() == "":
@@ -170,14 +152,19 @@ def get_or_create_id(cur, table, name_value):
     )
     return cur.fetchone()[0]
 
-def cargar_csv_a_db():
+def cargar_csv_a_db(desde_google):
     print("▶ Ejecutando carga automática desde CSV ▶")
     
     total = 0 # para mostrar total de inserciones
+    links = cargar_links_csv()
+
+    if desde_google is not None:
+        links = [desde_google]
 
     for link in links:
         # lee hoja 
         hoja = panda.read_csv(link)
+        # limpia algunos espacios al final, saltos de línea y dobles espacios
         hoja.columns = [name.strip().replace("\n", " ").replace("\r", "").replace("  ", " ") for name in hoja.columns]
 
         print("Columnas detectadas:")
@@ -350,24 +337,24 @@ def cargar_csv_a_db():
 
 # para concatenar con la consulta
 COLUMNAS_DISPONIBLES = {
-    "id_proyecto": "p.id_proyecto",
-    "fecha_registro": "p.fecha_registro",
+    "ID": "p.id_proyecto",
+    "fecha de registro": "p.fecha_registro",
     "email": "u.email",
-    "usuario_nombre": "u.nombre",
+    "Nombre de usuario": "u.nombre",
     "carrera": "carrera.nombre",
     "cargo": "cargo.nombre",
     "sede": "sede.nombre",
-    "nombre_proyecto": "p.nombre_proyecto",
-    "descripcion": "p.descripcion",
-    "tipo": "tipo.nombre",
-    "herramienta": "herr.nombre",
+    "nombre del proyecto": "p.nombre_proyecto",
+    "descripción": "p.descripcion",
+    "tipo de proyecto": "tipo.nombre",
+    "herramienta usada": "herr.nombre",
     "material": "p.material",
     "cantidad de prototipos": "p.cantidad_prototipos",
-    "justificacion": "p.justificacion",
+    "justificación": "p.justificacion",
     "fecha de necesidad": "p.fecha_necesidad",
-    "tiempo_estimado": "p.tiempo_estimado",
-    "otros_comentarios": "p.otros_comentarios",
-    "origen": "origen.nombre",
+    "tiempo estimado": "p.tiempo_estimado",
+    "otros comentarios": "p.otros_comentarios",
+    "origen del material": "origen.nombre",
     "estado": "estado.nombre"
 }
 
@@ -1070,10 +1057,10 @@ def exportar_pdf():
 
     # renderizar el mismo template que usás en pantalla
     html_string = render_template("proyectos.html",
-                                  columnas_disponibles=COLUMNAS_DISPONIBLES.keys(),
-                                  columnas=seleccionadas,
-                                  rows=proyectos,
-                                  sum_row=sum_row)
+                                columnas_disponibles=COLUMNAS_DISPONIBLES.keys(),
+                                columnas=seleccionadas,
+                                rows=proyectos,
+                                sum_row=sum_row)
 
     # generar PDF con WeasyPrint
     pdf = HTML(string=html_string).write_pdf(
@@ -1087,7 +1074,18 @@ def exportar_pdf():
     return response
 
 
+#######################################################################
+# Para recibir mensajes desde google
+# Por ahora el mensaje es un link hacia el csv a reescanear
+# Llama a la función que normalmente escanea todos los links, con el link como flag
 
+@app.route("/google-webhook", methods=["POST"])
+def google_webhook():
+    data = request.json
+    link = data.get("link")
+    if link:
+        cargar_csv_a_db((link))
+    return jsonify({"status": "ok"})
 
 
 # corre en el puerto 5000
