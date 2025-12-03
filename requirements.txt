@@ -1,6 +1,5 @@
-flask
-psycopg[binary]
-flask
-pdfkit
+Flask
 weasyprint
 beautifulsoup4
+psycopg[binary]
+pandas

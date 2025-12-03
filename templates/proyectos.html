@@ -34,7 +34,7 @@
                 {% endfor %}
                 <button type="submit">Aplicar</button>
                 <button type="button" id="toggle-all">(de)seleccionar todo</button>
-                <!-- Botón exportar PDF -->
+                <!-- botón exportar PDF -->
                 <button type="submit"
                     formaction="{{ url_for('proyectos_pdf') }}"
                     formmethod="post"
@@ -46,7 +46,7 @@
         {% endif %}
         
         <div id="tabla-proyectos"></div>
-                <h1 class="mb-4">Listado de proyectos</h1>
+                <h1 class="mb-4">Listado de proyectos LabA</h1>
 
                 {% if filtros %}
                     <div class="mb-3">
@@ -60,6 +60,20 @@
                         </ul>
                     </div>
                 {% endif %}
+
+                {% if resumen_proyectos %}
+                    <!-- tabla de sumatorias -->
+                    <table class="table table-striped table-bordered mt-4 mb-4">
+                        <tr>
+                            <th>Cantidad de proyectos</th>
+                            <td>{{ resumen_proyectos[0] }}</td>
+                            <th>Cantidad de prototipos</th>
+                            <td>{{ resumen_proyectos[1] }}</td>
+                            <th>Tiempo total (hs)</th>
+                            <td>{{ resumen_proyectos[2] }}</td>
+                        </tr>
+                    </table>
+                    {% endif %}
 
                 <table class="table table-striped table-bordered to-pdf">
                     <thead class="table-dark">
@@ -131,13 +145,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- fila de sumatorias -->
-                        <tr>
-                            {% for cell in sum_row %}
-                                <td><strong>{{ cell|default_dash }}</strong></td>
-                            {% endfor %}
-                        </tr>
-
                         <!-- filas normales -->
                         {% for row in rows %}
                             <tr>

@@ -1,0 +1,75 @@
+CREATE TABLE usuario (
+    id_usuario SERIAL PRIMARY KEY,
+    nombre TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE cargo (
+    id_cargo SERIAL PRIMARY KEY,
+    nombre TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE sede (
+    id_sede SERIAL PRIMARY KEY,
+    nombre TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE tipo (
+    id_tipo SERIAL PRIMARY KEY,
+    nombre TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE herramienta (
+    id_herramienta SERIAL PRIMARY KEY,
+    nombre TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE origen_material (
+    id_origen_material SERIAL PRIMARY KEY,
+    nombre TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE estado (
+    id_estado SERIAL PRIMARY KEY,
+    nombre TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE carrera (
+    id_carrera SERIAL PRIMARY KEY,
+    nombre TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE proyecto (
+    id_proyecto SERIAL PRIMARY KEY,
+    fecha_registro TIMESTAMP NOT NULL,
+
+    id_usuario INT NOT NULL REFERENCES usuario(id_usuario) ON DELETE CASCADE,
+    id_carrera INT REFERENCES carrera(id_carrera),
+
+    id_cargo INT REFERENCES cargo(id_cargo),
+    id_sede INT REFERENCES sede(id_sede),
+    nombre_proyecto TEXT,
+    descripcion TEXT,
+
+    id_tipo INT REFERENCES tipo(id_tipo),
+    id_herramienta INT REFERENCES herramienta(id_herramienta),
+
+    material TEXT,
+    cantidad_prototipos INT,
+    justificacion TEXT,
+    fecha_necesidad TIMESTAMP,
+    tiempo_estimado DECIMAL,
+    otros_comentarios TEXT,
+
+    id_origen_material INT REFERENCES origen_material(id_origen_material),
+    copiado TEXT,
+    id_estado INT REFERENCES estado(id_estado),
+
+    CONSTRAINT proyecto_unico UNIQUE (
+        id_usuario, nombre_proyecto, fecha_registro
+    )
+    CONSTRAINT proyecto_actualizado UNIQUE (
+        id_usuario, fecha_registro
+    )
+    
+);
