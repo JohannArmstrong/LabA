@@ -22,15 +22,29 @@ import atexit
 # Intervalo para ejecutar el escaneo de los archivos CSV adjuntos
 INTERVALO_CARGA = 1200  # tiempo en SEGUNDOS     3600 = 1 hora
 
-# CSV público de google sheets
-# Se pueden agregar más archivos separados con coma
-'''
-links = [ 
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vTilwi5g-OdfObKJmRWFIV-8N0RBaGLX2QiF0bmSpl915RlkIed5Ye-O80Ey5crsg5D7o8bCNtz26sv/pub?gid=1350431005&single=true&output=csv",
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vTilwi5g-OdfObKJmRWFIV-8N0RBaGLX2QiF0bmSpl915RlkIed5Ye-O80Ey5crsg5D7o8bCNtz26sv/pub?gid=728128631&single=true&output=csv"
+# # CSV público de google sheets
+# # Se pueden agregar más archivos separados con coma
+# '''
+# links = [ 
+#     "https://docs.google.com/spreadsheets/d/e/2PACX-1vTilwi5g-OdfObKJmRWFIV-8N0RBaGLX2QiF0bmSpl915RlkIed5Ye-O80Ey5crsg5D7o8bCNtz26sv/pub?gid=1350431005&single=true&output=csv",
+#     "https://docs.google.com/spreadsheets/d/e/2PACX-1vTilwi5g-OdfObKJmRWFIV-8N0RBaGLX2QiF0bmSpl915RlkIed5Ye-O80Ey5crsg5D7o8bCNtz26sv/pub?gid=728128631&single=true&output=csv"
     
-]'''
-links = []
+# ]'''
+# links = []
+
+def cargar_links_csv(path="csv_links.txt"):
+    links = []
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            for line in f:
+                url = line.strip()
+                if url:  # descartar líneas vacías
+                    links.append(url)
+    except FileNotFoundError:
+        logging.error(f"No se encontró el archivo {path}")
+    return links
+
+links = cargar_links_csv()
 
 # Se inicia un temporizador que ejecuta el escaneo de las hojas de google
 t = None

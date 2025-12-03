@@ -24,6 +24,9 @@ RUN apt-get update && apt-get install -y \
 # Copiar requirements
 COPY requirements.txt /app/
 
+COPY csv_links.txt /app/csv_links.txt
+
+
 # Instalar dependencias de Python
 RUN pip install --no-cache-dir -r requirements.txt
 
