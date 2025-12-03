@@ -7,121 +7,149 @@
     <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body class="container mt-4">
-    {% include "header.html" %}
+    {% if not solo_pdf %}
+        {% include "header.html" %}
 
-    <!--elegir entre los 2 siguientes-->
-    <!--link para exportar a pdf-->
-    <a href="{{ url_for('exportar_pdf') }}" class="btn btn-danger mb-3" target="_blank">
-        Exportar a PDF
-    </a>
-    <!--botón para exportar a pdf-->
-    <form method="POST" action="/">
-        <button type="submit" formaction="/exportar_pdf" target="_blank">Exportar PDF</button>
-    </form>
+        <!--elegir entre los 2 siguientes-->
+        <!--link para exportar a pdf-->
+        <a href="{{ url_for('exportar_pdf') }}" class="btn btn-danger mb-3" target="_blank">
+            Exportar a PDF
+        </a>
+        <!--botón para exportar a pdf-->
+        <form method="POST" action="/">
+            <button type="submit" formaction="/exportar_pdf" target="_blank">Exportar PDF</button>
+        </form>
 
-    <form method="POST" action="/">
-        {% for col in columnas_disponibles %}
-            <label>
-                <input class="form-check-input" type="checkbox" name="columnas" value="{{ col }}"
-                {% if col in columnas %}checked{% endif %}>
-                {{ col }}
-            </label><br>
-        {% endfor %}
-        <button type="submit">Aplicar</button>
-        <button type="button" id="toggle-all">(de)seleccionar todo</button>
-        <br>
 
-        <h1 class="mb-4">Listado de proyectos</h1>
-
-        <table class="table table-striped table-bordered to-pdf">
-            <thead class="table-dark">
-                <tr>
-                    {% for col in columnas %}
-                        <th>{{ col }}</th>
-                    {% endfor %}
-                </tr>
-                <!-- fila de filtros -->
-                <tr>
-                    {% for col in columnas %}
-                        <th>
-                            {% if col == "sede" %}
-                                <select name="filtro_{{ col }}" class="form-select">
-                                    <option value="">-- Todas --</option>
-                                    {% for sede in sedes %}
-                                        <option value="{{ sede }}" {% if filtros.get(col) == sede %}selected{% endif %}>{{ sede|sin_especificar }}</option>
-                                    {% endfor %}
-                                </select>
-                            {% elif col == "cargo" %}
-                                <select name="filtro_{{ col }}" class="form-select">
-                                    <option value="">-- Todos --</option>
-                                    {% for cargo in cargos %}
-                                        <option value="{{ cargo }}" {% if filtros.get(col) == cargo %}selected{% endif %}>{{ cargo|sin_especificar }}</option>
-                                    {% endfor %}
-                                </select>
-                            {% elif col == "tipo" %}
-                                <select name="filtro_{{ col }}" class="form-select">
-                                    <option value="">-- Todos --</option>
-                                    {% for tipo in tipos %}
-                                        <option value="{{ tipo }}" {% if filtros.get(col) == tipo %}selected{% endif %}>{{ tipo|sin_especificar }}</option>
-                                    {% endfor %}
-                                </select>
-                            {% elif col == "herramienta" %}
-                                <select name="filtro_{{ col }}" class="form-select">
-                                    <option value="">-- Todas --</option>
-                                    {% for h in herramientas %}
-                                        <option value="{{ h }}" {% if filtros.get(col) == h %}selected{% endif %}>{{ h|sin_especificar }}</option>
-                                    {% endfor %}
-                                </select>
-                            {% elif col == "carrera" %}
-                                <select name="filtro_{{ col }}" class="form-select">
-                                    <option value="">-- Todas --</option>
-                                    {% for c in carreras %}
-                                        <option value="{{ c }}" {% if filtros.get(col) == c %}selected{% endif %}>{{ c|sin_especificar }}</option>
-                                    {% endfor %}
-                                </select>
-                            {% elif col == "estado" %}
-                                <select name="filtro_{{ col }}" class="form-select">
-                                    <option value="">-- Todos --</option>
-                                    {% for e in estados %}
-                                        <option value="{{ e }}" {% if filtros.get(col) == e %}selected{% endif %}>{{ e|sin_especificar }}</option>
-                                    {% endfor %}
-                                </select>
-                            {% elif col == "fecha_registro" %}
-                                <div class="d-flex flex-column">
-                                    <input type="date" name="filtro_fecha_registro_desde"
-                                        value="{{ filtros.get('fecha_registro_desde', '') }}"
-                                        class="form-control mb-1">
-                                    <input type="date" name="filtro_fecha_registro_hasta"
-                                        value="{{ filtros.get('fecha_registro_hasta', '') }}"
-                                        class="form-control">
-                                </div>
-                            {% else %}
-                                <input type="text" name="filtro_{{ col }}" placeholder="Buscar {{ col }}" value="{{ filtros.get(col, '') }}">
-                            {% endif %}
-                        </th>
-                    {% endfor %}
-                </tr>
-            </thead>
-            <tbody>
-                <!-- fila de sumatorias -->
-                <tr>
-                    {% for cell in sum_row %}
-                        <td><strong>{{ cell|default_dash }}</strong></td>
-                    {% endfor %}
-                </tr>
-
-                <!-- filas normales -->
-                {% for row in rows %}
-                    <tr>
-                        {% for cell in row %}
-                            <td>{{ cell|default_dash }}</td>
-                        {% endfor %}
-                    </tr>
+    {% endif %}
+    <form id="form-proyectos" method="POST" action="{{ url_for('proyectos') }}">
+        {% if not solo_pdf %}
+            <form method="POST" action="/">
+                {% for col in columnas_disponibles %}
+                    <label>
+                        <input class="form-check-input" type="checkbox" name="columnas" value="{{ col }}"
+                        {% if col in columnas %}checked{% endif %}>
+                        {{ col }}
+                    </label><br>
                 {% endfor %}
-            </tbody>
-        </table>
-    </form>
+                <button type="submit">Aplicar</button>
+                <button type="button" id="toggle-all">(de)seleccionar todo</button>
+                <!-- Botón exportar PDF -->
+                <button type="submit"
+                    formaction="{{ url_for('proyectos_pdf') }}"
+                    formmethod="post"
+                    target="_blank"
+                    class="btn btn-danger mt-3">
+                    Exportar a PDF
+                </button>
 
+        {% endif %}
+        
+        <div id="tabla-proyectos"></div>
+                <h1 class="mb-4">Listado de proyectos</h1>
+
+                {% if filtros %}
+                    <div class="mb-3">
+                        <h5>Filtros aplicados:</h5>
+                        <ul>
+                        {% for col, val in filtros.items() %}
+                            {% if val %}
+                            <li>{{ col|capitalize }}: {{ val }}</li>
+                            {% endif %}
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+
+                <table class="table table-striped table-bordered to-pdf">
+                    <thead class="table-dark">
+                        <tr>
+                            {% for col in columnas %}
+                                <th>{{ col }}</th>
+                            {% endfor %}
+                        </tr>
+                        <!-- fila de filtros -->
+                        <tr>
+                            {% for col in columnas %}
+                                <th>
+                                    {% if col == "sede" %}
+                                        <select name="filtro_{{ col }}" class="form-select">
+                                            <option value="">-- Todas --</option>
+                                            {% for sede in sedes %}
+                                                <option value="{{ sede }}" {% if filtros.get(col) == sede %}selected{% endif %}>{{ sede|sin_especificar }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    {% elif col == "cargo" %}
+                                        <select name="filtro_{{ col }}" class="form-select">
+                                            <option value="">-- Todos --</option>
+                                            {% for cargo in cargos %}
+                                                <option value="{{ cargo }}" {% if filtros.get(col) == cargo %}selected{% endif %}>{{ cargo|sin_especificar }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    {% elif col == "tipo" %}
+                                        <select name="filtro_{{ col }}" class="form-select">
+                                            <option value="">-- Todos --</option>
+                                            {% for tipo in tipos %}
+                                                <option value="{{ tipo }}" {% if filtros.get(col) == tipo %}selected{% endif %}>{{ tipo|sin_especificar }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    {% elif col == "herramienta" %}
+                                        <select name="filtro_{{ col }}" class="form-select">
+                                            <option value="">-- Todas --</option>
+                                            {% for h in herramientas %}
+                                                <option value="{{ h }}" {% if filtros.get(col) == h %}selected{% endif %}>{{ h|sin_especificar }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    {% elif col == "carrera" %}
+                                        <select name="filtro_{{ col }}" class="form-select">
+                                            <option value="">-- Todas --</option>
+                                            {% for c in carreras %}
+                                                <option value="{{ c }}" {% if filtros.get(col) == c %}selected{% endif %}>{{ c|sin_especificar }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    {% elif col == "estado" %}
+                                        <select name="filtro_{{ col }}" class="form-select">
+                                            <option value="">-- Todos --</option>
+                                            {% for e in estados %}
+                                                <option value="{{ e }}" {% if filtros.get(col) == e %}selected{% endif %}>{{ e|sin_especificar }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    {% elif col == "fecha_registro" %}
+                                        <div class="d-flex flex-column">
+                                            <input type="date" name="filtro_fecha_registro_desde"
+                                                value="{{ filtros.get('fecha_registro_desde', '') }}"
+                                                class="form-control mb-1">
+                                            <input type="date" name="filtro_fecha_registro_hasta"
+                                                value="{{ filtros.get('fecha_registro_hasta', '') }}"
+                                                class="form-control">
+                                        </div>
+                                    {% else %}
+                                        <input type="text" name="filtro_{{ col }}" placeholder="Buscar {{ col }}" value="{{ filtros.get(col, '') }}">
+                                    {% endif %}
+                                </th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- fila de sumatorias -->
+                        <tr>
+                            {% for cell in sum_row %}
+                                <td><strong>{{ cell|default_dash }}</strong></td>
+                            {% endfor %}
+                        </tr>
+
+                        <!-- filas normales -->
+                        {% for row in rows %}
+                            <tr>
+                                {% for cell in row %}
+                                    <td>{{ cell|default_dash }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </form>
+        </div>
     
 
     <script src="../static/js/script.js"></script>

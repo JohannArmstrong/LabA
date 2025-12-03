@@ -740,6 +740,119 @@ def proyectos():
         return f"❌ Error al cargar proyectos: {e}", 500
 
 
+
+
+@app.route("/proyectos/pdf", methods=["POST"])
+def proyectos_pdf():
+    try:
+        # recuperar columnas seleccionadas y filtros igual que en "/proyectos"
+        seleccionadas = request.form.getlist("columnas")
+        filtros = {col: request.form.get(f"filtro_{col}", "") for col in seleccionadas}
+
+        filtro_fecha_desde = request.form.get("filtro_fecha_registro_desde", "")
+        filtro_fecha_hasta = request.form.get("filtro_fecha_registro_hasta", "")
+
+        if not seleccionadas:
+            seleccionadas = list(COLUMNAS_DISPONIBLES.keys())
+            filtros = {col: "" for col in seleccionadas}
+
+        cols_sql = ", ".join([COLUMNAS_DISPONIBLES[c] for c in seleccionadas])
+
+        where_clauses = []
+        params = []
+        for col, val in filtros.items():
+            if val.strip():
+                where_clauses.append(f"{COLUMNAS_DISPONIBLES[col]}::text ILIKE %s")
+                params.append(f"%{val}%")
+
+        if filtro_fecha_desde:
+            where_clauses.append("p.fecha_registro >= %s")
+            params.append(filtro_fecha_desde)
+        if filtro_fecha_hasta:
+            where_clauses.append("p.fecha_registro <= %s")
+            params.append(filtro_fecha_hasta)
+
+        filtros["fecha_registro_desde"] = filtro_fecha_desde
+        filtros["fecha_registro_hasta"] = filtro_fecha_hasta
+
+        where_sql = " AND ".join(where_clauses)
+
+        if where_sql:
+            query = f"""
+                SELECT {cols_sql}
+                FROM proyecto p
+                JOIN usuario u ON p.id_usuario = u.id_usuario
+                LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
+                LEFT JOIN sede ON p.id_sede = sede.id_sede
+                LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+                LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                LEFT JOIN estado ON p.id_estado = estado.id_estado
+                LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
+                LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
+                WHERE {where_sql}
+                ORDER BY p.id_proyecto DESC;
+            """
+        else:
+            query = f"""
+                SELECT {cols_sql}
+                FROM proyecto p
+                JOIN usuario u ON p.id_usuario = u.id_usuario
+                LEFT JOIN tipo ON p.id_tipo = tipo.id_tipo
+                LEFT JOIN sede ON p.id_sede = sede.id_sede
+                LEFT JOIN origen_material origen ON p.id_origen_material = origen.id_origen_material
+                LEFT JOIN herramienta herr ON p.id_herramienta = herr.id_herramienta
+                LEFT JOIN estado ON p.id_estado = estado.id_estado
+                LEFT JOIN carrera ON p.id_carrera = carrera.id_carrera
+                LEFT JOIN cargo ON p.id_cargo = cargo.id_cargo
+                ORDER BY p.id_proyecto DESC;
+            """
+
+        with psy.connect(conn_str) as conn:
+            with conn.cursor() as cur:
+                cur.execute(query, params)
+                proyectos = cur.fetchall()
+
+        # sumatorias
+        sum_row = []
+        for i, col in enumerate(seleccionadas):
+            valores = []
+            for p in proyectos:
+                v = p[i]
+                if isinstance(v, (int, float, Decimal)):
+                    if isinstance(v, float) and math.isnan(v):
+                        continue
+                    valores.append(v)
+            sum_row.append(sum(valores) if valores else "-")
+
+        # Renderizar template con flag solo_pdf
+        html = render_template("proyectos.html",
+                               active_page="proyectos",
+                               columnas_disponibles=COLUMNAS_DISPONIBLES.keys(),
+                               columnas=seleccionadas,
+                               rows=proyectos,
+                               sum_row=sum_row,
+                               filtros=filtros,
+                               solo_pdf=True)
+
+        # Cargar estilos
+        css_files = [
+            url_for('static', filename='css/bootstrap.min.css', _external=True),
+            url_for('static', filename='css/styles.css', _external=True),
+            url_for('static', filename='css/pdf.css', _external=True)
+        ]
+        stylesheets = [CSS(file) for file in css_files]
+
+        pdf = HTML(string=html).write_pdf(stylesheets=stylesheets)
+
+        response = make_response(pdf)
+        response.headers['Content-Type'] = 'application/pdf'
+        response.headers['Content-Disposition'] = 'inline; filename=proyectos.pdf'
+        return response
+
+    except Exception as e:
+        logging.error(f"Error al generar PDF: {e}")
+        return f"❌ Error al generar PDF: {e}", 500
+
 ########### estad'isticas ############################################################################
 
 @app.route("/estadisticas", methods=["GET", "POST"])
