@@ -26,3 +26,34 @@ p {
 .to-print {
   margin-top: 4rem;
 }
+
+form {
+  /*padding: 1rem;*/
+  border-radius: 0.5rem;
+}
+
+
+
+/*
+@media (prefers-color-scheme: light) {
+  .parametros {
+    background-color: #f8f9fa; 
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .parametros {
+    background-color: #2c2c2c; 
+  }
+}*/
+
+[data-bs-theme="light"] .parametros {
+  background-color: #f3f3f3; /* gris claro */
+  /*color: #212529;    */        /* texto oscuro */
+}
+
+[data-bs-theme="dark"] .parametros {
+  background-color: #323232; /* gris intermedio */
+  /*color: #f8f9fa;  */          /* texto claro */
+}

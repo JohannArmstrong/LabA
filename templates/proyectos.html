@@ -9,27 +9,16 @@
 <body class="container mt-4">
     {% if not solo_pdf %}
         {% include "header.html" %}
-
-        <!--elegir entre los 2 siguientes-->
-        <!--link para exportar a pdf-->
-        <a href="{{ url_for('exportar_pdf') }}" class="btn btn-danger mb-3" target="_blank">
-            Exportar a PDF
-        </a>
-        <!--botón para exportar a pdf-->
-        <form method="POST" action="/">
-            <button type="submit" formaction="/exportar_pdf" target="_blank">Exportar PDF</button>
-        </form>
-
-
     {% endif %}
+
     <form id="form-proyectos" method="POST" action="{{ url_for('proyectos') }}">
         {% if not solo_pdf %}
-            <form method="POST" action="/">
+            <div class="parametros">    
                 {% for col in columnas_disponibles %}
                     <label>
                         <input class="form-check-input" type="checkbox" name="columnas" value="{{ col }}"
                         {% if col in columnas %}checked{% endif %}>
-                        {{ col }}
+                        {{ COLUMNAS_LABELS[col] }}
                     </label><br>
                 {% endfor %}
                 <button type="submit">Aplicar</button>
@@ -42,7 +31,7 @@
                     class="btn btn-danger mt-3">
                     Exportar a PDF
                 </button>
-
+            </div>
         {% endif %}
         
         <div id="tabla-proyectos"></div>
@@ -79,7 +68,7 @@
                     <thead class="table-dark">
                         <tr>
                             {% for col in columnas %}
-                                <th>{{ col }}</th>
+                                <th>{{ COLUMNAS_LABELS[col] }}</th>
                             {% endfor %}
                         </tr>
                         <!-- fila de filtros -->
@@ -135,6 +124,15 @@
                                                 class="form-control mb-1">
                                             <input type="date" name="filtro_fecha_registro_hasta"
                                                 value="{{ filtros.get('fecha_registro_hasta', '') }}"
+                                                class="form-control">
+                                        </div>
+                                    {% elif col == "fecha_necesidad" %}
+                                        <div class="d-flex flex-column">
+                                            <input type="date" name="filtro_fecha_necesidad_desde"
+                                                value="{{ filtros.get('fecha_necesidad_desde', '') }}"
+                                                class="form-control mb-1">
+                                            <input type="date" name="filtro_fecha_necesidad_hasta"
+                                                value="{{ filtros.get('fecha_necesidad_hasta', '') }}"
                                                 class="form-control">
                                         </div>
                                     {% else %}

@@ -336,26 +336,70 @@ def cargar_csv_a_db(desde_google):
 #####################################################################################
 
 # para concatenar con la consulta
+# COLUMNAS_DISPONIBLES = {
+#     "ID": "p.id_proyecto",
+#     "fecha de registro": "p.fecha_registro",
+#     "email": "u.email",
+#     "Nombre de usuario": "u.nombre",
+#     "carrera": "carrera.nombre",
+#     "cargo": "cargo.nombre",
+#     "sede": "sede.nombre",
+#     "nombre del proyecto": "p.nombre_proyecto",
+#     "descripción": "p.descripcion",
+#     "tipo de proyecto": "tipo.nombre",
+#     "herramienta usada": "herr.nombre",
+#     "material": "p.material",
+#     "cantidad de prototipos": "p.cantidad_prototipos",
+#     "justificación": "p.justificacion",
+#     "fecha de necesidad": "p.fecha_necesidad",
+#     "tiempo estimado": "p.tiempo_estimado",
+#     "otros comentarios": "p.otros_comentarios",
+#     "origen del material": "origen.nombre",
+#     "estado": "estado.nombre"
+# }
+
 COLUMNAS_DISPONIBLES = {
-    "ID": "p.id_proyecto",
-    "fecha de registro": "p.fecha_registro",
+    "id_proyecto": "p.id_proyecto",
+    "fecha_registro": "p.fecha_registro",
     "email": "u.email",
-    "Nombre de usuario": "u.nombre",
+    "usuario_nombre": "u.nombre",
     "carrera": "carrera.nombre",
     "cargo": "cargo.nombre",
     "sede": "sede.nombre",
-    "nombre del proyecto": "p.nombre_proyecto",
-    "descripción": "p.descripcion",
-    "tipo de proyecto": "tipo.nombre",
-    "herramienta usada": "herr.nombre",
+    "nombre_proyecto": "p.nombre_proyecto",
+    "descripcion": "p.descripcion",
+    "tipo": "tipo.nombre",
+    "herramienta": "herr.nombre",
     "material": "p.material",
-    "cantidad de prototipos": "p.cantidad_prototipos",
-    "justificación": "p.justificacion",
-    "fecha de necesidad": "p.fecha_necesidad",
-    "tiempo estimado": "p.tiempo_estimado",
-    "otros comentarios": "p.otros_comentarios",
-    "origen del material": "origen.nombre",
+    "cantidad_prototipos": "p.cantidad_prototipos",
+    "justificacion": "p.justificacion",
+    "fecha_necesidad": "p.fecha_necesidad",
+    "tiempo_estimado": "p.tiempo_estimado",
+    "otros_comentarios": "p.otros_comentarios",
+    "origen": "origen.nombre",
     "estado": "estado.nombre"
+}
+
+COLUMNAS_LABELS = {
+    "id_proyecto": "ID",
+    "fecha_registro": "Fecha de registro",
+    "email": "Email",
+    "usuario_nombre": "Nombre de usuario",
+    "carrera": "Carrera",
+    "cargo": "Cargo",
+    "sede": "Sede",
+    "nombre_proyecto": "Nombre del proyecto",
+    "descripcion": "Descripción",
+    "tipo": "Tipo de proyecto",
+    "herramienta": "Herramienta usada",
+    "material": "Material",
+    "cantidad_prototipos": "Cantidad de prototipos",
+    "justificacion": "Justificación",
+    "fecha_necesidad": "Fecha de necesidad",
+    "tiempo_estimado": "Tiempo estimado (hs)",
+    "otros_comentarios": "Otros comentarios",
+    "origen": "Origen del material",
+    "estado": "Estado"
 }
 
 # ruta para la p'agina web localhost:5000
@@ -383,7 +427,9 @@ def proyectos():
                 where_clauses.append(f"{COLUMNAS_DISPONIBLES[col]}::text ILIKE %s")
                 params.append(f"%{val}%")
 
-
+        # filtros de fechas
+        # para poder seleccionar "desde - hasta" en el html
+        # fecha de registro:
         filtro_fecha_desde = request.form.get("filtro_fecha_registro_desde", "")
         filtro_fecha_hasta = request.form.get("filtro_fecha_registro_hasta", "")
 
@@ -398,6 +444,23 @@ def proyectos():
         # Guardar en filtros para que se muestre en el template
         filtros["fecha_registro_desde"] = filtro_fecha_desde
         filtros["fecha_registro_hasta"] = filtro_fecha_hasta
+
+        # fecha de necesidad:
+        filtro_fecha_necesidad_desde = request.form.get("filtro_fecha_necesidad_desde", "")
+        filtro_fecha_necesidad_hasta = request.form.get("filtro_fecha_necesidad_hasta", "")
+
+        if filtro_fecha_necesidad_desde:
+            where_clauses.append("p.fecha_necesidad >= %s")
+            params.append(filtro_fecha_necesidad_desde)
+
+        if filtro_fecha_necesidad_hasta:
+            where_clauses.append("p.fecha_necesidad <= %s")
+            params.append(filtro_fecha_necesidad_hasta)
+
+        # Guardar en filtros para que se muestre en el template
+        filtros["fecha_necesidad_desde"] = filtro_fecha_necesidad_desde
+        filtros["fecha_necesidad_hasta"] = filtro_fecha_necesidad_hasta
+
         
         # se juntan los filtros para la consulta
         where_sql = " AND ".join(where_clauses)
@@ -483,6 +546,7 @@ def proyectos():
         return render_template("proyectos.html",
                                 active_page="proyectos",
                                 columnas_disponibles=COLUMNAS_DISPONIBLES.keys(),
+                                COLUMNAS_LABELS=COLUMNAS_LABELS,
                                 columnas=seleccionadas,
                                 rows=proyectos,
                                 resumen_proyectos=resumen_proyectos,

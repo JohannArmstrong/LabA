@@ -25076,3 +25076,1528 @@ LINE 6:                             FROM uso_herramientas
 2025-12-03 16:45:06 [INFO] 127.0.0.1 - - [03/Dec/2025 16:45:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
 2025-12-03 16:45:06 [INFO] 127.0.0.1 - - [03/Dec/2025 16:45:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
 2025-12-03 16:45:06 [INFO] 127.0.0.1 - - [03/Dec/2025 16:45:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 17:38:38 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-04 17:38:38 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-04 17:43:32 [INFO] 127.0.0.1 - - [04/Dec/2025 17:43:32] "GET / HTTP/1.1" 200 -
+2025-12-04 17:43:32 [INFO] 127.0.0.1 - - [04/Dec/2025 17:43:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 17:43:33 [INFO] 127.0.0.1 - - [04/Dec/2025 17:43:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 17:43:33 [INFO] 127.0.0.1 - - [04/Dec/2025 17:43:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 17:43:33 [INFO] 127.0.0.1 - - [04/Dec/2025 17:43:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-04 17:43:52 [INFO] 127.0.0.1 - - [04/Dec/2025 17:43:52] "GET /estadisticas HTTP/1.1" 200 -
+2025-12-04 17:43:52 [INFO] 127.0.0.1 - - [04/Dec/2025 17:43:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 17:43:52 [INFO] 127.0.0.1 - - [04/Dec/2025 17:43:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 17:43:52 [INFO] 127.0.0.1 - - [04/Dec/2025 17:43:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 17:43:55 [INFO] 127.0.0.1 - - [04/Dec/2025 17:43:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 17:43:55 [INFO] 127.0.0.1 - - [04/Dec/2025 17:43:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 17:43:55 [INFO] 127.0.0.1 - - [04/Dec/2025 17:43:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 17:43:56 [INFO] 127.0.0.1 - - [04/Dec/2025 17:43:56] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 17:44:16 [INFO] 127.0.0.1 - - [04/Dec/2025 17:44:16] "GET /estadisticas HTTP/1.1" 200 -
+2025-12-04 17:44:16 [INFO] 127.0.0.1 - - [04/Dec/2025 17:44:16] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 17:44:17 [INFO] 127.0.0.1 - - [04/Dec/2025 17:44:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 17:44:17 [INFO] 127.0.0.1 - - [04/Dec/2025 17:44:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 17:44:17 [INFO] 127.0.0.1 - - [04/Dec/2025 17:44:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 17:44:17 [INFO] 127.0.0.1 - - [04/Dec/2025 17:44:17] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 17:44:59 [INFO] 127.0.0.1 - - [04/Dec/2025 17:44:59] "GET /estadisticas HTTP/1.1" 200 -
+2025-12-04 17:45:00 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 17:45:00 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 17:45:00 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 17:45:06 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:06] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-12-04 17:45:06 [WARNING] Unknown empty rule <AtRule @charset c { c }> at 1:1
+2025-12-04 17:45:06 [WARNING] Ignored `color-scheme:dark` at 5:3730, unknown property.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:no-preference)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:no-preference)' the whole @media rule was ignored at 5:5467.
+2025-12-04 17:45:06 [WARNING] Ignored `font-size:calc(1.375rem + 1.5vw)` at 5:6114, invalid value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:6147.
+2025-12-04 17:45:06 [WARNING] Ignored `font-size:calc(1.325rem + .9vw)` at 5:6205, invalid value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:6237.
+2025-12-04 17:45:06 [WARNING] Ignored `font-size:calc(1.3rem + .6vw)` at 5:6293, invalid value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:6323.
+2025-12-04 17:45:06 [WARNING] Ignored `font-size:calc(1.275rem + .3vw)` at 5:6382, invalid value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:6414.
+2025-12-04 17:45:06 [WARNING] Ignored `text-decoration-skip-ink:none` at 5:6682, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `text-align:-webkit-match-parent` at 5:8160, invalid value.
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '[list]:not([type=date]):not([type=datetime-local]):not([type=month]):not([type=week]):not([type=time])::-webkit-calendar-picker-indicator'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '::-moz-focus-inner'
+2025-12-04 17:45:06 [WARNING] Ignored `font-size:calc(1.275rem + .3vw)` at 5:9143, invalid value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:9175.
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '::-webkit-inner-spin-button'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '[type=search]::-webkit-search-cancel-button'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '::-webkit-search-decoration'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '::-webkit-color-swatch-wrapper'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '::-webkit-file-upload-button'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 17:45:06 [WARNING] Ignored `font-size:calc(1.625rem + 4.5vw)` at 5:10133, invalid value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10166.
+2025-12-04 17:45:06 [WARNING] Ignored `font-size:calc(1.575rem + 3.9vw)` at 5:10262, invalid value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10295.
+2025-12-04 17:45:06 [WARNING] Ignored `font-size:calc(1.525rem + 3.3vw)` at 5:10393, invalid value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10426.
+2025-12-04 17:45:06 [WARNING] Ignored `font-size:calc(1.475rem + 2.7vw)` at 5:10522, invalid value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10555.
+2025-12-04 17:45:06 [WARNING] Ignored `font-size:calc(1.425rem + 2.1vw)` at 5:10653, invalid value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10686.
+2025-12-04 17:45:06 [WARNING] Ignored `font-size:calc(1.375rem + 1.5vw)` at 5:10782, invalid value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10815.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:11958.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:12025.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:12106.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:12201.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:12312.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:14469.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:16204.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:17939.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:19674.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:21410.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:inset 0 0 0 9999px var(--bs-table-bg-state,var(--bs-table-bg-type,var(--bs-table-accent-bg)))` at 5:24111, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-x:auto` at 5:27930, unknown property.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:575.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:575.98px)' the whole @media rule was ignored at 5:27979.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:767.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:767.98px)' the whole @media rule was ignored at 5:28078.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:991.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:991.98px)' the whole @media rule was ignored at 5:28177.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:1199.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:1199.98px)' the whole @media rule was ignored at 5:28276.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:1399.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:1399.98px)' the whole @media rule was ignored at 5:28376.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:29462.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:0 0 0 .25rem rgba(13,110,253,.25)` at 5:29757, unknown property.
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control::-webkit-date-and-time-value'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control::-webkit-datetime-edit'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control::placeholder', unknown pseudo-element: placeholder
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control::-webkit-file-upload-button'
+2025-12-04 17:45:06 [WARNING] Ignored `margin-inline-end:.75rem` at 5:30798, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `border-inline-end-width:var(--bs-border-width)` at 5:30964, unknown property.
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:31153.
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control:hover:not(:disabled):not([readonly])::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control-sm::-webkit-file-upload-button'
+2025-12-04 17:45:06 [WARNING] Ignored `margin-inline-end:.5rem` at 5:32335, unknown property.
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control-sm::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control-lg::-webkit-file-upload-button'
+2025-12-04 17:45:06 [WARNING] Ignored `margin-inline-end:1rem` at 5:32752, unknown property.
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control-lg::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control-color::-moz-color-swatch'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control-color::-webkit-color-swatch'
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:34447.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:0 0 0 .25rem rgba(13,110,253,.25)` at 5:34566, unknown property.
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-select:-moz-focusring'
+2025-12-04 17:45:06 [WARNING] Ignored `color-adjust:exact` at 5:36155, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `print-color-adjust:exact` at 5:36174, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `filter:brightness(90%)` at 5:36325, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:0 0 0 .25rem rgba(13,110,253,.25)` at 5:36403, unknown property.
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-check-input[type=checkbox]:indeterminate'
+2025-12-04 17:45:06 [WARNING] Ignored `filter:none` at 5:37386, unknown property.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:37929.
+2025-12-04 17:45:06 [WARNING] Ignored `filter:none` at 5:38784, unknown property.
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-range:focus::-webkit-slider-thumb'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-range:focus::-moz-range-thumb'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-range::-moz-focus-outer'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-range::-webkit-slider-thumb'
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:39846.
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-range::-webkit-slider-thumb:active'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-range::-webkit-slider-runnable-track'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-range::-moz-range-thumb'
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:40564.
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-range::-moz-range-thumb:active'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-range::-moz-range-track'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-range:disabled::-webkit-slider-thumb'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-range:disabled::-moz-range-thumb'
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:41748.
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control-plaintext::placeholder,.form-floating>.form-control::placeholder', unknown pseudo-element: placeholder
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control-plaintext:focus,.form-floating>.form-control-plaintext:not(:placeholder-shown),.form-floating>.form-control:focus,.form-floating>.form-control:not(:placeholder-shown)'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control-plaintext:-webkit-autofill,.form-floating>.form-control:-webkit-autofill'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control-plaintext~label,.form-floating>.form-control:focus~label,.form-floating>.form-control:not(:placeholder-shown)~label,.form-floating>.form-select~label'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control:-webkit-autofill~label'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-floating>textarea:focus~label::after,.form-floating>textarea:not(:placeholder-shown)~label::after'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.is-valid~.valid-feedback,.is-valid~.valid-tooltip,.was-validated :valid~.valid-feedback,.was-validated :valid~.valid-tooltip'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control.is-valid,.was-validated .form-control:valid'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control.is-valid:focus,.was-validated .form-control:valid:focus'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.was-validated textarea.form-control:valid,textarea.form-control.is-valid'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-select.is-valid,.was-validated .form-select:valid'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-select.is-valid:not([multiple]):not([size]),.form-select.is-valid:not([multiple])[size="1"],.was-validated .form-select:valid:not([multiple]):not([size]),.was-validated .form-select:valid:not([multiple])[size="1"]'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-select.is-valid:focus,.was-validated .form-select:valid:focus'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control-color.is-valid,.was-validated .form-control-color:valid'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-check-input.is-valid,.was-validated .form-check-input:valid'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-check-input.is-valid:checked,.was-validated .form-check-input:valid:checked'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-check-input.is-valid:focus,.was-validated .form-check-input:valid:focus'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-check-input.is-valid~.form-check-label,.was-validated .form-check-input:valid~.form-check-label'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.input-group>.form-control:not(:focus).is-valid,.input-group>.form-floating:not(:focus-within).is-valid,.input-group>.form-select:not(:focus).is-valid,.was-validated .input-group>.form-control:not(:focus):valid,.was-validated .input-group>.form-floating:not(:focus-within):valid,.was-validated .input-group>.form-select:not(:focus):valid'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.is-invalid~.invalid-feedback,.is-invalid~.invalid-tooltip,.was-validated :invalid~.invalid-feedback,.was-validated :invalid~.invalid-tooltip'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control.is-invalid,.was-validated .form-control:invalid'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control.is-invalid:focus,.was-validated .form-control:invalid:focus'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.was-validated textarea.form-control:invalid,textarea.form-control.is-invalid'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-select.is-invalid,.was-validated .form-select:invalid'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-select.is-invalid:not([multiple]):not([size]),.form-select.is-invalid:not([multiple])[size="1"],.was-validated .form-select:invalid:not([multiple]):not([size]),.was-validated .form-select:invalid:not([multiple])[size="1"]'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-select.is-invalid:focus,.was-validated .form-select:invalid:focus'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-control-color.is-invalid,.was-validated .form-control-color:invalid'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-check-input.is-invalid,.was-validated .form-check-input:invalid'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-check-input.is-invalid:checked,.was-validated .form-check-input:invalid:checked'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-check-input.is-invalid:focus,.was-validated .form-check-input:invalid:focus'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.form-check-input.is-invalid~.form-check-label,.was-validated .form-check-input:invalid~.form-check-label'
+2025-12-04 17:45:06 [WARNING] Invalid or unsupported selector, '.input-group>.form-control:not(:focus).is-invalid,.input-group>.form-floating:not(:focus-within).is-invalid,.input-group>.form-select:not(:focus).is-invalid,.was-validated .input-group>.form-control:not(:focus):invalid,.was-validated .input-group>.form-floating:not(:focus-within):invalid,.was-validated .input-group>.form-select:not(:focus):invalid'
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-btn-font-family: ` at 5:52683, no value.
+2025-12-04 17:45:06 [WARNING] Ignored `user-select:none` at 5:53583, unknown property.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:53869.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:var(--bs-btn-focus-box-shadow)` at 5:54328, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:var(--bs-btn-focus-box-shadow)` at 5:54456, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:var(--bs-btn-focus-box-shadow)` at 5:54887, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:var(--bs-btn-focus-box-shadow)` at 5:54967, unknown property.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:63582.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:63770.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:63917.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:66242.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:66466.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:66690.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:66914.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:67139.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-dropdown-box-shadow: ` at 5:70204, no value.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-nav-link-font-weight: ` at 5:72954, no value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:73552.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:0 0 0 .25rem rgba(13,110,253,.25)` at 5:73721, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `isolation:isolate` at 5:74738, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-nav-link-font-weight: ` at 5:78402, no value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:79429.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:0 0 0 var(--bs-navbar-toggler-focus-width)` at 5:79597, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-y:auto` at 5:79925, unknown property.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:79941.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:80855.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:81769.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:82683.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:83598.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-y:visible` at 5:85362, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-card-title-color: ` at 5:86389, no value.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-card-subtitle-color: ` at 5:86413, no value.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-card-box-shadow: ` at 5:86592, no value.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-card-cap-color: ` at 5:86816, no value.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-card-height: ` at 5:86838, no value.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-card-color: ` at 5:86857, no value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:89891.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-anchor:none` at 5:92582, unknown property.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:92645.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color)` at 5:92839, unknown property.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:93406.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:var(--bs-accordion-btn-focus-box-shadow)` at 5:93565, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-breadcrumb-bg: ` at 5:95986, no value.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-breadcrumb-border-radius: ` at 5:96007, no value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:98291.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:var(--bs-pagination-focus-box-shadow)` at 5:98647, unknown property.
+2025-12-04 17:45:06 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:102897
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:103749.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:104258.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:107651.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:108410.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:109169.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:109928.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:110688.
+2025-12-04 17:45:06 [WARNING] Ignored `filter:var(--bs-btn-close-filter)` at 5:117279, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:var(--bs-btn-close-focus-shadow)` at 5:117519, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `user-select:none` at 5:117712, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-btn-close-filter: ` at 5:117884, no value.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-toast-color: ` at 5:118164, no value.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:var(--bs-toast-box-shadow)` at 5:118866, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `width:-webkit-max-content` at 5:119093, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `width:-moz-max-content` at 5:119119, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `width:max-content` at 5:119142, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-modal-footer-bg: ` at 5:120666, no value.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-x:hidden` at 5:120892, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-y:auto` at 5:120910, unknown property.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:121118.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-y:auto` at 5:121478, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `width:100vw` at 5:122068, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `height:100vh` at 5:122080, invalid value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:123481.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:123697.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:123766.
+2025-12-04 17:45:06 [WARNING] Ignored `width:100vw` at 5:123845, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-y:auto` at 5:124073, unknown property.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:575.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:575.98px)' the whole @media rule was ignored at 5:124089.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:767.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:767.98px)' the whole @media rule was ignored at 5:124420.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:991.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:991.98px)' the whole @media rule was ignored at 5:124751.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:1199.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:1199.98px)' the whole @media rule was ignored at 5:125082.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:1399.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:1399.98px)' the whole @media rule was ignored at 5:125414.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-tooltip-margin: ` at 5:125875, no value.
+2025-12-04 17:45:06 [WARNING] Ignored `text-shadow:none` at 5:126369, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `line-break:auto` at 5:126485, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `text-shadow:none` at 5:129940, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `line-break:auto` at 5:130056, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `backface-visibility:hidden` at 5:135405, unknown property.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:135469.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:136193.
+2025-12-04 17:45:06 [WARNING] Ignored `filter:var(--bs-carousel-control-icon-filter)` at 5:136541, unknown property.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:136636.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:138279.
+2025-12-04 17:45:06 [WARNING] Ignored `--bs-carousel-control-icon-filter: ` at 5:138828, no value.
+2025-12-04 17:45:06 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:139302
+2025-12-04 17:45:06 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:139758
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:140116.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:575.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:575.98px)' the whole @media rule was ignored at 5:140775.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:575.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:575.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:141097.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:575.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:575.98px)' the whole @media rule was ignored at 5:141192.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:142163.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:767.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:767.98px)' the whole @media rule was ignored at 5:142467.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:767.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:767.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:142789.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:767.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:767.98px)' the whole @media rule was ignored at 5:142884.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:143855.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:991.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:991.98px)' the whole @media rule was ignored at 5:144159.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:991.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:991.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:144481.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:991.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:991.98px)' the whole @media rule was ignored at 5:144576.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:145547.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:1199.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:1199.98px)' the whole @media rule was ignored at 5:145851.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:1199.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:1199.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:146174.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:1199.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:1199.98px)' the whole @media rule was ignored at 5:146270.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:147242.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:1399.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:1399.98px)' the whole @media rule was ignored at 5:147547.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:1399.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:1399.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:147871.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(max-width:1399.98px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (max-width:1399.98px)' the whole @media rule was ignored at 5:147968.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:148949.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:149547.
+2025-12-04 17:45:06 [WARNING] Ignored `width:100vw` at 5:150590, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `height:100vh` at 5:150602, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-y:auto` at 5:151305, unknown property.
+2025-12-04 17:45:06 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:151681
+2025-12-04 17:45:06 [WARNING] Ignored `mask-image:linear-gradient(130deg,#000 55%,rgba(0,0,0,0.8) 75%,#000 95%)` at 5:151824, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `mask-size:200% 100%` at 5:151925, unknown property.
+2025-12-04 17:45:06 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:151991
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:var(--bs-focus-ring-x,0) var(--bs-focus-ring-y,0) var(--bs-focus-ring-blur,0) var(--bs-focus-ring-width) var(--bs-focus-ring-color)` at 5:158113, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `backface-visibility:hidden` at 5:158550, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `fill:currentcolor` at 5:158627, unknown property.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:158682.
+2025-12-04 17:45:06 [WARNING] Ignored `position:-webkit-sticky` at 5:159339, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `position:sticky` at 5:159363, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `position:-webkit-sticky` at 5:159413, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `position:sticky` at 5:159437, invalid value.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:159475.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:159655.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:159835.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:160015.
+2025-12-04 17:45:06 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:06 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:160196.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-x:auto` at 5:162448, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-x:hidden` at 5:162493, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-x:visible` at 5:162541, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-x:scroll` at 5:162589, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-y:auto` at 5:162634, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-y:hidden` at 5:162679, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-y:visible` at 5:162727, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `overflow-y:scroll` at 5:162775, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:var(--bs-box-shadow)` at 5:163226, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:var(--bs-box-shadow-sm)` at 5:163279, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:var(--bs-box-shadow-lg)` at 5:163335, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `box-shadow:none` at 5:163393, unknown property.
+2025-12-04 17:45:06 [WARNING] Ignored `position:-webkit-sticky` at 5:164400, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `position:sticky` at 5:164434, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `width:100vw` at 5:167980, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `min-width:100vw` at 5:168014, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `height:100vh` at 5:168222, invalid value.
+2025-12-04 17:45:06 [WARNING] Ignored `min-height:100vh` at 5:168257, invalid value.
+2025-12-04 17:45:07 [WARNING] Ignored `font-size:calc(1.375rem + 1.5vw)` at 5:174913, invalid value.
+2025-12-04 17:45:07 [WARNING] Ignored `font-size:calc(1.325rem + .9vw)` at 5:174962, invalid value.
+2025-12-04 17:45:07 [WARNING] Ignored `font-size:calc(1.3rem + .6vw)` at 5:175010, invalid value.
+2025-12-04 17:45:07 [WARNING] Ignored `font-size:calc(1.275rem + .3vw)` at 5:175056, invalid value.
+2025-12-04 17:45:07 [WARNING] Ignored `word-break:break-word` at 5:176220, invalid value.
+2025-12-04 17:45:07 [WARNING] Ignored `user-select:all` at 5:184713, unknown property.
+2025-12-04 17:45:07 [WARNING] Ignored `user-select:auto` at 5:184824, unknown property.
+2025-12-04 17:45:07 [WARNING] Ignored `user-select:none` at 5:184936, unknown property.
+2025-12-04 17:45:07 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:07 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:190423.
+2025-12-04 17:45:07 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:07 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:198547.
+2025-12-04 17:45:07 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:07 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:206671.
+2025-12-04 17:45:07 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:07 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:214795.
+2025-12-04 17:45:07 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:07 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:222920.
+2025-12-04 17:45:07 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:07 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:231219.
+2025-12-04 17:45:08 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:08] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-12-04 17:45:08 [WARNING] Ignored `min-height: 100vh` at 2:3, invalid value.
+2025-12-04 17:45:09 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:09] "GET /static/css/pdf.css HTTP/1.1" 200 -
+2025-12-04 17:45:09 [ERROR] Relative URI reference without a base URI: <link href="../static/css/bootstrap.min.css">
+2025-12-04 17:45:09 [ERROR] Relative URI reference without a base URI: <link href="../static/css/styles.css">
+2025-12-04 17:45:09 [WARNING] Ignored `padding-left: calc(1.5rem * .5)` at 5:11893, invalid value.
+2025-12-04 17:45:09 [WARNING] Ignored `padding-right: calc(1.5rem * .5)` at 5:11850, invalid value.
+2025-12-04 17:45:09 [WARNING] Ignored `text-align: ` at 5:5747, no value.
+2025-12-04 17:45:11 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:11] "POST /estadisticas/pdf HTTP/1.1" 200 -
+2025-12-04 17:45:20 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:20] "POST /estadisticas HTTP/1.1" 200 -
+2025-12-04 17:45:20 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 17:45:20 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 17:45:20 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 17:45:23 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:23] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-12-04 17:45:23 [WARNING] Unknown empty rule <AtRule @charset c { c }> at 1:1
+2025-12-04 17:45:23 [WARNING] Ignored `color-scheme:dark` at 5:3730, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:no-preference)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:no-preference)' the whole @media rule was ignored at 5:5467.
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.375rem + 1.5vw)` at 5:6114, invalid value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:6147.
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.325rem + .9vw)` at 5:6205, invalid value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:6237.
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.3rem + .6vw)` at 5:6293, invalid value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:6323.
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.275rem + .3vw)` at 5:6382, invalid value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:6414.
+2025-12-04 17:45:23 [WARNING] Ignored `text-decoration-skip-ink:none` at 5:6682, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `text-align:-webkit-match-parent` at 5:8160, invalid value.
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '[list]:not([type=date]):not([type=datetime-local]):not([type=month]):not([type=week]):not([type=time])::-webkit-calendar-picker-indicator'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '::-moz-focus-inner'
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.275rem + .3vw)` at 5:9143, invalid value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:9175.
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '::-webkit-inner-spin-button'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '[type=search]::-webkit-search-cancel-button'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '::-webkit-search-decoration'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '::-webkit-color-swatch-wrapper'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '::-webkit-file-upload-button'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.625rem + 4.5vw)` at 5:10133, invalid value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10166.
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.575rem + 3.9vw)` at 5:10262, invalid value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10295.
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.525rem + 3.3vw)` at 5:10393, invalid value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10426.
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.475rem + 2.7vw)` at 5:10522, invalid value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10555.
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.425rem + 2.1vw)` at 5:10653, invalid value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10686.
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.375rem + 1.5vw)` at 5:10782, invalid value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10815.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:11958.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:12025.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:12106.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:12201.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:12312.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:14469.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:16204.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:17939.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:19674.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:21410.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:inset 0 0 0 9999px var(--bs-table-bg-state,var(--bs-table-bg-type,var(--bs-table-accent-bg)))` at 5:24111, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-x:auto` at 5:27930, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:575.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:575.98px)' the whole @media rule was ignored at 5:27979.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:767.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:767.98px)' the whole @media rule was ignored at 5:28078.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:991.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:991.98px)' the whole @media rule was ignored at 5:28177.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:1199.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:1199.98px)' the whole @media rule was ignored at 5:28276.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:1399.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:1399.98px)' the whole @media rule was ignored at 5:28376.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:29462.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:0 0 0 .25rem rgba(13,110,253,.25)` at 5:29757, unknown property.
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control::-webkit-date-and-time-value'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control::-webkit-datetime-edit'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control::placeholder', unknown pseudo-element: placeholder
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control::-webkit-file-upload-button'
+2025-12-04 17:45:23 [WARNING] Ignored `margin-inline-end:.75rem` at 5:30798, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `border-inline-end-width:var(--bs-border-width)` at 5:30964, unknown property.
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:31153.
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control:hover:not(:disabled):not([readonly])::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control-sm::-webkit-file-upload-button'
+2025-12-04 17:45:23 [WARNING] Ignored `margin-inline-end:.5rem` at 5:32335, unknown property.
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control-sm::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control-lg::-webkit-file-upload-button'
+2025-12-04 17:45:23 [WARNING] Ignored `margin-inline-end:1rem` at 5:32752, unknown property.
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control-lg::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control-color::-moz-color-swatch'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control-color::-webkit-color-swatch'
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:34447.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:0 0 0 .25rem rgba(13,110,253,.25)` at 5:34566, unknown property.
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-select:-moz-focusring'
+2025-12-04 17:45:23 [WARNING] Ignored `color-adjust:exact` at 5:36155, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `print-color-adjust:exact` at 5:36174, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `filter:brightness(90%)` at 5:36325, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:0 0 0 .25rem rgba(13,110,253,.25)` at 5:36403, unknown property.
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-check-input[type=checkbox]:indeterminate'
+2025-12-04 17:45:23 [WARNING] Ignored `filter:none` at 5:37386, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:37929.
+2025-12-04 17:45:23 [WARNING] Ignored `filter:none` at 5:38784, unknown property.
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-range:focus::-webkit-slider-thumb'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-range:focus::-moz-range-thumb'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-range::-moz-focus-outer'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-range::-webkit-slider-thumb'
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:39846.
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-range::-webkit-slider-thumb:active'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-range::-webkit-slider-runnable-track'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-range::-moz-range-thumb'
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:40564.
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-range::-moz-range-thumb:active'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-range::-moz-range-track'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-range:disabled::-webkit-slider-thumb'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-range:disabled::-moz-range-thumb'
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:41748.
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control-plaintext::placeholder,.form-floating>.form-control::placeholder', unknown pseudo-element: placeholder
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control-plaintext:focus,.form-floating>.form-control-plaintext:not(:placeholder-shown),.form-floating>.form-control:focus,.form-floating>.form-control:not(:placeholder-shown)'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control-plaintext:-webkit-autofill,.form-floating>.form-control:-webkit-autofill'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control-plaintext~label,.form-floating>.form-control:focus~label,.form-floating>.form-control:not(:placeholder-shown)~label,.form-floating>.form-select~label'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control:-webkit-autofill~label'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-floating>textarea:focus~label::after,.form-floating>textarea:not(:placeholder-shown)~label::after'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.is-valid~.valid-feedback,.is-valid~.valid-tooltip,.was-validated :valid~.valid-feedback,.was-validated :valid~.valid-tooltip'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control.is-valid,.was-validated .form-control:valid'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control.is-valid:focus,.was-validated .form-control:valid:focus'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.was-validated textarea.form-control:valid,textarea.form-control.is-valid'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-select.is-valid,.was-validated .form-select:valid'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-select.is-valid:not([multiple]):not([size]),.form-select.is-valid:not([multiple])[size="1"],.was-validated .form-select:valid:not([multiple]):not([size]),.was-validated .form-select:valid:not([multiple])[size="1"]'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-select.is-valid:focus,.was-validated .form-select:valid:focus'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control-color.is-valid,.was-validated .form-control-color:valid'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-check-input.is-valid,.was-validated .form-check-input:valid'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-check-input.is-valid:checked,.was-validated .form-check-input:valid:checked'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-check-input.is-valid:focus,.was-validated .form-check-input:valid:focus'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-check-input.is-valid~.form-check-label,.was-validated .form-check-input:valid~.form-check-label'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.input-group>.form-control:not(:focus).is-valid,.input-group>.form-floating:not(:focus-within).is-valid,.input-group>.form-select:not(:focus).is-valid,.was-validated .input-group>.form-control:not(:focus):valid,.was-validated .input-group>.form-floating:not(:focus-within):valid,.was-validated .input-group>.form-select:not(:focus):valid'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.is-invalid~.invalid-feedback,.is-invalid~.invalid-tooltip,.was-validated :invalid~.invalid-feedback,.was-validated :invalid~.invalid-tooltip'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control.is-invalid,.was-validated .form-control:invalid'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control.is-invalid:focus,.was-validated .form-control:invalid:focus'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.was-validated textarea.form-control:invalid,textarea.form-control.is-invalid'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-select.is-invalid,.was-validated .form-select:invalid'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-select.is-invalid:not([multiple]):not([size]),.form-select.is-invalid:not([multiple])[size="1"],.was-validated .form-select:invalid:not([multiple]):not([size]),.was-validated .form-select:invalid:not([multiple])[size="1"]'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-select.is-invalid:focus,.was-validated .form-select:invalid:focus'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-control-color.is-invalid,.was-validated .form-control-color:invalid'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-check-input.is-invalid,.was-validated .form-check-input:invalid'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-check-input.is-invalid:checked,.was-validated .form-check-input:invalid:checked'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-check-input.is-invalid:focus,.was-validated .form-check-input:invalid:focus'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.form-check-input.is-invalid~.form-check-label,.was-validated .form-check-input:invalid~.form-check-label'
+2025-12-04 17:45:23 [WARNING] Invalid or unsupported selector, '.input-group>.form-control:not(:focus).is-invalid,.input-group>.form-floating:not(:focus-within).is-invalid,.input-group>.form-select:not(:focus).is-invalid,.was-validated .input-group>.form-control:not(:focus):invalid,.was-validated .input-group>.form-floating:not(:focus-within):invalid,.was-validated .input-group>.form-select:not(:focus):invalid'
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-btn-font-family: ` at 5:52683, no value.
+2025-12-04 17:45:23 [WARNING] Ignored `user-select:none` at 5:53583, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:53869.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:var(--bs-btn-focus-box-shadow)` at 5:54328, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:var(--bs-btn-focus-box-shadow)` at 5:54456, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:var(--bs-btn-focus-box-shadow)` at 5:54887, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:var(--bs-btn-focus-box-shadow)` at 5:54967, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:63582.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:63770.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:63917.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:66242.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:66466.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:66690.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:66914.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:67139.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-dropdown-box-shadow: ` at 5:70204, no value.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-nav-link-font-weight: ` at 5:72954, no value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:73552.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:0 0 0 .25rem rgba(13,110,253,.25)` at 5:73721, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `isolation:isolate` at 5:74738, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-nav-link-font-weight: ` at 5:78402, no value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:79429.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:0 0 0 var(--bs-navbar-toggler-focus-width)` at 5:79597, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-y:auto` at 5:79925, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:79941.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:80855.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:81769.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:82683.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:83598.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-y:visible` at 5:85362, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-card-title-color: ` at 5:86389, no value.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-card-subtitle-color: ` at 5:86413, no value.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-card-box-shadow: ` at 5:86592, no value.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-card-cap-color: ` at 5:86816, no value.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-card-height: ` at 5:86838, no value.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-card-color: ` at 5:86857, no value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:89891.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-anchor:none` at 5:92582, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:92645.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color)` at 5:92839, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:93406.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:var(--bs-accordion-btn-focus-box-shadow)` at 5:93565, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-breadcrumb-bg: ` at 5:95986, no value.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-breadcrumb-border-radius: ` at 5:96007, no value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:98291.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:var(--bs-pagination-focus-box-shadow)` at 5:98647, unknown property.
+2025-12-04 17:45:23 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:102897
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:103749.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:104258.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:107651.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:108410.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:109169.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:109928.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:110688.
+2025-12-04 17:45:23 [WARNING] Ignored `filter:var(--bs-btn-close-filter)` at 5:117279, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:var(--bs-btn-close-focus-shadow)` at 5:117519, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `user-select:none` at 5:117712, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-btn-close-filter: ` at 5:117884, no value.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-toast-color: ` at 5:118164, no value.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:var(--bs-toast-box-shadow)` at 5:118866, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `width:-webkit-max-content` at 5:119093, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `width:-moz-max-content` at 5:119119, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `width:max-content` at 5:119142, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-modal-footer-bg: ` at 5:120666, no value.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-x:hidden` at 5:120892, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-y:auto` at 5:120910, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:121118.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-y:auto` at 5:121478, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `width:100vw` at 5:122068, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `height:100vh` at 5:122080, invalid value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:123481.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:123697.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:123766.
+2025-12-04 17:45:23 [WARNING] Ignored `width:100vw` at 5:123845, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-y:auto` at 5:124073, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:575.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:575.98px)' the whole @media rule was ignored at 5:124089.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:767.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:767.98px)' the whole @media rule was ignored at 5:124420.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:991.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:991.98px)' the whole @media rule was ignored at 5:124751.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:1199.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:1199.98px)' the whole @media rule was ignored at 5:125082.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:1399.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:1399.98px)' the whole @media rule was ignored at 5:125414.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-tooltip-margin: ` at 5:125875, no value.
+2025-12-04 17:45:23 [WARNING] Ignored `text-shadow:none` at 5:126369, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `line-break:auto` at 5:126485, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `text-shadow:none` at 5:129940, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `line-break:auto` at 5:130056, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `backface-visibility:hidden` at 5:135405, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:135469.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:136193.
+2025-12-04 17:45:23 [WARNING] Ignored `filter:var(--bs-carousel-control-icon-filter)` at 5:136541, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:136636.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:138279.
+2025-12-04 17:45:23 [WARNING] Ignored `--bs-carousel-control-icon-filter: ` at 5:138828, no value.
+2025-12-04 17:45:23 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:139302
+2025-12-04 17:45:23 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:139758
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:140116.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:575.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:575.98px)' the whole @media rule was ignored at 5:140775.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:575.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:575.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:141097.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:575.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:575.98px)' the whole @media rule was ignored at 5:141192.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:142163.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:767.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:767.98px)' the whole @media rule was ignored at 5:142467.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:767.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:767.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:142789.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:767.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:767.98px)' the whole @media rule was ignored at 5:142884.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:143855.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:991.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:991.98px)' the whole @media rule was ignored at 5:144159.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:991.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:991.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:144481.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:991.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:991.98px)' the whole @media rule was ignored at 5:144576.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:145547.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:1199.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:1199.98px)' the whole @media rule was ignored at 5:145851.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:1199.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:1199.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:146174.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:1199.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:1199.98px)' the whole @media rule was ignored at 5:146270.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:147242.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:1399.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:1399.98px)' the whole @media rule was ignored at 5:147547.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:1399.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:1399.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:147871.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(max-width:1399.98px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (max-width:1399.98px)' the whole @media rule was ignored at 5:147968.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:148949.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:149547.
+2025-12-04 17:45:23 [WARNING] Ignored `width:100vw` at 5:150590, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `height:100vh` at 5:150602, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-y:auto` at 5:151305, unknown property.
+2025-12-04 17:45:23 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:151681
+2025-12-04 17:45:23 [WARNING] Ignored `mask-image:linear-gradient(130deg,#000 55%,rgba(0,0,0,0.8) 75%,#000 95%)` at 5:151824, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `mask-size:200% 100%` at 5:151925, unknown property.
+2025-12-04 17:45:23 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:151991
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:var(--bs-focus-ring-x,0) var(--bs-focus-ring-y,0) var(--bs-focus-ring-blur,0) var(--bs-focus-ring-width) var(--bs-focus-ring-color)` at 5:158113, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `backface-visibility:hidden` at 5:158550, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `fill:currentcolor` at 5:158627, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:158682.
+2025-12-04 17:45:23 [WARNING] Ignored `position:-webkit-sticky` at 5:159339, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `position:sticky` at 5:159363, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `position:-webkit-sticky` at 5:159413, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `position:sticky` at 5:159437, invalid value.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:159475.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:159655.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:159835.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:160015.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:160196.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-x:auto` at 5:162448, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-x:hidden` at 5:162493, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-x:visible` at 5:162541, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-x:scroll` at 5:162589, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-y:auto` at 5:162634, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-y:hidden` at 5:162679, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-y:visible` at 5:162727, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `overflow-y:scroll` at 5:162775, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:var(--bs-box-shadow)` at 5:163226, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:var(--bs-box-shadow-sm)` at 5:163279, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:var(--bs-box-shadow-lg)` at 5:163335, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `box-shadow:none` at 5:163393, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `position:-webkit-sticky` at 5:164400, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `position:sticky` at 5:164434, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `width:100vw` at 5:167980, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `min-width:100vw` at 5:168014, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `height:100vh` at 5:168222, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `min-height:100vh` at 5:168257, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.375rem + 1.5vw)` at 5:174913, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.325rem + .9vw)` at 5:174962, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.3rem + .6vw)` at 5:175010, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `font-size:calc(1.275rem + .3vw)` at 5:175056, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `word-break:break-word` at 5:176220, invalid value.
+2025-12-04 17:45:23 [WARNING] Ignored `user-select:all` at 5:184713, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `user-select:auto` at 5:184824, unknown property.
+2025-12-04 17:45:23 [WARNING] Ignored `user-select:none` at 5:184936, unknown property.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:190423.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:198547.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:206671.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:214795.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:222920.
+2025-12-04 17:45:23 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 17:45:23 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:231219.
+2025-12-04 17:45:24 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:24] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-12-04 17:45:24 [WARNING] Ignored `min-height: 100vh` at 2:3, invalid value.
+2025-12-04 17:45:25 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:25] "GET /static/css/pdf.css HTTP/1.1" 200 -
+2025-12-04 17:45:25 [ERROR] Relative URI reference without a base URI: <link href="../static/css/bootstrap.min.css">
+2025-12-04 17:45:25 [ERROR] Relative URI reference without a base URI: <link href="../static/css/styles.css">
+2025-12-04 17:45:25 [WARNING] Ignored `padding-left: calc(1.5rem * .5)` at 5:11893, invalid value.
+2025-12-04 17:45:25 [WARNING] Ignored `padding-right: calc(1.5rem * .5)` at 5:11850, invalid value.
+2025-12-04 17:45:25 [WARNING] Ignored `text-align: ` at 5:5747, no value.
+2025-12-04 17:45:26 [INFO] 127.0.0.1 - - [04/Dec/2025 17:45:26] "POST /estadisticas/pdf HTTP/1.1" 200 -
+2025-12-04 17:51:08 [INFO] 127.0.0.1 - - [04/Dec/2025 17:51:08] "POST /estadisticas HTTP/1.1" 200 -
+2025-12-04 17:51:08 [INFO] 127.0.0.1 - - [04/Dec/2025 17:51:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 17:51:09 [INFO] 127.0.0.1 - - [04/Dec/2025 17:51:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 17:51:09 [INFO] 127.0.0.1 - - [04/Dec/2025 17:51:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 18:38:10 [INFO] 127.0.0.1 - - [04/Dec/2025 18:38:10] "POST /estadisticas HTTP/1.1" 200 -
+2025-12-04 18:38:10 [INFO] 127.0.0.1 - - [04/Dec/2025 18:38:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 18:38:10 [INFO] 127.0.0.1 - - [04/Dec/2025 18:38:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 18:38:10 [INFO] 127.0.0.1 - - [04/Dec/2025 18:38:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 18:38:30 [INFO] 127.0.0.1 - - [04/Dec/2025 18:38:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 18:38:30 [INFO] 127.0.0.1 - - [04/Dec/2025 18:38:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 18:38:30 [INFO] 127.0.0.1 - - [04/Dec/2025 18:38:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 18:38:30 [INFO] 127.0.0.1 - - [04/Dec/2025 18:38:30] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 18:41:42 [INFO] 127.0.0.1 - - [04/Dec/2025 18:41:42] "POST /estadisticas HTTP/1.1" 200 -
+2025-12-04 18:41:42 [INFO] 127.0.0.1 - - [04/Dec/2025 18:41:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 18:41:42 [INFO] 127.0.0.1 - - [04/Dec/2025 18:41:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 18:41:42 [INFO] 127.0.0.1 - - [04/Dec/2025 18:41:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 18:41:42 [INFO] 127.0.0.1 - - [04/Dec/2025 18:41:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 18:41:42 [INFO] 127.0.0.1 - - [04/Dec/2025 18:41:42] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 18:42:38 [INFO] 127.0.0.1 - - [04/Dec/2025 18:42:38] "POST /estadisticas HTTP/1.1" 200 -
+2025-12-04 18:42:39 [INFO] 127.0.0.1 - - [04/Dec/2025 18:42:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 18:42:39 [INFO] 127.0.0.1 - - [04/Dec/2025 18:42:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 18:42:39 [INFO] 127.0.0.1 - - [04/Dec/2025 18:42:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 18:43:18 [INFO] 127.0.0.1 - - [04/Dec/2025 18:43:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 18:43:18 [INFO] 127.0.0.1 - - [04/Dec/2025 18:43:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 18:43:18 [INFO] 127.0.0.1 - - [04/Dec/2025 18:43:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 18:43:18 [INFO] 127.0.0.1 - - [04/Dec/2025 18:43:18] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 18:44:53 [INFO] 127.0.0.1 - - [04/Dec/2025 18:44:53] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-12-04 18:44:53 [WARNING] Unknown empty rule <AtRule @charset c { c }> at 1:1
+2025-12-04 18:44:53 [WARNING] Ignored `color-scheme:dark` at 5:3730, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:no-preference)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:no-preference)' the whole @media rule was ignored at 5:5467.
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.375rem + 1.5vw)` at 5:6114, invalid value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:6147.
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.325rem + .9vw)` at 5:6205, invalid value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:6237.
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.3rem + .6vw)` at 5:6293, invalid value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:6323.
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.275rem + .3vw)` at 5:6382, invalid value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:6414.
+2025-12-04 18:44:53 [WARNING] Ignored `text-decoration-skip-ink:none` at 5:6682, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `text-align:-webkit-match-parent` at 5:8160, invalid value.
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '[list]:not([type=date]):not([type=datetime-local]):not([type=month]):not([type=week]):not([type=time])::-webkit-calendar-picker-indicator'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '::-moz-focus-inner'
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.275rem + .3vw)` at 5:9143, invalid value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:9175.
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '::-webkit-inner-spin-button'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '[type=search]::-webkit-search-cancel-button'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '::-webkit-search-decoration'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '::-webkit-color-swatch-wrapper'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '::-webkit-file-upload-button'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.625rem + 4.5vw)` at 5:10133, invalid value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10166.
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.575rem + 3.9vw)` at 5:10262, invalid value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10295.
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.525rem + 3.3vw)` at 5:10393, invalid value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10426.
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.475rem + 2.7vw)` at 5:10522, invalid value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10555.
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.425rem + 2.1vw)` at 5:10653, invalid value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10686.
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.375rem + 1.5vw)` at 5:10782, invalid value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:10815.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:11958.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:12025.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:12106.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:12201.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:12312.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:14469.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:16204.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:17939.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:19674.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:21410.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:inset 0 0 0 9999px var(--bs-table-bg-state,var(--bs-table-bg-type,var(--bs-table-accent-bg)))` at 5:24111, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-x:auto` at 5:27930, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:575.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:575.98px)' the whole @media rule was ignored at 5:27979.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:767.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:767.98px)' the whole @media rule was ignored at 5:28078.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:991.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:991.98px)' the whole @media rule was ignored at 5:28177.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:1199.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:1199.98px)' the whole @media rule was ignored at 5:28276.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:1399.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:1399.98px)' the whole @media rule was ignored at 5:28376.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:29462.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:0 0 0 .25rem rgba(13,110,253,.25)` at 5:29757, unknown property.
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control::-webkit-date-and-time-value'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control::-webkit-datetime-edit'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control::placeholder', unknown pseudo-element: placeholder
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control::-webkit-file-upload-button'
+2025-12-04 18:44:53 [WARNING] Ignored `margin-inline-end:.75rem` at 5:30798, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `border-inline-end-width:var(--bs-border-width)` at 5:30964, unknown property.
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:31153.
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control:hover:not(:disabled):not([readonly])::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control-sm::-webkit-file-upload-button'
+2025-12-04 18:44:53 [WARNING] Ignored `margin-inline-end:.5rem` at 5:32335, unknown property.
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control-sm::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control-lg::-webkit-file-upload-button'
+2025-12-04 18:44:53 [WARNING] Ignored `margin-inline-end:1rem` at 5:32752, unknown property.
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control-lg::file-selector-button', unknown pseudo-element: file-selector-button
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control-color::-moz-color-swatch'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control-color::-webkit-color-swatch'
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:34447.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:0 0 0 .25rem rgba(13,110,253,.25)` at 5:34566, unknown property.
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-select:-moz-focusring'
+2025-12-04 18:44:53 [WARNING] Ignored `color-adjust:exact` at 5:36155, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `print-color-adjust:exact` at 5:36174, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `filter:brightness(90%)` at 5:36325, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:0 0 0 .25rem rgba(13,110,253,.25)` at 5:36403, unknown property.
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-check-input[type=checkbox]:indeterminate'
+2025-12-04 18:44:53 [WARNING] Ignored `filter:none` at 5:37386, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:37929.
+2025-12-04 18:44:53 [WARNING] Ignored `filter:none` at 5:38784, unknown property.
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-range:focus::-webkit-slider-thumb'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-range:focus::-moz-range-thumb'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-range::-moz-focus-outer'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-range::-webkit-slider-thumb'
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:39846.
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-range::-webkit-slider-thumb:active'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-range::-webkit-slider-runnable-track'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-range::-moz-range-thumb'
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:40564.
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-range::-moz-range-thumb:active'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-range::-moz-range-track'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-range:disabled::-webkit-slider-thumb'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-range:disabled::-moz-range-thumb'
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:41748.
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control-plaintext::placeholder,.form-floating>.form-control::placeholder', unknown pseudo-element: placeholder
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control-plaintext:focus,.form-floating>.form-control-plaintext:not(:placeholder-shown),.form-floating>.form-control:focus,.form-floating>.form-control:not(:placeholder-shown)'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control-plaintext:-webkit-autofill,.form-floating>.form-control:-webkit-autofill'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control-plaintext~label,.form-floating>.form-control:focus~label,.form-floating>.form-control:not(:placeholder-shown)~label,.form-floating>.form-select~label'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-floating>.form-control:-webkit-autofill~label'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-floating>textarea:focus~label::after,.form-floating>textarea:not(:placeholder-shown)~label::after'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.is-valid~.valid-feedback,.is-valid~.valid-tooltip,.was-validated :valid~.valid-feedback,.was-validated :valid~.valid-tooltip'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control.is-valid,.was-validated .form-control:valid'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control.is-valid:focus,.was-validated .form-control:valid:focus'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.was-validated textarea.form-control:valid,textarea.form-control.is-valid'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-select.is-valid,.was-validated .form-select:valid'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-select.is-valid:not([multiple]):not([size]),.form-select.is-valid:not([multiple])[size="1"],.was-validated .form-select:valid:not([multiple]):not([size]),.was-validated .form-select:valid:not([multiple])[size="1"]'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-select.is-valid:focus,.was-validated .form-select:valid:focus'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control-color.is-valid,.was-validated .form-control-color:valid'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-check-input.is-valid,.was-validated .form-check-input:valid'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-check-input.is-valid:checked,.was-validated .form-check-input:valid:checked'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-check-input.is-valid:focus,.was-validated .form-check-input:valid:focus'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-check-input.is-valid~.form-check-label,.was-validated .form-check-input:valid~.form-check-label'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.input-group>.form-control:not(:focus).is-valid,.input-group>.form-floating:not(:focus-within).is-valid,.input-group>.form-select:not(:focus).is-valid,.was-validated .input-group>.form-control:not(:focus):valid,.was-validated .input-group>.form-floating:not(:focus-within):valid,.was-validated .input-group>.form-select:not(:focus):valid'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.is-invalid~.invalid-feedback,.is-invalid~.invalid-tooltip,.was-validated :invalid~.invalid-feedback,.was-validated :invalid~.invalid-tooltip'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control.is-invalid,.was-validated .form-control:invalid'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control.is-invalid:focus,.was-validated .form-control:invalid:focus'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.was-validated textarea.form-control:invalid,textarea.form-control.is-invalid'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-select.is-invalid,.was-validated .form-select:invalid'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-select.is-invalid:not([multiple]):not([size]),.form-select.is-invalid:not([multiple])[size="1"],.was-validated .form-select:invalid:not([multiple]):not([size]),.was-validated .form-select:invalid:not([multiple])[size="1"]'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-select.is-invalid:focus,.was-validated .form-select:invalid:focus'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-control-color.is-invalid,.was-validated .form-control-color:invalid'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-check-input.is-invalid,.was-validated .form-check-input:invalid'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-check-input.is-invalid:checked,.was-validated .form-check-input:invalid:checked'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-check-input.is-invalid:focus,.was-validated .form-check-input:invalid:focus'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.form-check-input.is-invalid~.form-check-label,.was-validated .form-check-input:invalid~.form-check-label'
+2025-12-04 18:44:53 [WARNING] Invalid or unsupported selector, '.input-group>.form-control:not(:focus).is-invalid,.input-group>.form-floating:not(:focus-within).is-invalid,.input-group>.form-select:not(:focus).is-invalid,.was-validated .input-group>.form-control:not(:focus):invalid,.was-validated .input-group>.form-floating:not(:focus-within):invalid,.was-validated .input-group>.form-select:not(:focus):invalid'
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-btn-font-family: ` at 5:52683, no value.
+2025-12-04 18:44:53 [WARNING] Ignored `user-select:none` at 5:53583, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:53869.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:var(--bs-btn-focus-box-shadow)` at 5:54328, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:var(--bs-btn-focus-box-shadow)` at 5:54456, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:var(--bs-btn-focus-box-shadow)` at 5:54887, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:var(--bs-btn-focus-box-shadow)` at 5:54967, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:63582.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:63770.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:63917.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:66242.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:66466.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:66690.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:66914.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:67139.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-dropdown-box-shadow: ` at 5:70204, no value.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-nav-link-font-weight: ` at 5:72954, no value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:73552.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:0 0 0 .25rem rgba(13,110,253,.25)` at 5:73721, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `isolation:isolate` at 5:74738, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-nav-link-font-weight: ` at 5:78402, no value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:79429.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:0 0 0 var(--bs-navbar-toggler-focus-width)` at 5:79597, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-y:auto` at 5:79925, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:79941.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:80855.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:81769.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:82683.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:83598.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-y:visible` at 5:85362, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-card-title-color: ` at 5:86389, no value.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-card-subtitle-color: ` at 5:86413, no value.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-card-box-shadow: ` at 5:86592, no value.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-card-cap-color: ` at 5:86816, no value.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-card-height: ` at 5:86838, no value.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-card-color: ` at 5:86857, no value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:89891.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-anchor:none` at 5:92582, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:92645.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color)` at 5:92839, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:93406.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:var(--bs-accordion-btn-focus-box-shadow)` at 5:93565, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-breadcrumb-bg: ` at 5:95986, no value.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-breadcrumb-border-radius: ` at 5:96007, no value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:98291.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:var(--bs-pagination-focus-box-shadow)` at 5:98647, unknown property.
+2025-12-04 18:44:53 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:102897
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:103749.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:104258.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:107651.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:108410.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:109169.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:109928.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:110688.
+2025-12-04 18:44:53 [WARNING] Ignored `filter:var(--bs-btn-close-filter)` at 5:117279, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:var(--bs-btn-close-focus-shadow)` at 5:117519, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `user-select:none` at 5:117712, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-btn-close-filter: ` at 5:117884, no value.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-toast-color: ` at 5:118164, no value.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:var(--bs-toast-box-shadow)` at 5:118866, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `width:-webkit-max-content` at 5:119093, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `width:-moz-max-content` at 5:119119, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `width:max-content` at 5:119142, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-modal-footer-bg: ` at 5:120666, no value.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-x:hidden` at 5:120892, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-y:auto` at 5:120910, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:121118.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-y:auto` at 5:121478, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `width:100vw` at 5:122068, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `height:100vh` at 5:122080, invalid value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:123481.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:123697.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:123766.
+2025-12-04 18:44:53 [WARNING] Ignored `width:100vw` at 5:123845, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-y:auto` at 5:124073, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:575.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:575.98px)' the whole @media rule was ignored at 5:124089.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:767.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:767.98px)' the whole @media rule was ignored at 5:124420.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:991.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:991.98px)' the whole @media rule was ignored at 5:124751.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:1199.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:1199.98px)' the whole @media rule was ignored at 5:125082.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:1399.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:1399.98px)' the whole @media rule was ignored at 5:125414.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-tooltip-margin: ` at 5:125875, no value.
+2025-12-04 18:44:53 [WARNING] Ignored `text-shadow:none` at 5:126369, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `line-break:auto` at 5:126485, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `text-shadow:none` at 5:129940, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `line-break:auto` at 5:130056, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `backface-visibility:hidden` at 5:135405, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:135469.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:136193.
+2025-12-04 18:44:53 [WARNING] Ignored `filter:var(--bs-carousel-control-icon-filter)` at 5:136541, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:136636.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:138279.
+2025-12-04 18:44:53 [WARNING] Ignored `--bs-carousel-control-icon-filter: ` at 5:138828, no value.
+2025-12-04 18:44:53 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:139302
+2025-12-04 18:44:53 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:139758
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:140116.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:575.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:575.98px)' the whole @media rule was ignored at 5:140775.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:575.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:575.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:141097.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:575.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:575.98px)' the whole @media rule was ignored at 5:141192.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:142163.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:767.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:767.98px)' the whole @media rule was ignored at 5:142467.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:767.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:767.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:142789.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:767.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:767.98px)' the whole @media rule was ignored at 5:142884.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:143855.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:991.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:991.98px)' the whole @media rule was ignored at 5:144159.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:991.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:991.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:144481.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:991.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:991.98px)' the whole @media rule was ignored at 5:144576.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:145547.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:1199.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:1199.98px)' the whole @media rule was ignored at 5:145851.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:1199.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:1199.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:146174.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:1199.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:1199.98px)' the whole @media rule was ignored at 5:146270.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:147242.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:1399.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:1399.98px)' the whole @media rule was ignored at 5:147547.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:1399.98px)and/**/(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:1399.98px) and (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:147871.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(max-width:1399.98px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (max-width:1399.98px)' the whole @media rule was ignored at 5:147968.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:148949.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:149547.
+2025-12-04 18:44:53 [WARNING] Ignored `width:100vw` at 5:150590, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `height:100vh` at 5:150602, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-y:auto` at 5:151305, unknown property.
+2025-12-04 18:44:53 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:151681
+2025-12-04 18:44:53 [WARNING] Ignored `mask-image:linear-gradient(130deg,#000 55%,rgba(0,0,0,0.8) 75%,#000 95%)` at 5:151824, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `mask-size:200% 100%` at 5:151925, unknown property.
+2025-12-04 18:44:53 [WARNING] Unknown rule <AtRule @keyframes c { c }> at 5:151991
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:var(--bs-focus-ring-x,0) var(--bs-focus-ring-y,0) var(--bs-focus-ring-blur,0) var(--bs-focus-ring-width) var(--bs-focus-ring-color)` at 5:158113, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `backface-visibility:hidden` at 5:158550, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `fill:currentcolor` at 5:158627, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(prefers-reduced-motion:reduce)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (prefers-reduced-motion:reduce)' the whole @media rule was ignored at 5:158682.
+2025-12-04 18:44:53 [WARNING] Ignored `position:-webkit-sticky` at 5:159339, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `position:sticky` at 5:159363, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `position:-webkit-sticky` at 5:159413, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `position:sticky` at 5:159437, invalid value.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:159475.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:159655.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:159835.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:160015.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:160196.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-x:auto` at 5:162448, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-x:hidden` at 5:162493, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-x:visible` at 5:162541, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-x:scroll` at 5:162589, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-y:auto` at 5:162634, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-y:hidden` at 5:162679, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-y:visible` at 5:162727, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `overflow-y:scroll` at 5:162775, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:var(--bs-box-shadow)` at 5:163226, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:var(--bs-box-shadow-sm)` at 5:163279, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:var(--bs-box-shadow-lg)` at 5:163335, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `box-shadow:none` at 5:163393, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `position:-webkit-sticky` at 5:164400, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `position:sticky` at 5:164434, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `width:100vw` at 5:167980, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `min-width:100vw` at 5:168014, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `height:100vh` at 5:168222, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `min-height:100vh` at 5:168257, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.375rem + 1.5vw)` at 5:174913, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.325rem + .9vw)` at 5:174962, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.3rem + .6vw)` at 5:175010, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `font-size:calc(1.275rem + .3vw)` at 5:175056, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `word-break:break-word` at 5:176220, invalid value.
+2025-12-04 18:44:53 [WARNING] Ignored `user-select:all` at 5:184713, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `user-select:auto` at 5:184824, unknown property.
+2025-12-04 18:44:53 [WARNING] Ignored `user-select:none` at 5:184936, unknown property.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:576px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:576px)' the whole @media rule was ignored at 5:190423.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:768px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:768px)' the whole @media rule was ignored at 5:198547.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:992px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:992px)' the whole @media rule was ignored at 5:206671.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:214795.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1400px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1400px)' the whole @media rule was ignored at 5:222920.
+2025-12-04 18:44:53 [WARNING] Expected a media type, got '(min-width:1200px)'
+2025-12-04 18:44:53 [WARNING] Invalid media type ' (min-width:1200px)' the whole @media rule was ignored at 5:231219.
+2025-12-04 18:44:54 [INFO] 127.0.0.1 - - [04/Dec/2025 18:44:54] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-12-04 18:44:54 [WARNING] Ignored `min-height: 100vh` at 2:3, invalid value.
+2025-12-04 18:44:55 [INFO] 127.0.0.1 - - [04/Dec/2025 18:44:55] "GET /static/css/pdf.css HTTP/1.1" 200 -
+2025-12-04 18:44:55 [ERROR] Relative URI reference without a base URI: <link href="../static/css/bootstrap.min.css">
+2025-12-04 18:44:55 [ERROR] Relative URI reference without a base URI: <link href="../static/css/styles.css">
+2025-12-04 18:44:56 [WARNING] Ignored `padding-left: calc(1.5rem * .5)` at 5:11893, invalid value.
+2025-12-04 18:44:56 [WARNING] Ignored `padding-right: calc(1.5rem * .5)` at 5:11850, invalid value.
+2025-12-04 18:44:56 [WARNING] Ignored `text-align: ` at 5:5747, no value.
+2025-12-04 18:44:56 [INFO] 127.0.0.1 - - [04/Dec/2025 18:44:56] "POST /estadisticas/pdf HTTP/1.1" 200 -
+2025-12-04 18:44:56 [INFO] 127.0.0.1 - - [04/Dec/2025 18:44:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 18:45:01 [INFO] 127.0.0.1 - - [04/Dec/2025 18:45:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 18:45:01 [INFO] 127.0.0.1 - - [04/Dec/2025 18:45:01] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 18:45:38 [INFO] 127.0.0.1 - - [04/Dec/2025 18:45:38] "POST /estadisticas HTTP/1.1" 200 -
+2025-12-04 18:45:38 [INFO] 127.0.0.1 - - [04/Dec/2025 18:45:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 18:45:38 [INFO] 127.0.0.1 - - [04/Dec/2025 18:45:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 18:45:38 [INFO] 127.0.0.1 - - [04/Dec/2025 18:45:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 18:45:38 [INFO] 127.0.0.1 - - [04/Dec/2025 18:45:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 18:45:39 [INFO] 127.0.0.1 - - [04/Dec/2025 18:45:39] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 18:50:07 [INFO] 127.0.0.1 - - [04/Dec/2025 18:50:07] "POST /estadisticas HTTP/1.1" 200 -
+2025-12-04 18:50:07 [INFO] 127.0.0.1 - - [04/Dec/2025 18:50:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 18:50:07 [INFO] 127.0.0.1 - - [04/Dec/2025 18:50:07] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-12-04 18:50:07 [INFO] 127.0.0.1 - - [04/Dec/2025 18:50:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 18:53:19 [INFO] 127.0.0.1 - - [04/Dec/2025 18:53:19] "POST /estadisticas HTTP/1.1" 200 -
+2025-12-04 18:53:19 [INFO] 127.0.0.1 - - [04/Dec/2025 18:53:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 18:53:19 [INFO] 127.0.0.1 - - [04/Dec/2025 18:53:19] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-12-04 18:53:19 [INFO] 127.0.0.1 - - [04/Dec/2025 18:53:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 18:59:17 [INFO] 127.0.0.1 - - [04/Dec/2025 18:59:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 18:59:17 [INFO] 127.0.0.1 - - [04/Dec/2025 18:59:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 18:59:17 [INFO] 127.0.0.1 - - [04/Dec/2025 18:59:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 18:59:18 [INFO] 127.0.0.1 - - [04/Dec/2025 18:59:18] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:00:32 [INFO] 127.0.0.1 - - [04/Dec/2025 19:00:32] "GET / HTTP/1.1" 200 -
+2025-12-04 19:00:32 [INFO] 127.0.0.1 - - [04/Dec/2025 19:00:32] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:00:32 [INFO] 127.0.0.1 - - [04/Dec/2025 19:00:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:00:32 [INFO] 127.0.0.1 - - [04/Dec/2025 19:00:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:00:33 [INFO] 127.0.0.1 - - [04/Dec/2025 19:00:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:00:34 [INFO] 127.0.0.1 - - [04/Dec/2025 19:00:34] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:01:25 [INFO] 127.0.0.1 - - [04/Dec/2025 19:01:25] "GET / HTTP/1.1" 200 -
+2025-12-04 19:01:26 [INFO] 127.0.0.1 - - [04/Dec/2025 19:01:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:01:26 [INFO] 127.0.0.1 - - [04/Dec/2025 19:01:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:01:26 [INFO] 127.0.0.1 - - [04/Dec/2025 19:01:26] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-12-04 19:01:26 [INFO] 127.0.0.1 - - [04/Dec/2025 19:01:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:01:27 [INFO] 127.0.0.1 - - [04/Dec/2025 19:01:27] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:01:33 [INFO] 127.0.0.1 - - [04/Dec/2025 19:01:33] "GET /estadisticas HTTP/1.1" 200 -
+2025-12-04 19:01:33 [INFO] 127.0.0.1 - - [04/Dec/2025 19:01:33] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:01:33 [INFO] 127.0.0.1 - - [04/Dec/2025 19:01:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:01:33 [INFO] 127.0.0.1 - - [04/Dec/2025 19:01:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:01:33 [INFO] 127.0.0.1 - - [04/Dec/2025 19:01:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:01:33 [INFO] 127.0.0.1 - - [04/Dec/2025 19:01:33] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:03:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:03:52] "GET /estadisticas HTTP/1.1" 200 -
+2025-12-04 19:03:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:03:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:03:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:03:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:03:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:03:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:03:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:03:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:03:53 [INFO] 127.0.0.1 - - [04/Dec/2025 19:03:53] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:03:54 [INFO] 127.0.0.1 - - [04/Dec/2025 19:03:54] "GET / HTTP/1.1" 200 -
+2025-12-04 19:03:54 [INFO] 127.0.0.1 - - [04/Dec/2025 19:03:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:03:54 [INFO] 127.0.0.1 - - [04/Dec/2025 19:03:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:03:55 [INFO] 127.0.0.1 - - [04/Dec/2025 19:03:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:03:55 [INFO] 127.0.0.1 - - [04/Dec/2025 19:03:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:03:55 [INFO] 127.0.0.1 - - [04/Dec/2025 19:03:55] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:04:04 [INFO] 127.0.0.1 - - [04/Dec/2025 19:04:04] "POST / HTTP/1.1" 200 -
+2025-12-04 19:04:05 [INFO] 127.0.0.1 - - [04/Dec/2025 19:04:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:04:05 [INFO] 127.0.0.1 - - [04/Dec/2025 19:04:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:04:05 [INFO] 127.0.0.1 - - [04/Dec/2025 19:04:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:04:05 [INFO] 127.0.0.1 - - [04/Dec/2025 19:04:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:04:05 [INFO] 127.0.0.1 - - [04/Dec/2025 19:04:05] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:05:16 [INFO] 127.0.0.1 - - [04/Dec/2025 19:05:16] "POST / HTTP/1.1" 200 -
+2025-12-04 19:05:17 [INFO] 127.0.0.1 - - [04/Dec/2025 19:05:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:05:17 [INFO] 127.0.0.1 - - [04/Dec/2025 19:05:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:05:17 [INFO] 127.0.0.1 - - [04/Dec/2025 19:05:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:06:51 [INFO] 127.0.0.1 - - [04/Dec/2025 19:06:51] "POST / HTTP/1.1" 200 -
+2025-12-04 19:06:51 [INFO] 127.0.0.1 - - [04/Dec/2025 19:06:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:06:51 [INFO] 127.0.0.1 - - [04/Dec/2025 19:06:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:06:51 [INFO] 127.0.0.1 - - [04/Dec/2025 19:06:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:07:02 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:02] "GET /estadisticas HTTP/1.1" 200 -
+2025-12-04 19:07:03 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:03] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:07:03 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:07:03 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:07:07 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:07] "GET / HTTP/1.1" 200 -
+2025-12-04 19:07:07 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:07:07 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:07:07 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:07:12 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:07:12 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:07:12 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:07:12 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:12] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:07:59 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:59] "GET / HTTP/1.1" 200 -
+2025-12-04 19:07:59 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:07:59 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:59] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-12-04 19:07:59 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:07:59 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:07:59 [INFO] 127.0.0.1 - - [04/Dec/2025 19:07:59] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:13:05 [INFO] 127.0.0.1 - - [04/Dec/2025 19:13:05] "GET / HTTP/1.1" 200 -
+2025-12-04 19:13:06 [INFO] 127.0.0.1 - - [04/Dec/2025 19:13:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:13:06 [INFO] 127.0.0.1 - - [04/Dec/2025 19:13:06] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-12-04 19:13:06 [INFO] 127.0.0.1 - - [04/Dec/2025 19:13:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:13:06 [INFO] 127.0.0.1 - - [04/Dec/2025 19:13:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:13:06 [INFO] 127.0.0.1 - - [04/Dec/2025 19:13:06] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:14:19 [INFO] 127.0.0.1 - - [04/Dec/2025 19:14:19] "GET / HTTP/1.1" 200 -
+2025-12-04 19:14:19 [INFO] 127.0.0.1 - - [04/Dec/2025 19:14:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:14:19 [INFO] 127.0.0.1 - - [04/Dec/2025 19:14:19] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-12-04 19:14:19 [INFO] 127.0.0.1 - - [04/Dec/2025 19:14:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:14:19 [INFO] 127.0.0.1 - - [04/Dec/2025 19:14:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:14:20 [INFO] 127.0.0.1 - - [04/Dec/2025 19:14:20] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:17:51 [INFO] 127.0.0.1 - - [04/Dec/2025 19:17:51] "POST / HTTP/1.1" 200 -
+2025-12-04 19:17:51 [INFO] 127.0.0.1 - - [04/Dec/2025 19:17:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:17:51 [INFO] 127.0.0.1 - - [04/Dec/2025 19:17:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:17:51 [INFO] 127.0.0.1 - - [04/Dec/2025 19:17:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:17:51 [INFO] 127.0.0.1 - - [04/Dec/2025 19:17:51] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:17:51 [INFO] 127.0.0.1 - - [04/Dec/2025 19:17:51] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:29:43 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-04 19:29:43 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-04 19:29:57 [ERROR] Error en consulta: 'ID'
+2025-12-04 19:29:57 [INFO] 127.0.0.1 - - [04/Dec/2025 19:29:57] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-12-04 19:29:57 [INFO] 127.0.0.1 - - [04/Dec/2025 19:29:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:31:17 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:17] "GET / HTTP/1.1" 200 -
+2025-12-04 19:31:17 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:31:17 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:17] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:31:22 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:22] "POST / HTTP/1.1" 200 -
+2025-12-04 19:31:22 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:31:22 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:31:22 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:31:22 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:31:22 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:22] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:31:39 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:39] "POST / HTTP/1.1" 200 -
+2025-12-04 19:31:40 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:31:40 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:31:40 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:31:40 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:31:40 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:40] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:31:51 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:51] "POST / HTTP/1.1" 200 -
+2025-12-04 19:31:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:31:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:31:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:31:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:31:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:52] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:31:56 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:56] "POST / HTTP/1.1" 200 -
+2025-12-04 19:31:56 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:31:56 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:31:56 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:31:56 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:31:57 [INFO] 127.0.0.1 - - [04/Dec/2025 19:31:57] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:32:00 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:00] "POST / HTTP/1.1" 200 -
+2025-12-04 19:32:00 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:32:00 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:32:00 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:32:00 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:32:00 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:00] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:32:35 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:35] "POST / HTTP/1.1" 200 -
+2025-12-04 19:32:36 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:32:36 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:36] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:32:36 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:32:36 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:32:37 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:37] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:32:50 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:50] "POST / HTTP/1.1" 200 -
+2025-12-04 19:32:50 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:32:50 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:32:50 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:50] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:32:50 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:32:50 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:50] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:32:56 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:56] "POST / HTTP/1.1" 200 -
+2025-12-04 19:32:56 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:32:56 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:32:56 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:32:56 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:32:56 [INFO] 127.0.0.1 - - [04/Dec/2025 19:32:56] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:35:25 [INFO] 127.0.0.1 - - [04/Dec/2025 19:35:25] "POST / HTTP/1.1" 200 -
+2025-12-04 19:35:25 [INFO] 127.0.0.1 - - [04/Dec/2025 19:35:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:35:25 [INFO] 127.0.0.1 - - [04/Dec/2025 19:35:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:35:26 [INFO] 127.0.0.1 - - [04/Dec/2025 19:35:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:35:26 [INFO] 127.0.0.1 - - [04/Dec/2025 19:35:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:35:26 [INFO] 127.0.0.1 - - [04/Dec/2025 19:35:26] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:35:31 [INFO] 127.0.0.1 - - [04/Dec/2025 19:35:31] "POST / HTTP/1.1" 200 -
+2025-12-04 19:35:31 [INFO] 127.0.0.1 - - [04/Dec/2025 19:35:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:35:31 [INFO] 127.0.0.1 - - [04/Dec/2025 19:35:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:35:31 [INFO] 127.0.0.1 - - [04/Dec/2025 19:35:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:35:31 [INFO] 127.0.0.1 - - [04/Dec/2025 19:35:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:35:31 [INFO] 127.0.0.1 - - [04/Dec/2025 19:35:31] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:42:35 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-04 19:42:35 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-04 19:42:44 [INFO] 127.0.0.1 - - [04/Dec/2025 19:42:44] "POST / HTTP/1.1" 200 -
+2025-12-04 19:42:44 [INFO] 127.0.0.1 - - [04/Dec/2025 19:42:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:42:45 [INFO] 127.0.0.1 - - [04/Dec/2025 19:42:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:42:45 [INFO] 127.0.0.1 - - [04/Dec/2025 19:42:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:42:45 [INFO] 127.0.0.1 - - [04/Dec/2025 19:42:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:42:45 [INFO] 127.0.0.1 - - [04/Dec/2025 19:42:45] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:43:25 [INFO] 127.0.0.1 - - [04/Dec/2025 19:43:25] "GET /estadisticas HTTP/1.1" 200 -
+2025-12-04 19:43:26 [INFO] 127.0.0.1 - - [04/Dec/2025 19:43:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:43:26 [INFO] 127.0.0.1 - - [04/Dec/2025 19:43:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:43:26 [INFO] 127.0.0.1 - - [04/Dec/2025 19:43:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:43:26 [INFO] 127.0.0.1 - - [04/Dec/2025 19:43:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:43:27 [INFO] 127.0.0.1 - - [04/Dec/2025 19:43:27] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:44:01 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:01] "GET / HTTP/1.1" 200 -
+2025-12-04 19:44:01 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:44:01 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:44:02 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:44:02 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:44:03 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:03] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:44:09 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:09] "GET /estadisticas HTTP/1.1" 200 -
+2025-12-04 19:44:09 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:44:09 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:44:09 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:44:09 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:44:09 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:09] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:44:11 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:11] "GET / HTTP/1.1" 200 -
+2025-12-04 19:44:11 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:44:11 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:44:11 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:44:11 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:44:11 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:11] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:44:42 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:42] "POST / HTTP/1.1" 200 -
+2025-12-04 19:44:43 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:44:43 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:44:43 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:44:43 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:44:43 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:43] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:44:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:52] "POST / HTTP/1.1" 200 -
+2025-12-04 19:44:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:44:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:44:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:44:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:44:52 [INFO] 127.0.0.1 - - [04/Dec/2025 19:44:52] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 19:45:15 [INFO] 127.0.0.1 - - [04/Dec/2025 19:45:15] "POST / HTTP/1.1" 200 -
+2025-12-04 19:45:16 [INFO] 127.0.0.1 - - [04/Dec/2025 19:45:16] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 19:45:16 [INFO] 127.0.0.1 - - [04/Dec/2025 19:45:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 19:45:16 [INFO] 127.0.0.1 - - [04/Dec/2025 19:45:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 19:45:16 [INFO] 127.0.0.1 - - [04/Dec/2025 19:45:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 19:45:16 [INFO] 127.0.0.1 - - [04/Dec/2025 19:45:16] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
