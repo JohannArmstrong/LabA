@@ -74,42 +74,6 @@
             </div>
             </form>
 
-
-
-
-        <!-- <form method="POST" class="mb-3">
-            <p>Seleccionar sedes:</p>
-            {% for sede in sedes %}
-                <label class="form-check">
-                    <input class="form-check-input" type="checkbox" name="sedes"
-                        value="{{ sede }}"
-                        {% if sede in sedes_seleccionadas %}checked{% endif %}>
-                    {{ sede }}
-                </label>
-            {% endfor %}
-
-            <p>Margen de tiempo:</p>
-            <div class="d-flex flex-column mb-2">
-                <label>Desde:</label>
-                <input type="date" name="filtro_fecha_desde" value="{{ filtro_fecha_desde }}" class="form-control w-auto d-inline-block fecha">
-                <label>Hasta:</label>
-                <input type="date" name="filtro_fecha_hasta" value="{{ filtro_fecha_hasta }}" class="form-control w-auto d-inline-block fecha">
-            </div>
-
-            <p>Opcionales:</p>
-            <label class="form-check">
-                <input class="form-check-input" type="checkbox" name="herramientas" value="herramientas"
-                    {% if mostrar_herramientas %}checked{% endif %}>
-                    Mostrar tabla de herramientas
-            </label>
-            <label class="form-check">
-                <input class="form-check-input" type="checkbox" name="graficas" value="graficas"
-                    {% if mostrar_graficas %}checked{% endif %}>
-                    Mostrar gráficas comparativas
-            </label>
-
-            <button type="submit" class="btn btn-primary mt-2">Aplicar</button>
-        -->
     {% endif %}
 
     <!-- Tablas que se imprimen en pdf -->

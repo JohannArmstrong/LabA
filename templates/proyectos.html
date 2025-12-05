@@ -13,7 +13,8 @@
 
     <form id="form-proyectos" method="POST" action="{{ url_for('proyectos') }}">
         {% if not solo_pdf %}
-            <div class="parametros">    
+            <div class="parametros">
+                <p>Columnas a mostrar:</p>   
                 <div class="row">
                 {% for col in columnas_disponibles %}
                     
