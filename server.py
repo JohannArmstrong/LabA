@@ -575,6 +575,9 @@ def proyectos_pdf():
         filtro_fecha_desde = request.form.get("filtro_fecha_registro_desde", "")
         filtro_fecha_hasta = request.form.get("filtro_fecha_registro_hasta", "")
 
+        filtro_fecha_necesidad_desde = request.form.get("filtro_fecha_necesidad_desde", "")
+        filtro_fecha_necesidad_hasta = request.form.get("filtro_fecha_necesidad_hasta", "")
+
         if not seleccionadas:
             seleccionadas = list(COLUMNAS_DISPONIBLES.keys())
             filtros = {col: "" for col in seleccionadas}
@@ -594,9 +597,19 @@ def proyectos_pdf():
         if filtro_fecha_hasta:
             where_clauses.append("p.fecha_registro <= %s")
             params.append(filtro_fecha_hasta)
+        
+        if filtro_fecha_necesidad_desde:
+            where_clauses.append("p.fecha_necesidad >= %s")
+            params.append(filtro_fecha_necesidad_desde)
+        if filtro_fecha_necesidad_hasta:
+            where_clauses.append("p.fecha_necesidad <= %s")
+            params.append(filtro_fecha_necesidad_hasta)
 
         filtros["fecha_registro_desde"] = filtro_fecha_desde
         filtros["fecha_registro_hasta"] = filtro_fecha_hasta
+
+        filtros["fecha_necesidad_desde"] = filtro_fecha_necesidad_desde
+        filtros["fecha_necesidad_hasta"] = filtro_fecha_necesidad_hasta
 
         where_sql = " AND ".join(where_clauses)
 
@@ -653,6 +666,7 @@ def proyectos_pdf():
         html = render_template("proyectos.html",
                                active_page="proyectos",
                                columnas_disponibles=COLUMNAS_DISPONIBLES.keys(),
+                               COLUMNAS_LABELS=COLUMNAS_LABELS,
                                columnas=seleccionadas,
                                rows=proyectos,
                                resumen_proyectos=resumen_proyectos,

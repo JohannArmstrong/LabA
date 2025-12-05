@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const btn = document.getElementById("theme-toggle");
     const htmlTag = document.documentElement;
 
+    const toggle = document.getElementById("theme-toggle");
+
+
     // uso de local storage para guardar el tema actual
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -11,6 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
         htmlTag.setAttribute("data-bs-theme", "dark"); // por defecto oscuro
         localStorage.setItem("theme", "dark");
     }
+
+    // Restaurar estado desde localStorage
+    if (savedTheme === "dark") {
+        toggle.checked = true;
+    } else {
+        toggle.checked = false;
+    }
+
 
     // alternar tema mediante botón
         btn.addEventListener("click", function () {

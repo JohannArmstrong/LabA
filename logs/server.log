@@ -26601,3 +26601,71 @@ LINE 6:                             FROM uso_herramientas
 2025-12-04 19:45:16 [INFO] 127.0.0.1 - - [04/Dec/2025 19:45:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
 2025-12-04 19:45:16 [INFO] 127.0.0.1 - - [04/Dec/2025 19:45:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-12-04 19:45:16 [INFO] 127.0.0.1 - - [04/Dec/2025 19:45:16] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 21:22:18 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-04 21:22:18 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-04 21:31:06 [INFO] 127.0.0.1 - - [04/Dec/2025 21:31:06] "GET / HTTP/1.1" 200 -
+2025-12-04 21:31:06 [INFO] 127.0.0.1 - - [04/Dec/2025 21:31:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 21:31:06 [INFO] 127.0.0.1 - - [04/Dec/2025 21:31:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 21:31:06 [INFO] 127.0.0.1 - - [04/Dec/2025 21:31:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 21:32:02 [INFO] 127.0.0.1 - - [04/Dec/2025 21:32:02] "GET / HTTP/1.1" 200 -
+2025-12-04 21:32:02 [INFO] 127.0.0.1 - - [04/Dec/2025 21:32:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 21:32:03 [INFO] 127.0.0.1 - - [04/Dec/2025 21:32:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 21:32:03 [INFO] 127.0.0.1 - - [04/Dec/2025 21:32:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 21:32:29 [INFO] 127.0.0.1 - - [04/Dec/2025 21:32:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 21:32:30 [INFO] 127.0.0.1 - - [04/Dec/2025 21:32:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 21:32:30 [INFO] 127.0.0.1 - - [04/Dec/2025 21:32:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 21:32:30 [INFO] 127.0.0.1 - - [04/Dec/2025 21:32:30] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 21:34:58 [INFO] 127.0.0.1 - - [04/Dec/2025 21:34:58] "GET / HTTP/1.1" 200 -
+2025-12-04 21:34:58 [INFO] 127.0.0.1 - - [04/Dec/2025 21:34:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 21:34:58 [INFO] 127.0.0.1 - - [04/Dec/2025 21:34:58] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-12-04 21:34:58 [INFO] 127.0.0.1 - - [04/Dec/2025 21:34:58] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 21:34:58 [INFO] 127.0.0.1 - - [04/Dec/2025 21:34:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 21:34:58 [INFO] 127.0.0.1 - - [04/Dec/2025 21:34:58] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 21:35:24 [INFO] 127.0.0.1 - - [04/Dec/2025 21:35:24] "GET / HTTP/1.1" 200 -
+2025-12-04 21:35:24 [INFO] 127.0.0.1 - - [04/Dec/2025 21:35:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 21:35:25 [INFO] 127.0.0.1 - - [04/Dec/2025 21:35:25] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-12-04 21:35:25 [INFO] 127.0.0.1 - - [04/Dec/2025 21:35:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 21:35:25 [INFO] 127.0.0.1 - - [04/Dec/2025 21:35:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 21:35:25 [INFO] 127.0.0.1 - - [04/Dec/2025 21:35:25] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 21:37:53 [INFO] 127.0.0.1 - - [04/Dec/2025 21:37:53] "GET / HTTP/1.1" 200 -
+2025-12-04 21:37:53 [INFO] 127.0.0.1 - - [04/Dec/2025 21:37:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 21:37:53 [INFO] 127.0.0.1 - - [04/Dec/2025 21:37:53] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-12-04 21:37:53 [INFO] 127.0.0.1 - - [04/Dec/2025 21:37:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 21:37:54 [INFO] 127.0.0.1 - - [04/Dec/2025 21:37:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 21:37:54 [INFO] 127.0.0.1 - - [04/Dec/2025 21:37:54] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 21:38:21 [INFO] 127.0.0.1 - - [04/Dec/2025 21:38:21] "GET / HTTP/1.1" 200 -
+2025-12-04 21:38:21 [INFO] 127.0.0.1 - - [04/Dec/2025 21:38:21] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 21:38:21 [INFO] 127.0.0.1 - - [04/Dec/2025 21:38:21] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-12-04 21:38:21 [INFO] 127.0.0.1 - - [04/Dec/2025 21:38:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 21:38:21 [INFO] 127.0.0.1 - - [04/Dec/2025 21:38:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 21:38:22 [INFO] 127.0.0.1 - - [04/Dec/2025 21:38:22] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 21:40:20 [ERROR] Error al generar PDF: 'COLUMNAS_LABELS' is undefined
+2025-12-04 21:40:20 [INFO] 127.0.0.1 - - [04/Dec/2025 21:40:20] "[35m[1mPOST /proyectos/pdf HTTP/1.1[0m" 500 -
+2025-12-04 21:40:21 [INFO] 127.0.0.1 - - [04/Dec/2025 21:40:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 21:40:25 [INFO] 127.0.0.1 - - [04/Dec/2025 21:40:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 21:40:26 [INFO] 127.0.0.1 - - [04/Dec/2025 21:40:26] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 21:47:20 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-04 21:47:20 [INFO] [33mPress CTRL+C to quit[0m
+2025-12-04 21:47:29 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:29] "GET / HTTP/1.1" 200 -
+2025-12-04 21:47:29 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 21:47:29 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 21:47:29 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 21:47:29 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 21:47:30 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:30] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 21:47:34 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:34] "GET / HTTP/1.1" 200 -
+2025-12-04 21:47:34 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 21:47:34 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 21:47:34 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 21:47:34 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-12-04 21:47:34 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:34] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 21:47:36 [ERROR] Error al generar PDF: 'COLUMNAS_LABELS' is undefined
+2025-12-04 21:47:36 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:36] "[35m[1mPOST /proyectos/pdf HTTP/1.1[0m" 500 -
+2025-12-04 21:47:36 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:36] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 21:47:43 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:43] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-04 21:47:43 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-04 21:47:43 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-12-04 21:47:43 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 21:47:43 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-04 21:47:43 [INFO] 127.0.0.1 - - [04/Dec/2025 21:47:43] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -

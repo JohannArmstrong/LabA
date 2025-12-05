@@ -8,7 +8,7 @@
     <!--<script src="{{ url_for('static', filename='js/script.js') }}" defer></script>-->
 
 </head>
-<body class="container mt-4">
+<body class="container">
     {% if not solo_pdf %}
         {% include "header.html" %}
         
@@ -62,7 +62,7 @@
             </div>
 
             <!-- Buttons row: right aligned -->
-            <div class="d-flex justify-content-end gap-2 mt-3">
+            <div class="d-flex gap-2 mt-3">
                 <button type="submit" class="btn btn-primary">Aplicar</button>
                 <button type="submit"
                         formaction="{{ url_for('estadisticas_pdf') }}"

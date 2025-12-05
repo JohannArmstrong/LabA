@@ -19,8 +19,8 @@ h2 {
 }
 
 p {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+
+  margin-bottom: 1rem;
 }
 
 .to-print {
@@ -48,12 +48,42 @@ form {
   }
 }*/
 
+.parametros{
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+table{
+  border-radius: 5px !important;
+}
+
 [data-bs-theme="light"] .parametros {
   background-color: #f3f3f3; /* gris claro */
   /*color: #212529;    */        /* texto oscuro */
 }
 
 [data-bs-theme="dark"] .parametros {
-  background-color: #323232; /* gris intermedio */
-  /*color: #f8f9fa;  */          /* texto claro */
+  background-color: #323232;
+  /*color: #f8f9fa;  */
+}
+
+.fecha{
+  display: inline-block;
+}
+
+.col-id {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 5rem !important;
+}
+
+input[type="date"] {
+  max-width: 8rem;
+}
+
+.logo{
+  width: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
